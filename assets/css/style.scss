@@ -1,0 +1,21 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+section {
+  display: table-cell;
+  width: 100%;
+  float: none;
+}
+
+header {
+  display: table-cell;
+  position: relative;
+}
+
+div.wrapper {
+  margin-left: none;
+  margin-right: none;
+  width: 100%;
+}

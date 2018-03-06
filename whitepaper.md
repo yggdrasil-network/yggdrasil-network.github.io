@@ -1,4 +1,4 @@
-### Yggdrasil
+# Whitepaper
 
 **Note:** This is a very rough early draft.
 
@@ -9,7 +9,7 @@ In an effort to mitigate many forms of attacks, the routing scheme only uses inf
 The implementation is distributed and runs on dynamic graphs, though this implementation may not converge quickly enough to be practical on networks with high node mobility.
 This document attempts to give a rough overview of how some of the key parts of the protocol are implemented, as well as an explanation of why a few subtle points are handled the way they are.
 
-#### Addressing
+## Addressing
 
 Addresses in Yggdrasil are derived from a truncated version of a `NodeID`.
 The `NodeID` itself is a sha512sum of a node's permanent public Curve25519 key.
@@ -26,7 +26,7 @@ A node is only communicated with if its `NodeID` matches its public key and the 
 It is important to note that only `NodeID` is used internally for routing, so the addressing scheme could in theory be changed without breaking compatibility with intermediate routers.
 This may become useful if the IPv6 address range ever needs to be changed, or if a new addressing format that allows for more significant bits is ever implemented by the OS.
 
-##### Cryptography
+### Cryptography
 
 Public key encryption is done using the `golang.org/x/crypto/nacl/box`, which uses Curve25519, XSalsa20, and Poly1305 for key exchange, encryption, and authentication.
 Permanent keys are used only for protocol traffic, with random nonces generated on a per-packet basis using `crypto/rand` from Go's standard library.
@@ -35,14 +35,14 @@ A list of recently received session nonces is kept (as a bitmask) and checked to
 
 A separate private key is generated and used for signing with Ed25519, which is used by the name-dependent routing layer to secure construction of the spanning tree, with a TreeID hash of a node's public Ed key being used to select the highest TreeID as the root of the tree.
 
-##### Prefixes
+### Prefixes
 
 Recall that each node's address is in the lower half of the address range, I.e. `fd00::/9`. A `/64` prefix is made available to each node under `fd80::/9`, where the remaining bits of the prefix match the node's address under `fd00::/9`.
 A node may optionally advertise a prefix on their local area network, which allows unsupported or legacy devices with IPv6 support to connect to the network.
 Note that there are 64 fewer bits of `NodeID` available to check in each address from a routing prefix, so it makes sense to brute force a `NodeID` with more significant bits in the address if this approach is to be used.
 Running `genkeys.go` will do this by default.
 
-#### Name-independent routing
+## Name-independent routing
 
 A distributed hash table is used to facilitate the lookup of a node's name-dependent routing `coords` from a `NodeID`.
 A kademlia-like peer structure and xor metric are used in the DHT layout, but only peering info is used--there is no key:value store.
@@ -57,7 +57,7 @@ As such, even if a switch to iterative parallel lookups was made, the recursive 
 
 Other than these differences, the DHT is more-or-less what you might expect from a kad implementation.
 
-#### Name-dependent routing
+## Name-dependent routing
 
 A spanning tree is constructed and used for name-dependent routing.
 The basic idea is to use the distance between nodes *on the tree* as a distance metric, and then perform greedy routing in that metric space.
@@ -87,7 +87,7 @@ A better approach to bandwidth estimation could probably switch to the new link 
 
 Note that this forwarding procedure generalizes to nodes that are not one-hop neighbors, but the current implementation omits the use of more distant neighbors, as this is expected to be a minor optimization (it would add per-link control traffic to pass path-vector-like information about a subset of the network, which is a lot of overhead compared to the current setup).
 
-#### Other implementation details
+## Other implementation details
 
 In case you hadn't noticed, this implementation is written in Go.
 That decision was made because the designer and initial author (@Arceliar) felt like learning a new language when the implementation was started, and the Go language seemed like an OK choice for prototyping a network application.
@@ -100,7 +100,7 @@ This implementation runs as an overlay network on top of regular IPv4 or IPv6 tr
 It uses link-local IPv6 multicast traffic to automatically connect to devices on the same network, but it can also be fed a list of address:port pairs to connect to.
 This can be used to e.g. set up two local networks and bridge them over the internet.
 
-#### Performance
+## Performance
 
 This section compares Yggdrasil with the results in [arxiv:0708.2309](https://arxiv.org/abs/0708.2309) (specifically table 1) from tests on the 9204-node [skitter](https://www.caida.org/tools/measurement/skitter/) network maps from [caida](https://www.caida.org/).
 
@@ -126,7 +126,7 @@ In most cases, this would require some form of per-neighbor state to be stored b
 So while compact routing schemes have nice theoretical limits, which do not require even as much state as one entry per one-hop neighbor, that property does not seem realistic if the implementation is running at the router level (as opposed to the AS level).
 As such, keeping one entry per neighbor may be reasonable, especially if nodes with a high degree have proportionally more resources available to them, but it is possible that something may have been overlooked in the design.
 
-#### Disclaimer
+## Disclaimer
 
 This is a draft version of documentation for a work-in-progress protocol.
 The design and implementation should be considered pre-alpha, with any and all aspects subject to change in light of ongoing R&D.

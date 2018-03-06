@@ -1,6 +1,6 @@
-### Platforms
+# Platforms
 
-#### Linux
+## Linux
 
 - Should work out of the box on most Linux distributions with `iproute2` installed.
 - systemd service scripts are included in the `contrib/systemd/` folder so that it runs automatically in the background (using `/etc/yggdrasil.conf` for configuration), copy the service files into `/etc/systemd/system`, copy `yggdrasil` into your `$PATH`, i.e. `/usr/bin`, and then enable the service:
@@ -14,18 +14,18 @@ systemctl status yggdrasil
 journalctl -u yggdrasil
 ```
 
-#### macOS
+## macOS
 
 - Tested and working out of the box on macOS 10.13 High Sierra.
 - May work in theory on any macOS version with `utun` support (which was added in macOS 10.7 Lion), although this is untested at present.
 - TAP mode is not supported on macOS.
 
-#### FreeBSD, OpenBSD, NetBSD
+## FreeBSD, OpenBSD, NetBSD
 
 - Works in TAP mode, but currently doesn't work in TUN mode.
 - You may need to create the TAP adapter first if it doesn't already exist, i.e. `ifconfig tap0 create`.
 
-#### Windows
+## Windows
 
 - Tested and working on Windows 7 and Windows 10, and should work on any recent versions of Windows, but it depends on the [OpenVPN TAP driver](https://openvpn.net/index.php/open-source/downloads.html) being installed first.
 - Has been proven to work with both the [NDIS 5](https://swupdate.openvpn.org/community/releases/tap-windows-9.9.2_3.exe) (`tap-windows-9.9.2_3`) driver and the [NDIS 6](https://swupdate.openvpn.org/community/releases/tap-windows-9.21.2.exe) (`tap-windows-9.21.2`) driver, however there are substantial performance issues with the NDIS 6 driver therefore it is recommended to use the NDIS 5 driver instead.
@@ -43,6 +43,6 @@ sc start yggdrasil
 sc create yggdrasil binpath= "\"C:\path\to\yggdrasil.exe\" -autoconf"
 ```
 
-#### EdgeRouter
+## EdgeRouter
 
 - Tested and working on the EdgeRouter X, using the [vyatta-yggdrasil](https://github.com/neilalexander/vyatta-yggdrasil) wrapper package.

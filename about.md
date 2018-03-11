@@ -8,7 +8,7 @@ A form of locator/identifier separation (similar in goal to [LISP](https://en.wi
 Locators are used to approximate the distance between nodes in the network, where the approximate distance is the length of a real worst-case-scenario path through the network.
 This is (arguably) easier to secure and requires less information about the network than commonly used routing schemes.
 
-While not technically a [compact routing scheme](https://arxiv.org/abs/0708.2309), tests on real-world networks suggest that routing in this style incurs stretch comparable to the name-dependent compact routing scheme designed for static networks.
+While not technically a [compact routing scheme](https://arxiv.org/abs/0708.2309), tests on real-world networks suggest that routing in this style incurs stretch comparable to the name-dependent compact routing schemes designed for static networks.
 Compared to compact routing schemes, Yggdrasil appears to have smaller average routing table sizes, works on dynamic networks, and is name-independent.
 It currently lacks the provable bounds of compact routing schemes, and there's a serious argument to be made that it cheats by stretching the definition of some of the above terms, but the main point to be emphasized is that *we're not looking for formal proofs and definitions, we just want something efficient in real networks*.
 In that sense, Yggdrasil seems to be competitive on paper, and working well in practice so far.

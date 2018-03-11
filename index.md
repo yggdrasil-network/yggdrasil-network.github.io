@@ -1,6 +1,6 @@
 # Introduction
 
-Yggdrasil is an early-stage implementation of a fully encrypted IPv6 network. Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it also employs a different routing algorithm based on a globally-agreed spanning tree. In theory, an Yggdrasil network should scale well even up to internet-like topologies. Take a look at the [Whitepaper](whitepaper.md) for a detailed overview.
+Yggdrasil is an early-stage implementation of a fully encrypted IPv6 network. Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it also employs a different routing algorithm based on a globally-agreed spanning tree. In theory, an Yggdrasil network should scale well even up to internet-like topologies. Take a look at the [About](about.md) page for a detailed overview.
 
 ## Project Status
 

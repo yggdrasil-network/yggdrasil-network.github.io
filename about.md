@@ -94,7 +94,7 @@ The current (Go) implementation is pre-alpha, so compatibility with future versi
 While users are discouraged from running anything truly critical on top of it, as of writing, it seems reliable enough for day-to-day use.
 
 An "alpha" quality release should at least include the ability to detect incompatible versions and warn the users that an update may be needed.
-A "beta" quality release should known enough to be compatible in the face of wire format changes, and reasonably feature complete.
+A "beta" quality release should know enough to be compatible in the face of wire format changes, and reasonably feature complete.
 A "stable" 1.0 release, if it ever happens, would probably be feature complete, with no expectation of future wire format changes, and free of known critical bugs.
 
 Roughly speaking, there are a few obvious ways the project could turn out:
@@ -106,4 +106,3 @@ Roughly speaking, there are a few obvious ways the project could turn out:
 
 That last one is probably impossible, because the speed of light would *eventually* become a problem.
 If the only thing limiting network growth turns out to be the underlying physics, then that arguably counts as a win.
-

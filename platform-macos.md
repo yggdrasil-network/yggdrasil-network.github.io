@@ -15,11 +15,13 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 ## Installation
 
-Start by either [downloading the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts). Alternatively, compile Yggdrasil from source (below).
-
-Install the `yggdrasil` binary by copying it into `/usr/bin`, and then generate your configuration:
+Start by either [downloading the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
 ```
-sudo cp /path/to/yggdrasil-go/yggdrasil /usr/bin
+sudo cp ~/Downloads/yggdrasil-x.x.xx-darwin-amd64 /usr/bin/yggdrasil
+```
+Alternatively, compile Yggdrasil from source (below) and install:
+```
+sudo cp /path/to/yggdrasil-go/yggdrasil /usr/bin/yggdrasil
 ```
 
 ## Generate configuration

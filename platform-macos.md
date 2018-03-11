@@ -52,9 +52,14 @@ Assuming that Yggdrasil is installed into `/usr/bin` and your configuration *alr
 ```
 cd /path/to/yggdrasil-go
 sudo cp contrib/macos/yggdrasil.plist /Library/LaunchDaemons/
-sudo launchctl load /Library/LaunchDaemons/
+sudo launchctl load /Library/LaunchDaemons/yggdrasil.plist
 ```
-When using the launchd scripts from the repository, standard output is logged to `/tmp/yggdrasil.stdout.log` and error output is logged to `/tmp/yggdrasil.stderr.log`. 
+When using the launchd scripts from the repository, standard output is logged to `/tmp/yggdrasil.stdout.log` and error output is logged to `/tmp/yggdrasil.stderr.log`.
+
+If you want to stop the Yggdrasil service and prevent it from being restarted by launchd:
+```
+sudo launchctl unload /Library/LaunchDaemons/yggdrasil.plist
+```
 
 ## Build instructions
 

@@ -1,3 +1,7 @@
+---
+tags: dontlink
+---
+
 # Introduction
 
 Yggdrasil is an early-stage implementation of a fully encrypted IPv6 network. Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it also employs a different routing algorithm based on a globally-agreed spanning tree. In theory, an Yggdrasil network should scale well even up to internet-like topologies. Take a look at the [About](about.md) page for a detailed overview.
@@ -10,7 +14,7 @@ Currently we don't have any specific releases, but binaries are [automatically b
 
 ## Implementation
 
-Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including Linux, Windows, macOS, NetBSD, FreeBSD, OpenBSD and Ubiquiti EdgeOS) although with various minor caveats. See the [Platforms](platforms.md) page for more information. 
+Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including Linux, Windows, macOS, NetBSD, FreeBSD, OpenBSD and Ubiquiti EdgeOS) although with various minor caveats. See the [Platforms](platforms.md) page for more information.
 
 ## Get Involved
 

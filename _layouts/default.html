@@ -17,22 +17,24 @@
       <header>
         <a href="{{ site.github.url }}"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-        
-        <p>        
+
+        <p>
         {% for page in site.pages %}
-          <a href="{{ page.url }}">{{ page.title }}</a><br />
+          {% unless page.tags contains "dontlink" %}
+            <a href="{{ page.url }}">{{ page.title }}</a><br />
+          {% endunless %}
         {% endfor %}
         </p>
-        
+
         <p>
         <a href="https://github.com/yggdrasil-network/yggdrasil-go">GitHub</a><br />
         <a href="https://circleci.com/gh/yggdrasil-network/yggdrasil-go">CircleCI</a><br />
         <a href="https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts">Latest Builds</a><br />
         <a href="https://github.com/yggdrasil-network/public-peers">Public Peers</a>
         </p>
-        
+
         <p><a href="https://circleci.com/gh/yggdrasil-network/yggdrasil-go"><img src="https://circleci.com/gh/yggdrasil-network/yggdrasil-go.svg?style=shield&circle-token=:circle-token" /></a></p>
-        
+
         {% if site.show_downloads %}
           <ul>
             <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>

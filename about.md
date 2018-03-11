@@ -42,11 +42,11 @@ A separate set of keys are generated and used for signing with [Ed25519](https:/
 ## Locators and Routing
 
 Locators are generated using information from a spanning tree (described below).
-The result is that each node has a set of coordinates in a greedy metric space.
+The result is that each node has a set of [coordinates in a greedy metric space](https://en.wikipedia.org/wiki/Greedy_embedding).
 These coordinates are used as a distance label.
 Given the coordinates of any two nodes, it is possible to calculate the length of some real path through the network between the two nodes.
-Traffic is forwarded using a greedy routing scheme, where each node forwards the packet to a one-hop neighbor that is closer to the destination (according to this distance metric) than the current node.
-In particular, nodes try to maximize: `<bandwidth to next hop> / <expected length of path to destination>`, where the denominator is equal to 1 (from the link from the current node to the nexthop) + the expected distance from the next hop to the destination.
+Traffic is forwarded using a [greedy routing](https://en.wikipedia.org/wiki/Small-world_routing#Greedy_routing) scheme, where each node forwards the packet to a one-hop neighbor that is closer to the destination (according to this distance metric) than the current node.
+In particular, nodes try to maximize: `<bandwidth to next hop> / <expected length of path to destination>`, where the denominator is equal to 1 (from the link from the current node to the next hop) + the expected distance from the next hop to the destination (from the [metric space](https://en.wikipedia.org/wiki/Metric_space)).
 
 ### Spanning Tree
 

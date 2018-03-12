@@ -12,15 +12,17 @@ let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdra
 fetch(url)
 .then(res => res.json())
 .then(function (bins) {
+  var links = document.createElement('p')
   for (var idx in bins) {
     var bin = bins[idx]
     var link = document.createElement('a');
     link.appendChild(document.createTextNode(bin.path));
     link.title = bin.path;
     link.href = bin.url;
-    document.body.appendChild(link);
-    document.body.appendChild(document.createElement('br'));
+    links.appendChild(link);
+    links.appendChild(document.createElement('br'));
   }
+  document.body.appendChild(links)
 })
 .catch(err => { throw err });
 </script>

@@ -14,7 +14,12 @@ fetch(url)
 .then(function (bins) {
   for (var idx in bins) {
     var bin = bins[idx]
-    console.log("<a href=\"" + bin.url + "\">" + bin.path + "</a><br/>");
+    var link = document.createElement('a');
+    link.appendChild(document.createTextNode(bin.path));
+    link.title = bin.path;
+    link.href = bin.url;
+    document.body.appendChild(link);
+    document.body.appendChild(document.createElement('br'));
   }
 })
 .catch(err => { throw err });

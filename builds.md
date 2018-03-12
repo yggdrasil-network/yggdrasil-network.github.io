@@ -11,8 +11,9 @@ let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdra
 
 fetch(url)
 .then(res => res.json())
-.then((bins) => {
-  for (var bin in bins) {
+.then(function (bins) {
+  for (var idx in bins) {
+    var bin = bins[idx]
     console.log("<a href=\"" + bin.url + "\">" + bin.path + "</a><br/>");
   }
 })

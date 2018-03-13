@@ -19,7 +19,7 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <p>
-        <a href="{{ site.github.url }}">Home</a><br />
+        <a href="{{ site.github.url }}">Home</a>
         {% for page in site.pages %}
           {% unless page.tags contains "dontlink" %}
             <a href="{{ page.url }}">{{ page.title }}</a><br />

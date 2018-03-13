@@ -2,12 +2,14 @@
 tags: dontlink
 ---
 
-# Builds
+# Latest Builds
 
-Build [artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts):
+After every push to the `master` branch of the [GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go), the code is automatically built by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms.
+For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) from the latest build are linked below:
 
 <p id="buildArtifactLinks"></p>
 
+<!-- TODO sort these to a useful order of some kind -->
 <script type="text/javascript">
 let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts';
 

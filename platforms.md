@@ -38,10 +38,10 @@ journalctl -u yggdrasil
 - Has been proven to work with both the [NDIS 5](https://swupdate.openvpn.org/community/releases/tap-windows-9.9.2_3.exe) (`tap-windows-9.9.2_3`) driver and the [NDIS 6](https://swupdate.openvpn.org/community/releases/tap-windows-9.21.2.exe) (`tap-windows-9.21.2`) driver, however there are substantial performance issues with the NDIS 6 driver therefore it is recommended to use the NDIS 5 driver instead.
 - Be aware that connectivity issues can occur on Windows if multiple IPv6 addresses from the `fd00::/8` prefix are assigned to the TAP interface. If this happens, then you may need to manually remove the old/unused addresses from the interface (though the code has a workaround in place to do this automatically in some cases).
 - TUN mode is not supported on Windows.
-- Yggdrasil can be installed as a Windows service so that it runs automatically in the background. As an example, create the folder `C:\Program Files\Yggdrasil\` and copy `yggdrasil.exe` into it. From an Administrator Command Prompt:
+- Yggdrasil can be installed as a Windows service so that it runs automatically in the background. As an example, create the folder `C:\Program Files\Yggdrasil\` and copy `yggdrasil.exe` into it. Once done, open Command Prompt as Administrato and use the following commands (being careful to note the escaped `\"` quotemarks on the `sc create` line):
   - Generate a configuration file, if you have not already:
   ```
-  "C:\Program Files\Yggdrasil\Yggdrasil.exe" -genconf > "C:\Program Files\Yggdrasil\yggdrasil.conf"
+  "C:\Program Files\Yggdrasil\yggdrasil.exe" -genconf > "C:\Program Files\Yggdrasil\yggdrasil.conf"
   ```
   - Install the Windows service:
   ```

@@ -44,9 +44,9 @@ Alternatively, start Yggdrasil in auto-configuration mode:
 sudo nohup yggdrasil -autoconf &
 ```
 
-### Run as a system service
+### Run as a background service
 
-Running as a system service means that Yggdrasil will automatically start up in the background when your Mac boots. It also ensures that Yggdrasil will be restarted automatically if the process is terminated for some reason.
+Running as a background system service means that Yggdrasil will automatically start up in the background when your Mac boots. It also ensures that Yggdrasil will be restarted automatically if the process is terminated for some reason.
 
 Assuming that Yggdrasil is installed into `/usr/bin` and your configuration *already exists* in `/etc`, as above, then you can install Yggdrasil as a launchd service using the launchd scripts in the Git repository:
 ```

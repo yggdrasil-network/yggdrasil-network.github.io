@@ -11,7 +11,7 @@ For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/git
 
 <!-- TODO sort these to a useful order of some kind -->
 <script type="text/javascript">
-let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts';
+let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful';
 
 fetch(url)
 .then(res => res.json())

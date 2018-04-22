@@ -16,11 +16,11 @@ journalctl -u yggdrasil
 
 ## macOS
 
-- See the [platform-macos.md](macOS platform page).
+- See the [macOS platform page](platform-macos.md).
 
 ## Windows
 
-- See the [platform-windows.md](Windows platform page).
+- See the [Windows platform page](platform-windows.md).
 
 ## FreeBSD, NetBSD
 

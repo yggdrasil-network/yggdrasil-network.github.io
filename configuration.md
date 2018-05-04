@@ -1,6 +1,6 @@
 # Configuration
 
-Yggdrasil can be run with a dynamically generated configuration, using sane-ish default settings, with `yggdrasil --autoconf`
+Yggdrasil can be run with a dynamically generated configuration, using sane-ish default settings, with `yggdrasil --autoconf`.
 
 There are cases where a static configuration simplifies some setups.
 Configuration is provided to `stdin` in json format, such as from a file using `yggdrasil --useconf < path/to/configuration.json`.

@@ -7,6 +7,7 @@ tags: dontlink
 Yggdrasil has been tested and is working on the following versions of Windows:
 
 - Windows 7
+- Windows 8.1
 - Windows 10
 - Windows Server 2016
 

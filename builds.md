@@ -14,8 +14,9 @@ For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/git
 let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful';
 
 fetch(url)
-.then(res => res.json())
-.then(function (bins) {
+.then(function(res) {
+  return res.json();
+}).then(function (bins) {
   var links = document.createElement('p')
   for (var idx in bins) {
     var bin = bins[idx]

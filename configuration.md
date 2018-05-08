@@ -112,11 +112,9 @@ Note that any field not specified in the configuration will use its default valu
 
 By default, only link-local auto-peering is enabled. This connects devices that are connected directly to each other at layer 2, including devices on the same LAN, directly connected by ethernet or configured to use the same ad-hoc wireless network.
 
-As the network uses ordinary TCP and UDP, it is possible to connect over other networks, such as the Internet, provided that the connecting node knows the address and port to connect to and that the connection is not blocked by a NAT or firewall.
+As the network uses ordinary TCP and UDP, it is possible to connect over other networks, such as the Internet or WAN links, provided that the connecting node knows the address and port to connect to and that the connection is not blocked by a NAT or firewall. If the node resides behind a NAT, then port forwarding may be required in order to accept incoming connections.
 
-By default, connections to peers are made over TCP. This tends to have lower CPU usage than connecting over UDP, which leads to higher bandwidth on CPU-constrained single-board computers (i.e. Raspberry Pi). 
-
-UDP connections can be made by specifying `udp://` in the connection string. These tend to require more CPU, due to lower PMTU, but otherwise mostly works the same.
+By default, connections to peers are made over TCP. This tends to have lower CPU usage than connecting over UDP, which leads to higher bandwidth on CPU-constrained single-board computers (i.e. Raspberry Pi). UDP connections can be made by specifying `udp://` in the connection string. These tend to require more CPU, due to lower PMTU, but otherwise mostly works the same.
 
 If two nodes that want to connect are both stuck behind NATs, then it should generally be possible to punch a hole through the NAT if each node specifies a `udp://` connection to the other.
 

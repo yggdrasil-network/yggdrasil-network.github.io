@@ -51,10 +51,15 @@ Note that any field not specified in the configuration will use its default valu
     - The default is to listen on the loopback interface (`localhost:9001`) which ensures that only local connections to the admin socket are allowed.
     - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable. 
 - `Peers`
-    - A list of strings in the form `["peerAddress:peerPort"]` of peers to connect to.
+    - A list of strings in the form `["peerAddress:peerPort", "peerAddress:peerPort", ...]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry may optionally begin with `tcp://`, `udp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
     - If unspecified, the default is to connect over TCP.
+- `AllowedBoxPubs`
+    - A list of strings in the form `["boxpub", "boxpub", ...]`, where `boxpub` is each node's `BoxPub` key which you would like to allow connections from.
+    - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections and both incoming and outgoing UDP connections.
+    - If the list is left empty, or the option is not specified, then Yggdrasil will automatically accept connections from any other node.
+    - Note that multicast link-local peerings (see below) will always override this option if enabled.
 - `BoxPub`
     - A hexadecimal string representing the node's public Curve25519 key.
     - A node's ID in the DHT is a (sha-512) hash of this public key.

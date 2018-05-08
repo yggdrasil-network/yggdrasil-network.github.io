@@ -13,7 +13,7 @@ section {
 header {
   display: table-cell;
   position: relative;
-  width: 240px;
+  width: 240px !important;
   margin-right: 1em;
 }
 
@@ -24,6 +24,7 @@ div.wrapper {
 }
 
 pre.highlight {
+  width: auto;
   white-space: pre-wrap;       
   white-space: -moz-pre-wrap;  
   white-space: -pre-wrap;      

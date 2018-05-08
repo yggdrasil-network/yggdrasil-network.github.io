@@ -1,9 +1,11 @@
 # Configuration
 
-Yggdrasil can be run with a dynamically generated configuration, using sane-ish default settings, with `yggdrasil --autoconf`.
+Yggdrasil can be run with a dynamically generated configuration, using sane-ish default settings, with `yggdrasil --autoconf`. In this mode, Yggdrasil will automatically attempt to peer with other nodes on the same subnet, but it also generates a random set of keys each time it is started, and therefore a random IP address.
 
-There are cases where a static configuration simplifies some setups.
-Configuration is provided to `stdin` in json format, such as from a file using `yggdrasil --useconf < path/to/configuration.json`.
+In most cases, a static configuration simplifies most setups - it allows you to maintain the same IP address, configure static peers and various other options that will persist across restarts.
+
+Configuration can be provided to Yggdrasil in JSON format either through `stdin` (using `yggdrasil --useconf < path/to/configuration.json`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/configuration.json`).
+
 A new configuration file may be generated with `yggdrasil --genconf > path/to/configuration.json`, which looks something like:
 
 ```json
@@ -11,6 +13,7 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/co
   "Listen": "[::]:51743",
   "AdminListen": "[::1]:9001",
   "Peers": [],
+  "AllowedBoxPubs": [],
   "BoxPub": "some hex string",
   "BoxPriv": "some hex string",
   "SigPub": "some hex string",
@@ -40,19 +43,22 @@ Note that any field not specified in the configuration will use its default valu
 ## Configuration Options
 
 - `Listen`
-    - A string, in the form of `"ip:port"`, on which to listen (both TCP and UDP).
+    - A string, in the form of `"ip:port"`, on which to listen for connections from peers (both TCP and UDP).
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
     - The default is to listen on all addresses (`[::]`) with a random port.
 - `AdminListen`
     - Port to listen on for the (TCP) admin socket.
+    - The default is to listen on the loopback interface (`localhost:9001`) which ensures that only local connections to the admin socket are allowed.
+    - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable. 
 - `Peers`
     - A list of strings in the form `["peerAddress:peerPort"]` of peers to connect to.
+    - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry may optionally begin with `tcp://`, `udp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
     - If unspecified, the default is to connect over TCP.
 - `BoxPub`
     - A hexadecimal string representing the node's public Curve25519 key.
     - A node's ID in the DHT is a (sha-512) hash of this public key.
-    - A node's IP is derived from the ID.
+    - A node's IP address is derived from the ID.
 - `BoxPriv`
     - A hexadecimal string representing the node's private Curve25519 key.
     - This is a private key, don't share it.
@@ -63,51 +69,53 @@ Note that any field not specified in the configuration will use its default valu
     - A hexadecimal string representing the node's private Ed25519 key.
     - This is a private key, don't share it.
 - `Multicast`
-    - If true (default), link-local multicast peering is enabled.
+    - If true (default), link-local multicast peering is enabled. This will attempt to discover other Yggdrasil nodes running on the same network and peer with them automatically, effectively creating a "zero-config" peering setup.
     - Link-local multicast listens for UDP announcement messages on `[ff02::114]:9001`.
-    - Link-local multicast peers are added as TCP peers.
+    - Upon discovery, link-local multicast peers are added as TCP peers.
 - `LinkLocal`
     - A regex string.
     - Link-local multicast peering only connects over interfaces matching this regex.
     - The default value (an empty string) matches all interfaces.
-    - This is useful if you want to prevent accidental peering over a layer 2 VPN running on top of yggdrasil.
+    - This is useful if you want to prevent accidental peering over a layer 2 VPN running on top of Yggdrasil.
 - `IfName`
     - The name of the `tun` or `tap` network interface to create or use.
+    - The behaviour of this option is different on different operating systems. Some quick notes:
+        - On Linux, any suitable interface name can be specified.
+        - On FreeBSD, OpenBSD and NetBSD, a full path to the TAP interface should be specified, i.e. `/dev/tap0`. 
+        - On Windows and macOS, an interface is selected automatically regardless of name.
+    - Yggdrasil can be run without connecting to a network interface, which effectively allows it to run as a router without actually handling traffic to or from the local machine. To do this, specify the interface name as `"none"`.
     - Applications send packets over this interface to use the network.
     - On most platforms, an empty string or the default `"auto"` will create a new interface automatically.
 - `IfTAPMode`
-    - If true, then the interface will be a `tap` device instead of a `tun`.
+    - If true, then the interface will be a `tap` device (Layer 2) instead of a `tun` (Layer 3) device.
     - Default value is platform specific, and some platforms support only `tun` or `tap` mode.
     - Note that the network only transports IPv6 packets, so frames sent to or received from a `tap` are decapsulated or encapsulated at the end points of a connection.
+    - In TAP mode, Yggdrasil automatically answers Neighbor Discovery Packet (NDP) requests on behalf of Yggdrasil IPv6 addresses. 
 - `IfMTU`
     - The MTU of the `tun`/`tap` interface.
-    - Defaults to the maximum value supported on each platform, up to `65535`.
-    - PMTU discovery will limit the MTU to the lower of the MTUs used by the end points of a connection.
-    - If traffic is routed over UDP links, PMTU may be further reduced to prevent fragmentation.
+    - Defaults to the maximum value supported on each platform, up to `65535` on Linux/macOS/Windows, `32767` on FreeBSD, `16384` on OpenBSD, `9000` on NetBSD, etc.
+    - Yggdrasil automatically assists in Path MTU Discovery (PMTU) and will limit the MTU of a given connection between two hosts to the lower of the MTUs used by each endpoint. The operating system is made aware of these MTUs using ICMP.
+    - If traffic is routed over UDP links, PMTU may be further reduced to prevent unnecessary packet fragmentation.
 - `Net`
     - Additional configuration options for overlay networks (Tor, I2P).
     - Still under development.
-    - Note that a `socks` connection should be sufficient to use any network which is reachable over a socks proxy.
+    - Note that a `socks` connection should be sufficient to use any network which is reachable over a SOCKS proxy.
 
 # Use Cases
 
 ## Manually Connecting to Peers
 
-By default, only link-local auto-peering is enabled.
-This connects devices that are connected directly to eachother at layer 2, including devices on the same LAN, directly connected by ethernet, or configured to use the same ad-hoc wifi network.
+By default, only link-local auto-peering is enabled. This connects devices that are connected directly to each other at layer 2, including devices on the same LAN, directly connected by ethernet or configured to use the same ad-hoc wireless network.
 
-As the network uses ordinary TCP and UDP, it is possible to connect over other networks, provided that the connecting node knows the address and port to connect to, and that the connection is not blocked by a NAT or firewall.
+As the network uses ordinary TCP and UDP, it is possible to connect over other networks, such as the Internet, provided that the connecting node knows the address and port to connect to and that the connection is not blocked by a NAT or firewall.
 
-By default, connections to peers are made over TCP.
-This tends to have lower CPU usage than connecting over UDP, which leads to higher bandwidth on CPU-constrained single-board computers (Raspberry Pi and its ilk).
+By default, connections to peers are made over TCP. This tends to have lower CPU usage than connecting over UDP, which leads to higher bandwidth on CPU-constrained single-board computers (i.e. Raspberry Pi). 
 
-UDP connections can be made by specifying `udp://` in the connection string.
-These tend to require more CPU, due to lower PMTU, but otherwise mostly works the same.
-If two nodes that want to connect are both stuck behind NATs, then it should generally be possible to hole punch if each node specifies a `udp://` connection to the other.
+UDP connections can be made by specifying `udp://` in the connection string. These tend to require more CPU, due to lower PMTU, but otherwise mostly works the same.
 
-As a transport of last resort, it is possible to route through a `socks://proxyAddr:proxyPort:/` connection.
-This uses TCP over the specified proxy, and can be used to e.g. ssh tunnel out from a network with a particularly restrictive firewall.
-This can also be used to connect over Tor, particularly for `.onion` hidden service addresses.
+If two nodes that want to connect are both stuck behind NATs, then it should generally be possible to punch a hole through the NAT if each node specifies a `udp://` connection to the other.
+
+As a last resort, it is possible to route through a `socks://proxyAddr:proxyPort:/` connection. This uses TCP over the specified SOCKS proxy, and can be used to tunnel out from a network with a particularly restrictive firewall, for example, using SSH tunnelling. This can also be used to connect over Tor, particularly for `.onion` hidden service addresses.
 
 If you are unable to find nodes in the nearby area, a best effort is made to maintain a list of [Public Peers](https://github.com/yggdrasil-network/public-peers) for new users looking to join or test the network.
 
@@ -123,7 +131,7 @@ This may be best illustrated by example.
 Suppose a node has generated the address: `fd00:1111:2222:3333:4444:5555:6666:7777`.
 Then the node may also use addresses from the prefix: `fd80:1111:2222:3333::/64` (note the `fd00` changed to `fd80`, a separate `/9` is used for prefixes, but the rest of the first 64 bits are the same).
 
-Something like the following should be sufficient to advertise a prefix and a route to `fd00::/8` with radvd to a network attached to the `eth0` interface:
+On Linux, something like the following should be sufficient to advertise a prefix and a route to `fd00::/8` using radvd to a network attached to the `eth0` interface:
 
 1. Enable IPv6 forwarding (e.g. `sysctl -w net.ipv6.conf.all.forwarding=1` or add it to sysctl.conf).
 

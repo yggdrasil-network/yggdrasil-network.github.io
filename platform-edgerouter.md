@@ -82,7 +82,7 @@ If you have multiple IPv6 subnets, then they can be configured individually by s
 
 IPv6 masquerade is not supported on VyOS 1.1.x due to missing support in the kernel.
 
-### Crash Detection
+## Crash Detection
 
 To make sure that the process is restarted if it crashes, schedule the `vyatta-check-yggdrasil` script to run at a regular interval:
 ```
@@ -90,4 +90,35 @@ configure
 set system task-scheduler task check-yggdrasil executable path /opt/vyatta/sbin/vyatta-check-yggdrasil
 set system task-scheduler task check-yggdrasil interval 1m
 commit
+```
+
+## Default Firewall Config
+
+Use this as an example firewall configuration, which will allow outgoing connections but prevent unexpected incoming ones, with the exception of ICMPv6 which will be allowed:
+```
+set firewall ipv6-name YGG_IN default-action drop
+set firewall ipv6-name YGG_LOCAL default-action drop
+
+set firewall ipv6-name YGG_IN rule 10 action accept
+set firewall ipv6-name YGG_IN rule 10 state established enable
+set firewall ipv6-name YGG_IN rule 10 state related enable
+
+set firewall ipv6-name YGG_IN rule 20 action drop
+set firewall ipv6-name YGG_IN rule 20 state invalid enable
+
+set firewall ipv6-name YGG_IN rule 30 action accept
+set firewall ipv6-name YGG_IN rule 30 protocol icmpv6
+
+set firewall ipv6-name YGG_LOCAL rule 10 action accept
+set firewall ipv6-name YGG_LOCAL rule 10 state established enable
+set firewall ipv6-name YGG_LOCAL rule 10 state related enable
+
+set firewall ipv6-name YGG_LOCAL rule 20 action drop
+set firewall ipv6-name YGG_LOCAL rule 20 state invalid enable
+
+set firewall ipv6-name YGG_LOCAL rule 30 action accept
+set firewall ipv6-name YGG_LOCAL rule 30 protocol icmpv6
+
+set interfaces yggdrasil tun0 firewall in ipv6-name YGG_IN
+set interfaces yggdrasil tun0 firewall local ipv6-name YGG_LOCAL
 ```

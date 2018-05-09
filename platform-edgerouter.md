@@ -13,20 +13,21 @@ Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](h
 
 ## Installation
 
-Start by either [downloading the latest vyatta-yggdrasil .deb package](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
+Start by [downloading the latest vyatta-yggdrasil .deb package](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and then install it:
 ```
+curl -O https://xx-xxxxxxxxx-gh.circle-artifacts.com/x/vyatta-yggdrasil-x.x.xxx-mipsel.deb
 sudo dpkg -i vyatta-yggdrasil-x.x.xxx-mipsel.deb
 ```
 
 ## Generate configuration
 
-Configuration for Yggdrasil is generated automatically when you create an interface.
+Configuration for Yggdrasil is generated automatically when you create an interface:
 ```
 configure
 set interfaces yggdrasil tun0
 commit
 ```
-At this point, Yggdrasil will start running using default configuration.
+At this point, Yggdrasil will start running using default configuration, which includes automatic peer discovery of other Yggdrasil nodes on the same network using multicast. 
 
 ## Add peers
 

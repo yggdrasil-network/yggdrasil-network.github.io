@@ -22,6 +22,10 @@ journalctl -u yggdrasil
 
 - See the [Windows platform page](platform-windows.md).
 
+## EdgeRouter
+
+- See the [EdgeRouter platform page](platform-edgerouter.md).
+
 ## FreeBSD, NetBSD
 
 - Works in TAP mode, but currently doesn't work in TUN mode.
@@ -33,7 +37,3 @@ journalctl -u yggdrasil
 - You may need to create the TAP adapter first if it doesn't already exist, i.e. `ifconfig tap0 create`.
 - OpenBSD is not capable of listening on both IPv4 and IPv6 at the same time on the same socket (unlike FreeBSD and NetBSD). This affects the `Listen` and `AdminListen` configuration options. You will need to set `Listen` and `AdminListen` to use either an IPv4 or an IPv6 address.
 - You may consider using [relayd](https://man.openbsd.org/relayd.8) to allow incoming Yggdrasil connections on both IPv4 and IPv6 simultaneously.
-
-## EdgeRouter
-
-- Tested and working on the EdgeRouter X, using the [vyatta-yggdrasil](https://github.com/neilalexander/vyatta-yggdrasil) wrapper package.

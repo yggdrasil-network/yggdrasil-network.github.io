@@ -1,0 +1,93 @@
+---
+tags: dontlink
+---
+
+# EdgeRouter
+
+Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](https://github.com/neilalexander/vyatta-yggdrasil) package.
+
+## Notes
+
+- Yggdrasil does not survive an upgrade of the EdgeRouter firmware. You must reinstall it after a system upgrade.
+- After reinstalling Yggdrasil, use `load` to reload your configuration `commit` to make it effective again. Do not run `save` under any circumstances until after you have reloaded your configuration.
+
+## Installation
+
+Start by either [downloading the latest vyatta-yggdrasil .deb package](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
+```
+sudo dpkg -i vyatta-yggdrasil-x.x.xxx-mipsel.deb
+```
+
+## Generate configuration
+
+Configuration for Yggdrasil is generated automatically when you create an interface.
+```
+configure
+set interfaces yggdrasil tun0
+commit
+```
+At this point, Yggdrasil will start running using default configuration.
+
+## Add Peers
+
+Add additional peers (using `tcp://` or `udp://`):
+```
+configure
+set interfaces yggdrasil tunX peers tcp://hostname.com:12345
+set interfaces yggdrasil tunX peers tcp://a.b.c.d:12345
+set interfaces yggdrasil tunX peers tcp://[a:b:c::d]:12345
+commit
+run restart yggdrasil tun0
+```
+
+## Set multicast
+
+Enable or disable multicast (replacing `tunX` with your chosen TUN adapter):
+```
+configure
+set interfaces yggdrasil tunX multicast true
+set interfaces yggdrasil tunX multicast false
+commit
+run restart yggdrasil tun0
+```
+
+## Set MTU
+
+Set the maximum MTU of the Yggdrasil interface, from 1280-65535 (replacing `tunX` with your chosen TUN adapter):
+```
+configure
+set interfaces yggdrasil tun0 mtu 1500
+commit
+run restart yggdrasil tun0
+```
+
+## Configuration
+
+Other changes should be made to `/config/yggdrasil.tunX.conf` by hand. To make effective, restart yggdrasil (replacing `tunX` with your chosen TUN adapter):
+```
+restart yggdrasil tun0
+```
+
+## Masquerade
+
+If you want to allow other IPv6 hosts on your network to communicate through yggdrasil, you can configure an IPv6 masquerade rule. All traffic sent from other hosts on the network through the yggdrasil interface will be NAT'd.
+
+For example:
+```
+configure
+set interfaces yggdrasil tun0 masquerade from xxxx:xxxx:xxxx::/48
+commit
+```
+If you have multiple IPv6 subnets, then they can be configured individually by setting multiple `masquerade from` source ranges. Both private/ULA and public IPv6 subnets are acceptable.
+
+IPv6 masquerade is not supported on VyOS 1.1.x due to missing support in the kernel.
+
+### Crash Detection
+
+To make sure that the process is restarted if it crashes, schedule the `vyatta-check-yggdrasil` script to run at a regular interval:
+```
+configure
+set system task-scheduler task check-yggdrasil executable path /opt/vyatta/sbin/vyatta-check-yggdrasil
+set system task-scheduler task check-yggdrasil interval 1m
+commit
+```

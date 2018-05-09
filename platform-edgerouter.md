@@ -9,7 +9,7 @@ Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](h
 ## Notes
 
 - Yggdrasil does not survive an upgrade of the EdgeRouter firmware. You must reinstall it after a system upgrade.
-- After reinstalling Yggdrasil, use `load` to reload your configuration `commit` to make it effective again. Do not run `save` under any circumstances until after you have reloaded your configuration.
+- After reinstalling Yggdrasil, use `load` to reload your configuration and then `commit` to make it effective again. Do not run `save` under any circumstances until after you have reloaded your configuration.
 
 ## Installation
 
@@ -30,7 +30,7 @@ At this point, Yggdrasil will start running using default configuration.
 
 ## Add peers
 
-Add additional peers (using `tcp://` or `udp://`):
+Add additional peers to your configuration (using `tcp://` or `udp://`):
 ```
 configure
 set interfaces yggdrasil tunX peers tcp://hostname.com:12345
@@ -43,11 +43,11 @@ run restart yggdrasil tun0
 
 ## Set multicast
 
-Enable or disable multicast (replacing `tunX` with your chosen TUN adapter):
+Enable or disable multicast peer discovery:
 ```
 configure
-set interfaces yggdrasil tunX multicast true
-set interfaces yggdrasil tunX multicast false
+set interfaces yggdrasil tun0 multicast true
+set interfaces yggdrasil tun0 multicast false
 commit
 
 run restart yggdrasil tun0
@@ -55,7 +55,7 @@ run restart yggdrasil tun0
 
 ## Set MTU
 
-Set the maximum MTU of the Yggdrasil interface, from 1280-65535 (replacing `tunX` with your chosen TUN adapter):
+Set the maximum MTU of the Yggdrasil interface, from 1280-65535:
 ```
 configure
 set interfaces yggdrasil tun0 mtu 1500
@@ -66,7 +66,7 @@ run restart yggdrasil tun0
 
 ## Configuration
 
-Other changes should be made to `/config/yggdrasil.tun0.conf` by hand. To make effective, restart Yggdrasil (replacing `tunX` with your chosen TUN adapter):
+Other changes should be made to `/config/yggdrasil.tun0.conf` by hand. To make effective, restart Yggdrasil:
 ```
 restart yggdrasil tun0
 ```

@@ -83,14 +83,14 @@ Note that any field not specified in the configuration will use its default valu
     - The default value (an empty string) matches all interfaces.
     - This is useful if you want to prevent accidental peering over a layer 2 VPN running on top of Yggdrasil.
 - `IfName`
-    - The name of the `tun` or `tap` network interface to create or use.
+    - The name of the `tun` or `tap` network interface to create or use. Applications send packets over this interface to use the network.
+    - On most platforms, an empty string or the default `"auto"` will create a new interface automatically.
+    - You can also specify `none` as the interface name, in which case Yggdrasil will run as a router only without opening a network interface. This effectively allows Yggdrasil to carry traffic for other nodes without exposing the system to the network.
     - The behaviour of this option is different on different operating systems. Some quick notes:
         - On Linux, any suitable interface name can be specified.
         - On FreeBSD, OpenBSD and NetBSD, a full path to the TAP interface should be specified, i.e. `/dev/tap0`. 
-        - On Windows and macOS, an interface is selected automatically regardless of name.
-    - Yggdrasil can be run without connecting to a network interface, which effectively allows it to run as a router without actually handling traffic to or from the local machine. To do this, specify the interface name as `"none"`.
-    - Applications send packets over this interface to use the network.
-    - On most platforms, an empty string or the default `"auto"` will create a new interface automatically.
+        - On macOS, a utun device is automatically assigned by the operating system, therefore you cannot specify a name.
+        - On Windows, a network adapter friendly name (like `Local Area Connection 2`) can be specified to choose a specific adapter. Use "Network Adapters" in Control Panel to see and/or rename adapters.
 - `IfTAPMode`
     - If true, then the interface will be a `tap` device (Layer 2) instead of a `tun` (Layer 3) device.
     - Default value is platform specific, and some platforms support only `tun` or `tap` mode.

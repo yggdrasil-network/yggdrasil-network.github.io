@@ -28,7 +28,7 @@ commit
 ```
 At this point, Yggdrasil will start running using default configuration.
 
-## Add Peers
+## Add peers
 
 Add additional peers (using `tcp://` or `udp://`):
 ```
@@ -37,6 +37,7 @@ set interfaces yggdrasil tunX peers tcp://hostname.com:12345
 set interfaces yggdrasil tunX peers tcp://a.b.c.d:12345
 set interfaces yggdrasil tunX peers tcp://[a:b:c::d]:12345
 commit
+
 run restart yggdrasil tun0
 ```
 
@@ -48,6 +49,7 @@ configure
 set interfaces yggdrasil tunX multicast true
 set interfaces yggdrasil tunX multicast false
 commit
+
 run restart yggdrasil tun0
 ```
 
@@ -58,6 +60,7 @@ Set the maximum MTU of the Yggdrasil interface, from 1280-65535 (replacing `tunX
 configure
 set interfaces yggdrasil tun0 mtu 1500
 commit
+
 run restart yggdrasil tun0
 ```
 

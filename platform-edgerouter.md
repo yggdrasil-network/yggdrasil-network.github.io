@@ -63,14 +63,14 @@ run restart yggdrasil tun0
 
 ## Configuration
 
-Other changes should be made to `/config/yggdrasil.tunX.conf` by hand. To make effective, restart yggdrasil (replacing `tunX` with your chosen TUN adapter):
+Other changes should be made to `/config/yggdrasil.tun0.conf` by hand. To make effective, restart Yggdrasil (replacing `tunX` with your chosen TUN adapter):
 ```
 restart yggdrasil tun0
 ```
 
 ## Masquerade
 
-If you want to allow other IPv6 hosts on your network to communicate through yggdrasil, you can configure an IPv6 masquerade rule. All traffic sent from other hosts on the network through the yggdrasil interface will be NAT'd.
+If you want to allow other IPv6 hosts on your network to communicate through yggdrasil, you can configure an IPv6 masquerade rule. All traffic sent from other hosts on the network through the Yggdrasil interface will be NAT'd.
 
 For example:
 ```
@@ -79,8 +79,6 @@ set interfaces yggdrasil tun0 masquerade from xxxx:xxxx:xxxx::/48
 commit
 ```
 If you have multiple IPv6 subnets, then they can be configured individually by setting multiple `masquerade from` source ranges. Both private/ULA and public IPv6 subnets are acceptable.
-
-IPv6 masquerade is not supported on VyOS 1.1.x due to missing support in the kernel.
 
 ## Crash Detection
 
@@ -96,6 +94,8 @@ commit
 
 Use this as an example firewall configuration, which will allow outgoing connections but prevent unexpected incoming ones, with the exception of ICMPv6 which will be allowed:
 ```
+configure
+
 set firewall ipv6-name YGG_IN default-action drop
 set firewall ipv6-name YGG_LOCAL default-action drop
 
@@ -121,4 +121,6 @@ set firewall ipv6-name YGG_LOCAL rule 30 protocol icmpv6
 
 set interfaces yggdrasil tun0 firewall in ipv6-name YGG_IN
 set interfaces yggdrasil tun0 firewall local ipv6-name YGG_LOCAL
+
+commit
 ```

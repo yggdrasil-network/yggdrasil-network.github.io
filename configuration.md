@@ -4,35 +4,72 @@ Yggdrasil can be run with a dynamically generated configuration, using sane-ish 
 
 In most cases, a static configuration simplifies most setups - it allows you to maintain the same IP address, configure static peers and various other options that will persist across restarts.
 
-Configuration can be provided to Yggdrasil in JSON format either through `stdin` (using `yggdrasil --useconf < path/to/configuration.json`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/configuration.json`).
+Configuration can be provided to Yggdrasil in HJSON format either through `stdin` (using `yggdrasil --useconf < path/to/configuration.json`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/configuration.json`).
 
 A new configuration file may be generated with `yggdrasil --genconf > path/to/configuration.json`, which looks something like:
 
-```json
-{
-  "Listen": "[::]:51743",
-  "AdminListen": "[::1]:9001",
-  "Peers": [],
-  "AllowedBoxPubs": [],
-  "BoxPub": "some hex string",
-  "BoxPriv": "some hex string",
-  "SigPub": "some hex string",
-  "SigPriv": "some longer hex string",
-  "Multicast": true,
-  "LinkLocal": "",
-  "IfName": "auto",
-  "IfTAPMode": false,
-  "IfMTU": 65535,
-  "Net": {
-    "Tor": {
-      "OnionKeyfile": "",
-      "ControlAddr": "",
-      "Enabled": false
-    },
-    "I2P": {
-      "Keyfile": "",
-      "Addr": "",
-      "Enabled": false
+```{
+  # Listen address for peer connections (default is to listen for all
+  # connections over IPv4 and IPv6)
+  Listen: "[::]:45744"
+
+  # Listen address for admin connections (default is to listen only
+  # for local connections)
+  AdminListen: "[::1]:9001"
+
+  # List of connection strings for static peers (i.e. tcp://a.b.c.d:e)
+  Peers: []
+
+  # List of peer BoxPubs to allow UDP incoming TCP connections from
+  # (if left empty/undefined then connections will be allowed by default)
+  AllowedBoxPubs: []
+
+  # Your public encryption key (your peers may ask you for this to put
+  # into their AllowedBoxPubs configuration)
+  BoxPub: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  # Your private encryption key (do not share this with anyone!)
+  BoxPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  # Your public signing key
+  SigPub: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  # Your private signing key (do not share this with anyone!)
+  SigPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  # Enable or disable automatic peer discovery on the same LAN using multicast
+  Multicast: true
+
+  # Regex for which interfaces multicast peer discovery should be enabled on
+  LinkLocal: ""
+
+  # Local network interface name for TUN/TAP adapter, or "auto", or "none"
+  IfName: auto
+
+  # Set local network interface to TAP mode rather than TUN mode (if supported
+  # by your platform, option will be ignored if not)
+  IfTAPMode: false
+
+  # Maximux Transmission Unit (MTU) size for your local network interface
+  IfMTU: 65535
+
+  # Extended options for interoperability with other networks
+  Net:
+  { 
+    # Experimental options for configuring peerings over Tor 
+    Tor:
+    {
+      OnionKeyfile: ""
+      ControlAddr: ""
+      Enabled: false
+    }
+ 
+    # Experimental options for configuring peerings over I2P 
+    I2P:
+    {
+      Keyfile: ""
+      Addr: ""
+      Enabled: false
     }
   }
 }

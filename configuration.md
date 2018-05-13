@@ -36,7 +36,7 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/co
   SigPub: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
   # Your private signing key (do not share this with anyone!)
-  SigPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  SigPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
   # Enable or disable automatic peer discovery on the same LAN using multicast
   Multicast: true

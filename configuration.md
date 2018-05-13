@@ -8,7 +8,8 @@ Configuration can be provided to Yggdrasil in HJSON format either through `stdin
 
 A new configuration file may be generated with `yggdrasil --genconf > path/to/configuration.json`, which looks something like:
 
-```{
+```
+{
   # Listen address for peer connections (default is to listen for all
   # connections over IPv4 and IPv6)
   Listen: "[::]:45744"

@@ -6,6 +6,27 @@ tags: dontlink
 
 The admin socket provides an interface to query and configure Yggdrasil during runtime. By default, Yggdrasil listens for admin connections on `localhost:9001`.
 
+## `yggdrasilctl` Utility
+
+The `yggdrasilctl` utility provides a human-friendly CLI interface to the Yggdrasil admin socket. It can connect to both local and remote Yggdrasil instances, and accepts the same verbs as below. Each field is specified in the `field=value` format.
+
+Examples:
+```
+yggdrasilctl getDHT
+yggdrasilctl addPeer uri=tcp://a.b.c.d:e
+yggdrasilctl setTunTap name=auto mtu=65535 tap_mode=false
+````
+
+To perform an action on a remote Yggdrasil node, specify the `-endpoint` parameter:
+```
+yggdrasilctl -endpoint=10.0.0.1:9001 getPeers
+```
+
+To get the JSON response body instead of a "friendly" output, specify the `-json` parameter:
+```
+yggdrasilctl -json getSwitchPeers
+```
+
 ## Admin Socket
 
 The Yggdrasil admin socket uses JSON for request and response formats.

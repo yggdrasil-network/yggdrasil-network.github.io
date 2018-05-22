@@ -68,25 +68,43 @@ The `"request"` field contains a verb that describes which request to perform.
 Expects no additional request fields.
 
 Returns known nodes in the DHT.
-- `last_seen` contains the number of seconds since the DHT record was last updated
-- `bucket` contains the ID of the bucket that the DHT record is stored in
-- `coords` contains the coordinates of the node on the spanning tree
-- `peer_only` shows if the node is a peer
+- `last_seen` (`uint32`) contains the number of seconds since the DHT record was last updated
+- `bucket` (`uint8`) contains the ID of the bucket that the DHT record is stored in
+- `coords` (`string`) contains the coordinates of the node on the spanning tree
+- `peer_only` (`bool`) shows if the node is a peer
 
 #### `getPeers`
 
 Expects no additional request fields.
 
 Returns information about active peer sessions, sorted by IPv6 address.
-- `bytes_sent` contains the number of bytes sent to that peer
-- `bytes_recvd` contains the number of bytes received from that peer
-- `port` contains the local switch port number for that peer 
-- `uptime` contains the number of seconds since the peer connection was established
+- `bytes_sent` (`uint64`) contains the number of bytes sent to that peer
+- `bytes_recvd` (`uint64`) contains the number of bytes received from that peer
+- `port` (`uint8`) contains the local switch port number for that peer 
+- `uptime` (`uint32`) contains the number of seconds since the peer connection was established
 
 #### `getSwitchPeers`
 
 Expects no additional request fields.
 
 Returns information about switch peers, sorted by port number.
-- `coords` contains the coordinates of the node on the spanning tree
-- `ip` contains the IPv6 address of the node 
+- `coords` (`string`) contains the coordinates of the node on the spanning tree
+- `ip` (`string`) contains the IPv6 address of the node 
+
+#### `getSelf`
+
+Expects no additional request fields.
+
+Returns information about the current Yggdrasil node, sorted by IPv6 address.
+- `coords` (`string`) contains the coordinates of the node on the spanning tree
+
+#### `getSessions`
+
+Expects no additional request fields.
+
+Returns information about open sessions between the current Yggdrasil node and other nodes, sorted by IPv6 address. Open sessions indicate that traffic has been exchanged with the remote node recently.
+- `bytes_sent` (`uint64`) contains the number of bytes sent across that session
+- `bytes_recvd` (`uint64`) contains the number of bytes received across that session
+- `coords` (`string`) contains the coordinates of the remote node on the spanning tree
+- `mtu` (`uint8`) contains the negotiated session MTU between the local end and the remote end of the session
+- `was_mtu_fixed` (`bool`) shows whether or not the MTU has been adjusted since the session was opened to compensate for read errors

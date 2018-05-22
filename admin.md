@@ -138,8 +138,19 @@ If zero strings are returned then it is implied that all connections are permitt
 #### `addAllowedBoxPub`
 
 Expects:
-- `box_pub_key` (`string`) for the public key to allow
+- `box_pub_key` (`string`) for the public key to add
 
 Adds a new allowed box pub key.
 
-Returns zero or more successfully added box pub keys in the `"added"` section, and returns zero or more failed box pub keys in the `"not_added"` section. 
+Returns zero or more successful `string` box pub keys in the `"added"` section.
+Returns zero or more failed `string` box pub keys in the `"not_added"` section. 
+
+#### `removeAllowedBoxPub`
+
+Expects:
+- `box_pub_key` (`string`) for the public key to remove
+
+Removes an existing box pub key.
+
+Returns zero or more successful `string` box pub keys in the `"removed"` section.
+Returns zero or more failed `string` box pub keys in the `"not_removed"` section. 

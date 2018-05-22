@@ -77,7 +77,9 @@ Returns known nodes in the DHT.
 
 Expects no additional request fields.
 
-Returns information about active peer sessions, sorted by IPv6 address.
+Returns one or more records containing information about active peer sessions. The first record typically refers to the current node. 
+
+For each IPv6 address:
 - `bytes_sent` (`uint64`) contains the number of bytes sent to that peer
 - `bytes_recvd` (`uint64`) contains the number of bytes received from that peer
 - `port` (`uint8`) contains the local switch port number for that peer 
@@ -87,7 +89,9 @@ Returns information about active peer sessions, sorted by IPv6 address.
 
 Expects no additional request fields.
 
-Returns information about switch peers, sorted by port number.
+Returns zero or more records containing information about switch peers.
+
+For each port number:
 - `coords` (`string`) contains the coordinates of the node on the spanning tree
 - `ip` (`string`) contains the IPv6 address of the node 
 
@@ -95,16 +99,30 @@ Returns information about switch peers, sorted by port number.
 
 Expects no additional request fields.
 
-Returns information about the current Yggdrasil node, sorted by IPv6 address.
+Returns exactly one record containing information about the current Yggdrasil node.
+
+For the current IPv6 address:
 - `coords` (`string`) contains the coordinates of the node on the spanning tree
 
 #### `getSessions`
 
 Expects no additional request fields.
 
-Returns information about open sessions between the current Yggdrasil node and other nodes, sorted by IPv6 address. Open sessions indicate that traffic has been exchanged with the remote node recently.
+Returns zero or more records containing information about open sessions between the current Yggdrasil node and other nodes. Open sessions indicate that traffic has been exchanged with the remote node recently.
+
+For each IPv6 address:
 - `bytes_sent` (`uint64`) contains the number of bytes sent across that session
 - `bytes_recvd` (`uint64`) contains the number of bytes received across that session
 - `coords` (`string`) contains the coordinates of the remote node on the spanning tree
 - `mtu` (`uint8`) contains the negotiated session MTU between the local end and the remote end of the session
 - `was_mtu_fixed` (`bool`) shows whether or not the MTU has been adjusted since the session was opened to compensate for read errors
+
+#### `getTunTap`
+
+Expects no additional request fields.
+
+Returns exactly one record containing information about the current node's TUN/TAP adapter. 
+
+For each adapter:
+- `tap_mode` (`bool`) shows whether or not the interface is in TAP mode (if `false` then TUN mode is implied)
+- `mtu` (`uint8`) contains the MTU of the local TUN/TAP adapter

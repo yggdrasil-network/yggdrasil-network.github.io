@@ -73,7 +73,7 @@ A typical response is structured like this:
 A response:
 - *Always* has a `"request"` (`string`) field, which contains the body of the original request
 - *Always* has a `"status"` (`string`) field, which is either `"success"` or `"error"`
-- *Optionally* has a `"response"` section, which contains the response data from the request
+- *Optionally* has a `"response"` section, which contains the response data from the request - this is nearly always present, with the single exception that the verb specified in `"request"` does not exist, in which case the `"response"` section will be missing
 - *Optionally* has an `"error"` (`string`) field, which contains error text
 
 ### Request Types

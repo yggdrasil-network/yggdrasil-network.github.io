@@ -28,8 +28,8 @@ The structure of a typical request is as below:
 ```
 
 A request:
-- *Must* have a `"request"` field - a string value containing the verb of the request
-- *Can* have a `"keepalive"` field - a `true` or `false` value stating whether the connection should be kept alive for further requests (if not specified, Yggdrasil will close the admin connection after returning a response)
+- *Must* have a `"request"` (`string`) field - a value containing the verb of the request
+- *Can* have a `"keepalive"` (`bool`) field - a `true` or `false` value stating whether the connection should be kept alive for further requests (if not specified, Yggdrasil will close the admin connection after returning a response)
 - *Must* have any other required fields for the request
 - *Can* have any other optional fields for the request
 
@@ -54,10 +54,10 @@ A typical response is structured like this:
 ```
 
 A response:
-- *Always* has a `"request"` field, which contains the body of the original request
-- *Always* has a `"status"` field, which is either `"success"` or `"error"`
-- *Optionally* has a `"response"` field, which contains the response data from the request
-- *Optionally* has an `"error"` field, which contains error text
+- *Always* has a `"request"` (`string`) field, which contains the body of the original request
+- *Always* has a `"status"` (`string`) field, which is either `"success"` or `"error"`
+- *Optionally* has a `"response"` section, which contains the response data from the request
+- *Optionally* has an `"error"` (`string`) field, which contains error text
 
 ### Request Types
 
@@ -126,3 +126,11 @@ Returns exactly one record containing information about the current node's TUN/T
 For each adapter:
 - `tap_mode` (`bool`) shows whether or not the interface is in TAP mode (if `false` then TUN mode is implied)
 - `mtu` (`uint8`) contains the MTU of the local TUN/TAP adapter
+
+#### `getAllowedBoxPubs`
+
+Expects no additional request fields.
+
+Returns zero or more strings containing the allowed box public keys.
+
+If zero strings are returned then it is implied that all connections are permitted.

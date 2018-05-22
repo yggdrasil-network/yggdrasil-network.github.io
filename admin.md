@@ -92,8 +92,9 @@ Expects:
 
 Adds a new peer.
 
-Returns zero or more successful `string` peer URIs in the `"added"` section.
-Returns zero or more failed `string` peer URIs in the `"not_added"` section. 
+Returns:
+- Zero or more successful `string` peer URIs in the `"added"` section
+- Zero or more failed `string` peer URIs in the `"not_added"` section
 
 #### `removePeer`
 
@@ -102,8 +103,9 @@ Expects:
 
 Removes an existing peer.
 
-Returns zero or more successful `string` ports in the `"removed"` section.
-Returns zero or more failed `string` ports in the `"not_removed"` section. 
+Returns:
+- Zero or more successful `string` ports in the `"removed"` section
+- Zero or more failed `string` ports in the `"not_removed"` section 
 
 #### `getSwitchPeers`
 
@@ -162,8 +164,9 @@ Expects:
 
 Adds a new allowed box pub key.
 
-Returns zero or more successful `string` box pub keys in the `"added"` section.
-Returns zero or more failed `string` box pub keys in the `"not_added"` section. 
+Returns:
+- Zero or more successful `string` box pub keys in the `"added"` section
+- Zero or more failed `string` box pub keys in the `"not_added"` section
 
 #### `removeAllowedBoxPub`
 
@@ -172,5 +175,6 @@ Expects:
 
 Removes an existing box pub key.
 
-Returns zero or more successful `string` box pub keys in the `"removed"` section.
-Returns zero or more failed `string` box pub keys in the `"not_removed"` section. 
+Returns:
+- Zero or more successful `string` box pub keys in the `"removed"` section
+- Zero or more failed `string` box pub keys in the `"not_removed"` section

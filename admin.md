@@ -134,3 +134,12 @@ Expects no additional request fields.
 Returns zero or more strings containing the allowed box public keys.
 
 If zero strings are returned then it is implied that all connections are permitted.
+
+#### `addAllowedBoxPub`
+
+Expects:
+- `box_pub_key` (`string`) for the public key to allow
+
+Adds a new allowed box pub key.
+
+Returns zero or more successfully added box pub keys in the `"added"` section, and returns zero or more failed box pub keys in the `"not_added"` section. 

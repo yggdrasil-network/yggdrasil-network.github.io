@@ -85,6 +85,26 @@ For each IPv6 address:
 - `port` (`uint8`) contains the local switch port number for that peer 
 - `uptime` (`uint32`) contains the number of seconds since the peer connection was established
 
+#### `addPeer`
+
+Expects:
+- `uri` (`string`) for the peer to added, in standard URI format as used in the configuration file, i.e. `tcp://a.b.c.d:e`
+
+Adds a new peer.
+
+Returns zero or more successful `string` peer URIs in the `"added"` section.
+Returns zero or more failed `string` peer URIs in the `"not_added"` section. 
+
+#### `removePeer`
+
+Expects:
+- `port` (`uint8`) for the port of the peer to remove
+
+Removes an existing peer.
+
+Returns zero or more successful `string` ports in the `"removed"` section.
+Returns zero or more failed `string` ports in the `"not_removed"` section. 
+
 #### `getSwitchPeers`
 
 Expects no additional request fields.

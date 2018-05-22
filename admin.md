@@ -10,6 +10,14 @@ The admin socket provides an interface to query and configure Yggdrasil during r
 
 The Yggdrasil admin socket uses JSON for request and response formats.
 
+A request must be:
+- A complete JSON stanza
+- Followed by a newline `\n` character
+
+Once a valid request is received, the response stanza is returned.
+
+### Request
+
 The structure of a typical request is as below:
 ```
 {
@@ -18,6 +26,15 @@ The structure of a typical request is as below:
   "baz": "qux"
 }
 ```
+
+A request:
+- *Must* have a `"request"` field - a string value containing the verb of the request
+- *Can* have a `"keepalive"` field - a `true` or `false` value stating whether the connection should be kept alive for further requests (if not specified, Yggdrasil will close the admin connection after returning a response)
+- *Must* have any other required fields for the request
+- *Can* have any other optional fields for the request
+
+### Response 
+
 A typical response is structured like this:
 ```
 {
@@ -37,16 +54,18 @@ A typical response is structured like this:
 ```
 
 A response:
-- *Always* has a `request` field, which contains the body of the original request
-- *Always* has a `status` field, which is either `"success"` or `"error"`
-- *Optionally* has a `response` field, which contains the response data from the request
+- *Always* has a `"request"` field, which contains the body of the original request
+- *Always* has a `"status"` field, which is either `"success"` or `"error"`
+- *Optionally* has a `"response"` field, which contains the response data from the request
 - *Optionally* has an `"error"` field, which contains error text
 
-### Request
+### Request Types
 
 The `"request"` field contains a verb that describes which request to perform. 
 
 #### `getDHT`
+
+Expects no additional request fields.
 
 Returns known nodes in the DHT.
 - `last_seen` contains the number of seconds since the DHT record was last updated
@@ -56,7 +75,9 @@ Returns known nodes in the DHT.
 
 #### `getPeers`
 
-Returns information about active peer sessions.
+Expects no additional request fields.
+
+Returns information about active peer sessions, sorted by IPv6 address.
 - `bytes_sent` contains the number of bytes sent to that peer
 - `bytes_recvd` contains the number of bytes received from that peer
 - `port` contains the local switch port number for that peer 
@@ -64,4 +85,8 @@ Returns information about active peer sessions.
 
 #### `getSwitchPeers`
 
-Returns information about switch peers, including 
+Expects no additional request fields.
+
+Returns information about switch peers, sorted by port number.
+- `coords` contains the coordinates of the node on the spanning tree
+- `ip` contains the IPv6 address of the node 

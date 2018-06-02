@@ -23,6 +23,11 @@ To get the JSON response body instead of a "friendly" output, specify the `-json
 yggdrasilctl -json getSwitchPeers
 ```
 
+To draw a map of a node's view of the network, install Graphviz onto your system and use `dot`:
+```
+yggdrasilctl dot | dot -Tpng -o map.png
+```
+
 ## Admin Socket
 
 The Yggdrasil admin socket uses JSON for request and response formats.

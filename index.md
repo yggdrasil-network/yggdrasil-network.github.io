@@ -25,4 +25,5 @@ Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. I
 If you are interested in or would like to get involved in the Yggdrasil project, please feel free to join us!
 
 - Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org) (or even [read our channel backlog](https://view.matrix.org/room/!DwmKuvGvRKciqyFcxv:matrix.org/))
+- Alternatively, come and chat to us on the [Freenode IRC network](irc://chat.freenode.net/yggdrasil) in `#yggdrasil`.
 - Take a look at our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), and in particular, the [Open Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) which contain bugs waiting to be fixed, problems waiting to be solved and plenty of in-depth discussions about our implementation or design choices

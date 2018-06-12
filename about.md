@@ -81,13 +81,13 @@ The DHT is Kademlia-like in that it uses the `xor` metric and structures the has
 It differs from kademlia in that there are no values in the key:value store--it only stores information about DHT peers.
 Furthermore, the network bootstraps by adding one-hop neighbors to the DHT, and (for subtle reasons) this strategy does not behave the same as bootstrapping off of a dedicated node.
 To bootstrap successfully, when a bucket is full, old nodes (the least recently pinged) are removed to make room for new nodes.
-For a combination of performance and testing reasons, the usual iterative-parallel lookups are not used for searches in the DHT, and a recursive-serial approach is taken instead (similar to e.g. some implementations of [Chord](https://en.wikipedia.org/wiki/Chord_(DHT))).
 
 To summarize the entire procedure, given only a node's IP address, the goal is to find a route to the destination.
 That happens through 3 steps:
 
 1. The address is unpacked into the known bits of a NodeID and a bitmask to signal which bits of the NodeID are known (the unknown bits are ignored).
-2. A DHT search is performed, which normally results in a response from the node closest in the DHT keyspace to the target NodeID. The response contains the node's curve25519 key, which is checked to match the NodeID (and therefore the address), as well as the node's coordinates. Incorrect responses are ignored.
+2. A DHT search is performed, which normally results in a response from the node closest in the DHT keyspace to the target NodeID. The response contains the node's curve25519 key, which is checked to match the NodeID (and therefore the address), as well as the node's coordinates.
+The NodeID is checked to make sure it matches the target IPv6 address.
 3. Using the keys and coords from the above step, an ephemeral key exchange occurs between the source and destination nodes. These ephemeral session keys are used to encrypt any ordinary IPv6 traffic that may be encapsulated and sent between the nodes.
 
 ## Project Status and Plans

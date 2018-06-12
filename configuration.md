@@ -21,7 +21,7 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/co
   # List of connection strings for static peers (i.e. tcp://a.b.c.d:e)
   Peers: []
 
-  # List of peer BoxPubs to allow UDP incoming TCP connections from
+  # List of peer BoxPubs to allow incoming connections from
   # (if left empty/undefined then connections will be allowed by default)
   AllowedBoxPubs: []
 
@@ -81,7 +81,7 @@ Note that any field not specified in the configuration will use its default valu
 ## Configuration Options
 
 - `Listen`
-    - A string, in the form of `"ip:port"`, on which to listen for connections from peers (both TCP and UDP).
+    - A string, in the form of `"ip:port"`, on which to listen for (TCP) connections from peers.
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
     - The default is to listen on all addresses (`[::]`) with a random port.
 - `AdminListen`
@@ -91,11 +91,11 @@ Note that any field not specified in the configuration will use its default valu
 - `Peers`
     - A list of strings in the form `["peerAddress:peerPort", "peerAddress:peerPort", ...]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
-    - Each entry may optionally begin with `tcp://`, `udp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
+    - Each entry may optionally begin with `tcp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
     - If unspecified, the default is to connect over TCP.
 - `AllowedBoxPubs`
     - A list of strings in the form `["boxpub", "boxpub", ...]`, where `boxpub` is each node's `BoxPub` key which you would like to allow connections from.
-    - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections and both incoming and outgoing UDP connections.
+    - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.
     - If the list is left empty, or the option is not specified, then Yggdrasil will automatically accept connections from any other node.
     - Note that multicast link-local peerings (see below) will always override this option if enabled.
 - `BoxPub`
@@ -138,11 +138,6 @@ Note that any field not specified in the configuration will use its default valu
     - The MTU of the `tun`/`tap` interface.
     - Defaults to the maximum value supported on each platform, up to `65535` on Linux/macOS/Windows, `32767` on FreeBSD, `16384` on OpenBSD, `9000` on NetBSD, etc.
     - Yggdrasil automatically assists in Path MTU Discovery (PMTU) and will limit the MTU of a given connection between two hosts to the lower of the MTUs used by each endpoint. The operating system is made aware of these MTUs using ICMP.
-    - If traffic is routed over UDP links, PMTU may be further reduced to prevent unnecessary packet fragmentation.
-- `Net`
-    - Additional configuration options for overlay networks (Tor, I2P).
-    - Still under development.
-    - Note that a `socks` connection should be sufficient to use any network which is reachable over a SOCKS proxy.
 
 # Use Cases
 
@@ -150,13 +145,11 @@ Note that any field not specified in the configuration will use its default valu
 
 By default, only link-local auto-peering is enabled. This connects devices that are connected directly to each other at layer 2, including devices on the same LAN, directly connected by ethernet or configured to use the same ad-hoc wireless network.
 
-As the network uses ordinary TCP and UDP, it is possible to connect over other networks, such as the Internet or WAN links, provided that the connecting node knows the address and port to connect to and that the connection is not blocked by a NAT or firewall. If the node resides behind a NAT, then port forwarding may be required in order to accept incoming connections.
+As the network uses ordinary TCP, it is possible to connect over other networks, such as the Internet or WAN links, provided that the connecting node knows the address and port to connect to and that the connection is not blocked by a NAT or firewall. If the node resides behind a NAT, then port forwarding may be required in order to accept incoming connections.
 
-By default, connections to peers are made over TCP. This tends to have lower CPU usage than connecting over UDP, which leads to higher bandwidth on CPU-constrained single-board computers (i.e. Raspberry Pi). UDP connections can be made by specifying `udp://` in the connection string. These tend to require more CPU, due to lower PMTU, but otherwise mostly works the same.
-
-If two nodes that want to connect are both stuck behind NATs, then it should generally be possible to punch a hole through the NAT if each node specifies a `udp://` connection to the other.
-
-As a last resort, it is possible to route through a `socks://proxyAddr:proxyPort:/` connection. This uses TCP over the specified SOCKS proxy, and can be used to tunnel out from a network with a particularly restrictive firewall, for example, using SSH tunnelling. This can also be used to connect over Tor, particularly for `.onion` hidden service addresses.
+By default, connections to peers are made over TCP. It is possible to route through a `socks://proxyAddr:proxyPort/` connection.
+This uses TCP over the specified SOCKS proxy, and can be used to tunnel out from a network with a particularly restrictive firewall, for example, using SSH tunneling.
+This can also be used to [connect over Tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md), particularly for `.onion` hidden service addresses.
 
 If you are unable to find nodes in the nearby area, a best effort is made to maintain a list of [Public Peers](https://github.com/yggdrasil-network/public-peers) for new users looking to join or test the network.
 
@@ -204,9 +197,9 @@ This can partially mitigate the fact that IPv6 addresses are only 128 bits long,
 In short, if you plan to advertise a prefix, or if you want your address to be exceptionally difficult to collide with, then it is strongly advised that you burn some CPU cycles generating a harder-to-collide set of keys, using the following tool:
 
 ```
-GOPATH=$PWD go run misc/genkeys.go
+GOPATH=$PWD go run -tags debug misc/genkeys.go
 ```
 
 This continually generates new keys and prints them out each time a new best set of keys is discovered.
-These keys must then be manually added to the configuration file.
+These keys may then be manually added to the configuration file.
 

@@ -31,7 +31,7 @@ At this point, Yggdrasil will start running using default configuration, which i
 
 ## Add peers
 
-Add additional peers to your configuration (using `tcp://` or `udp://`):
+Add additional peers to your configuration (using `tcp://` or `socks://`):
 ```
 configure
 set interfaces yggdrasil tunX peers tcp://hostname.com:12345

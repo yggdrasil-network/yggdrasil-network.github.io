@@ -46,7 +46,8 @@ The result is that each node has a set of [coordinates in a greedy metric space]
 These coordinates are used as a distance label.
 Given the coordinates of any two nodes, it is possible to calculate the length of some real path through the network between the two nodes.
 Traffic is forwarded using a [greedy routing](https://en.wikipedia.org/wiki/Small-world_routing#Greedy_routing) scheme, where each node forwards the packet to a one-hop neighbor that is closer to the destination (according to this distance metric) than the current node.
-In particular, nodes try to maximize: `<bandwidth to next hop> / <expected length of path to destination>`, where the denominator is equal to 1 (from the link from the current node to the next hop) + the expected distance from the next hop to the destination (from the [metric space](https://en.wikipedia.org/wiki/Metric_space)).
+In particular, nodes try to minimize: `<expected length of path to destination> + <number of packets already queued to be sent to that neighbor>`, where the first term based on the distance in the greedy [metric space](https://en.wikipedia.org/wiki/Metric_space) used by the network, and must be strictly less than the distance from the current node to the destination.
+The second term acts as a kind of (local) backpressure to route around congestion in some scenarios, particularly when there are multiple interfaces through which the same neighbor can be reached (e.g. ad-hoc wifi and a physical ethernet cable).
 
 ### Spanning Tree
 
@@ -64,7 +65,8 @@ The implementation chooses to set the sequence number equal to the unix time on 
 
 Other than the root node, every other node in the network must select one of its neighbors to use as their parent.
 This selection is done by maximizing: `<uptime + timeout> / <distance to the root>`.
-The `uptime` in this definition is equal to the time that a neighbor has been advertising *the same* coords for a node.
+Here, `uptime` is the time between when we first and last received a message from the node, and timeout is the time we wait before dropping a root due to inactivity.
+This essentially means the numerator is at least as long as the amount of time between when the neighbor was first seen and when the advertisement from the neighbor becomes invalid due to root timeout.
 
 The distance metric between nodes is simply the distance between the nodes if they routed on the spanning tree.
 This is equal to the sum of the distance from each node to the last common ancestor of the two nodes being compared.
@@ -79,13 +81,13 @@ The DHT is Kademlia-like in that it uses the `xor` metric and structures the has
 It differs from kademlia in that there are no values in the key:value store--it only stores information about DHT peers.
 Furthermore, the network bootstraps by adding one-hop neighbors to the DHT, and (for subtle reasons) this strategy does not behave the same as bootstrapping off of a dedicated node.
 To bootstrap successfully, when a bucket is full, old nodes (the least recently pinged) are removed to make room for new nodes.
-For a combination of performance and testing reasons, the usual iterative-parallel lookups are not used for searches in the DHT, and a recursive-serial approach is taken instead (similar to e.g. some implementations of [Chord](https://en.wikipedia.org/wiki/Chord_(DHT))).
 
 To summarize the entire procedure, given only a node's IP address, the goal is to find a route to the destination.
 That happens through 3 steps:
 
 1. The address is unpacked into the known bits of a NodeID and a bitmask to signal which bits of the NodeID are known (the unknown bits are ignored).
-2. A DHT search is performed, which normally results in a response from the node closest in the DHT keyspace to the target NodeID. The response contains the node's curve25519 key, which is checked to match the NodeID (and therefore the address), as well as the node's coordinates. Incorrect responses are ignored.
+2. A DHT search is performed, which normally results in a response from the node closest in the DHT keyspace to the target NodeID. The response contains the node's curve25519 key, which is checked to match the NodeID (and therefore the address), as well as the node's coordinates.
+The NodeID is checked to make sure it matches the target IPv6 address.
 3. Using the keys and coords from the above step, an ephemeral key exchange occurs between the source and destination nodes. These ephemeral session keys are used to encrypt any ordinary IPv6 traffic that may be encapsulated and sent between the nodes.
 
 ## Project Status and Plans

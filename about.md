@@ -46,7 +46,8 @@ The result is that each node has a set of [coordinates in a greedy metric space]
 These coordinates are used as a distance label.
 Given the coordinates of any two nodes, it is possible to calculate the length of some real path through the network between the two nodes.
 Traffic is forwarded using a [greedy routing](https://en.wikipedia.org/wiki/Small-world_routing#Greedy_routing) scheme, where each node forwards the packet to a one-hop neighbor that is closer to the destination (according to this distance metric) than the current node.
-In particular, nodes try to maximize: `<bandwidth to next hop> / <expected length of path to destination>`, where the denominator is equal to 1 (from the link from the current node to the next hop) + the expected distance from the next hop to the destination (from the [metric space](https://en.wikipedia.org/wiki/Metric_space)).
+In particular, nodes try to minimize: `<expected length of path to destination> + <number of packets already queued to be sent to that neighbor>`, where the first term based on the distance in the greedy [metric space](https://en.wikipedia.org/wiki/Metric_space) used by the network, and must be strictly less than the distance from the current node to the destination.
+The second term acts as a kind of (local) backpressure to route around congestion in some scenarios, particularly when there are multiple interfaces through which the same neighbor can be reached (e.g. ad-hoc wifi and a physical ethernet cable).
 
 ### Spanning Tree
 
@@ -64,7 +65,8 @@ The implementation chooses to set the sequence number equal to the unix time on 
 
 Other than the root node, every other node in the network must select one of its neighbors to use as their parent.
 This selection is done by maximizing: `<uptime + timeout> / <distance to the root>`.
-The `uptime` in this definition is equal to the time that a neighbor has been advertising *the same* coords for a node.
+Here, `uptime` is the time between when we first and last received a message from the node, and timeout is the time we wait before dropping a root due to inactivity.
+This essentially means the numerator is at least as long as the amount of time between when the neighbor was first seen and when the advertisement from the neighbor becomes invalid due to root timeout.
 
 The distance metric between nodes is simply the distance between the nodes if they routed on the spanning tree.
 This is equal to the sum of the distance from each node to the last common ancestor of the two nodes being compared.

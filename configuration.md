@@ -4,9 +4,9 @@ Yggdrasil can be run with a dynamically generated configuration, using sane-ish 
 
 In most cases, a static configuration simplifies most setups - it allows you to maintain the same IP address, configure static peers and various other options that will persist across restarts.
 
-Configuration can be provided to Yggdrasil in HJSON format either through `stdin` (using `yggdrasil --useconf < path/to/configuration.json`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/configuration.json`).
+Configuration can be provided to Yggdrasil in HJSON format either through `stdin` (using `yggdrasil --useconf < path/to/yggdrasil.conf`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/yggdrasil.conf`).
 
-A new configuration file may be generated with `yggdrasil --genconf > path/to/configuration.json`, which looks something like:
+A new configuration file may be generated with `yggdrasil --genconf > path/to/yggdrasil.conf`, which looks something like:
 
 ```
 {

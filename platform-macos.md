@@ -15,13 +15,19 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 ## Installation
 
-Start by either [downloading the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
+System Integrity Protection in macOS prevents you from copying files into `/usr/bin`, therefore you should install into `/usr/local/bin` instead. This may not exist by default so create it if it doesn't exist:
 ```
-sudo cp ~/Downloads/yggdrasil-x.x.xx-darwin-amd64 /usr/bin/yggdrasil
+sudo mkdir -p /usr/local/bin
+```
+
+Then [download the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
+```
+sudo cp ~/Downloads/yggdrasil-x.x.xx-darwin-amd64 /usr/local/bin/yggdrasil
 ```
 Alternatively, compile Yggdrasil from source (below) and install:
 ```
-sudo cp /path/to/yggdrasil-go/yggdrasil /usr/bin/yggdrasil
+sudo cp /path/to/yggdrasil-go/yggdrasil /usr/local/bin/yggdrasil
+sudo chmod +x /usr/local/bin/yggdrasil
 ```
 
 ## Generate configuration
@@ -48,7 +54,7 @@ sudo nohup yggdrasil -autoconf &
 
 Running as a background system service means that Yggdrasil will automatically start up in the background when your Mac boots. It also ensures that Yggdrasil will be restarted automatically if the process is terminated for some reason.
 
-Assuming that Yggdrasil is installed into `/usr/bin` and your configuration *already exists* in `/etc`, as above, then you can install Yggdrasil as a launchd service using the launchd scripts in the Git repository:
+You can install Yggdrasil as a launchd service using the launchd scripts in the Git repository. Locate the `yggdrasil.plist` file in the `contrib` folder of the repository and modify it so that the paths match your installation (i.e. `/usr/local/bin/yggdrasil` and `/etc/yggdrasil.conf`) and then install it:
 ```
 cd /path/to/yggdrasil-go
 sudo cp contrib/macos/yggdrasil.plist /Library/LaunchDaemons/

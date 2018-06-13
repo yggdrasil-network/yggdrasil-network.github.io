@@ -10,69 +10,57 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/co
 
 ```
 {
-  # Listen address for peer connections (default is to listen for all
-  # connections over IPv4 and IPv6)
-  Listen: "[::]:45744"
+  # Listen address for peer connections. Default is to listen for all
+  # TCP connections over IPv4 and IPv6 with a random port.
+  Listen: "[::]:33228"
 
-  # Listen address for admin connections (default is to listen only
-  # for local connections)
-  AdminListen: "[::1]:9001"
+  # Listen address for admin connections Default is to listen for local
+  # connections only on TCP port 9001.
+  AdminListen: localhost:9001
 
-  # List of connection strings for static peers (i.e. tcp://a.b.c.d:e)
+  # List of connection strings for static peers in URI format, i.e.
+  # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j
   Peers: []
 
-  # List of peer BoxPubs to allow incoming connections from
-  # (if left empty/undefined then connections will be allowed by default)
-  AllowedBoxPubs: []
+  # List of peer encryption public keys to allow or incoming TCP
+  # connections from. If left empty/undefined then all connections
+  # will be allowed by default.
+  AllowedEncryptionPublicKeys: []
 
-  # Your public encryption key (your peers may ask you for this to put
-  # into their AllowedBoxPubs configuration)
-  BoxPub: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  # Your public encryption key. Your peers may ask you for this to put
+  # into their AllowedEncryptionPublicKeys configuration.
+  EncryptionPublicKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Your private encryption key (do not share this with anyone!)
-  BoxPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  # Your private encryption key. DO NOT share this with anyone!
+  EncryptionPrivateKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Your public signing key
-  SigPub: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  # Your public signing key. You should not ordinarily need to share
+  # this with anyone.
+  SigningPublicKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Your private signing key (do not share this with anyone!)
-  SigPriv: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  # Your private signing key. DO NOT share this with anyone!
+  SigningPrivateKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Enable or disable automatic peer discovery on the same LAN using multicast
-  Multicast: true
+  # Regular expressions for which interfaces multicast peer discovery
+  # should be enabled on. If none specified, multicast peer discovery is
+  # disabled. The default value is .* which uses all interfaces.
+  MulticastInterfaces:
+  [
+    .*
+  ]
 
-  # Regex for which interfaces multicast peer discovery should be enabled on
-  LinkLocal: ""
-
-  # Local network interface name for TUN/TAP adapter, or "auto", or "none"
+  # Local network interface name for TUN/TAP adapter, or "auto" to select
+  # an interface automatically, or "none" to run without TUN/TAP.
   IfName: auto
 
-  # Set local network interface to TAP mode rather than TUN mode (if supported
-  # by your platform, option will be ignored if not)
+  # Set local network interface to TAP mode rather than TUN mode if
+  # supported by your platform - option will be ignored if not.
   IfTAPMode: false
 
-  # Maximux Transmission Unit (MTU) size for your local network interface
+  # Maximux Transmission Unit (MTU) size for your local TUN/TAP interface.
+  # Default is the largest supported size for your platform. The lowest
+  # possible value is 1280.
   IfMTU: 65535
-
-  # Extended options for interoperability with other networks
-  Net:
-  { 
-    # Experimental options for configuring peerings over Tor 
-    Tor:
-    {
-      OnionKeyfile: ""
-      ControlAddr: ""
-      Enabled: false
-    }
- 
-    # Experimental options for configuring peerings over I2P 
-    I2P:
-    {
-      Keyfile: ""
-      Addr: ""
-      Enabled: false
-    }
-  }
 }
 ```
 
@@ -89,37 +77,31 @@ Note that any field not specified in the configuration will use its default valu
     - The default is to listen on the loopback interface (`localhost:9001`) which ensures that only local connections to the admin socket are allowed.
     - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable. 
 - `Peers`
-    - A list of strings in the form `["peerAddress:peerPort", "peerAddress:peerPort", ...]` of peers to connect to.
+    - A list of strings in the form `[ "peerAddress:peerPort", "peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry may optionally begin with `tcp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
-    - If unspecified, the default is to connect over TCP.
-- `AllowedBoxPubs`
+- `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["boxpub", "boxpub", ...]`, where `boxpub` is each node's `BoxPub` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.
     - If the list is left empty, or the option is not specified, then Yggdrasil will automatically accept connections from any other node.
     - Note that multicast link-local peerings (see below) will always override this option if enabled.
-- `BoxPub`
+- `EncryptionPublicKey`
     - A hexadecimal string representing the node's public Curve25519 key.
     - A node's ID in the DHT is a (sha-512) hash of this public key.
     - A node's IP address is derived from the ID.
-- `BoxPriv`
+- `EncryptionPrivateKey`
     - A hexadecimal string representing the node's private Curve25519 key.
     - This is a private key, don't share it.
-- `SigPub`
+- `SigningPublicKey`
     - A hexadecimal string representing a node's public Ed25519 key.
     - Used primarily for signatures in the greedy routing scheme.
-- `SigPriv`
+- `SigningPrivateKey`
     - A hexadecimal string representing the node's private Ed25519 key.
     - This is a private key, don't share it.
-- `Multicast`
-    - If true (default), link-local multicast peering is enabled. This will attempt to discover other Yggdrasil nodes running on the same network and peer with them automatically, effectively creating a "zero-config" peering setup.
-    - Link-local multicast listens for UDP announcement messages on `[ff02::114]:9001`.
-    - Upon discovery, link-local multicast peers are added as TCP peers.
-- `LinkLocal`
-    - A regex string.
-    - Link-local multicast peering only connects over interfaces matching this regex.
+- `MulticastInterfaces`
+    - A list of regex strings for matching which interfaces to enable multicast peer discovery on. Interfaces that don't match any of the provided regexes are ignored.
     - The default value (an empty string) matches all interfaces.
-    - This is useful if you want to prevent accidental peering over a layer 2 VPN running on top of Yggdrasil.
+    - This is also useful if you want to prevent accidental peering over a layer 2 VPN running on top of Yggdrasil.
 - `IfName`
     - The name of the `tun` or `tap` network interface to create or use. Applications send packets over this interface to use the network.
     - On most platforms, an empty string or the default `"auto"` will create a new interface automatically.

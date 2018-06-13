@@ -4,7 +4,7 @@ tags: dontlink
 
 # Latest Builds
 
-After every push to the `master` branch of the [GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go), the code is automatically built by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms.
+After every push to the `master` branch of the [GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go), the code is automatically built by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms. If you prefer to live dangerously, builds are [also available](builds-develop.md) for the `develop` branch.
 For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful) from the latest build are linked below:
 
 <p id="buildArtifactLinks"></p>

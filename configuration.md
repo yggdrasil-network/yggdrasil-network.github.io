@@ -81,7 +81,7 @@ Note that any field not specified in the configuration will use its default valu
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry may optionally begin with `tcp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
 - `AllowedEncryptionPublicKeys`
-    - A list of strings in the form `["boxpub", "boxpub", ...]`, where `boxpub` is each node's `BoxPub` key which you would like to allow connections from.
+    - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.
     - If the list is left empty, or the option is not specified, then Yggdrasil will automatically accept connections from any other node.
     - Note that multicast link-local peerings (see below) will always override this option if enabled.

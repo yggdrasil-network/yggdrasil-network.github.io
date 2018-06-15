@@ -144,37 +144,37 @@ To that end, it is each node is assigned a `/64` prefix in parallel to their add
 A node acting as a router may advertise this prefix just as they would any other ordinary IPv6 network.
 
 This may be best illustrated by example.
-Suppose a node has generated the address: `fd00:1111:2222:3333:4444:5555:6666:7777`.
-Then the node may also use addresses from the prefix: `fd80:1111:2222:3333::/64` (note the `fd00` changed to `fd80`, a separate `/9` is used for prefixes, but the rest of the first 64 bits are the same).
+Suppose a node has generated the address: `200:1111:2222:3333:4444:5555:6666:7777`.
+Then the node may also use addresses from the prefix: `300:1111:2222:3333::/64` (note the `200` changed to `300`, a separate `/8` is used for prefixes, but the rest of the first 64 bits are the same).
 
-On Linux, something like the following should be sufficient to advertise a prefix and a route to `fd00::/8` using radvd to a network attached to the `eth0` interface:
+On Linux, something like the following should be sufficient to advertise a prefix and a route to `200::/7` using radvd to a network attached to the `eth0` interface:
 
 1. Enable IPv6 forwarding (e.g. `sysctl -w net.ipv6.conf.all.forwarding=1` or add it to sysctl.conf).
 
-2. `ip addr add fd80:1111:2222:3333::1/64 dev eth0` or similar, to assign an address for the router to use in that prefix, where the LAN is reachable through `eth0`.
+2. `ip addr add 300:1111:2222:3333::1/64 dev eth0` or similar, to assign an address for the router to use in that prefix, where the LAN is reachable through `eth0`.
 
 3. Install/run `radvd` with something like the following in `/etc/radvd.conf`:
 ```
 interface eth0
 {
         AdvSendAdvert on;
-        prefix fd80:1111:2222:3333::/64 {
+        prefix 300:1111:2222:3333::/64 {
             AdvOnLink on;
             AdvAutonomous on;
         };
-        route fd00::/8 {};
+        route 200::/7 {};
 };
 ```
 
 Note that a `/64` prefix has fewer bits of address space available to check against the node's ID, which in turn means hash collisions are more likely.
-As such, it is unwise to rely on addresses as a form of identify verification for the `fd80::/9` address range.
+As such, it is unwise to rely on addresses as a form of identify verification for the `300::/8` address range.
 
 ## Generating Stronger Addresses (and Prefixes)
 
 While 128 bits is long enough to make collisions technically impractical, if not outright impossible, it's not unreasonable to think that 64 bits may be attackable at some point if not now.
 Without going too far into the details, addresses are a truncated hash of a node's public key, with leading `1` bits accumulated and suppressed (along with the inevitable first `0` bit).
 Thanks to the accumulator, it is possible to brute force generate keys which include more bits of the node's ID in the node's IPv6 address, thereby making collisions more difficult.
-This can partially mitigate the fact that IPv6 addresses are only 128 bits long, and, more importantly, that prefixes are a mere 64 bits, 16 bits of which are sacrificed to the `fd00::/8` prefix and 1-byte accumulator in either case.
+This can partially mitigate the fact that IPv6 addresses are only 128 bits long, and, more importantly, that prefixes are a mere 64 bits, 16 bits of which are sacrificed to the `200::/7` prefix and 1-byte accumulator in either case.
 
 In short, if you plan to advertise a prefix, or if you want your address to be exceptionally difficult to collide with, then it is strongly advised that you burn some CPU cycles generating a harder-to-collide set of keys, using the following tool:
 

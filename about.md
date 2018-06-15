@@ -1,6 +1,6 @@
 # About
 
-Yggdrasil is an encrypted IPv6 network running in the [`fd00::/8` address range](https://en.wikipedia.org/wiki/Unique_local_address).
+Yggdrasil is an encrypted IPv6 network running in the [`200::/7` address range](https://en.wikipedia.org/wiki/Unique_local_address).
 It is an experimental/toy network, so failure is acceptable, as long as it's instructive to see how it breaks if/when everything falls apart.
 
 IP addresses are derived from cryptographic keys, to reduce the need for public key infrastructure.
@@ -16,14 +16,14 @@ In that sense, Yggdrasil seems to be competitive on paper, and working well in p
 ## Addressing and NodeIDs
 
 Yggdrasil uses a truncated version of a NodeID to assign addresses.
-An address is assigned from the `fd00::/8` prefix, according to the following:
+An address is assigned from the `200::/7` prefix, according to the following:
 
-1. Begin with `0xfd` as the first byte of the address.
+1. Begin with `0x02` as the first byte of the address, or `0x03` if it's a `/64` prefix.
 2. Count the number of leading `1` bits in the NodeID.
-3. Set the lower 7 bits of the second byte of the address to the number of leading `1` bits in the NodeID (7 bit unsigned integer, at most 127).
+3. Set the second byte of the address to the number of leading `1` bits in the NodeID (8 bit unsigned integer, at most 255).
 4. Append the NodeID to the remaining bits of the address, truncating the leading `1` bits and the first `0` bit, to a total address size of 128 bits.
 
-The first bit of the second byte is used to flag if an address is for a router (`fd00::/9`), or part of an advertised prefix (`fd80::/9`), where each router owns a `/64` prefix with the 9th bit of the address set to 1.
+The last bit of the first byte is used to flag if an address is for a router (`200::/8`), or part of an advertised prefix (`300::/8`), where each router owns a `/64` that matches their address (except with the eight bit set to 1 instead of 0).
 This allows the prefix to be advertised to the router's LAN, so unsupported devices can still connect to the network (e.g. network printers).
 
 The NodeID is a [sha512sum](https://en.wikipedia.org/wiki/SHA-512) of a node's public encryption key.

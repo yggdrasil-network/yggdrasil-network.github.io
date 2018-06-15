@@ -65,8 +65,9 @@ The implementation chooses to set the sequence number equal to the unix time on 
 
 Other than the root node, every other node in the network must select one of its neighbors to use as their parent.
 This selection is done by maximizing: `<uptime + timeout> / <distance to the root>`.
-Here, `uptime` is the time between when we first and last received a message from the node, and timeout is the time we wait before dropping a root due to inactivity.
-This essentially means the numerator is at least as long as the amount of time between when the neighbor was first seen and when the advertisement from the neighbor becomes invalid due to root timeout.
+Here, `uptime` is the time between when we first and last received a message from the node which advertised the node's current location in the tree (resetting to zero if the location changes), and timeout is the time we wait before dropping a root due to inactivity.
+This essentially means the numerator is at least as long as the amount of time between when the neighbor was first seen at its present location, and when the advertisement from the neighbor becomes invalid due to root timeout.
+Resetting the uptime with each coordinate change causes nodes to favor long-lived stable paths over short-lived unstable ones, for the purposes of tree construction (indirectly impacting route selection).
 
 The distance metric between nodes is simply the distance between the nodes if they routed on the spanning tree.
 This is equal to the sum of the distance from each node to the last common ancestor of the two nodes being compared.

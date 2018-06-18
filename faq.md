@@ -2,7 +2,7 @@
 
 ## Is Yggdrasil safe?
 
-All traffic sent across the Yggdrasil network is encrypted end-to-end. It cannot be decrypted or read by any intermediate nodes.
+All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming that our crypto is solid, it cannot be decrypted or read by any intermediate nodes. However, please note that Yggdrasil has not been officially externally audited.
 
 ## Is Yggdrasil stable?
 

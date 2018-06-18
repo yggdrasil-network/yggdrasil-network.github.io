@@ -57,7 +57,7 @@ yggdrasilctl -endpoint=127.0.0.1:12345
 
 ## I want to run an Yggdrasil router to provide connectivity for other people, but I don't want them to be able to reach my own machine.
 
-You can set the `IfName` configuration setting to `none`. This will load Yggdrasil, but will not create a TUN/TAP adapter, meaning that your host will not be exposed to the Yggdrasil network.
+You can set the `IfName` configuration setting to `none`. This will load Yggdrasil, but will not create a TUN/TAP adapter, meaning that your host will not be exposed to the Yggdrasil network. This does of course mean that you won't be able to send any traffic from that node to Yggdrasil either!
 
 ## I want to allow outgoing connections from my machine but prevent unwanted incoming connections.
 

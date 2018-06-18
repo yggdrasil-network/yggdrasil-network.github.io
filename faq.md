@@ -2,13 +2,15 @@
 
 ## Is Yggdrasil safe?
 
-All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming that our crypto is solid, it cannot be decrypted or read by any intermediate nodes. However, please note that Yggdrasil has not been officially externally audited.
+All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming that our crypto is solid, it cannot be decrypted or read by any intermediate nodes, and can only be decrypted by the recipient for which it was intended. However, please note that Yggdrasil has not been officially externally audited.
 
 ## Is Yggdrasil stable?
 
-Our official stance is that it is still alpha software. Expect things to not be wholly smooth, and expect to have to upgrade often to the latest builds.
+Our official stance is that it is still alpha software. Expect things to not be wholly smooth, and expect to have to upgrade often to the latest builds. That said, there is a small community of users who have not experienced any stability problems so far. Yggdrasil very rarely crashes.
 
-That said, there is a small community of users who have not experienced any stability problems so far. Yggdrasil very rarely crashes.
+## Does Yggdrasil work on my platform?
+
+Quite likely! Take a look at the [Platforms](platforms.md) page - you'll find platform-specific notes there.
 
 ## Does Yggdrasil require IPv6?
 

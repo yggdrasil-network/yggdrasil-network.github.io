@@ -42,11 +42,21 @@ The Debian package installs the Yggdrasil service into systemd, therefore you ca
 
 Yggdrasil only loads the configuration at startup. Restart the Yggdrasil process or service to load the new configuration.
 
-### I'm running Yggdrasil on a machine that is reachable from the Internet. Does this mean anyone can peer with me?
+### I'm running Yggdrasil on a machine that is directly reachable from the Internet. Does this mean anyone can peer with me?
 
-Without any further configuration, yes. However, you can limit who can peer with you by modifying the `AllowedEncryptionPublicKeys` configuration option. When this list is empty, any remote node is allowed to peer with you.
+Without any further configuration, yes.
 
-To restrict incoming peerings to certain nodes, you should first ask the operators of those nodes for their `EncryptionPublicKey` and then add those public keys into your own `AllowedEncryptionPublicKeys` setting. 
+However, you can either limit incoming connections to your host using a firewall by limiting or denying connections to the port specified in your `Listen` configuration option. This is useful if you want to limit peerings from certain IP ranges or on certain interfaces.
+
+Alternatively, you can limit who can peer with you by modifying the `AllowedEncryptionPublicKeys` option in your Yggdrasil configuration. When this list is empty, any remote node is allowed to peer with you.
+
+To restrict incoming peerings to certain nodes, you should first ask the operators of those nodes for their `EncryptionPublicKey` and then add those public keys into your own `AllowedEncryptionPublicKeys` list. From that point forward, only nodes with those public keys will be allowed to peer with you.
+
+### I am running Yggdrasil from behind a NAT. Will this affect my connectivity?
+
+To accept incoming peerings, you will probably need to configure port forwarding on your router/gateway. Yggdrasil listens on the port number specified in the `Listen` setting, so forward this port to the machine that runs Yggdrasil.
+
+To use outbound peerings, that is, static peers that have been configured in your `Peers` setting, you will likely not need to change anything. 
 
 ### I've changed my `AdminListen` port and now `yggdrasilctl` doesn't work.
 

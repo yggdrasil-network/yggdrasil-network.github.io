@@ -84,8 +84,6 @@ ip6tables -A INPUT -i tun0 -j DROP
 #### Windows (with Windows Firewall)
 Windows, by default, will classify the TAP adapter as a "Public Network". Configure Windows Firewall to prevent incoming connections on Public networks.
 
-Note that this does mean that your node won't be able to send any traffic to the Yggdrasil either - it will act purely as an intermediate router.
-
 #### macOS (with built-in firewall)
 macOS has an application firewall, therefore any firewall policies applied on other interfaces will also apply to the Yggdrasil interface.
 

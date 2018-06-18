@@ -50,14 +50,14 @@ To restrict incoming peerings to certain nodes, you should first ask the operato
 
 ## I've changed my `AdminListen` port and now `yggdrasilctl` doesn't work.
 
-`yggdrasilctl` will assume that your admin port is on `localhost:9001`. If you have changed it, simply pass this option through to `yggdrasilctl`, i.e.
+`yggdrasilctl` will assume that your admin port is on `localhost:9001`. If you have changed it, simply pass your configured endpoint through to `yggdrasilctl`, i.e.
 ```
 yggdrasilctl -endpoint=127.0.0.1:12345
 ```
 
 ## I want to run an Yggdrasil router to provide connectivity for other people, but I don't want them to be able to reach my own machine.
 
-You can set the `IfName` configuration setting to `none`. This will load Yggdrasil, but will not create a TUN/TAP adapter, meaning that your host will not be exposed to the Yggdrasil network. This does of course mean that you won't be able to send any traffic from that node to Yggdrasil either!
+You can set the `IfName` configuration setting to `"none"`. This will load Yggdrasil, but will not create a TUN/TAP adapter, meaning that your host will not be exposed to the Yggdrasil network. This does of course mean that you won't be able to send any traffic from that node to Yggdrasil either!
 
 ## I want to allow outgoing connections from my machine but prevent unwanted incoming connections.
 

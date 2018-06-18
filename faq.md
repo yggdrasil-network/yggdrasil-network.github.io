@@ -1,4 +1,26 @@
-# Frequently Asked Questions
+# FAQ
+
+## Is Yggdrasil safe?
+
+All traffic sent across the Yggdrasil network is encrypted end-to-end. It cannot be decrypted or read by any intermediate nodes.
+
+## Is Yggdrasil stable?
+
+Our official stance is that it is still alpha software. Expect things to not be wholly smooth, and expect to have to upgrade often to the latest builds.
+
+That said, there is a small community of users who have not experienced any stability problems so far. Yggdrasil very rarely crashes.
+
+## Does Yggdrasil require IPv6?
+
+Your system must be IPv6-capable, which just about all modern operating systems are.
+
+While Yggdrasil does transport only IPv6 traffic internally, you do not need an IPv6 internet connection to peer with other Yggdrasil users. You can peer with other Yggdrasil nodes over either IPv4 or IPv6.
+
+## Will Yggdrasil conflict with my network routing?
+
+Yggdrasil uses the `0200::/7` range, which is a range deprecated by the IETF. It has been deprecated since 2004, pending changes to an RFC which simply never materialised 14 years later. It was decided to use this range instead of `fc00::/7` (which is more typically allocated to private networks) in order to prevent conflicts with existing ULA ranges.
+
+As long as you are not using this deprecated address range on your network, you will not experience any routing conflicts.
 
 ## I've just installed Yggdrasil and I can't ping anyone. What have I missed?
 

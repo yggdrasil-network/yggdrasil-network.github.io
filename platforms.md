@@ -2,18 +2,7 @@
 
 ## Linux
 
-- Should work out of the box on most Linux distributions.
-- systemd service scripts are included in the `contrib/systemd/` folder so that it runs automatically in the background (using `/etc/yggdrasil.conf` for configuration), copy the service files into `/etc/systemd/system`, copy `yggdrasil` into your `$PATH`, i.e. `/usr/bin`, and then enable the service:
-```
-systemctl enable yggdrasil
-systemctl start yggdrasil
-```
-- Once installed as a systemd service, you can read the `yggdrasil` output:
-```
-systemctl status yggdrasil
-journalctl -u yggdrasil
-```
-- If you are running a Debian-based system (including Ubuntu and elementaryOS), you may instead prefer to use the [automatically built](builds.md) Debian packages. These install the systemd scripts and generate a configuration file into `/etc/yggdrasil.conf` automatically, and can be easily upgraded when needed.
+- See the [Linux platform page](platform-linux.md).
 
 ## macOS
 

@@ -9,9 +9,7 @@ Yggdrasil is well supported on Linux.
 ## Notes
 
 - Should work with any kernel that includes `tun` and/or `tap`.
-- TAP mode is not supported on macOS, therefore the `IfTAPMode` option will have
-no effect.
-- The maximum MTU size supported on macOS is 65535.
+- The maximum MTU size supported on Linux is 65535.
 
 ## Debian
 

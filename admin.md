@@ -171,7 +171,7 @@ For each adapter:
 - `tap_mode` (`bool`) shows whether or not the interface is in TAP mode (if `false` then TUN mode is implied)
 - `mtu` (`uint8`) contains the MTU of the local TUN/TAP adapter
 
-#### `getAllowedBoxPubs`
+#### `getAllowedEncryptionPublicKeys`
 
 Expects no additional request fields.
 
@@ -179,10 +179,10 @@ Returns zero or more strings containing the allowed box public keys.
 
 If zero strings are returned then it is implied that all connections are permitted.
 
-#### `addAllowedBoxPub`
+#### `addAllowedEncryptionPublicKey`
 
 Expects:
-- `box_pub_key` (`string`) for the public key to add
+- `box_pub_key=` `string` for the public key to add
 
 Adds a new allowed box pub key.
 
@@ -190,10 +190,10 @@ Returns:
 - Zero or more successful `string` box pub keys in the `"added"` section
 - Zero or more failed `string` box pub keys in the `"not_added"` section
 
-#### `removeAllowedBoxPub`
+#### `removeAllowedEncryptionPublicKey`
 
 Expects:
-- `box_pub_key` (`string`) for the public key to remove
+- `box_pub_key=` `string` for the public key to remove
 
 Removes an existing box pub key.
 

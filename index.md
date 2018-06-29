@@ -10,9 +10,11 @@ Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjde
 
 ## Project Status
 
-The project is currently in very early stages but it is being actively developed. We have already passed our first [alpha release](https://github.com/yggdrasil-network/yggdrasil-go/milestone/1) and are now regularly releasing updates. A small number of users have been using and stress-testing Yggdrasil quite heavily for a number of purposes, including but not limited to secure remote access (SSH and VNC), access to Matrix, Jabber and IRC servers (including a Matrix-IRC bridge that runs solely over Yggdrasil) and even some video streams, large file transfers and performance tests. 
+The project is currently in very early stages but it is being actively developed. We have already passed our first [alpha release](https://github.com/yggdrasil-network/yggdrasil-go/milestone/1) and are now regularly releasing updates.
 
-It is entirely possible that occasional breaking changes may still happen but generally Yggdrasil works well and has proven to be reasonably stable so far, with recent builds reaching weeks of uptime without crashes or failures.
+A small number of users have been using and stress-testing Yggdrasil quite heavily for a number of purposes, including but not limited to secure remote access (SSH and VNC), access to Matrix, Jabber and IRC servers (including a Matrix-IRC bridge that runs solely over Yggdrasil) and even some video streams, large file transfers and performance tests. 
+
+It is entirely possible that occasional breaking changes may still happen in future versions but generally Yggdrasil works well and has proven to be reasonably stable so far, with recent builds reaching weeks of uptime without crashes or failures.
 
 Binaries are [automatically built](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) each time that we commit to the Git repository for a number of platforms. Feel free to [download them](builds.md), play with them, stress-test them or even use them in your own environments. However, be prepared to upgrade frequently and we wouldn't recommend relying on Yggdrasil for anything mission-critical at this stage!
 

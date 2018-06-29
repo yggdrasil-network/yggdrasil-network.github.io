@@ -5,7 +5,9 @@ tags: dontlink
 # Latest Development Builds
 
 Much like the `master` branch, developmental builds are also built from the `develop` branch by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms.
-Builds from the `develop` branch may be rougher around the edges and not be as well tested! If you value stability, stick to the [master](builds.md) builds.
+
+Builds from the `develop` branch will contain prerelease features and changes, although they may be rougher around the edges and not be as well tested! If you value stability, stick to the [master](builds.md) builds.
+
 For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=develop&filter=successful) from the latest `develop` build are linked below:
 
 <p id="buildArtifactLinks"></p>

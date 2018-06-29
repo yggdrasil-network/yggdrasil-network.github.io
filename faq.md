@@ -89,6 +89,6 @@ macOS has an application firewall, therefore any firewall policies applied on ot
 
 ### Why does my Yggdrasil adapter have an unusually high MTU?
 
-Yggdrasil peerings are typically stream-based and therefore don't suffer from fragmentation issues when pushing large amounts of data. By using the largest possible MTU supported by a platform, we can send much more data for every TCP control message. 
+Yggdrasil peerings are typically stream-based and therefore don't suffer from fragmentation issues when pushing large amounts of data. By using the largest possible MTU supported by a platform, we can send much more data in each write, and the TCP connection will take care of the rest. This also helps somewhat in the reduction of TCP-over-TCP amplification, as there are less control messages to be amplified.
 
-This also helps somewhat in the reduction of TCP-over-TCP amplification, as there are less control messages to be amplified, and also uses less CPU, as we can send more data for every system call on the TUN/TAP adapter or network socket!
+This also uses less CPU, as we can send more data for every system call on the TUN/TAP adapter or network socket. System calls often result in context switches by the operating system and are expensive operations, therefore by using an MTU of up to 65535, we can save as many as 42 context switches for each packet - a substantial performance improvement!

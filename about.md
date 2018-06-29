@@ -46,8 +46,14 @@ The result is that each node has a set of [coordinates in a greedy metric space]
 These coordinates are used as a distance label.
 Given the coordinates of any two nodes, it is possible to calculate the length of some real path through the network between the two nodes.
 Traffic is forwarded using a [greedy routing](https://en.wikipedia.org/wiki/Small-world_routing#Greedy_routing) scheme, where each node forwards the packet to a one-hop neighbor that is closer to the destination (according to this distance metric) than the current node.
-In particular, nodes try to minimize: `<expected length of path to destination> + <number of packets already queued to be sent to that neighbor>`, where the first term based on the distance in the greedy [metric space](https://en.wikipedia.org/wiki/Metric_space) used by the network, and must be strictly less than the distance from the current node to the destination.
-The second term acts as a kind of (local) backpressure to route around congestion in some scenarios, particularly when there are multiple interfaces through which the same neighbor can be reached (e.g. ad-hoc wifi and a physical ethernet cable).
+In particular, when a packet needs to be forward, a node will forward it to whatever peer is closest to the destination in the greedy [metric space](https://en.wikipedia.org/wiki/Metric_space) used by the network, provided that the peer is closer to the destination than the current node.
+If no closer peers are idle, then the packet is queued in FIFO order, with separate queues per destination+crypto-session (so traffic from different nodes, to the same destination, is tracked separately).
+Whenever the node finishes forwarding a packet to a peer, it checks the queued, and will forward from the *smallest* non-empty queue for which that peer is a valid next hop (i.e. closer to the destination than the current node).
+If no non-empty queue is available, then the peer is added to the idle set, forward packets when the need arises.
+This acts as a crude approximation of backpressure routing, where the remote queue sizes are assumed to be equal to the distance of a node from a destination (rather than communicating queue size information), and packets are never forwarded "backwards" through the network.
+Using the minimum non-empty queue size grants the largest fration of available bandwith to the session that attempt to use the *smallest* amount of bandwidth, loosely based on the rationale behind some proposed solutions to the [cake-cutting](https://en.wikipedia.org/wiki/Fair_cake-cutting) problem.
+Packets older than 25 ms are dropped from the front of the queue, to mitigate bufferbloat, for the same reasons as the (likely much better, but much more complicated) [CoDel](https://en.wikipedia.org/wiki/CoDel) approach to bufferbloat mitigation.
+Transmitting local queue sizes between neighbors, to permit true [backpressure routing](https://en.wikipedia.org/wiki/Backpressure_routing), continuing to use the metric space distance as a baseline shadow queue size, is under consideration for future study.
 
 ### Spanning Tree
 

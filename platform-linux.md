@@ -10,6 +10,8 @@ Yggdrasil is well supported on Linux.
 
 - Should work with any kernel that includes `tun` and/or `tap`.
 - The maximum MTU size supported on Linux is 65535.
+- Binary `.deb` packages are available for Debian, Ubuntu, elementaryOS and similar distributions.
+- Binary `.rpm` packages are available for Red Hat Enterprise Linux, Fedora, CentOS and similar distributions.
 
 ## Debian, Ubuntu, elementaryOS
 

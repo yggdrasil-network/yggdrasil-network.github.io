@@ -4,12 +4,14 @@ The admin socket provides an interface to query and configure Yggdrasil during r
 
 ## Control Utility
 
-The `yggdrasilctl` utility provides a human-friendly CLI interface to the Yggdrasil admin socket. It can connect to both local and remote Yggdrasil instances, and accepts the same verbs as below. Each field is specified in the `field=value` format.
+The `yggdrasilctl` utility provides a human-friendly CLI interface to the Yggdrasil admin socket. It can connect to both local and remote Yggdrasil instances, and accepts the same verbs as below. Every field is specified in the `field=value` format.
 
 Examples:
 ```
 yggdrasilctl getDHT
 yggdrasilctl addPeer uri=tcp://a.b.c.d:e
+yggdrasilctl getPeers
+yggdrasilctl removePeer port=4
 yggdrasilctl setTunTap name=auto mtu=65535 tap_mode=false
 ````
 
@@ -104,7 +106,7 @@ Returns one or more records containing information about active peer sessions. T
 For each IPv6 address:
 - `bytes_sent` (`uint64`) contains the number of bytes sent to that peer
 - `bytes_recvd` (`uint64`) contains the number of bytes received from that peer
-- `port` (`uint8`) contains the local switch port number for that peer 
+- `port` (`uint8`) contains the local switch port number for that peer
 - `uptime` (`uint32`) contains the number of seconds since the peer connection was established
 
 #### `addPeer`
@@ -121,7 +123,7 @@ Returns:
 #### `removePeer`
 
 Expects:
-- `port` (`uint8`) for the port of the peer to remove
+- `port` (`uint8`) for the port of the peer to remove, this can be looked up using `getPeers` or `getSwitchPorts`
 
 Removes an existing peer.
 

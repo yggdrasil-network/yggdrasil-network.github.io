@@ -25,6 +25,9 @@ install it on your system:
 ```
 sudo dpkg -i yggdrasil...deb
 ```
+Configuration will be generated automatically into `/etc/yggdrasil.conf` when
+the package is installed, and the Yggdrasil service will automatically be
+installed into systemd and started.
 
 ### From an Internet repository
 
@@ -59,6 +62,9 @@ install it on your system:
 ```
 sudo rpm -i yggdrasil...rpm
 ```
+Configuration will be generated automatically into `/etc/yggdrasil.conf` when
+the package is installed, and the Yggdrasil service will automatically be
+installed into systemd and started.
 
 ## Other Distributions
 

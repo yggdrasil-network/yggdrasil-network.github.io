@@ -11,10 +11,10 @@ Yggdrasil is well supported on Linux.
 - Should work with any kernel that includes `tun` and/or `tap`.
 - The maximum MTU size supported on Linux is 65535.
 
-## Debian
+## Debian, Ubuntu, elementaryOS
 
 Debian binary packages exist to simplify the installation of Yggdrasil. These
-will also work on any Debian-based distribution such as elementaryOS.
+will also work on any Debian-based distribution.
 
 ### From CircleCI
 
@@ -44,6 +44,19 @@ sudo apt-get install yggdrasil
 Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into systemd and started.
+
+## Red Hat Enterprise Linux, Fedora, CentOS
+
+RPM binary packages exist to simplify the installation of Yggdrasil. These
+will also work on any other RPM-based distribution.
+
+### From CircleCI
+
+Visit our [Builds](builds.md) page and download the relevant `.rpm` file, then
+install it on your system:
+```
+sudo rpm -i yggdrasil...rpm
+```
 
 ## Other Distributions
 

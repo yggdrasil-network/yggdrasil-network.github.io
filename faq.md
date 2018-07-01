@@ -8,6 +8,10 @@ All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming 
 
 Our official stance is that it is still alpha software. Expect things to not be wholly smooth, and expect to have to upgrade often to the latest builds. That said, there is a small community of users who have not experienced any stability problems so far. Yggdrasil very rarely crashes.
 
+### Is Yggdrasil anonymous?
+
+It is not a goal of the Yggdrasil project to provide anonymity. Your direct peers may be able to determine your location if, for example, you are peering over the Internet. 
+
 ### Does Yggdrasil work on my platform?
 
 Quite likely! Take a look at the [Platforms](platforms.md) page - you'll find platform-specific notes there.
@@ -56,7 +60,13 @@ To restrict incoming peerings to certain nodes, you should first ask the operato
 
 To accept incoming peerings, you will probably need to configure port forwarding on your router/gateway. Yggdrasil listens on the port number specified in the `Listen` setting, so forward this port to the machine that runs Yggdrasil.
 
-To use outbound peerings, that is, static peers that have been configured in your `Peers` setting, you will likely not need to change anything. 
+To use outbound peerings, that is, static peers that have been configured in your `Peers` setting, you will likely not need to change anything.
+
+### Why does my Yggdrasil adapter have an unusually high MTU?
+
+Yggdrasil peerings are typically stream-based and therefore don't suffer from fragmentation issues when pushing large amounts of data. By using the largest possible MTU supported by a platform, we can send much more data in each write, and the TCP connection will take care of the rest. This also helps somewhat in the reduction of TCP-over-TCP amplification, as there are less control messages to be amplified.
+
+This also uses less CPU, as we can send more data for every system call on the TUN/TAP adapter or network socket. System calls often result in context switches by the operating system and are expensive operations, therefore by using an MTU of up to 65535, we can save as many as 42 context switches for each packet - a substantial performance improvement!
 
 ### I've changed my `AdminListen` port and now `yggdrasilctl` doesn't work.
 
@@ -86,9 +96,3 @@ Windows, by default, will classify the TAP adapter as a "Public Network". Config
 
 #### macOS (with built-in firewall)
 macOS has an application firewall, therefore any firewall policies applied on other interfaces will also apply to the Yggdrasil interface.
-
-### Why does my Yggdrasil adapter have an unusually high MTU?
-
-Yggdrasil peerings are typically stream-based and therefore don't suffer from fragmentation issues when pushing large amounts of data. By using the largest possible MTU supported by a platform, we can send much more data in each write, and the TCP connection will take care of the rest. This also helps somewhat in the reduction of TCP-over-TCP amplification, as there are less control messages to be amplified.
-
-This also uses less CPU, as we can send more data for every system call on the TUN/TAP adapter or network socket. System calls often result in context switches by the operating system and are expensive operations, therefore by using an MTU of up to 65535, we can save as many as 42 context switches for each packet - a substantial performance improvement!

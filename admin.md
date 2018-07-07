@@ -17,7 +17,8 @@ yggdrasilctl setTunTap name=auto mtu=65535 tap_mode=false
 
 To perform an action on a remote Yggdrasil node, specify the `-endpoint` parameter:
 ```
-yggdrasilctl -endpoint=10.0.0.1:9001 getPeers
+yggdrasilctl -endpoint=tcp://10.0.0.1:9001 getPeers
+yggdrasilctl -endpoint=unix:///var/run/yggdrasil.sock getDHT
 ```
 
 To get the JSON response body instead of a "friendly" output, specify the `-json` parameter:
@@ -57,7 +58,7 @@ A request:
 - *Must* have any other required fields for the request
 - *Can* have any other optional fields for the request
 
-### Response 
+### Response
 
 A typical response is structured like this:
 ```
@@ -68,11 +69,11 @@ A typical response is structured like this:
     "foo": "bar",
     "baz": "qux"
   },
-  
+
   "response":
   {
   },
-  
+
   "status": "success"
 }
 ```
@@ -85,7 +86,7 @@ A response:
 
 ### Request Types
 
-The `"request"` field contains a verb that describes which request to perform. 
+The `"request"` field contains a verb that describes which request to perform.
 
 #### `getDHT`
 
@@ -101,7 +102,7 @@ Returns known nodes in the DHT.
 
 Expects no additional request fields.
 
-Returns one or more records containing information about active peer sessions. The first record typically refers to the current node. 
+Returns one or more records containing information about active peer sessions. The first record typically refers to the current node.
 
 For each IPv6 address:
 - `bytes_sent` (`uint64`) contains the number of bytes sent to that peer
@@ -129,7 +130,7 @@ Removes an existing peer.
 
 Returns:
 - Zero or more successful `string` ports in the `"removed"` section
-- Zero or more failed `string` ports in the `"not_removed"` section 
+- Zero or more failed `string` ports in the `"not_removed"` section
 
 #### `getSwitchPeers`
 
@@ -139,7 +140,7 @@ Returns zero or more records containing information about switch peers.
 
 For each port number:
 - `coords` (`string`) contains the coordinates of the node on the spanning tree
-- `ip` (`string`) contains the IPv6 address of the node 
+- `ip` (`string`) contains the IPv6 address of the node
 
 #### `getSelf`
 
@@ -167,7 +168,7 @@ For each IPv6 address:
 
 Expects no additional request fields.
 
-Returns exactly one record containing information about the current node's TUN/TAP adapter. 
+Returns exactly one record containing information about the current node's TUN/TAP adapter.
 
 For each adapter:
 - `tap_mode` (`bool`) shows whether or not the interface is in TAP mode (if `false` then TUN mode is implied)

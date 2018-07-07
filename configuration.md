@@ -16,7 +16,7 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/yg
 
   # Listen address for admin connections Default is to listen for local
   # connections only on TCP port 9001.
-  AdminListen: localhost:9001
+  AdminListen: "tcp://localhost:9001"
 
   # List of connection strings for static peers in URI format, i.e.
   # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j
@@ -73,9 +73,10 @@ Note that any field not specified in the configuration will use its default valu
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
     - The default is to listen on all addresses (`[::]`) with a random port.
 - `AdminListen`
-    - Port to listen on for the (TCP) admin socket.
-    - The default is to listen on the loopback interface (`localhost:9001`) which ensures that only local connections to the admin socket are allowed.
-    - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable. 
+    - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
+    - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.
+    - The default is to listen on the loopback interface (`tcp://localhost:9001`) which ensures that only local connections to the admin socket are allowed.
+    - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
 - `Peers`
     - A list of strings in the form `[ "peerAddress:peerPort", "peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
@@ -108,14 +109,14 @@ Note that any field not specified in the configuration will use its default valu
     - You can also specify `"none"` as the interface name, in which case Yggdrasil will run as a router only without opening a network interface. This effectively allows Yggdrasil to carry traffic for other nodes without exposing the system to the network.
     - The behaviour of this option is different on different operating systems. Some quick notes:
         - On Linux, any suitable interface name can be specified.
-        - On FreeBSD, OpenBSD and NetBSD, a full path to the TAP interface should be specified, i.e. `"/dev/tap0"`. 
+        - On FreeBSD, OpenBSD and NetBSD, a full path to the TAP interface should be specified, i.e. `"/dev/tap0"`.
         - On macOS, a utun device is automatically assigned by the operating system, therefore you cannot specify a name.
         - On Windows, a network adapter friendly name (like `"Local Area Connection 2"`) can be specified to choose a specific adapter. Use "Network Adapters" in Control Panel to see and/or rename adapters.
 - `IfTAPMode`
     - If true, then the interface will be a `tap` device (Layer 2) instead of a `tun` (Layer 3) device.
     - Default value is platform specific, and some platforms support only `tun` or `tap` mode.
     - Note that the network only transports IPv6 packets, so frames sent to or received from a `tap` are decapsulated or encapsulated at the end points of a connection.
-    - In TAP mode, Yggdrasil automatically answers Neighbor Discovery Packet (NDP) requests on behalf of Yggdrasil IPv6 addresses. 
+    - In TAP mode, Yggdrasil automatically answers Neighbor Discovery Packet (NDP) requests on behalf of Yggdrasil IPv6 addresses.
 - `IfMTU`
     - The MTU of the `tun`/`tap` interface.
     - Defaults to the maximum value supported on each platform, up to `65535` on Linux/macOS/Windows, `32767` on FreeBSD, `16384` on OpenBSD, `9000` on NetBSD, etc.
@@ -184,4 +185,3 @@ GOPATH=$PWD go run -tags debug misc/genkeys.go
 
 This continually generates new keys and prints them out each time a new best set of keys is discovered.
 These keys may then be manually added to the configuration file.
-

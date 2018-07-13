@@ -3,11 +3,12 @@
 {% for post in site.posts %}
   <div class='blogpost'>
     <div id='date'>
-      <div id='day'>{{ page.date | date: "%-d" }}</div>
-      <div id='month'>{{ page.date | date: "%B %Y" }}</div>
+      <div id='day'>{{ post.date | date: "%-d" }}</div>
+      <div id='month'>{{ post.date | date: "%B %Y" }}</div>
     </div>
     <div id='overview'>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <div id='title'><a href="{{ post.url }}">{{ post.title }}</a></div>
+      <div id='excerpt'>{{ post.excerpt }}</div>
     </div>
   </div>
 {% endfor %}

@@ -3,11 +3,9 @@ layout: default
 ---
 
 <h1>{{ page.title }}</h1>
-<div>
-  <small>{{ page.date | date: "%-d %B %Y" }} by {{ page.author | default: site.author }}</small>
+<h5>{{ page.date | date: "%-d %B %Y" }} by {{ page.author | default: site.author }}
   {% if page.tags %}
-    <small>Tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-  {% endif %}
-</div>
+    <br />Tags: <em>{{ page.tags | join: "</em> - <em>" }}</em>
+  {% endif %}</h5>
 
 {{content}}

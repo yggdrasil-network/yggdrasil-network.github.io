@@ -35,7 +35,7 @@ pre.highlight {
 div.blogpost {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 75px minmax(200px, 1fr);
+  grid-template-columns: 100px minmax(200px, 1fr);
 
   margin-bottom: 1em;
 }
@@ -43,6 +43,7 @@ div.blogpost {
 div.blogpost div#date div#day {
   font-size: 2.25em;
   text-align: center;
+  margin-top: 0.1em;
 }
 
 div.blogpost div#date div#month {
@@ -51,7 +52,7 @@ div.blogpost div#date div#month {
   text-transform: uppercase;
 
   position: relative;
-  top: -0.5em;
+  top: -1em;
 }
 
 div.blogpost div#overview div#title {

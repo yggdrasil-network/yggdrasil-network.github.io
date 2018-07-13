@@ -25,9 +25,23 @@ div.wrapper {
 
 pre.highlight {
   width: auto;
-  white-space: pre-wrap;       
-  white-space: -moz-pre-wrap;  
-  white-space: -pre-wrap;      
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+
+div.blogpost {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100px minmax(200px, 1fr);
+}
+
+div.blogpost div.day {
+  font-size: 2em;
+}
+
+div.blogpost div.month {
+  font-size: 0.5em;
 }

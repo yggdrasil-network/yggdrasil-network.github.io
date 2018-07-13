@@ -78,9 +78,9 @@ Note that any field not specified in the configuration will use its default valu
     - The default is to listen on the loopback interface (`tcp://localhost:9001`) which ensures that only local connections to the admin socket are allowed.
     - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
 - `Peers`
-    - A list of strings in the form `[ "peerAddress:peerPort", "peerAddress:peerPort", ... ]` of peers to connect to.
+    - A list of strings in the form `[ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
-    - Each entry may optionally begin with `tcp://` or `socks://proxyAddress:proxyPort/` to manually force a connection over a specific protocol.
+    - Each entry should begin with `tcp://` or `socks://proxyAddress:proxyPort/`.
 - `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.

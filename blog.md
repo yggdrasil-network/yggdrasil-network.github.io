@@ -8,7 +8,7 @@
     </div>
     <div id='overview'>
       <div id='title'><a href="{{ post.url }}">{{ post.title }}</a></div>
-      <div id='excerpt'>{{ post.excerpt }}</div>
+      <div id='excerpt'>{{ post.excerpt | strip_html }}</div>
     </div>
   </div>
 {% endfor %}

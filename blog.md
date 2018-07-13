@@ -1,5 +1,7 @@
 # Blog
 
+You can subscribe to our blog [using RSS](https://yggdrasil-network.github.io/feed.xml).
+
 {% for post in site.posts %}
   <div class='blogpost'>
     <div id='date'>

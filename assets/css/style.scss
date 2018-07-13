@@ -39,16 +39,22 @@ div.blogpost {
 }
 
 div.blogpost div#date div#day {
-  font-size: 2em;
+  font-size: 2.25em;
   text-align: center;
 }
 
 div.blogpost div#date div#month {
-  font-size: 0.5em;
+  font-size: 0.6em;
   text-align: center;
+  text-transform: uppercase;
+}
+
+div.blogpost div#overview div#title {
+  margin-bottom: 0.25em;
 }
 
 div.blogpost div#overview div#excerpt {
+  padding-top: 0.5em;
   color: #444444;
   text-decoration: none;
   font-size: 1em;

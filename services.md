@@ -13,20 +13,21 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### IRC
 
 - `201:3ad4:37ce:3341:af74:976f:59c9:ddeb` port 6667, hosted by yakamo
+  - DNS name: `y.yakamo.org`
   - Join `#yggdrasil`
-  - DNS: `y.yakamo.org`
 
 ### Matrix
 
 - [h-ic.eu homeserver](http://ygg.h-ic.eu/_matrix/client/#/login)
+  - DNS name: `ygg.h-ic.eu`
   - Internet & Yggdrasil federation enabled
   - Also [accessible from the Internet](https://h-ic.eu)
 
 ### XMPP/Jabber
 
 - `201:3ad4:37ce:3341:af74:976f:59c9:ddeb` port 5222, hosted by yakamo/lex
+  - DNS name: `im-ygg.h-ic.eu`
   - Supports in-band registration of `@im.h-ic.eu` JIDs
-  - DNS: `im-ygg.h-ic.eu`
 
 ----
 
@@ -54,5 +55,5 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Minecraft
   - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
+    - DNS name: `mc.y.creativeserver.net`
     - Survival mode map, ask piele to be whitelisted
-    - DNS: `mc.y.creativeserver.net`

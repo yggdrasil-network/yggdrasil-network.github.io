@@ -67,7 +67,7 @@ restrictions which I will discuss shortly.
 
 The main benefits here are that Yggdrasil uses a LIFO queue for session traffic
 and also takes advantage of huge MTUs (as discussed in my [previous blog
-post]({% post_url 2018-07-16-remote-access %})) to lessen the effect of TCP control
+post]({{ site.baseurl }}{% post_url 2018-07-16-remote-access %})) to lessen the effect of TCP control
 message amplification and improved congestion handling. This results in a much
 more usable and stable connection when tunnelling TCP over a TCP Yggdrasil
 peering - the stability and the responsiveness of VNC proved to be much improved

@@ -97,9 +97,7 @@ whitelist are dropped, hiding my machines from anyone else on the network.
 
 An example of how I achieved this on my EdgeRouter X:
 ```
-set firewall group ipv6-address-group YGG_TRUSTED description 'Trusted yggdrasil hosts'
 set firewall group ipv6-address-group YGG_TRUSTED ipv6-address 'xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx'
-set firewall group ipv6-address-group YGG_TRUSTEDNETS description 'Trusted yggdrasil networks'
 set firewall group ipv6-network-group YGG_TRUSTEDNETS ipv6-network 'xxx:xxx:xxx::/48'
 
 set firewall ipv6-name YGG_IN default-action drop

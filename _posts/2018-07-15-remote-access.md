@@ -67,7 +67,7 @@ restrictions which I will discuss shortly.
 
 The main benefits here are that Yggdrasil uses a LIFO queue for session traffic
 and also takes advantage of huge MTUs (as discussed in my [previous blog
-post](_posts/2018-07-16-remote-access.md)) to lessen the effect of TCP control
+post](2018-07-16-remote-access.md)) to lessen the effect of TCP control
 message amplification and improved congestion handling. This results in a much
 more usable and stable connection when tunnelling TCP over a TCP Yggdrasil
 peering - the stability and the responsiveness of VNC proved to be much improved
@@ -138,4 +138,4 @@ node and still be able to reach your machines like before.
 Yggdrasil has proven to be a more-than-capable method for remotely accessing my
 home network and very much normalises the idea that all network traffic should
 be encrypted and treated as if it is private, even in locations where connection
-security would not otherwise be guaranteed. 
+security would not otherwise be guaranteed.

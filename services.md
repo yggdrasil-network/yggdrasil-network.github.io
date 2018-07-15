@@ -57,3 +57,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
     - DNS name: `mc.y.creativeserver.net`
     - Survival mode map, ask piele to be whitelisted
+
+----
+
+## DNS
+
+### Public DNS Server 
+  - `200:8993:bb44:e1f3:bde7:6234:3f3e:fdd1` port 53, hosted by [Famicoman](https://phillymesh.net)
+    - Supports clearnet resolution of standard DNS domains
+    - Supports resolution of [OpenNIC](https://www.opennic.org/) domains
+	- [DNSCrypt on port 5353](https://servers.opennicproject.org/edit.php?srv=ns7.nh.nl.dns.opennic.glue)

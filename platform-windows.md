@@ -36,7 +36,7 @@ Start by either [downloading the latest Yggdrasil binary](https://circleci.com/a
 
 Before starting Yggdrasil, you should generate configuration. Open a Command Prompt as Administrator:
 ```
-"C:\Program Files\Yggdrasil\yggdrasil.exe" > "C:\Program Files\Yggdrasil\yggdrasil.conf"
+"C:\Program Files\Yggdrasil\yggdrasil.exe" -genconf > "C:\Program Files\Yggdrasil\yggdrasil.conf"
 ```
 
 ## Run Yggdrasil

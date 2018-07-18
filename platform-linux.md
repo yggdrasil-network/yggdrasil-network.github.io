@@ -12,6 +12,8 @@ Yggdrasil is well supported on Linux.
 - The maximum MTU size supported on Linux is 65535.
 - Binary `.deb` packages are available for Debian, Ubuntu, elementaryOS and similar distributions.
 - Binary `.rpm` packages are available for Red Hat Enterprise Linux, Fedora, CentOS and similar distributions.
+- IPv6 needs to be enabled in order for Yggdrasil to work - IPv6 is usually enabled by default, but if not, enable using `sysctl -w net.ipv6.conf.all.disable_ipv6=0` or similar.
+- If using TUN/TAP then `/dev/net/tun` should be present on your system.
 
 ## Debian, Ubuntu, elementaryOS
 

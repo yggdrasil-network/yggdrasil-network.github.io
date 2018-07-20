@@ -15,7 +15,7 @@ Yggdrasil is well supported on Linux.
 - IPv6 needs to be enabled in order for Yggdrasil to work - IPv6 is usually enabled by default, but if not, enable using `sysctl -w net.ipv6.conf.all.disable_ipv6=0` or similar.
 - If using TUN/TAP then `/dev/net/tun` should be present on your system.
 
-## Debian, Ubuntu, elementaryOS
+## Debian, Ubuntu, elementaryOS (with systemd)
 
 Debian binary packages exist to simplify the installation of Yggdrasil. These
 will also work on any Debian-based distribution.
@@ -52,7 +52,7 @@ Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into systemd and started.
 
-## Red Hat Enterprise Linux, Fedora, CentOS
+## Red Hat Enterprise Linux, Fedora, CentOS (with systemd)
 
 RPM binary packages exist to simplify the installation of Yggdrasil. These
 will also work on any other RPM-based distribution.

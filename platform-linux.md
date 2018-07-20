@@ -90,7 +90,7 @@ Install Yggdrasil:
 ```
 sudo dnf install yggdrasil
 ```
-Enable and start the service:
+Enable and start the service after install/upgrade:
 ```
 sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil

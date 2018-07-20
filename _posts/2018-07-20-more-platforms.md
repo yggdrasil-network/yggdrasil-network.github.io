@@ -91,7 +91,7 @@ in the end, but did end up being really quite different from macOS.
 
 Originally I anticipated that setting the interface address, prefix and MTU
 would be just like macOS too, but this turned out not to be the case.
-Whereas macOS uses an `AF_SYSTEM` socket, BSD expects you to simplify perform
+Whereas macOS uses an `AF_SYSTEM` socket, BSD expects you to simply perform
 syscalls directly onto the TUN/TAP device node. More code for BSD was born.
 However, like all system calls, these are difficult to debug, and I haven't yet
 figured out the secret formula to getting these `ioctl` calls to work right. I

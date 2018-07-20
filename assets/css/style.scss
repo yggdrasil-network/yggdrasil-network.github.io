@@ -3,6 +3,14 @@
 
 @import "jekyll-theme-minimal";
 
+#logo {
+  width: 1.8in;
+
+  margin-left: none;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
 section {
   display: table-cell;
   width: 100%;

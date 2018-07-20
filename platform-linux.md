@@ -68,6 +68,34 @@ Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into systemd and started.
 
+### From an Internet repository
+
+To start with, download the repository key:
+```
+sudo curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil http://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+```
+
+Add the repository:
+```
+sudo cat > /etc/yum.repos.d/yggdrasil.repo << EOF
+[yggdrasil]
+name = Yggdrasil
+baseurl = https://neilalexander.s3.eu-west-2.amazonaws.com/rpm/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
+EOF
+```
+
+Install Yggdrasil:
+```
+sudo dnf install yggdrasil
+```
+Enable and start the service:
+```
+sudo systemctl enable yggdrasil
+sudo systemctl start yggdrasil
+```
+
 ## Other Distributions
 
 [Download the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:

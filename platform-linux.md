@@ -72,7 +72,7 @@ installed into systemd and started.
 
 To start with, download the repository key:
 ```
-sudo curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil http://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+sudo curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil http://neilalexander.s3.eu-west-2.amazonaws.com/rpm/key.txt
 ```
 
 Add the repository:

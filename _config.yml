@@ -5,3 +5,4 @@ description: End-to-end encrypted IPv6 networking to connect worlds
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag

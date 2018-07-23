@@ -1,3 +1,7 @@
+---
+sitemap: true
+---
+
 # FAQ
 
 ### Is Yggdrasil safe?
@@ -10,7 +14,7 @@ Our official stance is that it is still alpha software. Expect things to not be 
 
 ### Is Yggdrasil anonymous?
 
-It is not a goal of the Yggdrasil project to provide anonymity. Your direct peers may be able to determine your location if, for example, you are peering over the Internet. 
+It is not a goal of the Yggdrasil project to provide anonymity. Your direct peers may be able to determine your location if, for example, you are peering over the Internet.
 
 ### Does Yggdrasil work on my platform?
 

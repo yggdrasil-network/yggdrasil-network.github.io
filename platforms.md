@@ -1,3 +1,7 @@
+---
+sitemap: true
+---
+
 # Platforms
 
 ## Linux

@@ -1,5 +1,6 @@
 ---
 tags: dontlink
+sitemap: true
 ---
 
 # macOS

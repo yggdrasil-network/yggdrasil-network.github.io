@@ -1,3 +1,7 @@
+---
+sitemap: true
+---
+
 # About
 
 Yggdrasil is an encrypted IPv6 network running in the [`200::/7` address range](https://en.wikipedia.org/wiki/Unique_local_address).

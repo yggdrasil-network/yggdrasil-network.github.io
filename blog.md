@@ -1,3 +1,7 @@
+---
+sitemap: true
+---
+
 # Blog
 
 You can subscribe to our blog [using RSS](https://yggdrasil-network.github.io/feed.xml).

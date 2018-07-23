@@ -1,5 +1,6 @@
 ---
 tags: dontlink
+sitemap: true
 ---
 
 # Services
@@ -35,11 +36,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### BAN.AI Public Access Multics Service
 
- - `dps8@[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]` 
+ - `dps8@[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]`
    - Open anonymous Guest access and free user account registration.
    - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
    - More information and access available via [cjnds](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
-   
+
 ----
 
 ## Git
@@ -73,7 +74,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## DNS
 
-### Public DNS Server 
+### Public DNS Server
   - `200:8993:bb44:e1f3:bde7:6234:3f3e:fdd1` port 53, hosted by [Famicoman](https://phillymesh.net)
     - Supports clearnet resolution of standard DNS domains
     - Supports resolution of [OpenNIC](https://www.opennic.org/) domains

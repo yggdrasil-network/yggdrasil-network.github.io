@@ -1,10 +1,11 @@
 ---
 tags: dontlink
+sitemap: true
 ---
 
 # Latest Builds
 
-After every push to the `master` branch of the [GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go), the code is automatically built by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms. 
+After every push to the `master` branch of the [GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go), the code is automatically built by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms.
 
 If you prefer to live dangerously and want to test bleeding-edge features or changes, development builds are [available from the `develop` branch](builds-develop.md), although these may not be as stable.
 

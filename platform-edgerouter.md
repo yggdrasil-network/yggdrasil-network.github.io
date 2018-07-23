@@ -1,5 +1,6 @@
 ---
 tags: dontlink
+sitemap: true
 ---
 
 # EdgeRouter
@@ -27,7 +28,7 @@ configure
 set interfaces yggdrasil tun0
 commit
 ```
-At this point, Yggdrasil will start running using default configuration, which includes automatic peer discovery of other Yggdrasil nodes on the same network using multicast. 
+At this point, Yggdrasil will start running using default configuration, which includes automatic peer discovery of other Yggdrasil nodes on the same network using multicast.
 
 ## Add peers
 

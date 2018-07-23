@@ -1,7 +1,11 @@
 theme: jekyll-theme-minimal
 name: Yggdrasil
 title: Yggdrasil
-description: End-to-end encrypted IPv6 networking to connect worlds
+description: >
+  A proof-of-concept IPv6 meshnet, featuring end-to-end encryption, a unique
+  spanning tree routing algorithm and aiming to implement novel backpressure
+  routing metrics. It is lightweight, self-arranging and should scale well
+  beyond the limits of existing mesh networks.
 
 plugins:
   - jekyll-feed

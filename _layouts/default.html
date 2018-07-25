@@ -23,9 +23,11 @@
         <p>
         <a href="{{ site.github.url }}">Home</a><br />
         {% for page in site.pages %}
-          {% unless page.tags contains "dontlink" %}
-            <a href="{{ page.url }}">{{ page.title }}</a><br />
-          {% endunless %}
+          {% if "{{ page.url | slice: -5,5 }}" == ".html" %}
+            {% unless page.tags contains "dontlink" %}
+              <a href="{{ page.url }}">{{ page.title }}</a><br />
+            {% endunless %}
+          {% endif %}
         {% endfor %}
         </p>
 

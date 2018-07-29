@@ -8,16 +8,16 @@ author: Arceliar
 ### By any other name
 
 In an earlier post, I talked about Yggdrasil's use of a tree-based metric space for name-dependent routing.
-The purpose of this post is to explain how Yggdrasil's name-independnet routing is implemented.
+The purpose of this post is to explain how Yggdrasil's name-independent routing is implemented.
 
 Name-dependent routing means that addressing follows network topology: if the state of the network changes, then a machine's address can change.
 For example, in the CIDR-based internet, at least if you're the kind of person who reads random blogs about experimental routing schemes, then you've probably run into the dynamic addressing problem.
 If you're offline for too long, or your ISP does any non-trivial maintenance or upgrade work on their network, or sometimes for no visible reason, IP addresses tend to change.
-Sure, you can pay extra for a static address, but this is one of the cases where ISPs have a genuinely good excuse to charge extra: assigning a static IP means may require the ISPs routers to keep an additional route to you, which would consume excessive resources if everyone needed static addresses.
+Sure, you can pay extra for a static address, but this is one of the cases where ISPs have a genuinely good excuse to charge extra: assigning a static IP may require the ISPs routers to keep an additional route to you, which would consume excessive resources if everyone needed static addresses.
 
 If addresses are dynamic, and you want to host some kind of service, then you probably want to attach a static identifier to the host.
-This usually means [dynamic dns](https://en.wikipedia.org/wiki/Dynamic_DNS).
-This *also* tends to wrap the problem up with the separate problem of assigning human-readable identifiers, and securing this layer of abstraction [complicates things](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions).
+This usually means [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS).
+This *also* tends to wrap the problem up with the separate problem of assigning human-readable identifiers and securing this layer of abstraction [complicates things](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions).
 The real issue is that we simultaneously use an IP address as an *address*, specifying *where* we want to send a packet, and as a *name*, specifying *who* the packet is for.
 
 ### Addressing in Yggdrasil

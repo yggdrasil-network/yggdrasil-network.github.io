@@ -29,5 +29,5 @@ If you are interested in or would like to get involved in the Yggdrasil project,
 
 - Set up Yggdrasil on your [own computer or router](platforms.md) and join the network - the bigger the network grows, the better understanding we will get of how Yggdrasil can scale!
 - Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org) (or even [read our channel backlog](https://view.matrix.org/room/!DwmKuvGvRKciqyFcxv:matrix.org/))
-- Alternatively, come and chat to us on the [Freenode IRC network](irc://chat.freenode.net/yggdrasil) in `#yggdrasil`.
+- Alternatively, come and chat to us on the [Freenode IRC network](irc://chat.freenode.net/yggdrasil) in `#yggdrasil` (channel key/password `toconnectworlds`).
 - Take a look at our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), and in particular, the [Open Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) which contain bugs waiting to be fixed, problems waiting to be solved and plenty of in-depth discussions about our implementation or design choices

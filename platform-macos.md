@@ -24,6 +24,7 @@ sudo mkdir -p /usr/local/bin
 Then [download the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
 ```
 sudo cp ~/Downloads/yggdrasil-x.x.xx-darwin-amd64 /usr/local/bin/yggdrasil
+sudo chmod +x /usr/local/bin/yggdrasil
 ```
 Alternatively, compile Yggdrasil from source (below) and install:
 ```

@@ -79,3 +79,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Supports clearnet resolution of standard DNS domains
     - Supports resolution of [OpenNIC](https://www.opennic.org/) domains
 	- [DNSCrypt on port 5353](https://servers.opennicproject.org/edit.php?srv=ns7.nh.nl.dns.opennic.glue)
+
+----
+
+## Misc
+
+### NodeList
+  - [nodelist](https://github.com/yakamok/yggdrasil-nodelist/blob/master/nodelist) on github
+    - Node names can be a plain alias or a domain name
+    - Programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the IPv6 address with a pretty name

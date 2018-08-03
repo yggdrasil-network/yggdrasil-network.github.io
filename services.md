@@ -86,5 +86,5 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### NodeList
   - [nodelist](https://github.com/yakamok/yggdrasil-nodelist/blob/master/nodelist) on github
-    - this node list can be a plain alias or a domain name
-    - programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the ipv6 with a pretty name
+    - Node names can be a plain alias or a domain name
+    - Programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the IPv6 address with a pretty name

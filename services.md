@@ -56,10 +56,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Yggdrasil Network Data
 
-- [y.yakamo.org API](http://y.yakamo.org/#api) for collecting network data from Yggdrasil nodes:
+- [y.yakamo.org API](http://y.yakamo.org:3000/) network research & map view of the network:
   - [Current nodes](http://[201:3ad4:37ce:3341:af74:976f:59c9:ddeb]:3000/current)
-  - [Historical nodes](http://[201:3ad4:37ce:3341:af74:976f:59c9:ddeb]:3000/old)
-  - [All nodes](http://[201:3ad4:37ce:3341:af74:976f:59c9:ddeb]:3000/all)
 
 ----
 

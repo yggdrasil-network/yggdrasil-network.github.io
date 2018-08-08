@@ -100,3 +100,9 @@ Windows, by default, will classify the TAP adapter as a "Public Network". Config
 
 #### macOS (with built-in firewall)
 macOS has an application firewall, therefore any firewall policies applied on other interfaces will also apply to the Yggdrasil interface.
+
+### Is there any benefit to being the "root node" of the network?
+
+No. At worst, the root node may be used in worst-case-scenario paths between
+other nodes in the absence of being able to determine better routes, but this
+is not advantageous. 

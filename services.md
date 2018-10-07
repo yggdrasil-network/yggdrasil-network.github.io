@@ -9,29 +9,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Messaging
-
-### IRC
-
-- `201:3ad4:37ce:3341:af74:976f:59c9:ddeb` port 6667, hosted by yakamo
-  - DNS name: `y.yakamo.org`
-  - Join `#yggdrasil`
-
-### Matrix
-
-- [h-ic.eu homeserver](http://ygg.h-ic.eu/_matrix/client/#/login)
-  - DNS name: `ygg.h-ic.eu`
-  - Internet & Yggdrasil federation enabled
-  - Also [accessible from the Internet](https://h-ic.eu)
-
-### XMPP/Jabber
-
-- `201:3ad4:37ce:3341:af74:976f:59c9:ddeb` port 5222, hosted by yakamo/lex
-  - DNS name: `im-ygg.h-ic.eu`
-  - Supports in-band registration of `@im.h-ic.eu` JIDs
-
-----
-
 ## Shell accounts
 
 ### BAN.AI Public Access Multics Service
@@ -40,15 +17,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
    - Open anonymous Guest access and free user account registration.
    - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
    - More information and access available via [cjnds](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
-
-----
-
-## Git
-
-### Repository Hosting
-
-- [git.h-ic.eu](http://git.h-ic.eu), hosted by yakamo
-  - Supports public and private repositories
 
 ----
 

@@ -20,9 +20,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
    
 ### Linux containers
 
-- LXC containers hosted on ProLiant DL380 Gen8 hardware (dual Xeon, 96GB RAM) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
+- LXC containers hosted on ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
 - Routable to Yggdrasil only (not the public Internet), although access to Debian repos is available through a proxy
-- Hosted by neilalexander, ask in the Matrix channel if you'd like a container
+- Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
 ----
 

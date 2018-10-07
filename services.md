@@ -17,6 +17,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
    - Open anonymous Guest access and free user account registration.
    - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
    - More information and access available via [cjnds](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
+   
+### Linux containers
+
+- LXC containers hosted on ProLiant DL380 Gen8 hardware (dual Xeon, 96GB RAM) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
+- Routable to Yggdrasil only (not the public Internet), although access to Debian repos is available through a proxy
+- Hosted by neilalexander, ask in the Matrix channel if you'd like a container
 
 ----
 

@@ -9,6 +9,17 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+## Hosting
+
+### Linux containers
+
+- LXC containers hosted on HP ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM, 1.5TB on Smart Array) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
+  - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
+  - Containers can route to Yggdrasil only and cannot route to the public Internet, although access to Debian repos is available through a proxy (and other specific locations on request if needed)
+  - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
+
+----
+
 ## Shell accounts
 
 ### BAN.AI Public Access Multics Service
@@ -17,13 +28,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
    - Open anonymous Guest access and free user account registration.
    - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
    - More information and access available via [cjnds](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
-   
-### Linux containers
-
-- LXC containers hosted on HP ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM, 1.5TB on Smart Array) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
-  - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
-  - Containers can route to Yggdrasil only and cannot route to the public Internet, although access to Debian repos is available through a proxy (and other specific locations on request if needed)
-  - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
 ----
 

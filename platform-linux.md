@@ -24,7 +24,8 @@ will also work on any Debian-based distribution.
 ### From CircleCI
 
 Visit our [Builds](builds.md) page and download the relevant `.deb` file, then
-install it on your system:
+install it on your system. If you want to install the latest `.deb` from the
+`master` branch:
 ```
 curl -so- "https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful" | \
 egrep -o "https.*yggdrasil\-.*$(dpkg --print-architecture).deb" | \

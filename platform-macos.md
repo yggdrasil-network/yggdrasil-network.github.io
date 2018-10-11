@@ -58,7 +58,7 @@ Running as a background system service means that Yggdrasil will automatically s
 
 You can install Yggdrasil as a launchd service using the launchd scripts in the Git repository. Locate the [`yggdrasil.plist` file in the `contrib` folder](https://raw.githubusercontent.com/yggdrasil-network/yggdrasil-go/master/contrib/macos/yggdrasil.plist) of the repository and make sure that the paths match your installation (i.e. `/usr/local/bin/yggdrasil` and `/etc/yggdrasil.conf`) and then copy it into `/Library/LaunchDaemons/`.
 
-If you have the source repository:
+If you already have the source repository to hand, you can instead retrieve `yggdrasil.plist` from there instead of downloading as above:
 ```
 cd /path/to/yggdrasil-go
 sudo cp contrib/macos/yggdrasil.plist /Library/LaunchDaemons/

@@ -26,7 +26,9 @@ will also work on any Debian-based distribution.
 Visit our [Builds](builds.md) page and download the relevant `.deb` file, then
 install it on your system:
 ```
-sudo dpkg -i yggdrasil...deb
+curl -so- "https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful" | \
+egrep -o "https.*yggdrasil\-.*$(dpkg --print-architecture).deb" | \
+while read line; do curl -O $line && dpkg -i $(basename $line); done
 ```
 Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be

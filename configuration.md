@@ -16,15 +16,27 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/yg
 {
   # Listen address for peer connections. Default is to listen for all
   # TCP connections over IPv4 and IPv6 with a random port.
-  Listen: "[::]:33228"
+  Listen: "[::]:52072"
 
   # Listen address for admin connections Default is to listen for local
-  # connections only on TCP port 9001.
-  AdminListen: "tcp://localhost:9001"
+  # connections either on TCP/9001 or a UNIX socket depending on your
+  # platform. Use this value for yggdrasilctl -endpoint=X.
+  AdminListen: tcp://localhost:9001
 
   # List of connection strings for static peers in URI format, i.e.
-  # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j
+  # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j.
   Peers: []
+
+  # List of connection strings for static peers in URI format, arranged
+  # by source interface, i.e. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
+  # SOCKS peerings will NOT be affected by this option and should go in
+  # the "Peers" section instead.
+  InterfacePeers: {}
+
+  # Read timeout for connections, specified in milliseconds. If less
+  # than 6000 and not negative, 6000 (the default) is used. If negative,
+  # reads won't time out.
+  ReadTimeout: 0
 
   # List of peer encryption public keys to allow or incoming TCP
   # connections from. If left empty/undefined then all connections
@@ -65,6 +77,38 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/yg
   # Default is the largest supported size for your platform. The lowest
   # possible value is 1280.
   IfMTU: 65535
+
+  # The session firewall controls who can send/receive network traffic
+  # to/from. This is useful if you want to protect this node without
+  # resorting to using a real firewall. This does not affect traffic
+  # being routed via this node to somewhere else. Rules are prioritised as
+  # follows: blacklist, whitelist, always allow outgoing, direct, remote.
+  SessionFirewall:
+  { 
+    # Enable or disable the session firewall. If disabled, network traffic  
+    # from any node will be allowed. If enabled, the below rules apply. 
+    Enable: false
+ 
+    # Allow network traffic from directly connected peers. 
+    AllowFromDirect: true
+ 
+    # Allow network traffic from remote nodes on the network that you are  
+    # not directly peered with. 
+    AllowFromRemote: true
+ 
+    # Allow outbound network traffic regardless of AllowFromDirect or  
+    # AllowFromRemote. This does allow a remote node to send unsolicited  
+    # traffic back to you for the length of the session. 
+    AlwaysAllowOutbound: false
+ 
+    # List of public keys from which network traffic is always accepted,  
+    # regardless of AllowFromDirect or AllowFromRemote. 
+    WhitelistEncryptionPublicKeys: []
+ 
+    # List of public keys from which network traffic is always rejected,  
+    # regardless of the whitelist, AllowFromDirect or AllowFromRemote. 
+    BlacklistEncryptionPublicKeys: []
+  }
 }
 ```
 
@@ -85,6 +129,8 @@ Note that any field not specified in the configuration will use its default valu
     - A list of strings in the form `[ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry should begin with `tcp://` or `socks://proxyAddress:proxyPort/`.
+- `InterfacePeers`
+    - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
 - `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.
@@ -125,6 +171,24 @@ Note that any field not specified in the configuration will use its default valu
     - The MTU of the `tun`/`tap` interface.
     - Defaults to the maximum value supported on each platform, up to `65535` on Linux/macOS/Windows, `32767` on FreeBSD, `16384` on OpenBSD, `9000` on NetBSD, etc.
     - Yggdrasil automatically assists in Path MTU Discovery (PMTU) and will limit the MTU of a given connection between two hosts to the lower of the MTUs used by each endpoint. The operating system is made aware of these MTUs using ICMP.
+- `SessionFirewall`
+    - The session firewall lets you control the traffic sent to/from that node. It is useful if you want to act as a router without allowing access to your host, or if you only want to allow access from a specific set of nodes.
+    - Contains the following configuration options:
+    - `Enable`
+        - Disables or enables the session firewall.
+        - If enabled, the rules from the below options apply. If disabled, all traffic is allowed.
+    - `AllowFromDirect`
+        - Allows traffic from nodes that are direct peers.
+    - `AllowFromRemote`
+        - Allows traffic from nodes that are not direct peers.
+    - `AlwaysAllowOutbound`
+        - Allows traffic to a node only when outbound traffic is sent to that node.
+    - `WhitelistEncryptionPublicKeys`
+        - A list of node's `EncryptionPublicKey` keys that are always allowed to send traffic to this host.
+        - Takes priority over the above options, but is overridden by the blacklist below.
+    - `BlacklistEncryptionPublicKeys`
+        - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances.
+        - Takes priority over all other options.
 
 # Use Cases
 

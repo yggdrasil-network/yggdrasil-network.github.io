@@ -174,21 +174,21 @@ Note that any field not specified in the configuration will use its default valu
 - `SessionFirewall`
     - The session firewall lets you control the traffic sent to/from that node. It is useful if you want to act as a router without allowing access to your host, or if you only want to allow access from a specific set of nodes.
     - Contains the following configuration options:
-    - `Enable`
-        - Disables or enables the session firewall.
-        - If enabled, the rules from the below options apply. If disabled, all traffic is allowed.
-    - `AllowFromDirect`
-        - Allows traffic from nodes that are direct peers.
-    - `AllowFromRemote`
-        - Allows traffic from nodes that are not direct peers.
-    - `AlwaysAllowOutbound`
-        - Allows traffic to a node only when outbound traffic is sent to that node.
-    - `WhitelistEncryptionPublicKeys`
-        - A list of node's `EncryptionPublicKey` keys that are always allowed to send traffic to this host.
-        - Takes priority over the above options, but is overridden by the blacklist below.
-    - `BlacklistEncryptionPublicKeys`
-        - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances.
-        - Takes priority over all other options.
+        - `Enable`
+            - Disables or enables the session firewall.
+            - If enabled, the rules from the below options apply. If disabled, all traffic is allowed.
+        - `AllowFromDirect`
+            - Allows traffic from nodes that are direct peers.
+        - `AllowFromRemote`
+            - Allows traffic from nodes that are not direct peers.
+        - `AlwaysAllowOutbound`
+            - Allows traffic to a node only when outbound traffic is sent to that node.
+        - `WhitelistEncryptionPublicKeys`
+            - A list of node's `EncryptionPublicKey` keys that are always allowed to send traffic to this host.
+            - Takes priority over the above options, but is overridden by the blacklist below.
+        - `BlacklistEncryptionPublicKeys`
+            - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances.
+            - Takes priority over all other options.
 
 # Use Cases
 

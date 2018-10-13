@@ -37,9 +37,9 @@ installed into systemd and started.
 
 ### From an Internet repository
 
-To start with, trust the repository key:
+To start with, add the repository key to your apt keyring:
 ```
-curl -o- http://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt | sudo apt-key add -
+sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 569130E8CA20FBC4CB3FDE555898470A764B32C9
 ```
 
 Add the repository:

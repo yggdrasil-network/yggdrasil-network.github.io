@@ -31,6 +31,15 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+## IRC
+
+### meshIRC
+
+- Accessible via Yggdrasil at `301:4541:2f84:1188:216:3eff:fe84:627d` port 6667
+- Accessible via cjdns at `fc2a:897b:4630:86f8:c3a5:23cb:7ea5:a69a` port 6667
+  
+----
+
 ## API
 
 ### Yggdrasil Network Data

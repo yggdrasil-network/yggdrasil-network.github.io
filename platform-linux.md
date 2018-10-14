@@ -86,7 +86,6 @@ sudo cat > /etc/yum.repos.d/yggdrasil.repo << EOF
 name = Yggdrasil
 baseurl = https://neilalexander.s3.eu-west-2.amazonaws.com/rpm/
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
 EOF
 ```
 

@@ -37,6 +37,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - Accessible via Yggdrasil at `301:4541:2f84:1188:216:3eff:fe84:627d` port 6667
 - Accessible via cjdns at `fc2a:897b:4630:86f8:c3a5:23cb:7ea5:a69a` port 6667
+
+### benisnet
+
+- cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667`, ygg channel `#yggdrasil`
   
 ----
 

@@ -11,7 +11,7 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 - Tested and working out of the box on macOS 10.13 High Sierra and 10.14 Mojave.
 - May work in theory on any macOS version with `utun` support (which was added in macOS 10.7 Lion), although this is untested at present.
-- TAP mode is not supported on macOS, therefore the `IfTAPMode` option will have no effect.
+- TAP mode is not supported on macOS, therefore the `IfTAPMode` option will have no effect and will default to TUN mode automatically.
 - The maximum MTU size supported on macOS is 65535.
 
 ## Installation

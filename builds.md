@@ -11,7 +11,10 @@ If you prefer to live dangerously and want to test bleeding-edge features or cha
 
 For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful) from the latest build are linked below:
 
+<h4>yggdrasil</h4>
 <p id="buildArtifactLinks"></p>
+
+<h4>yggdrasilctl</h4>
 <p id="buildArtifactLinksCtl"></p>
 
 <!-- TODO sort these to a useful order of some kind -->
@@ -39,6 +42,5 @@ fetch(url).then(function(res) {
   document.getElementById("buildArtifactLinks").appendChild(links);
   document.getElementById("buildArtifactLinksCtl").appendChild(ctllinks);
 })
-.catch(err => { throw err });
 .catch(err => { throw err });
 </script>

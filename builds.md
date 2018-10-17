@@ -23,39 +23,24 @@ json.then(function(res) {
   return res.json();
 }).then(function (bins) {
   var links = document.createElement('p')
+  var ctllinks = document.createElement('p')
   for (var idx in bins) {
-    if (bin.path.includes("yggdrasilctl")) {
-      continue
-    }
     var bin = bins[idx]
     var link = document.createElement('a');
     link.appendChild(document.createTextNode(bin.path));
     link.title = bin.path;
     link.href = bin.url;
-    links.appendChild(link);
-    links.appendChild(document.createElement('br'));
+    if (bin.path.includes("yggdrasilctl")) {
+      ctllinks.appendChild(link);
+      ctllinks.appendChild(document.createElement('br'));
+    } else {
+      links.appendChild(link);
+      links.appendChild(document.createElement('br'));
+    }
   }
   document.getElementById("buildArtifactLinks").appendChild(links)
+  document.getElementById("buildArtifactLinksCtl").appendChild(ctllinks)
 })
 .catch(err => { throw err });
-
-json.then(function(res) {
-  return res.json();
-}).then(function (bins) {
-  var links = document.createElement('p')
-  for (var idx in bins) {
-    if (!bin.path.includes("yggdrasilctl")) {
-      continue
-    }
-    var bin = bins[idx]
-    var link = document.createElement('a');
-    link.appendChild(document.createTextNode(bin.path));
-    link.title = bin.path;
-    link.href = bin.url;
-    links.appendChild(link);
-    links.appendChild(document.createElement('br'));
-  }
-  document.getElementById("buildArtifactLinksCtl").appendChild(links)
-})
 .catch(err => { throw err });
 </script>

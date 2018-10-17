@@ -9,12 +9,12 @@ After every push to the `master` branch of the [GitHub repository](https://githu
 
 If you prefer to live dangerously and want to test bleeding-edge features or changes, development builds are [available from the `develop` branch](builds-develop.md), although these may not be as stable.
 
-For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful) from the latest build are linked below:
+For convenience, the latest builds are linked below:
 
-<h4>yggdrasil</h4>
+<h3>yggdrasil</h3>
 <p id="buildArtifactLinks"></p>
 
-<h4>yggdrasilctl</h4>
+<h3>yggdrasilctl (admin utility)</h3>
 <p id="buildArtifactLinksCtl"></p>
 
 <!-- TODO sort these to a useful order of some kind -->

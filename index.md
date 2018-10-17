@@ -21,7 +21,7 @@ Binaries are [automatically built](https://circleci.com/gh/yggdrasil-network/ygg
 
 ## Implementation
 
-Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including Linux, Windows, macOS, NetBSD, FreeBSD, OpenBSD and Ubiquiti EdgeOS) although with various minor caveats. See the [Platforms](platforms.md) page for more information.
+Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including [Linux](platform-linux.md), [Windows](platform-windows.md), [macOS](platform-macos.md), NetBSD, FreeBSD, OpenBSD and [Ubiquiti EdgeOS](platform-edgerouter.md)) although with various minor caveats. See the [Platforms](platforms.md) page for more information.
 
 ## Get Involved
 

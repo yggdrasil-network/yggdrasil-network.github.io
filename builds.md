@@ -17,9 +17,7 @@ For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/git
 <!-- TODO sort these to a useful order of some kind -->
 <script type="text/javascript">
 let url = 'https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful';
-let json = fetch(url)
-
-json.then(function(res) {
+fetch(url).then(function(res) {
   return res.json();
 }).then(function (bins) {
   var links = document.createElement('p')
@@ -38,8 +36,8 @@ json.then(function(res) {
       links.appendChild(document.createElement('br'));
     }
   }
-  document.getElementById("buildArtifactLinks").appendChild(links)
-  document.getElementById("buildArtifactLinksCtl").appendChild(ctllinks)
+  document.getElementById("buildArtifactLinks").appendChild(links);
+  document.getElementById("buildArtifactLinksCtl").appendChild(ctllinks);
 })
 .catch(err => { throw err });
 .catch(err => { throw err });

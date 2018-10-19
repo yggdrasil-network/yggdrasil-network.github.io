@@ -79,9 +79,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `200:680e:76d0:2435:a2f0:c956:c484:c267:8008`
   - Invite code:
 ```
-200:680e:76d0:2435:a2f0:c956:c484:c267:8008:@gBeNk
-0gWi92lTUd5im8yGgOitRPSQcZkt4KxkMl6YZ0=.ed25519~8C
-r4z+P9UCY9aQ2CGWwBoqjCnw4JHMqx+00mOw8g0Hw=
+200:680e:76d0:2435:a2f0:c956:c484:c267:8008:@gBeNk0gWi92lTUd5im8yGgOitRPSQcZkt4KxkMl6YZ0=.ed25519~8Cr4z+P9UCY9aQ2CGWwBoqjCnw4JHMqx+00mOw8g0Hw=
 ```
 
 ----

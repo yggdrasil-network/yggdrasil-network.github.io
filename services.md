@@ -76,7 +76,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ## Social
 
 ### Scuttlebot Pub Server
-  - `200:680e:76d0:2435:a2f0:c956:c484:c267:8008`
+  - `[200:680e:76d0:2435:a2f0:c956:c484:c267]:8008`
   - Invite code:
 ```
 200:680e:76d0:2435:a2f0:c956:c484:c267:

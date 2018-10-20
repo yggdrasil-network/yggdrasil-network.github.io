@@ -89,7 +89,7 @@ BoqjCnw4JHMqx+00mOw8g0Hw=
 ## VCS
 
 ### Gitea Server
-  - http://git.y.cryptocloud.icu/
+  - [git.y.cryptocloud.icu](http://git.y.cryptocloud.icu/)
   - Account registrations are open
   
 ----

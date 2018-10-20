@@ -84,7 +84,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 4KxkMl6YZ0=.ed25519~8Cr4z+P9UCY9aQ2CGWw
 BoqjCnw4JHMqx+00mOw8g0Hw=
 ```
+----
 
+## VCS
+
+### Gitea Server
+  - http://git.y.cryptocloud.icu/
+  - Account registrations are open
+  
 ----
 
 ## Misc

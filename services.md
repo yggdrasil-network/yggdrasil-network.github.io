@@ -40,7 +40,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### benisnet
 
-- cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667`, ygg channel `#yggdrasil`
+- Yggdrasil channel is `#yggdrasil`
+- cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667`
   
 ----
 

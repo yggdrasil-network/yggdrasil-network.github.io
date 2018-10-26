@@ -98,3 +98,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - [nodelist](https://github.com/yakamok/yggdrasil-nodelist/blob/master/nodelist) on github
     - Node names can be a plain alias or a domain name
     - Programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the IPv6 address with a pretty name
+    
+### Speedtest
+  - [Speedtest](http://[200:d086:a672:1989:bb29:adca:4488:eda0]:9090)
+  - Speedtest server is located in Nuernberg, Germany

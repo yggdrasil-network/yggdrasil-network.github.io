@@ -45,9 +45,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Umbrellix
 
-- It's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
+- Main channel is `#lounge#
 - Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
 - Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
+- It's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
   
 ----
 

@@ -27,7 +27,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
  - `dps8@[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]`
    - Open anonymous Guest access and free user account registration.
    - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
-   - More information and access available via [cjnds](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
+   - More information and access available via [cjdns](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
 
 ----
 
@@ -42,6 +42,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - Yggdrasil channel is `#yggdrasil`
 - cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667`
+
+### Umbrellix
+
+- it's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
+- Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
+- Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
   
 ----
 
@@ -90,6 +96,15 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - [git.y.cryptocloud.icu](http://git.y.cryptocloud.icu/)
   - Account registrations are open
   
+----
+
+## Gopher Holes
+
+### Umbrellix Gopher
+
+  - gopher-y.umbrellix.net or 202:8fb5:1490:594d:7e29:98fd:8d79:953f
+  - hole not updated with details of Yggdrasil, yet.
+
 ----
 
 ## Misc

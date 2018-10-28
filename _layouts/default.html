@@ -17,11 +17,11 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="{{ site.github.url }}"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
+        <a href="/"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
         <p>End-to-end encrypted IPv6 networking to connect worlds</p>
 
         <p>
-        <a href="{{ site.github.url }}">Home</a><br />
+        <a href="/">Home</a><br />
         {% for page in site.pages %}
           {% if page.url contains ".html" %}
             {% unless page.tags contains "dontlink" %}
@@ -34,9 +34,9 @@
         <p>
         <a href="https://github.com/yggdrasil-network/yggdrasil-go">GitHub</a><br />
         <a href="https://circleci.com/gh/yggdrasil-network/yggdrasil-go">CircleCI</a><br />
-        <a href="{{ site.github.url }}/builds.html">Latest Builds</a><br />
+        <a href="/builds.html">Latest Builds</a><br />
         <a href="https://github.com/yggdrasil-network/public-peers">Public Peers</a><br />
-        <a href="{{ site.github.url }}/services.html">Public Services</a><br />
+        <a href="/services.html">Public Services</a><br />
         </p>
 
         <p><a href="https://circleci.com/gh/yggdrasil-network/yggdrasil-go"><img src="https://circleci.com/gh/yggdrasil-network/yggdrasil-go.svg?style=shield&circle-token=:circle-token" /></a></p>

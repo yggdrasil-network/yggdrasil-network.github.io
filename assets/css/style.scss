@@ -8,21 +8,8 @@ body {
   color: #333333;
 }
 
-section {
-  display: table-cell;
-  width: 100%;
-  max-width: 100vw;
-  float: none;
-}
-
-header {
-  display: table-cell;
-  position: relative;
-  width: 240px !important;
-  margin-right: 1em;
-}
-
 div.wrapper {
+  display: inline-flex;
   margin-left: none;
   margin-right: none;
   width: 100%;
@@ -30,6 +17,17 @@ div.wrapper {
 
 div.wrapper section p a code {
   color: rgb(38, 124, 185);
+}
+
+section {
+  width: 100%;
+  max-width: 100vw;
+}
+
+header {
+  position: relative;
+  width: 240px !important;
+  margin-right: 1em;
 }
 
 pre {

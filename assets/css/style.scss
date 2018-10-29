@@ -20,11 +20,12 @@ div.wrapper section p a code {
 }
 
 section {
-  width: 100%;
+  flex: auto;
   max-width: 100vw;
 }
 
 header {
+  flex: initial;
   position: relative;
   width: 240px !important;
   margin-right: 1em;

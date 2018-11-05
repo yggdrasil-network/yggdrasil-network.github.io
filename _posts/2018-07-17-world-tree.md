@@ -67,7 +67,7 @@ To skip over the details, there are basically two aspects to consider that are r
 First, compact routing schemes can be name-dependent or name-independent.
 Name-dependent routing schemes assign an address (of some kind, not necessarily a familiar IP address) based on a node's location in the network.
 Name-independent routing schemes place no requirements on a node's address, and treat it as some opaque identifier in a flat (i.e. non-subnetted) address space.
-Secondly, compact routing schemes an either be a universal scheme, with strong guarantees on all possible network types, or they can be specific to certain network topologies.
+Secondly, compact routing schemes can either be a universal scheme, with strong guarantees on all possible network types, or they can be specific to certain network topologies.
 
 On paper, compact routing is essentially a solved problem: universal name-dependent routing schemes are known with worst case scenario performance guarantees that are basically equal to the best case scenario lower bounds proven by the mathematicians who do that sort of thing.
 Furthermore, name-independent routing schemes are known with the same performance guarantees, albeit much worse observed performance *in practice* (still better than the guaranteed worst cases, but not by as much).

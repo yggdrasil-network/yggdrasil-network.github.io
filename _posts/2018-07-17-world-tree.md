@@ -45,7 +45,7 @@ This system of gateways, often between a hierarchy of networks with progressivel
 
 Within a particular network, each node must be able to find a path to every other node within that network.
 Virtually all routing schemes in use today are a form of shortest path routing, wherein each node knows the shortest path to every other node in the network, for some definition of path length (such as the number of network hops, latency, some function of bandwidth usage, or often the [expected transmission count](https://en.wikipedia.org/wiki/Expected_transmission_count) in mesh networks).
-A notable exception to this is ethernet, which has historically used the [spanning-tree protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) (STP) to reduce a network to a tree topology, in an effort to eliminate routing loops, but newer protocols (such as [shortest path bridging](https://en.wikipedia.org/wiki/IEEE_802.1aq)) aim to improve this.
+A notable exception to this is Ethernet, which has historically used the [spanning-tree protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) (STP) to reduce a network to a tree topology, in an effort to eliminate routing loops, but newer protocols (such as [shortest path bridging](https://en.wikipedia.org/wiki/IEEE_802.1aq)) aim to improve this.
 Typically, shortest path routing is implemented either via a proactive protocol, wherein every node in a network maintains a local routing table with information about every other node in the network, or via a reactive protocol using broadcast lookup traffic, wherein routes are found by broadcasting lookups through the entire network.
 
 There are things about this approach which can be problematic.
@@ -87,7 +87,7 @@ Every node's "address" is simply the X and Y coordinates of the node in the netw
 Because there are no gaps in this example, every node can route traffic simply by forwarding it to any neighbor which is closer to the destination's X-Y coordinates than itself.
 This is called a greedy routing strategy, and coordinate systems where this strategy is guaranteed to work are called greedy embeddings.
 
-While there is no finite dimensional euclidean space for which a greedy embedding exists on all possible graphs, so the dimension of euclidean embeddings need to be changed due to network size and topology, which complicates things, it turns out that [the hyperbolic plane admits a greedy embedding of any network](http://www.cs.cornell.edu/~rdk/papers/pgr.pdf).
+While there is no finite dimensional Euclidean space for which a greedy embedding exists on all possible graphs, so the dimension of Euclidean embeddings need to be changed due to network size and topology, which complicates things, it turns out that [the hyperbolic plane admits a greedy embedding of any network](http://www.cs.cornell.edu/~rdk/papers/pgr.pdf).
 Furthermore, this can be done with small addresses, and produces low stretch in realistic network topologies -- this is basically everything we want!
 However, the most common approach to implementing such an embedding, which can be done via a distributed algorithm, consist of constructing a spanning tree of the network, and then embedding the spanning tree instead of the original network graph.
 
@@ -98,7 +98,7 @@ Here's an observation for you to consider: that strategy for greedy hyperbolic e
 
 Yggdrasil, named after [the mythical world tree of Norse cosmology](https://en.wikipedia.org/wiki/Yggdrasil), uses a form of greedy embedded routing for the "switch" layer.
 Instead of embedding a spanning tree into the hyperbolic plane, the spanning tree is used directly to define the metric space: the distance between two nodes in the space is simply their distance apart on the tree, which trivially leads to a greedy embedding.
-It must be emphasized that this is not the same as *routing* on the tree, as in STP flavor of ethernet, because every link is available to forward traffic.
+It must be emphasized that this is not the same as *routing* on the tree, as in STP flavor of Ethernet, because every link is available to forward traffic.
 The spanning tree itself is constructed using a STP-like distributed algorithm, but with cryptographically secured advertisements (to prevent forgery-based route hijacking attacks).
 
 This has a number of effects.

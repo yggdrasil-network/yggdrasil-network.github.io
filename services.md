@@ -82,6 +82,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Supports clearnet resolution of standard DNS domains
     - Supports resolution of [OpenNIC](https://www.opennic.org/) domains
 	- [DNSCrypt on port 5353](https://servers.opennicproject.org/edit.php?srv=ns7.nh.nl.dns.opennic.glue)
+  - `200:c493:950a:d576:a413:faef:990b:fb76` port 53, hosted by [Asymptote Club](https://asymptote.club)
+    - OpenNIC resolver
 
 ----
 

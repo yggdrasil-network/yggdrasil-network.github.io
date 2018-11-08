@@ -7,7 +7,7 @@ sitemap: true
 
 Much like the `master` branch, developmental builds are also built from the `develop` branch by [CircleCI](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) for a number of platforms.
 
-Builds from the `develop` branch will contain prerelease features and changes, although they may be rougher around the edges and not be as well tested! If you value stability, stick to the [master](builds.md) builds.
+**Warning:** The `develop` branch is used for pre-release changes and features. It's not guaranteed to be 100% compatible with the `master` branch and anything in the `develop` branch is subject to change at any point before release - features merged into the `develop` branch may not be completely finished. Builds from this branch will likely be rougher around the edges and not as well tested. We welcome all testing and feedback of the `develop` branch, but if you value stability, you may prefer to stick to the [master](builds.md) builds instead.
 
 For convenience, the [build artifacts](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=develop&filter=successful) from the latest `develop` build are linked below:
 

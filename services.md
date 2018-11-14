@@ -95,13 +95,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ```
 200:680e:76d0:2435:a2f0:c956:c484:c267:8009:@gBeNk0gWi92lTUd5im8yGgOitRPSQcZkt4KxkMl6YZ0=.ed25519~LV1YVEbDhAptPP9pfiFBNc7ix5Bw2xGsGyRx4S9GB1s=
 ```
-----
-
-## VCS
-
-### Gitea Server
-  - [git.y.cryptocloud.icu](http://git.y.cryptocloud.icu/)
-  - Account registrations are open
   
 ----
 
@@ -121,6 +114,3 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Node names can be a plain alias or a domain name
     - Programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the IPv6 address with a pretty name
     
-### Speedtest
-  - [Speedtest](http://[200:d086:a672:1989:bb29:adca:4488:eda0]:9090)
-  - Speedtest server is located in Nuernberg, Germany

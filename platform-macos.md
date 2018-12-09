@@ -77,7 +77,7 @@ sudo launchctl unload /Library/LaunchDaemons/yggdrasil.plist
 
 ## Build instructions
 
-macOS has most of the tools needed to build Yggdrasil from source - you just need to install Go 1.9 or later.
+macOS has most of the tools needed to build Yggdrasil from source - you just need to install Go 1.11 or later.
 
 1. Download the latest [Go .pkg installer for macOS](https://golang.org/dl/)
 1. Run the installer to install Go on your system

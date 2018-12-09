@@ -255,11 +255,30 @@ Note that any field not specified in the configuration will use its default valu
         - `BlacklistEncryptionPublicKeys`
             - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances, both incoming or outgoing.
             - Takes priority over all other options.
-  - `SwitchOptions`
-      - Switch options are advanced tuning settings. Ordinarily you should not attempt to change these from their defaults.
-      - Contains the following configuration options:
-          - `MaxTotalQueueSize`
-              - The maximum allowed size, in bytes, of all local switch queues combined. Default is `4194304` (or 4MB).
+- `TunnelRouting`
+    - Crypto-key tunnel routing allows you to tunnel either IPv4 or IPv6 traffic to remote nodes over Yggdrasil. This is similar to using a VPN.
+    - Contains the following configuration options:
+        - `Enable`
+            - Enables crypto-key routing.
+            - If enabled, the following crypto-key routes will be used by Yggdrasil. If disabled, the below options have no effect.
+        - `IPv6Destinations`
+            - A list of routes in the form `{ "aaaa:bbbb:cccc::/e": "EncryptionPublicKey", ... }`
+            - For each entry, an IPv6 route entry will be created that sends traffic destined for `aaaa:bbbb:cccc::/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
+        - `IPv6Sources`
+            - A list of allowed source subnets in the form `[ "aaaa:bbbb:cccc::/e" ]`
+            - Specifies a list of source IPv6 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
+            - Traffic from the Yggdrasil node's IPv6 address and routed subnet are always allowed.
+        - `IPv4Destinations`
+            - A list of routes in the form `{ "a.b.c.d/e": "EncryptionPublicKey", ... }`
+            - For each entry, an IPv4 route entry will be created that sends traffic destined for `a.b.c.d/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
+        - `IPv4Sources`
+            - A list of allowed source subnets in the form `[ "a.b.c.d/e" ]`
+            - Specifies a list of source IPv4 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
+- `SwitchOptions`
+    - Switch options are advanced tuning settings. Ordinarily you should not attempt to change these from their defaults.
+    - Contains the following configuration options:
+        - `MaxTotalQueueSize`
+            - The maximum allowed size, in bytes, of all local switch queues combined. Default is `4194304` (or 4MB).
 
 # Use Cases
 

@@ -271,7 +271,7 @@ As the network uses ordinary TCP, it is possible to connect over other networks,
 
 By default, connections to peers are made over TCP. It is possible to route through a `socks://proxyAddr:proxyPort/` connection.
 This uses TCP over the specified SOCKS proxy, and can be used to tunnel out from a network with a particularly restrictive firewall, for example, using SSH tunneling.
-This can also be used to [connect over Tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md), particularly for `.onion` hidden service addresses.
+This can also be used to [connect over Tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md), particularly for `.onion` hidden service addresses, although this does have a number of performance issues and is not generally recommended.
 
 If you are unable to find nodes in the nearby area, a best effort is made to maintain a list of [Public Peers](https://github.com/yggdrasil-network/public-peers) for new users looking to join or test the network.
 

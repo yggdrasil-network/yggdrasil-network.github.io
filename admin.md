@@ -102,10 +102,9 @@ The `"request"` field contains a verb that describes which request to perform.
 Expects no additional request fields.
 
 Returns known nodes in the DHT.
-- `last_seen` (`uint32`) contains the number of seconds since the DHT record was last updated
-- `bucket` (`uint8`) contains the ID of the bucket that the DHT record is stored in
+- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the remote node
 - `coords` (`string`) contains the coordinates of the node on the spanning tree
-- `peer_only` (`bool`) shows if the node is a peer
+- `last_seen` (`uint32`) contains the number of seconds since the DHT record was last updated
 
 #### `getPeers`
 
@@ -223,3 +222,11 @@ Removes an existing box pub key.
 Returns:
 - Zero or more successful `string` box pub keys in the `"removed"` section
 - Zero or more failed `string` box pub keys in the `"not_removed"` section
+
+#### `getMulticastInterfaces`
+
+Expects no additional request fields.
+
+Returns zero or more strings containing the enabled multicast peering interfaces.
+
+If zero strings are returned then it is implied that multicast peering is not allowed on any interface.

@@ -16,14 +16,14 @@ If you installed Yggdrasil through one of the platform packages (i.e. macOS, Deb
 
 Otherwise, you can generate a configuration file in the following ways:
 
-- **HJSON**: `yggdrasil -genconf > /etc/yggdrasil.conf`
-- **JSON**: `yggdrasil -genconf -json > /etc/yggdrasil.conf`
+- **Generate HJSON**: `yggdrasil -genconf > /etc/yggdrasil.conf`
+- **Generate JSON**: `yggdrasil -genconf -json > /etc/yggdrasil.conf`
 
 ## Using Configuration
 
 Yggdrasil can accept a configuration file either through `stdin` or by being given a path on the filesystem to a configuration file:
 
-- **Using `stdin`**: `yggdrasilctl --useconf < /etc/yggdrasil.conf`
+- **Using stdin**: `yggdrasilctl --useconf < /etc/yggdrasil.conf`
 - **Using file:** `yggdrasilctl --useconffile /etc/yggdrasil.conf`
 
 ## Normalising Configuration

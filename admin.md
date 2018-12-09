@@ -230,3 +230,49 @@ Expects no additional request fields.
 Returns zero or more strings containing the enabled multicast peering interfaces.
 
 If zero strings are returned then it is implied that multicast peering is not allowed on any interface.
+
+#### `addRoute`
+
+Expects:
+- `subnet=` `string` for the subnet to route
+- `box_pub_key=` `string` for the public key to route to
+
+Adds a new crypto-key route.
+
+Returns:
+- Zero or more successful `string` routes in the `"added"` section
+- Zero or more failed `string` routes in the `"not_added"` section
+
+#### `removeRoute`
+
+Expects:
+- `subnet=` `string` for the subnet to remove the route route for
+- `box_pub_key=` `string` for the public key that is routed to
+
+Removes an existing crypto-key route.
+
+Returns:
+- Zero or more successful `string` routes in the `"removed"` section
+- Zero or more failed `string` routes in the `"not_removed"` section
+
+#### `addSourceSubnet`
+
+Expects:
+- `subnet=` `string` for the subnet to allow traffic from
+
+Adds a new crypto-key source subnet.
+
+Returns:
+- Zero or more successful `string` source subnets in the `"added"` section
+- Zero or more failed `string` source subnets in the `"not_added"` section
+
+#### `removeSourceSubnet`
+
+Expects:
+- `subnet=` `string` for the subnet to remove
+
+Removes an existing crypto-key source subnet.
+
+Returns:
+- Zero or more successful `string` source subnets in the `"removed"` section
+- Zero or more failed `string` source subnets in the `"not_removed"` section

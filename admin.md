@@ -231,6 +231,12 @@ Returns zero or more strings containing the enabled multicast peering interfaces
 
 If zero strings are returned then it is implied that multicast peering is not allowed on any interface.
 
+#### `getRoutes`
+
+Expects no additional request fields.
+
+Returns zero or more records where the subnet (`string`) is mapped to the public key (`string`).
+
 #### `addRoute`
 
 Expects:
@@ -254,6 +260,12 @@ Removes an existing crypto-key route.
 Returns:
 - Zero or more successful `string` routes in the `"removed"` section
 - Zero or more failed `string` routes in the `"not_removed"` section
+
+#### `getSourceSubnets`
+
+Expects no additional request fields.
+
+Returns zero or more records for allowed crypto-key routing source subnets (`string`).
 
 #### `addSourceSubnet`
 

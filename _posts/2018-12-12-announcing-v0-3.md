@@ -56,29 +56,28 @@ we have **not** needed to introduce breaking changes at this stage and currently
 the network has been running a mix of both older and newer developmental nodes
 without any particular issues.
 
-### New features
+### Features
 
-You'll be able to see the full list of modifications that have been made in our
-[changelog](changelog.md), but I'd like to take the time to discuss some of our
-bigger changes.
+You can see the full list of modifications that have been made in our
+[changelog](changelog.md).
 
-Perhaps the largest user-facing change is the introduction of Crypto-Key Routing
-for traffic tunnelling, allowing you to effectively use Yggdrasil as a VPN for
-both IPv4 and IPv6 traffic between any two given points on the network. This
-tunnelled traffic enjoys the same benefits as regular Yggdrasil IPv6 traffic in
-that it is end-to-end encrypted and our many optimisations assist in preventing
-TCP-over-TCP anomalies that often arise in other solutions. I wrote an
-introductory [blog post](_posts/2018-11-06-crypto-key-routing.md) back at the
-beginning of November about CKR, which explains some more about how to
-configure it and how it works.
+Perhaps the largest user-visible change is the introduction of Crypto-Key
+Routing for traffic tunnelling, allowing you to effectively use Yggdrasil as a
+VPN for both IPv4 and IPv6 traffic between any two given points on the network.
+This tunnelled traffic enjoys the same benefits as regular Yggdrasil IPv6
+traffic in that it is end-to-end encrypted and our many optimisations assist in
+preventing TCP-over-TCP anomalies that often arise in other solutions. I wrote
+an introductory [blog post](_posts/2018-11-06-crypto-key-routing.md) back at the
+beginning of November about CKR, which explains some more about how to configure
+it and how it works.
 
-In the background, we've made a change from using a Kademlia-based DHT to a
-Chord-based DHT. This has some advantages in that a node can bootstrap and start
-working with far less state information than was needed before. Additional
-state, which we learn about automatically through searches, helps to speed up
-DHT lookups. We also believe that using Chord can help us to reduce some idle
-DHT chatter on the network in the future, and to help nodes converge more
-quickly when they change their coordinates on the network.
+In the background, we've made a substantial change from using a Kademlia-based
+DHT to a Chord-based DHT. This has some advantages in that a node can bootstrap
+and start working with far less state information than was needed before.
+Additional state, which we learn about automatically through searches, helps to
+speed up DHT lookups. We also believe that using Chord can help us to reduce
+some idle DHT chatter on the network in the future, and to help nodes converge
+more quickly when they change their coordinates on the network.
 
 We've fixed a reasonable number of bugs and crashes, including in the DHT,
 switch and ICMPv6 code, and have made a number of additions to the admin socket

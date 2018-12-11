@@ -2,7 +2,7 @@
 layout: post
 title:  "Announcing Yggdrasil Network v0.3"
 date:   2018-12-12 00:00:00 -0000
-author: Neil Alexander
+author: Neil Alexander, Arceliar
 ---
 
 ### It's finally here
@@ -13,9 +13,10 @@ encrypted and scalable compact routing scheme modelled around the concept of a
 global spanning tree. Many concept routing schemes that we have seen to date
 seem to have problems with scalability - after the network exceeds a certain
 size, they either fail to perform or they start to rely on centralised points in
-order to consolidate routing information. We wanted to build something that
-would not be subject to these limitations and to maintain decentralisation as
-far as possible. To our knowledge, this hasn't quite been achieved before.
+order to consolidate routing information. We want to figure out how to build something that
+would not be subject to these limitations, and to maintain decentralisation as
+far as possible, and the best way to test our ideas is to build that network.
+To our knowledge, this hasn't quite been achieved before.
 
 Throughout the course of 2018, Yggdrasil has gone from being a very early-stage
 project supporting only a single platform to a feature-strong and relatively
@@ -72,12 +73,25 @@ beginning of November about CKR, which explains some more about how to configure
 it and how it works.
 
 In the background, we've made a substantial change from using a Kademlia-based
-DHT to a Chord-based DHT. This has some advantages in that a node can bootstrap
-and start working with far less state information than was needed before.
-Additional state, which we learn about automatically through searches, helps to
-speed up DHT lookups. We also believe that using Chord can help us to reduce
-some idle DHT chatter on the network in the future, and to help nodes converge
-more quickly when they change their coordinates on the network.
+DHT to a Chord-based DHT. The chord-based appraoch allows us to do lookups with
+`O(1)` (constant) state, and only depends on additional (`O(logn)`) state as a
+performance optimization, which allows us to bootstrap more quickly after changes.
+We also believe that using Chord can help us to reduce some idle DHT chatter
+on the network in the future, which will save a little bandwidth, and may be
+helpful on battery-powered devices.
+
+The spanning tree is now constructed a little differently. Previously, in a stable
+network, each node would select a new parent only if this reduced the length of
+the path to the root of the tree, measured by the number of other Yggdrasil nodes
+in the path. This has the virtue of simplicity, but it sometimes leads to poor
+performance when a node replaces a few low-latency/high-bandwidth local links with
+a comparatively high-latency/low-bandwidth link over the internet (or an anonymous
+overlay like [tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md)
+or [i2p](https://github.com/yggdrasil-network/public-peers/blob/master/other/i2p.md)).
+Starting with this release, nodes will switch to a new parent if it provides a
+consistency lower latency path to the root, and its less eager to immediately switch
+again after having just changed parents. This should lead to lower latency in stable
+networks, and better reliability in unstable ones.
 
 We've fixed a reasonable number of bugs and crashes, including in the DHT,
 switch and ICMPv6 code, and have made a number of additions to the admin socket

@@ -288,3 +288,18 @@ Removes an existing crypto-key source subnet.
 Returns:
 - Zero or more successful `string` source subnets in the `"removed"` section
 - Zero or more failed `string` source subnets in the `"not_removed"` section
+
+#### `dhtPing`
+
+Expects:
+- `box_pub_key=` `string`, hex-encoded public key of the remote node to ping, in the same format as e.g. verbose output from a `getDHT` response
+- `coords=` `string`, location of the remote node in the network, in the same format as e.g. a `getDHT` response
+- `target=` `string`, hex-encoded 512-bit NodeID to ask about, affects what the response from the remote node will be, optional
+
+Asks a remote node to respond with information from the DHT
+
+Returns a `nodes` section with information about each node included in the DHT lookup response, indexed by IPv6.
+
+For each IPv6 address, this includes:
+- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the remote node
+- `coords` (`string`) contains the coordinates of the node on the spanning tree

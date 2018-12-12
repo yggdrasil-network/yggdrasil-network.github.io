@@ -60,7 +60,7 @@ without any particular issues.
 ### Features
 
 You can see the full list of modifications that have been made in our
-[changelog](changelog.md).
+[changelog](https://yggdrasil-network.github.io/changelog.html).
 
 Perhaps the largest user-visible change is the introduction of Crypto-Key
 Routing for traffic tunnelling, allowing you to effectively use Yggdrasil as a

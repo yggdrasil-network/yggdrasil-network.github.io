@@ -60,7 +60,7 @@ without any particular issues.
 ### Features
 
 You can see the full list of modifications that have been made in our
-[changelog](changelog.md).
+[changelog](/changelog.md).
 
 Perhaps the largest user-visible change is the introduction of Crypto-Key
 Routing for traffic tunnelling, allowing you to effectively use Yggdrasil as a
@@ -68,7 +68,7 @@ VPN for both IPv4 and IPv6 traffic between any two given points on the network.
 This tunnelled traffic enjoys the same benefits as regular Yggdrasil IPv6
 traffic in that it is end-to-end encrypted and our many optimisations assist in
 preventing TCP-over-TCP anomalies that often arise in other solutions. I wrote
-an introductory [blog post](_posts/2018-11-06-crypto-key-routing.md) back at the
+an introductory [blog post](2018-11-06-crypto-key-routing.md) back at the
 beginning of November about CKR, which explains some more about how to configure
 it and how it works.
 
@@ -101,13 +101,13 @@ consistent throughout.
 ### Upgrading
 
 Our CI pipeline automatically produces builds for all supported platforms and
-these will become available on our [Builds page](builds.md). In addition, our S3
+these will become available on our [Builds page](/builds.md). In addition, our S3
 repository for Debian and RPM-based distributions will also be updated with the
 new package releases.
 
 New macOS .pkg installers are now available as a part of the v0.3 release too,
 so installing and upgrading on macOS is now significantly easier than before.
-You can find these installers on the [Builds page](builds.md) also.
+You can find these installers on the [Builds page](/builds.md) also.
 
 On other platforms, simply download the latest binary for your platform and drop
 it into place. Remember to take a backup of your configuration and normalise it,

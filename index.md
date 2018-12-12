@@ -7,7 +7,7 @@ sitemap: true
 
 Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4.
 
-Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing algorithm based on a globally-agreed spanning tree and greedy routing in a metric space, and aims to implement some novel local backpressure routing techniques. In theory, an Yggdrasil network should scale well on networks with internet-like topologies. Take a look at the [About](about.md) page for a detailed overview.
+Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing algorithm based on a globally-agreed spanning tree and greedy routing in a metric space, and aims to implement some novel local backpressure routing techniques. In theory, Yggdrasil should scale well on networks with internet-like topologies. Take a look at the [About](about.md) page for a detailed overview.
 
 ## Project Status
 

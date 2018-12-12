@@ -16,6 +16,16 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 ## Installation
 
+### Using the macOS installer
+
+Visit the [Builds](builds.md) page and download the relevant `-macos-amd64.pkg` (64-bit) or `-macos-i386.pkg` (32-bit) package file.
+
+Once downloaded, open the Downloads folder in Finder, right-click the package and click "Open".
+
+(Alternatively, double-click and then use System Preferences > Security to "Open Anyway" after the developer prompt.)
+
+### Manual installation
+
 System Integrity Protection in macOS prevents you from copying files into `/usr/bin`, therefore you should install into `/usr/local/bin` instead. This may not exist by default so create it if it doesn't exist:
 ```
 sudo mkdir -p /usr/local/bin
@@ -77,7 +87,7 @@ sudo launchctl unload /Library/LaunchDaemons/yggdrasil.plist
 
 ## Build instructions
 
-macOS has most of the tools needed to build Yggdrasil from source - you just need to install Go 1.9 or later.
+macOS has most of the tools needed to build Yggdrasil from source - you just need to install Go 1.11 or later.
 
 1. Download the latest [Go .pkg installer for macOS](https://golang.org/dl/)
 1. Run the installer to install Go on your system

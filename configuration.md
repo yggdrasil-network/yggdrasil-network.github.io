@@ -8,27 +8,54 @@ Yggdrasil can be run with a dynamically generated configuration, using sane-ish 
 
 In most cases, a static configuration simplifies most setups - it allows you to maintain the same IP address, configure static peers and various other options that will persist across restarts.
 
-Configuration can be provided to Yggdrasil in HJSON format either through `stdin` (using `yggdrasil --useconf < path/to/yggdrasil.conf`) or through a path to a configuration file (using `yggdrasil --useconffile path/to/yggdrasil.conf`).
+Yggdrasil supports configuration in either HJSON or JSON format. HJSON is the default preferred format, as it has comments, although JSON support is available due to ease of manipulation.
 
-A new configuration file may be generated with `yggdrasil --genconf > path/to/yggdrasil.conf`, which looks something like:
+## Generating Configuration
+
+If you installed Yggdrasil through one of the platform packages (i.e. macOS, Debian, RPM) then a default configuration file may already exist in `/etc/yggdrasil.conf`.
+
+Otherwise, you can generate a configuration file in the following ways:
+
+- **Generate HJSON**: `yggdrasil -genconf > /etc/yggdrasil.conf`
+- **Generate JSON**: `yggdrasil -genconf -json > /etc/yggdrasil.conf`
+
+## Using Configuration
+
+Yggdrasil can accept a configuration file either through `stdin` or by being given a path on the filesystem to a configuration file:
+
+- **Using stdin**: `yggdrasilctl --useconf < /etc/yggdrasil.conf`
+- **Using file:** `yggdrasilctl --useconffile /etc/yggdrasil.conf`
+
+## Normalising Configuration
+
+If you want to see the original format of the configuration file, or convert between HJSON and JSON formats, you can use the `-normaliseconf` option, e.g.
+
+- **Convert from HJSON to JSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf -json`
+- **Convert from JSON to HJSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf`
+
+Normalising the configuration also adds any missing configuration items with their default values. This can be useful when upgrading to a newer version of Yggdrasil that adds new configuration options. Many of our distribution packages normalise the configuration automatically during upgrade.
+
+## Configuration Layout
+
+A new configuration file has the following format. Please note that some of the default values will vary from platform to platform.
 
 ```
 {
   # Listen address for peer connections. Default is to listen for all
   # TCP connections over IPv4 and IPv6 with a random port.
-  Listen: "[::]:52072"
+  Listen: "[::]:xxxxx"
 
   # Listen address for admin connections Default is to listen for local
   # connections either on TCP/9001 or a UNIX socket depending on your
   # platform. Use this value for yggdrasilctl -endpoint=X.
   AdminListen: tcp://localhost:9001
 
-  # List of connection strings for static peers in URI format, i.e.
+  # List of connection strings for static peers in URI format, e.g.
   # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j.
   Peers: []
 
   # List of connection strings for static peers in URI format, arranged
-  # by source interface, i.e. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
+  # by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
   # SOCKS peerings will NOT be affected by this option and should go in
   # the "Peers" section instead.
   InterfacePeers: {}
@@ -84,30 +111,67 @@ A new configuration file may be generated with `yggdrasil --genconf > path/to/yg
   # being routed via this node to somewhere else. Rules are prioritised as
   # follows: blacklist, whitelist, always allow outgoing, direct, remote.
   SessionFirewall:
-  { 
+  {
     # Enable or disable the session firewall. If disabled, network traffic  
-    # from any node will be allowed. If enabled, the below rules apply. 
+    # from any node will be allowed. If enabled, the below rules apply.
     Enable: false
- 
-    # Allow network traffic from directly connected peers. 
+
+    # Allow network traffic from directly connected peers.
     AllowFromDirect: true
- 
+
     # Allow network traffic from remote nodes on the network that you are  
-    # not directly peered with. 
+    # not directly peered with.
     AllowFromRemote: true
- 
+
     # Allow outbound network traffic regardless of AllowFromDirect or  
     # AllowFromRemote. This does allow a remote node to send unsolicited  
-    # traffic back to you for the length of the session. 
+    # traffic back to you for the length of the session.
     AlwaysAllowOutbound: false
- 
+
     # List of public keys from which network traffic is always accepted,  
-    # regardless of AllowFromDirect or AllowFromRemote. 
+    # regardless of AllowFromDirect or AllowFromRemote.
     WhitelistEncryptionPublicKeys: []
- 
+
     # List of public keys from which network traffic is always rejected,  
-    # regardless of the whitelist, AllowFromDirect or AllowFromRemote. 
+    # regardless of the whitelist, AllowFromDirect or AllowFromRemote.
     BlacklistEncryptionPublicKeys: []
+  }
+
+  # Allow tunneling non-Yggdrasil traffic over Yggdrasil. This effectively
+  # allows you to use Yggdrasil to route to, or to bridge other networks,
+  # similar to a VPN tunnel. Tunnelling works between any two nodes and
+  # does not require them to be directly peered.
+  TunnelRouting:
+  {
+    # Enable or disable tunnel routing.
+    Enable: false
+
+    # IPv6 CIDR subnets, mapped to the EncryptionPublicKey to which they  
+    # should be routed, e.g. { "aaaa:bbbb:cccc::/e": "boxpubkey", ... }
+    IPv6Destinations: {}
+
+    # Optional IPv6 source subnets which are allowed to be tunnelled in  
+    # addition to this node's Yggdrasil address/subnet. If not  
+    # specified, only traffic originating from this node's Yggdrasil  
+    # address or subnet will be tunnelled.
+    IPv6Sources: []
+
+    # IPv4 CIDR subnets, mapped to the EncryptionPublicKey to which they  
+    # should be routed, e.g. { "a.b.c.d/e": "boxpubkey", ... }
+    IPv4Destinations: {}
+
+    # IPv4 source subnets which are allowed to be tunnelled. Unlike for  
+    # IPv6, this option is required for bridging IPv4 traffic. Only  
+    # traffic with a source matching these subnets will be tunnelled.
+    IPv4Sources: []
+  }
+
+  # Advanced options for tuning the switch. Normally you will not need
+  # to edit these options.
+  SwitchOptions:
+  {
+    # Maximum size of all switch queues combined (in bytes).
+    MaxTotalQueueSize: 4194304
   }
 }
 ```
@@ -124,7 +188,7 @@ Note that any field not specified in the configuration will use its default valu
     - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
     - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.
     - The default is to listen on the loopback interface (`tcp://localhost:9001`) which ensures that only local connections to the admin socket are allowed.
-    - Note that if you change the listen address to a non-loopback address, this will allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
+    - Note that if you change the listen address to a non-loopback address, this may allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
 - `Peers`
     - A list of strings in the form `[ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
@@ -142,13 +206,13 @@ Note that any field not specified in the configuration will use its default valu
     - A node's IP address is derived from the ID.
 - `EncryptionPrivateKey`
     - A hexadecimal string representing the node's private Curve25519 key.
-    - This is a private key, don't share it.
+    - This is a private key, **don't share it with anyone**.
 - `SigningPublicKey`
     - A hexadecimal string representing a node's public Ed25519 key.
     - Used primarily for signatures in the greedy routing scheme.
 - `SigningPrivateKey`
     - A hexadecimal string representing the node's private Ed25519 key.
-    - This is a private key, don't share it.
+    - This is a private key, **don't share it with anyone**.
 - `MulticastInterfaces`
     - A list of regex strings for matching which interfaces to enable multicast peer discovery on. Interfaces that don't match any of the provided regexes are ignored.
     - The default value (`.*`) matches all interfaces.
@@ -160,13 +224,14 @@ Note that any field not specified in the configuration will use its default valu
     - The behaviour of this option is different on different operating systems. Some quick notes:
         - On Linux, any suitable interface name can be specified.
         - On FreeBSD, OpenBSD and NetBSD, a full path to the TAP interface should be specified, i.e. `"/dev/tap0"`.
-        - On macOS, a utun device is automatically assigned by the operating system, therefore you cannot specify a name.
+        - On macOS, a `utun` device is automatically assigned by the operating system, therefore you cannot specify a name.
         - On Windows, a network adapter friendly name (like `"Local Area Connection 2"`) can be specified to choose a specific adapter. Use "Network Adapters" in Control Panel to see and/or rename adapters.
 - `IfTAPMode`
     - If true, then the interface will be a `tap` device (Layer 2) instead of a `tun` (Layer 3) device.
     - Default value is platform specific, and some platforms support only `tun` or `tap` mode.
     - Note that the network only transports IPv6 packets, so frames sent to or received from a `tap` are decapsulated or encapsulated at the end points of a connection.
     - In TAP mode, Yggdrasil automatically answers Neighbor Discovery Packet (NDP) requests on behalf of Yggdrasil IPv6 addresses.
+    - In TAP mode, it may be possible to bridge with the Yggdrasil `tap` adapter, e.g. to allow container bridging.
 - `IfMTU`
     - The MTU of the `tun`/`tap` interface.
     - Defaults to the maximum value supported on each platform, up to `65535` on Linux/macOS/Windows, `32767` on FreeBSD, `16384` on OpenBSD, `9000` on NetBSD, etc.
@@ -178,17 +243,42 @@ Note that any field not specified in the configuration will use its default valu
             - Disables or enables the session firewall.
             - If enabled, the rules from the below options apply. If disabled, all traffic is allowed.
         - `AllowFromDirect`
-            - Allows traffic from nodes that are direct peers.
+            - Decides whether or not traffic should be allowed from nodes that are directly peered to you.
         - `AllowFromRemote`
-            - Allows traffic from nodes that are not direct peers.
+            - Decides whether or not traffic should be allowed from nodes that are elsewhere on the network and *not* directly peered to you.
         - `AlwaysAllowOutbound`
-            - Allows traffic to a node only when outbound traffic is sent to that node.
+            - Decides whether to allow traffic to be sent to any node on the network, as long the connection is initiated from your node.
+            - Note that once you open a session with a remote node, they *can* send traffic back to you for the lifetime of the session.
         - `WhitelistEncryptionPublicKeys`
-            - A list of node's `EncryptionPublicKey` keys that are always allowed to send traffic to this host.
+            - A list of node's `EncryptionPublicKey` keys that are always allowed to exchange traffic with this host, both incoming or outgoing.
             - Takes priority over the above options, but is overridden by the blacklist below.
         - `BlacklistEncryptionPublicKeys`
-            - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances.
+            - A list of node's `EncryptionPublicKey` keys that are never allowed to communicate with this node under any circumstances, both incoming or outgoing.
             - Takes priority over all other options.
+- `TunnelRouting`
+    - Crypto-key tunnel routing allows you to tunnel either IPv4 or IPv6 traffic to remote nodes over Yggdrasil. This is similar to using a VPN.
+    - Contains the following configuration options:
+        - `Enable`
+            - Enables crypto-key routing.
+            - If enabled, the following crypto-key routes will be used by Yggdrasil. If disabled, the below options have no effect.
+        - `IPv6Destinations`
+            - A list of routes in the form `{ "aaaa:bbbb:cccc::/e": "EncryptionPublicKey", ... }`
+            - For each entry, an IPv6 route entry will be created that sends traffic destined for `aaaa:bbbb:cccc::/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
+        - `IPv6Sources`
+            - A list of allowed source subnets in the form `[ "aaaa:bbbb:cccc::/e" ]`
+            - Specifies a list of source IPv6 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
+            - Traffic from the Yggdrasil node's IPv6 address and routed subnet are always allowed.
+        - `IPv4Destinations`
+            - A list of routes in the form `{ "a.b.c.d/e": "EncryptionPublicKey", ... }`
+            - For each entry, an IPv4 route entry will be created that sends traffic destined for `a.b.c.d/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
+        - `IPv4Sources`
+            - A list of allowed source subnets in the form `[ "a.b.c.d/e" ]`
+            - Specifies a list of source IPv4 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
+- `SwitchOptions`
+    - Switch options are advanced tuning settings. Ordinarily you should not attempt to change these from their defaults.
+    - Contains the following configuration options:
+        - `MaxTotalQueueSize`
+            - The maximum allowed size, in bytes, of all local switch queues combined. Default is `4194304` (or 4MB).
 
 # Use Cases
 
@@ -200,7 +290,7 @@ As the network uses ordinary TCP, it is possible to connect over other networks,
 
 By default, connections to peers are made over TCP. It is possible to route through a `socks://proxyAddr:proxyPort/` connection.
 This uses TCP over the specified SOCKS proxy, and can be used to tunnel out from a network with a particularly restrictive firewall, for example, using SSH tunneling.
-This can also be used to [connect over Tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md), particularly for `.onion` hidden service addresses.
+This can also be used to [connect over Tor](https://github.com/yggdrasil-network/public-peers/blob/master/other/tor.md), particularly for `.onion` hidden service addresses, although this does have a number of performance issues and is not generally recommended.
 
 If you are unable to find nodes in the nearby area, a best effort is made to maintain a list of [Public Peers](https://github.com/yggdrasil-network/public-peers) for new users looking to join or test the network.
 

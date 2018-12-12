@@ -155,9 +155,9 @@ journalctl -u yggdrasil
 ## Build instructions
 
 Linux has most of the tools needed to build Yggdrasil from source - you just
-need to install Go 1.9 or later.
+need to install Go 1.11 or later.
 
-1. Install Go 1.9 or later, [godeb](https://github.com/niemeyer/godeb) is
+1. Install Go 1.11 or later, [godeb](https://github.com/niemeyer/godeb) is
 recommended for Debian-based distributions).
 1. Open a shell, clone the repository and build:
 ```

@@ -67,8 +67,8 @@ sc config yggdrasil start= "auto"
 sc start yggdrasil
 ```
 Alternatively, if you want the service to autoconfigure instead of using an `yggdrasil.conf`, replace the `sc create` line from above with:
-  ```
-  sc create yggdrasil binpath= "\"C:\Program Files\Yggdrasil\yggdrasil.exe\" -autoconf"
-  ```
+```
+sc create yggdrasil binpath= "\"C:\Program Files\Yggdrasil\yggdrasil.exe\" -autoconf"
+```
 
 The Yggdrasil service can then be stopped and started using `services.msc`, or in more recent versions of Windows, the Task Manager.

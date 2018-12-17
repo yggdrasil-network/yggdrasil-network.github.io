@@ -291,9 +291,9 @@ Note that any field not specified in the configuration will use its default valu
     ```
 NodeInfo:
 {
-  name: hostname.y.domain.com
-  contact: email@domain.com
-  location: Place, Country
+    name: hostname.y.domain.com
+    contact: email@domain.com
+    location: Place, Country
 }
     ```
 

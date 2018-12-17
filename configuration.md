@@ -173,6 +173,11 @@ A new configuration file has the following format. Please note that some of the 
     # Maximum size of all switch queues combined (in bytes).
     MaxTotalQueueSize: 4194304
   }
+
+  # Optional node info. This must be a { "key": "value", ... } map
+  # or set as null. This is entirely optional but, if set, is visible
+  # to the whole network on request.
+  NodeInfo: {}
 }
 ```
 
@@ -279,6 +284,18 @@ Note that any field not specified in the configuration will use its default valu
     - Contains the following configuration options:
         - `MaxTotalQueueSize`
             - The maximum allowed size, in bytes, of all local switch queues combined. Default is `4194304` (or 4MB).
+- `NodeInfo`
+    - Public information about your node. This information can be requested by any node and may be particularly useful for crawlers and network surveys.
+    - There are no set options - you can freely enter any valid HJSON or JSON (whichever your configuration file is using).
+    - An example of some ways in which you may populate nodeinfo:
+    ```
+NodeInfo:
+{
+    name: hostname.y.domain.com
+    contact: email@domain.com
+    location: Place, Country
+}
+    ```
 
 # Use Cases
 

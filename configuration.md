@@ -222,6 +222,7 @@ Note that any field not specified in the configuration will use its default valu
     - A list of regex strings for matching which interfaces to enable multicast peer discovery on. Interfaces that don't match any of the provided regexes are ignored.
     - The default value (`.*`) matches all interfaces.
     - This is also useful if you want to prevent accidental peering over a layer 2 VPN running on top of Yggdrasil.
+    - These interfaces will be listened on UDP port 9001 which needs to be opened in firewall. For example with UFW: `ufw allow from fe80::/10 to any port 9001 proto udp`
 - `IfName`
     - The name of the `tun` or `tap` network interface to create or use. Applications send packets over this interface to use the network.
     - On most platforms, an empty string or the default `"auto"` will create a new interface automatically.

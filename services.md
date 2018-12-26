@@ -53,7 +53,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### PirateIRC
 
 - y.irc.pirateirc.net accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port 6697/tcp+ssl (recommended), 6667/tcp
-  
+
+### 2f30 IRC
+
+- irc.2f30.org accessible via Yggdrasil at `201:918e:f16:bd05:e1f4:7435:7182:42d5` port 6697/tcp+ssl
+
 ----
 
 ## API

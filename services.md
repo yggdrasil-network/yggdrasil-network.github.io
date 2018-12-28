@@ -76,7 +76,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## BitTorrent
 
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[301:4541:2f84:1188:216:3eff:fe34:ec44]:6969/announce`
+- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[301:4541:2f84:1188:216:3eff:fe34:ec44]:6969/announce`
 
 ----
 

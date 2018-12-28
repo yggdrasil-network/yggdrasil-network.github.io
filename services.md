@@ -13,9 +13,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Linux containers
 
-- LXC containers hosted on HP ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM, 1.5TB on Smart Array) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
+- LXC containers hosted on HP ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM, RAID1+0) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
   - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
-  - Containers can route to Yggdrasil only and cannot route to the public Internet, although access to Debian repos is available through a proxy (and other specific locations on request if needed)
+  - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
 ----
@@ -65,8 +65,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### Yggdrasil Network Data
 
 - [y.yakamo.org API](http://y.yakamo.org:3000/) network research & map view of the network:
-  - [Current nodes](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/current)
-  - [World Map](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/static/map.png)
+  - [Current Nodes](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/current)
+  - [Discovered NodeInfo](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/nodeinfo)
+  
+### Network Maps
+  
+- [Arceliar's Interactive Network Map](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e])
+- [y.yakamo.org Static World Map](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/static/map.png)
 
 ----
 
@@ -108,13 +113,4 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
   - `gopher-y.umbrellix.net` or `202:8fb5:1490:594d:7e29:98fd:8d79:953f`
   - Hole not updated with details of Yggdrasil, yet.
-
-----
-
-## Misc
-
-### NodeList
-  - [nodelist](https://github.com/yakamok/yggdrasil-nodelist/blob/master/nodelist) on github
-    - Node names can be a plain alias or a domain name
-    - Programs like [ygg-stats](https://github.com/yakamok/yggdrasil-stats) uses it to replace the IPv6 address with a pretty name
     

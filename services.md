@@ -35,28 +35,27 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### meshIRC
 
-- Accessible via Yggdrasil at `301:4541:2f84:1188:216:3eff:fe84:627d` port 6667
-- Accessible via cjdns at `fc2a:897b:4630:86f8:c3a5:23cb:7ea5:a69a` port 6667
+- Accessible via Yggdrasil at `301:4541:2f84:1188:216:3eff:fe84:627d` port `6667` (TCP)
 
 ### benisnet
 
 - Yggdrasil channel is `#yggdrasil`
-- cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667`
+- cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667` (TCP)
 
 ### Umbrellix
 
 - Main channel is `#lounge`
-- Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
-- Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports 194/tcp, 994/tcp+ssl, 6667/tcp, 6697/tcp+ssl
+- Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
+- Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
 - It's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
 
 ### PirateIRC
 
-- y.irc.pirateirc.net accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port 6697/tcp+ssl (recommended), 6667/tcp
+- `y.irc.pirateirc.net` accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port `6697` (TCP+SSL, recommended), `6667` (TCP)
 
 ### 2f30/Cyberia IRC
 
-- irc.y.fz.is accessible via Yggdrasil at `201:918e:f16:bd05:e1f4:7435:7182:42d5` port 6697/tcp+ssl
+- `irc.y.fz.is accessible` via Yggdrasil at `201:918e:f16:bd05:e1f4:7435:7182:42d5` port `6697` (TCP+SSL)
 
 ----
 

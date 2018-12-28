@@ -31,6 +31,18 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+## BitTorrent
+
+- neilalexander's tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[301:4541:2f84:1188:216:3eff:fe34:ec44]:6969/announce`
+
+----
+
+## IPFS
+
+- neilalexander's IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
+
+----
+
 ## IRC
 
 ### meshIRC

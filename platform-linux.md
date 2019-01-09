@@ -66,7 +66,7 @@ will also work on any other RPM-based distribution.
 Visit our [Builds](builds.md) page and download the relevant `.rpm` file, then
 install it on your system:
 ```
-addgroup --system yggdrasil
+sudo addgroup --system yggdrasil
 sudo rpm -i yggdrasil...rpm
 ```
 Configuration will be generated automatically into `/etc/yggdrasil.conf` when
@@ -92,7 +92,7 @@ EOF
 
 Create the `yggdrasil` group:
 ```
-addgroup --system yggdrasil
+sudo addgroup --system yggdrasil
 ```
 
 Install Yggdrasil:

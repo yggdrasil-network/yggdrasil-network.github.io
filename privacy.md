@@ -5,7 +5,7 @@ sitemap: true
 
 # Privacy
 
-In order to release Yggdrasil on certain platforms, we are obliged to release a Privacy Policy which discusses information usage within Yggdrasil. 
+In order to release Yggdrasil on certain platforms, we are obliged to release a Privacy Policy which discusses information usage within Yggdrasil. This document was last updated on the 9th January 2019.
 
 ### Overview
 
@@ -21,9 +21,9 @@ You can discard your network IPv6 address/network identity and assume a new one 
 
 ### Node Information
 
-Yggdrasil supports node information configuration through the `NodeInfo` configuration section. On iOS, this is shown under "Node Info" in the Settings page. Any information entered into this section is published to the network and may be stored by network crawlers. You should not publish any sensitive information in your `NodeInfo`. 
+Yggdrasil supports node information configuration through the `NodeInfo` configuration section. By default, the `NodeInfo` may also contain information about the version of Yggdrasil being run, on which operating system and architecture. You can choose not to publish this information using the `NodeInfoPrivacy` option in your configuration. Any other `NodeInfo` is entirely optional. You are not obliged to share any information. 
 
-By default, the `NodeInfo` may also contain information about the version of Yggdrasil being run, on which operating system and architecture. You can choose not to publish this information using the `NodeInfoPrivacy` option in your configuration. Any other `NodeInfo` is entirely optional. You are not obliged to share any information. 
+On iOS, this is shown under "Node Info" in the Settings page. Any information entered into this section is published to the network and may be stored by network crawlers or by any other network user. You should therefore not publish any sensitive information in your `NodeInfo`. 
 
 ### Peerings
 

@@ -92,7 +92,7 @@ EOF
 
 Create the `yggdrasil` group:
 ```
-sudo addgroup --system yggdrasil
+sudo groupadd --system yggdrasil
 ```
 
 Install Yggdrasil:

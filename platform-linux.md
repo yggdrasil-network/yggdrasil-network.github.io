@@ -48,6 +48,8 @@ echo 'deb http://neilalexander.s3.eu-west-2.amazonaws.com/deb/ debian yggdrasil'
 sudo apt-get update
 ```
 
+**Note**: The repository also works over HTTPS - you will need to `sudo apt-get install apt-transport-https` and then edit the above URL so that it starts with `https://` instead of `http://` in `/etc/apt/sources.list.d/yggdrasil.list`.
+
 Install Yggdrasil:
 ```
 sudo apt-get install yggdrasil

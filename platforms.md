@@ -24,6 +24,7 @@ sitemap: true
 
 - Works in TAP mode, but currently doesn't work in TUN mode.
 - You may need to create the TAP adapter first if it doesn't already exist, i.e. `ifconfig tap0 create`.
+- A [FreeBSD service script](https://github.com/yggdrasil-network/yggdrasil-go/blob/master/contrib/freebsd/yggdrasil) is available in the `contrib` folder. This might be adaptable to other BSDs.
 
 ## OpenBSD
 

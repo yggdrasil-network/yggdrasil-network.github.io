@@ -110,15 +110,18 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Social
+## ZeroNet
 
-### Scuttlebot Pub Server
-  - `[200:680e:76d0:2435:a2f0:c956:c484:c267]:8009`
-  - Invite code:
-```
-200:680e:76d0:2435:a2f0:c956:c484:c267:8009:@gBeNk0gWi92lTUd5im8yGgOitRPSQcZkt4KxkMl6YZ0=.ed25519~LV1YVEbDhAptPP9pfiFBNc7ix5Bw2xGsGyRx4S9GB1s=
-```
+### ZeroNet Public tracker
+  - `zero://203:5871:3e33:413c:a824:cb7b:2604:92ab:24589`
+  - Add the tracker to your `zeronet.conf` file
+  - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to `zeronet.conf` otherwise it wont connect.
   
+### Yggdrasil landing page
+  - http://127.0.0.1:43110/1H2hcep9CaGYrYycMJwFx7Jr5jA81oLC34
+  
+### Yggdrasil website copy
+  - http://127.0.0.1:43110/1PffaPsQp81gec3GbLDTzH3cY57WuRfC36
 ----
 
 ## Gopher Holes

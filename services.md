@@ -114,9 +114,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### ZeroNet Public tracker
   - `zero://203:5871:3e33:413c:a824:cb7b:2604:92ab:24589`
-  - Add the tracker to your zeronet.conf file
-  - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to zeronet.conf otherwise it wont connect.
-  - Open your browser to http://127.0.0.1:43110/1H2hcep9CaGYrYycMJwFx7Jr5jA81oLC34
+  - Add the tracker to your `zeronet.conf` file
+  - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to `zeronet.conf` otherwise it wont connect.
+  
+### Yggdrasil landing page
+  - http://127.0.0.1:43110/1H2hcep9CaGYrYycMJwFx7Jr5jA81oLC34
+  
+### Yggdrasil website copy
+  - http://127.0.0.1:43110/1PffaPsQp81gec3GbLDTzH3cY57WuRfC36
 ----
 
 ## Gopher Holes

@@ -30,42 +30,6 @@ commit
 ```
 At this point, Yggdrasil will start running using default configuration, which includes automatic peer discovery of other Yggdrasil nodes on the same network using multicast.
 
-## Add peers
-
-Add additional peers to your configuration (using `tcp://` or `socks://`):
-```
-configure
-set interfaces yggdrasil tunX peers tcp://hostname.com:12345
-set interfaces yggdrasil tunX peers tcp://a.b.c.d:12345
-set interfaces yggdrasil tunX peers tcp://[a:b:c::d]:12345
-commit
-
-run restart yggdrasil tun0
-```
-
-## Set multicast
-
-Enable or disable multicast peer discovery:
-```
-configure
-set interfaces yggdrasil tun0 multicast true
-set interfaces yggdrasil tun0 multicast false
-commit
-
-run restart yggdrasil tun0
-```
-
-## Set MTU
-
-Set the maximum MTU of the Yggdrasil interface, from 1280-65535:
-```
-configure
-set interfaces yggdrasil tun0 mtu 1500
-commit
-
-run restart yggdrasil tun0
-```
-
 ## Configuration
 
 Other changes should be made to `/config/yggdrasil.tun0.conf` by hand. To make effective, restart Yggdrasil:

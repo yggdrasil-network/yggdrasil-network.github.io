@@ -20,6 +20,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+## Websites
+
+### Wikis
+
+- [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
+
+----
+
 ## Shell accounts
 
 ### BAN.AI Public Access Multics Service

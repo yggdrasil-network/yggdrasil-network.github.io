@@ -49,6 +49,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - Yggdrasil channel is `#yggdrasil`
 - cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667` (TCP)
+- Jeff's node via Yggdrasil at `203:e0b0:ec08:4e1f:f004:19a9:577a:90ba` port `6667` (TCP)
 
 ### Umbrellix
 

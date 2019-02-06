@@ -141,4 +141,20 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
   - `gopher-y.umbrellix.net` or `202:8fb5:1490:594d:7e29:98fd:8d79:953f`
   - Hole not updated with details of Yggdrasil, yet.
-    
+
+----
+
+## DC-HUB
+
+- ru.meshnet DC-hub by whoami `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
+
+----
+
+## HTTP Proxy
+
+- by whoami `[202:9877:2815:cd91:336:2a16:bfd9:7258]:8118`
+  - This resolves OpenNIC domains (such as Emercoin .lib, Namecoin .bit), eg. http://flibusta.lib
+  - Opens TOR .onion, eg http://flibustahezeous3.onion
+  - Opens I2P .i2p domains, eg http://flibusta.i2p
+  - Opens CJDNS sites
+  - Please bypass heavy video sites like Youtube (*.googlevideo.com) and others. Try to use Proxy SwitchyOmega addon for this.

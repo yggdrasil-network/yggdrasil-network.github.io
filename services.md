@@ -60,7 +60,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### PirateIRC
 
-- `y.irc.pirateirc.net` accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port `6697` (TCP+SSL, recommended), `6667` (TCP)
+- `y.irc.pirateirc.net` accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port `6697` (TCP+SSL)
 
 ### 2f30/Cyberia IRC
 

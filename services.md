@@ -117,6 +117,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `219:8496:8f7b:b1e8:13a6:87d2:a3ca:b13d` port 53, hosted by [jcgruenhage](https://jcg.re)
     - Supports clearnet resolution of standard DNS domains
     - Will ask 1.1.1.1 over TLS, recursive resolving currently disabled due to inferior speed.
+  - `200:a120:8cf8:2ad5:7509:7341:c861:34aa` port 53 hosted by [sin](https://2f30.org)
+    - Supports clearnet resolution of standard DNS domains via root lookups
 
 ----
 

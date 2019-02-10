@@ -111,13 +111,13 @@ sudo systemctl start yggdrasil
 
 [Download the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and install it:
 ```
-sudo cp ~/yggdrasil-x.x.xx-linux-amd64 /usr/bin/yggdrasil
-sudo chmod +x /usr/bin/yggdrasil
+sudo cp ~/yggdrasil-x.x.xx-linux-amd64 /usr/local/bin/yggdrasil
+sudo chmod +x /usr/local/bin/yggdrasil
 ```
 Alternatively, compile Yggdrasil from source (below) and install:
 ```
-sudo cp /path/to/yggdrasil-go/yggdrasil /usr/bin/yggdrasil
-sudo chmod +x /usr/bin/yggdrasil
+sudo cp /path/to/yggdrasil-go/yggdrasil /usr/local/bin/yggdrasil
+sudo chmod +x /usr/local/bin/yggdrasil
 ```
 
 ## Generate configuration

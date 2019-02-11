@@ -146,7 +146,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## DC-HUB
+## Direct Connect
 
 - ru.meshnet DC-hub by whoami `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
   - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)

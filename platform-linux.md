@@ -37,9 +37,12 @@ installed into systemd and started.
 
 ### From an Internet repository
 
-To start with, add the repository key to your apt keyring:
+To start with, import the repository key to your gpg keyring and export it
+to your apt keyring:
+
 ```
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 569130E8CA20FBC4CB3FDE555898470A764B32C9
+gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+gpg --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo apt-key add -
 ```
 
 Add the repository:
@@ -79,7 +82,8 @@ installed into systemd and started.
 
 To start with, download the repository key:
 ```
-sudo rpm --define="%_hkp_keyserver http://pool.sks-keyservers.net" --import 0x5898470A764B32C9
+gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+gpg --armor --no-comment --export-options export-minimal --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
 ```
 
 Add the repository:
@@ -89,6 +93,7 @@ sudo cat > /etc/yum.repos.d/yggdrasil.repo << EOF
 name = Yggdrasil
 baseurl = https://neilalexander.s3.eu-west-2.amazonaws.com/rpm/
 gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
 EOF
 ```
 

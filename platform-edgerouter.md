@@ -54,7 +54,7 @@ At this point, Yggdrasil will start running using default configuration, which i
 
 ## Configuration
 
-Once you have generated a configuration file, as above, then you should make configuration changes (like adding peers) by editing the  `/config/yggdrasil.tun0.conf` file.
+Once you have generated a configuration file, as above, then you should make configuration changes (like [adding peers](https://github.com/yggdrasil-network/public-peers)) by editing the  `/config/yggdrasil.tun0.conf` file.
 
 For example, if using `tun0`:
 ```

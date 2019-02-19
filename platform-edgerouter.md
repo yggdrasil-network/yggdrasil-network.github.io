@@ -14,6 +14,8 @@ Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](h
 
 ## Installation
 
+Perform installation steps over SSH by connecting to the EdgeRouter as the `ubnt` user, e.g. `ssh ubnt@192.168.1.1`, or another admin-level user if configured.
+
 ### From an Internet repository
 
 Start by adding the repository:

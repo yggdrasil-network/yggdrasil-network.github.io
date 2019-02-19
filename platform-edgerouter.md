@@ -9,7 +9,7 @@ Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](h
 
 ## Notes
 
-- Although your Yggdrasil configuration will persist, the Yggdrasil package itself does not survive an upgrade of the EdgeRouter firmware. You must reinstall it after a system upgrade.
+- Although your Yggdrasil configuration will persist, the Yggdrasil package itself **does not** survive an upgrade of the EdgeRouter firmware. You must reinstall Yggdrasil after a system upgrade.
 - After upgrading firmware and reinstalling Yggdrasil, use `load` to reload your configuration and then `commit` to make it effective again. Do not run `save` until after you have reloaded your configuration.
 
 ## Installation
@@ -42,7 +42,7 @@ sudo dpkg -i vyatta-yggdrasil-x.x.xxx-mipsel.deb
 
 ## Generate configuration
 
-Configuration for Yggdrasil is generated automatically when you create an interface:
+Configuration for Yggdrasil is generated automatically when you create an interface, e.g. as `tun0`:
 ```
 configure
 set interfaces yggdrasil tun0
@@ -52,7 +52,11 @@ At this point, Yggdrasil will start running using default configuration, which i
 
 ## Configuration
 
-Other changes should be made to `/config/yggdrasil.tun0.conf` by hand. To make effective, restart Yggdrasil:
+Other changes should be made to `/config/yggdrasil.tun0.conf` by hand, e.g. if using `tun0`:
+```
+vi /config/yggdrasil.tun0.conf
+```
+To make configuration changes effective, restart Yggdrasil:
 ```
 restart yggdrasil tun0
 ```
@@ -81,7 +85,7 @@ commit
 
 ## Default Firewall Config
 
-Use this as an example firewall configuration, which will allow outgoing connections but prevent unexpected incoming ones, with the exception of ICMPv6 which will be allowed. You may need to substitute `tun0` for the interface name you chose when configuring Yggdrasil if you did not select `tun0`:
+Use this as an example firewall configuration, which will allow outgoing connections but prevent unexpected incoming ones, with the exception of ICMPv6 which will be allowed, e.g. if using `tun0`:
 ```
 configure
 

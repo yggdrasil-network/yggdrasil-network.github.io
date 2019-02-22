@@ -161,3 +161,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - Opens I2P .i2p domains, eg. http://flibusta.i2p
   - Opens CJDNS sites
   - Please bypass heavy video sites like Youtube (*.googlevideo.com) and others. Try to use Proxy SwitchyOmega addon for this.
+
+----
+
+## SOCKS5 Proxy
+
+- by whoami `[202:9877:2815:cd91:336:2a16:bfd9:7258]:1080`
+  - This resolves OpenNIC domains (such as Emercoin .lib, Namecoin .bit), eg. http://flibusta.lib
+  - Opens CJDNS sites
+  - Please bypass heavy video sites like Youtube (*.googlevideo.com) and others. Try to use Proxy SwitchyOmega addon for this.

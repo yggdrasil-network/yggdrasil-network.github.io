@@ -5,7 +5,7 @@ sitemap: true
 
 # iOS
 
-Yggdrasil is supported on iOS thanks to a native app currently in TestFlight. 
+Yggdrasil is supported on iOS thanks to a native app currently in TestFlight. It can be used on both iPhones or iPads. Although it should work on most recent releases of iOS, using the latest version is recommended.
 
 ## Notes
 

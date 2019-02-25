@@ -5,7 +5,7 @@ sitemap: true
 
 # iOS
 
-Yggdrasil is supported on iOS thanks to a native app currently in TestFlight. It can be used on both iPhones or iPads. Although it should work on most recent releases of iOS, using the latest version is recommended.
+Yggdrasil is supported on iOS thanks to a native app currently in TestFlight. It can be used on both iPhones or iPads and is implemented as a VPN extension. Although it should work on most recent releases of iOS, using the latest version is recommended.
 
 ## Notes
 
@@ -20,3 +20,5 @@ Yggdrasil is supported on iOS thanks to a native app currently in TestFlight. It
 Start by downloading the [TestFlight app](https://itunes.apple.com/us/app/testflight/id899247664?mt=8) from the App Store.
 
 Then visit the [Yggdrasil TestFlight URL](https://testflight.apple.com/join/jZNsIkRr) from your iPhone or iPad to enroll. You can then download (and upgrade) the app from within TestFlight.
+
+Upon opening Yggdrasil for the first time, you will be prompted to add a VPN configuration. You must allow this - Yggdrasil will not work without it.

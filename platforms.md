@@ -12,6 +12,10 @@ sitemap: true
 
 - See the [macOS platform page](platform-macos.md).
 
+## iOS
+
+- See the [iOS platform page](platform-ios.md).
+
 ## Windows
 
 - See the [Windows platform page](platform-windows.md).

@@ -21,7 +21,15 @@ Perform installation steps over SSH by connecting to the EdgeRouter as the `ubnt
 Start by adding the repository:
 ```
 curl -o- https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt | sudo apt-key add -
-echo 'deb http://neilalexander.s3.eu-west-2.amazonaws.com/deb/ edgerouter yggdrasil' | sudo tee /etc/apt/sources.list.d/yggdrasil.list
+```
+Then add the repository:
+```
+configure
+set system package repository yggdrasil distribution edgerouter
+set system package repository yggdrasil components yggdrasil
+set system package repository yggdrasil url http://neilalexander.s3.eu-west-2.amazonaws.com/deb/
+commit
+save
 ```
 Then install the `vyatta-yggdrasil` package:
 ```
@@ -49,6 +57,7 @@ Configuration for Yggdrasil is generated automatically when you create an interf
 configure
 set interfaces yggdrasil tun0
 commit
+save
 ```
 At this point, Yggdrasil will start running using default configuration, which includes automatic peer discovery of other Yggdrasil nodes on the same network using multicast.
 
@@ -74,6 +83,7 @@ For example:
 configure
 set interfaces yggdrasil tun0 masquerade from xxxx:xxxx:xxxx::/48
 commit
+save
 ```
 If you have multiple IPv6 subnets, then they can be configured individually by setting multiple `masquerade from` source ranges. Both private/ULA and public IPv6 subnets are acceptable.
 
@@ -85,6 +95,7 @@ configure
 set system task-scheduler task check-yggdrasil executable path /opt/vyatta/sbin/vyatta-check-yggdrasil
 set system task-scheduler task check-yggdrasil interval 1m
 commit
+save
 ```
 
 ## Default Firewall Config
@@ -120,4 +131,5 @@ set interfaces yggdrasil tun0 firewall in ipv6-name YGG_IN
 set interfaces yggdrasil tun0 firewall local ipv6-name YGG_LOCAL
 
 commit
+save
 ```

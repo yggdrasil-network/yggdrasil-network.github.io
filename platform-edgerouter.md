@@ -9,7 +9,7 @@ Yggdrasil is supported on the Ubiquiti EdgeRouter using the [vyatta-yggdrasil](h
 
 ## Notes
 
-- Although your Yggdrasil configuration will persist, the Yggdrasil package itself **does not** survive an upgrade of the EdgeRouter firmware. You must reinstall Yggdrasil after a system upgrade.
+- Although your Yggdrasil configuration will persist, the Yggdrasil package itself **does not** survive an upgrade of the EdgeRouter firmware. You must re-add the repository GPG key and re-install the `vyatta-yggdrasil` package after a system upgrade.
 - After upgrading firmware and reinstalling Yggdrasil, use `load` to reload your configuration and then `commit` to make it effective again. Do not run `save` until after you have reloaded your configuration.
 
 ## Installation
@@ -18,7 +18,7 @@ Perform installation steps over SSH by connecting to the EdgeRouter as the `ubnt
 
 ### From an Internet repository
 
-Start by adding the repository:
+Start by adding the GPG key:
 ```
 curl -o- https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt | sudo apt-key add -
 ```

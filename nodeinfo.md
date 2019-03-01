@@ -46,7 +46,8 @@ The first level of the `"public"` key should contain the network class, and then
 ```
 NodeInfo:
 {
-  public: {
+  public:
+  {
     internet: [
       tcp://a.b.c.d:e
       tcp://[a:b:c::d]:e

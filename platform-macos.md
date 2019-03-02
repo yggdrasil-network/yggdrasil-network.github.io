@@ -14,17 +14,15 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 - TAP mode is not supported on macOS, therefore the `IfTAPMode` option will have no effect and will default to TUN mode automatically.
 - The maximum MTU size supported on macOS is 65535.
 
-## Installation
-
-### Using the macOS installer (preferred)
+## Installation using the macOS installer (preferred)
 
 Visit the [Builds](builds.md) page and download the relevant `-macos-amd64.pkg` package file.
 
 Once downloaded, open the Downloads folder in Finder, right-click the package and click "Open". (Alternatively, double-click and then use System Preferences > Security to "Open Anyway" after the developer prompt.)
 
-Once installed, Yggdrasil will automatically start in the background. 
+Once installed, configuration will be generated/updated and Yggdrasil will automatically start in the background. You do not need to complete any of the below steps when using this package.
 
-### Manual installation
+## Manual installation
 
 System Integrity Protection in macOS prevents you from copying files into `/usr/bin`, therefore you should install into `/usr/local/bin` instead. This may not exist by default so create it if it doesn't exist:
 ```
@@ -42,16 +40,16 @@ sudo cp /path/to/yggdrasil-go/yggdrasil /usr/local/bin/yggdrasil
 sudo chmod +x /usr/local/bin/yggdrasil
 ```
 
-## Generate configuration
+### Generate configuration
 
 Before starting Yggdrasil, you should generate configuration:
 ```
 sudo yggdrasil -genconf > /etc/yggdrasil.conf
 ```
 
-## Run Yggdrasil
+### Run Yggdrasil
 
-### Run once
+#### Run once
 
 Open Terminal.app and start Yggdrasil using your generated configuration:
 ```
@@ -62,7 +60,7 @@ Alternatively, start Yggdrasil in auto-configuration mode:
 sudo nohup yggdrasil -autoconf &
 ```
 
-### Run as a background service
+#### Run as a background service
 
 Running as a background system service means that Yggdrasil will automatically start up in the background when your Mac boots. It also ensures that Yggdrasil will be restarted automatically if the process is terminated for some reason.
 

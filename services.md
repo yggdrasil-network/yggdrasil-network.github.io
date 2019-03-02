@@ -43,7 +43,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### meshIRC
 
-- Accessible via Yggdrasil at `301:4541:2f84:1188:216:3eff:fe84:627d` port `6667` (TCP)
+- Accessible via Yggdrasil at `201:870:9573:4095:f4e6:dfde:cc68:c783` port `6667` (TCP)
+- Accessible via cjdns at `fcdc:71fe:e8c2:f3ba:ca93:80f4:3d97:2096` port `6667` (TCP)
 
 ### benisnet
 

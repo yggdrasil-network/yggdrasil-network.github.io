@@ -16,7 +16,7 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 ## Installation
 
-### Using the macOS installer
+### Using the macOS installer (preferred)
 
 Visit the [Builds](builds.md) page and download the relevant `-macos-amd64.pkg` package file.
 

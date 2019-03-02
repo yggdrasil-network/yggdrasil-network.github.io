@@ -18,11 +18,11 @@ Yggdrasil is well supported on macOS out of the box, thanks to the inclusion of 
 
 ### Using the macOS installer
 
-Visit the [Builds](builds.md) page and download the relevant `-macos-amd64.pkg` (64-bit) or `-macos-i386.pkg` (32-bit) package file.
+Visit the [Builds](builds.md) page and download the relevant `-macos-amd64.pkg` package file.
 
-Once downloaded, open the Downloads folder in Finder, right-click the package and click "Open".
+Once downloaded, open the Downloads folder in Finder, right-click the package and click "Open". (Alternatively, double-click and then use System Preferences > Security to "Open Anyway" after the developer prompt.)
 
-(Alternatively, double-click and then use System Preferences > Security to "Open Anyway" after the developer prompt.)
+Once installed, Yggdrasil will automatically start in the background. 
 
 ### Manual installation
 

@@ -103,6 +103,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
     - DNS name: `mc.y.creativeserver.net`
     - Survival mode map, ask piele to be whitelisted
+  - `200:2c1c:5fd:76f2:d23e:b512:34ca:302a`, hosted by santost12
+    - no whitelist
 
 ----
 

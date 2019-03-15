@@ -8,6 +8,17 @@ sitemap: true
 Yggdrasil is supported on macOS. You can either [download the latest binary from
 CircleCI](builds.md) or you can build from source.
 
+## Download binaries
+
+Download the relevant macOS `yggdrasil` and `yggdrasilctl` binaries from the
+[Builds](builds.md) page.
+
+System Integrity Protection in macOS prevents you from copying files into
+`/usr/bin`, therefore you should install into `/usr/local/bin`:
+```
+sudo cp {yggdrasil,yggdrasilctl} /usr/local/bin
+```
+
 ## Build from source
 
 macOS has most of the tools needed to build Yggdrasil from source - you just

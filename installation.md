@@ -16,4 +16,4 @@ Installation guides are available for the following platforms/distributions.
 ## macOS
 
 - [macOS installer](installation-macos-pkg.md)
-- [Manual install or build from source](installation-linux-other.md)
+- [Manual install or build from source](installation-macos-other.md)

@@ -3,12 +3,14 @@ tags: dontlink
 sitemap: true
 ---
 
-# Installing on Red Hat Enterprise Linux, Fedora, CentOS
+# Installing on Red Hat Enterprise Linux, Fedora, CentOS and similar
+
+**These instructions apply to any RPM-based distribution with `systemd`.**
 
 RPM binary packages exist to simplify the installation of Yggdrasil. These
 will also work on any other RPM-based distribution.
 
-## Package install from an RPM repository
+## Package install from the S3 repository
 
 To start with, import the repository key to your `gpg` keyring and export it
 to your `rpm` keyring:

@@ -3,13 +3,15 @@ tags: dontlink
 sitemap: true
 ---
 
-# Installing on Debian, Ubuntu, elementaryOS
+# Installing on Debian, Ubuntu, elementaryOS, Linux Mint and similar
+
+**These instructions apply to any Debian-based distribution with `systemd`.**
 
 Yggdrasil is supported on Debian Linux. Debian binary packages exist to simplify
 the installation of Yggdrasil. These will also work on any Debian-based
 distribution, e.g. elementaryOS.
 
-## Package install from an Aptitude repository
+## Package install from the S3 repository
 
 To start with, import the repository key to your `gpg` keyring and export it
 to your `apt` keyring:

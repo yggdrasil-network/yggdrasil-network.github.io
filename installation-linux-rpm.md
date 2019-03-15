@@ -8,7 +8,7 @@ sitemap: true
 RPM binary packages exist to simplify the installation of Yggdrasil. These
 will also work on any other RPM-based distribution.
 
-### Package install from an RPM repository
+## Package install from an RPM repository
 
 To start with, import the repository key to your `gpg` keyring and export it
 to your `rpm` keyring:
@@ -47,7 +47,7 @@ sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil
 ```
 
-### One-off package install from CircleCI
+## One-off package install from CircleCI
 
 Visit our [Builds](builds.md) page and download the relevant `.rpm` file, then
 install it on your system:
@@ -59,7 +59,7 @@ Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into systemd and started.
 
-### Making configuration changes
+## Making configuration changes
 
 Modify the `/etc/yggdrasil.conf` file and then either reload the config:
 ```
@@ -70,7 +70,7 @@ systemctl reload yggdrasil
 systemctl restart yggdrasil
 ```
 
-### After installation
+## After installation
 
 Read the [Linux platform page](platform-linux.md) page for further
 information about Linux platform support.

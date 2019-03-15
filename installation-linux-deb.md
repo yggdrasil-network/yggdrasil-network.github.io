@@ -9,7 +9,7 @@ Yggdrasil is supported on Debian Linux. Debian binary packages exist to simplify
 the installation of Yggdrasil. These will also work on any Debian-based
 distribution, e.g. elementaryOS.
 
-### Package install from an Aptitude repository
+## Package install from an Aptitude repository
 
 To start with, import the repository key to your `gpg` keyring and export it
 to your `apt` keyring:
@@ -41,7 +41,7 @@ sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil
 ```
 
-### One-off package install from CircleCI
+## One-off package install from CircleCI
 
 Visit our [Builds](builds.md) page and download the relevant `.deb` file, then
 install it on your system. If you want to install the latest `.deb` from the
@@ -66,7 +66,7 @@ systemctl reload yggdrasil
 systemctl restart yggdrasil
 ```
 
-### After installation
+## After installation
 
 Read the [Linux platform page](platform-linux.md) page for further
 information about Linux platform support.

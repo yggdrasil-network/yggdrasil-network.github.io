@@ -8,7 +8,7 @@ sitemap: true
 Yggdrasil is supported on macOS. You can either [download the latest binary from
 CircleCI](builds.md) or you can build from source.
 
-### Build from source
+## Build from source
 
 macOS has most of the tools needed to build Yggdrasil from source - you just
 need to install the Go toolchain. Yggdrasil requires Go 1.11 as a minimum.
@@ -34,13 +34,13 @@ you should install into `/usr/local/bin`:
 sudo cp {yggdrasil,yggdrasilctl} /usr/local/bin
 ```
 
-##### Debug builds
+#### Debug builds
 
 You can create a debug build by running `./build -d` instead of
 `./build`. Debug builds contain profiling code as well as additional debugging
 symbols. They are likely to be larger files as a result.
 
-### Install launchd service
+## Install launchd service
 
 launchd service scripts are included in the `contrib/macos/` folder so that it
 runs automatically in the background (using `/etc/yggdrasil.conf` for
@@ -64,7 +64,7 @@ tail -f /tmp/yggdrasil.stdout.log
 tail -f /tmp/yggdrasil.stderr.log
 ```
 
-### Generate configuration
+## Generate configuration
 
 Generate an initial Yggdrasil configuration file:
 ```
@@ -74,7 +74,7 @@ sudo yggdrasil -genconf > /etc/yggdrasil.conf
 You can make changes to this file as described in the
 [Configuration](configuration.md) page.
 
-### After installation
+## After installation
 
 Read the [macOS platform page](platform-macos.md) page for further
 information about macOS platform support.

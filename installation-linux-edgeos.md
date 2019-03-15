@@ -12,7 +12,7 @@ Perform installation steps over SSH by connecting to the EdgeRouter as the
 `ubnt` user, e.g. `ssh ubnt@192.168.1.1`, or another admin-level user if
 configured.
 
-### Package install from an Aptitude repository
+## Package install from an Aptitude repository
 
 Start by adding the GPG key:
 ```
@@ -41,7 +41,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-### One-off package install from CircleCI
+## One-off package install from CircleCI
 
 If you do not want to configure the repository above, you can perform a one-off
 installation by [downloading the latest vyatta-yggdrasil `.deb`
@@ -51,7 +51,7 @@ curl -O https://xx-xxxxxxxxx-gh.circle-artifacts.com/x/vyatta-yggdrasil-x.x.xxx-
 sudo dpkg -i vyatta-yggdrasil-x.x.xxx-mipsel.deb
 ```
 
-### After installation
+## After installation
 
 Read the [EdgeRouter platform page](platform-edgerouter.md) page for information
 on how to configure Yggdrasil and guidance on modifying the configuration.

@@ -2,7 +2,7 @@
 sitemap: true
 ---
 
-# Platforms
+# Platform Notes
 
 ## Linux
 

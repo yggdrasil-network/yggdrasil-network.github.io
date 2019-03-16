@@ -147,16 +147,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Direct Connect
+## HTTP/SOCKS5 Proxy
 
-- ru.meshnet DC-hub by whoami `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
-  - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)
-
-----
-
-## HTTP Proxy
-
-- by whoami `[202:9877:2815:cd91:336:2a16:bfd9:7258]:8118`
+- by *whoami* `[202:9877:2815:cd91:336:2a16:bfd9:7258]:8888`
   - This resolves OpenNIC domains (such as Emercoin .lib, Namecoin .bit), eg. http://flibusta.lib
   - Opens TOR .onion, eg. http://flibustahezeous3.onion
   - Opens I2P .i2p domains, eg. http://flibusta.i2p
@@ -165,9 +158,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## SOCKS5 Proxy
+## Direct Connect
 
-- by whoami `[202:9877:2815:cd91:336:2a16:bfd9:7258]:1080`
-  - This resolves OpenNIC domains (such as Emercoin .lib, Namecoin .bit), eg. http://flibusta.lib
-  - Opens CJDNS sites
-  - Please bypass heavy video sites like Youtube (*.googlevideo.com) and others. Try to use Proxy SwitchyOmega addon for this.
+- ru.meshnet DC-hub by *whoami* `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
+  - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)
+

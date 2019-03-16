@@ -16,6 +16,9 @@ distribution, e.g. elementaryOS.
 To start with, import the repository key to your `gpg` keyring and export it
 to your `apt` keyring:
 
+On Raspberry pi you need to do first:
+`sudo apt-get install dirmngr`
+
 ```
 gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
 gpg --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo apt-key add -

@@ -69,6 +69,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+## Matrix
+
+### netwhood.online
+
+- `http://[201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89]:8008` run by [abslimit](http://netwhood.online/feedback/)
+
+----
+
 ## API
 
 ### Yggdrasil Network Data

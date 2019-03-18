@@ -13,7 +13,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Linux containers
 
-- LXC containers hosted on HP ProLiant DL380 G7 hardware (dual Xeon X5650, 96GB RAM, RAID1+0) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
+- LXD containers hosted on HP ProLiant DL360 Gen9 hardware (dual Xeon E5-2603v3, 128GB RAM, RAID6) at `201:4541:2f84:1188:59ab:e8dd:48a8:d40c`
   - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
   - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network

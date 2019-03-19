@@ -13,12 +13,14 @@ distribution, e.g. elementaryOS.
 
 ## Package install from the S3 repository
 
-To start with, import the repository key to your `gpg` keyring and export it
-to your `apt` keyring:
+On some platforms, e.g. Raspberry Pi, you may need to start by installing
+`dirmngr` if it is not already available:
+```
+sudo apt-get install dirmngr
+```
 
-On Raspberry pi you need to do first:
-`sudo apt-get install dirmngr`
-
+Then import the repository key to your `gpg` keyring and export it to your
+`apt` keyring:
 ```
 gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
 gpg --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo apt-key add -

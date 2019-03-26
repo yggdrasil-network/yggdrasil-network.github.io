@@ -69,10 +69,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### ILITA IRC
 
-- Primarily russian IRC network of users and developers of meshnets and overlay networks (like i2p). English is fine too :).
-- Servers in network linked via i2p.
-- There are nodes in clearnet (`irc.pztrn.name` ports `16667` (TCP), `16697` (TCP+SSL)), i2p (`irc.ilita.i2p`) and Yggdrasil (`303:60d4:3d32:a2b9::3` ports `16667` (TCP) and `16697` (TCP+SSL)). Yggdrasil's SSL port uses same certificate as clearnet node, so you **will** receive SSL warning, this is expected.
-- Join #en for english discussions.
+- Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
+- Accessible via Yggdrasil at `303:60d4:3d32:a2b9::3` ports `16667` (TCP), `16697` (TCP+SSL)
+- Accessible via public Internet at `irc.pztrn.name` ports `16667` (TCP), `16697` (TCP+SSL)
+- Accessible via I2P at `irc.ilita.i2p` (and servers in the network are linked via I2P)
+- Yggdrasil's SSL port uses same certificate as the public Internet node, so you **will** receive SSL warning, this is expected
+- Join `#en` for english discussions
 
 ----
 

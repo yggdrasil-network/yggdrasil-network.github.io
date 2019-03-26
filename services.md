@@ -67,6 +67,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - `irc.y.fz.is accessible` via Yggdrasil at `201:918e:f16:bd05:e1f4:7435:7182:42d5` port `6697` (TCP+SSL)
 
+### ILITA IRC
+
+- Primarily russian IRC network of users and developers of meshnets and overlay networks (like i2p). English is fine too :).
+- Servers in network linked via i2p.
+- There are nodes in clearnet (`irc.pztrn.name` ports `16667` (TCP), `16697` (TCP+SSL)), i2p (`irc.ilita.i2p`) and Yggdrasil (`303:60d4:3d32:a2b9::3` ports `16667` (TCP) and `16697` (TCP+SSL)). Yggdrasil's SSL port uses same certificate as clearnet node, so you **will** receive SSL warning, this is expected.
+- Join #en for english discussions.
+
 ----
 
 ## Matrix

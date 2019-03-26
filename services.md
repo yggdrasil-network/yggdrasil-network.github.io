@@ -22,6 +22,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## Websites
 
+### Forums
+
+- [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.
+  - Accessible via Yggdrasil at `http://[303:60d4:3d32:a2b9::4]/`.
+  - Accessible via I2P at `http://meshforum.i2p` or `http://hp2uzysaur74tbeojtlcsl7apsy2jgqxydd7b5asgvztihz76jia.b32.i2p/`.
+
 ### Wikis
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`

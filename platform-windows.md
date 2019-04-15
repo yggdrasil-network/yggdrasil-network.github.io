@@ -14,6 +14,14 @@ Yggdrasil has been tested and is working on the following versions of Windows:
 
 It may work on other versions of Windows too, although these are untested.
 
+## Automated package (yggdrasil-waash)
+
+There is now an automated package for Windows which contains both the TAP driver and yggdrasil itself.
+It also allows for an easy configuration of peers to connect to and comes with a long list of public
+peers. Download from https://github.com/carnhofdaki/yggdrasil-waash/releases
+
+The original documentation for manual intallation continues:
+
 ## TAP Driver
 
 Yggdrasil depends on the OpenVPN TAP driver to work on Windows. There are two flavours of this driver:

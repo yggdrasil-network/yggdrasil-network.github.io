@@ -31,7 +31,7 @@ Please note that if you already have OpenVPN for Windows, you likely have one of
 
 ## Installation
 
-Start by [downloading the latest Yggdrasil binary](https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts) and use Windows Explorer to copy it into a sensible location and rename it to `yggdrasil.exe`.
+Start by [downloading the latest Yggdrasil binary](builds.md) and use Windows Explorer to copy it into a sensible location and rename it to `yggdrasil.exe`.
 
 The below examples assume that you placed `yggdrasil.exe` into `C:\Program Files\Yggdrasil`.
 

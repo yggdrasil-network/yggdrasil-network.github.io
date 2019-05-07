@@ -44,8 +44,7 @@ installed into `systemd`.
 
 Enable and start the service after install/upgrade:
 ```
-sudo systemctl enable yggdrasil
-sudo systemctl start yggdrasil
+sudo systemctl enable --now yggdrasil
 ```
 
 ## One-off package install from CircleCI

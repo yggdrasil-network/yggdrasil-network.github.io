@@ -71,8 +71,7 @@ sudo systemctl daemon-reload
 
 Enable and start Yggdrasil:
 ```
-sudo systemctl enable yggdrasil
-sudo systemctl start yggdrasil
+sudo systemctl enable --now yggdrasil
 ```
 
 Once installed as a systemd service, you can read the `yggdrasil` output using

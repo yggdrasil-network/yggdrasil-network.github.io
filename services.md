@@ -88,7 +88,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### netwhood.online
 
-- `http://[201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89]:8008` run by [abslimit](http://netwhood.online/feedback/)
+- `http://[202:12a9:e5:4474:d473:82be:16ac:9381]:8008` run by [abslimit](http://netwhood.online/feedback/)
 
 ----
 

@@ -32,6 +32,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
 
+### File hosting
+- [Simple file hosting](http://[200:72a1:1bba:324:3e34:528e:bdc2:a1d7]/) for files <100 Mb and images run by @u1035 at `http://[200:72a1:1bba:324:3e34:528e:bdc2:a1d7]`
+
 ----
 
 ## Shell accounts

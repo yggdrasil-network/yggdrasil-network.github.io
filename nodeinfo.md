@@ -22,7 +22,7 @@ NodeInfo:
   buildname: yggdrasil
   buildversion: 0.3.3
   buildplatform: darwin
-  buildarch": amd64
+  buildarch: amd64
 }
 ```
 

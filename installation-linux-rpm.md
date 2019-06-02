@@ -10,46 +10,52 @@ sitemap: true
 RPM binary packages exist to simplify the installation of Yggdrasil. These
 will also work on any other RPM-based distribution.
 
-## Package install from the S3 repository
 
-To start with, import the repository key to your `gpg` keyring and export it
-to your `rpm` keyring:
-```
-gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
-gpg --armor --no-comment --export-options export-minimal --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
+## Install RPM package from COPR repository
+
+There's a [Fedora COPR repository](https://copr.fedorainfracloud.org/coprs/leisteth/yggdrasil/) available, which provides recent versions of Yggdrasil - *not only for Fedora, but also for CentOS/RHEL!*
+
+
+### Fedora
+
+Installation on Fedora is easy as:
+
+```bash
+dnf copr enable leisteth/yggdrasil
+dnf install yggdrasil
 ```
 
-Add the repository:
+... and you're ready to go!
+
+
+### CentOS / RHEL
+
+Paste the following into a new file `/etc/yum.repos.d/yggdrasil.repo`:
+
 ```
-sudo cat > /etc/yum.repos.d/yggdrasil.repo << EOF
-[yggdrasil]
-name = Yggdrasil
-baseurl = https://neilalexander.s3.eu-west-2.amazonaws.com/rpm/
+[leisteth-yggdrasil]
+name=Copr repo for yggdrasil owned by leisteth
+baseurl=https://copr-be.cloud.fedoraproject.org/results/leisteth/yggdrasil/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
-EOF
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/leisteth/yggdrasil/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
 ```
 
-Create the `yggdrasil` group on your system:
-```
-sudo groupadd --system yggdrasil
+*Don't forget to change the `baseurl` according to your RHEL/CentOS version! In the config above, version 7 is used.*
+
+Install yggdrasil:
+
+```bash
+yum update
+yum install yggdrasil
 ```
 
-Install Yggdrasil:
-```
-sudo dnf install yggdrasil
-```
-Configuration will be generated automatically into `/etc/yggdrasil.conf` when
-the package is installed, and the Yggdrasil service will automatically be
-installed into `systemd`.
 
-Enable and start the service after install/upgrade:
-```
-sudo systemctl enable yggdrasil
-sudo systemctl start yggdrasil
-```
-
-## One-off package install from CircleCI
+## One-off package install from CircleCI (not recommended!)
 
 Visit our [Builds](builds.md) page and download the relevant `.rpm` file, then
 install it on your system:
@@ -60,6 +66,9 @@ sudo rpm -i yggdrasil...rpm
 Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into systemd and started.
+
+**Please note: By using this installation method, you won't receive (security-/) updates for Yggdrasil!**
+
 
 ## Making configuration changes
 

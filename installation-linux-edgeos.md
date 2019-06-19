@@ -16,7 +16,7 @@ configured.
 
 Start by adding the GPG key:
 ```
-curl -o- https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt | sudo apt-key add -
+curl -o- https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt | sudo apt-key add -
 ```
 
 Then add the repository:
@@ -24,7 +24,7 @@ Then add the repository:
 configure
 set system package repository yggdrasil distribution edgerouter
 set system package repository yggdrasil components yggdrasil
-set system package repository yggdrasil url http://neilalexander.s3.eu-west-2.amazonaws.com/deb/
+set system package repository yggdrasil url http://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/
 commit
 save
 ```

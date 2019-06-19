@@ -15,7 +15,7 @@ will also work on any other RPM-based distribution.
 To start with, import the repository key to your `gpg` keyring and export it
 to your `rpm` keyring:
 ```
-gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+gpg --fetch-keys https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt
 gpg --armor --no-comment --export-options export-minimal --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
 ```
 
@@ -24,7 +24,7 @@ Add the repository:
 sudo cat > /etc/yum.repos.d/yggdrasil.repo << EOF
 [yggdrasil]
 name = Yggdrasil
-baseurl = https://neilalexander.s3.eu-west-2.amazonaws.com/rpm/
+baseurl = https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/rpm/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil
 EOF

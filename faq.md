@@ -89,7 +89,7 @@ VPN traffic can be sent while using Yggdrasil.
 
 ### Does Yggdrasil work with networks like i2p and TOR?
 
-i2p and TOR work over Yggdrasil.
+i2p and TOR work with Yggdrasil.
 
 See: [/public-peers/tree/master/other](https://github.com/yggdrasil-network/public-peers/tree/master/other)
 

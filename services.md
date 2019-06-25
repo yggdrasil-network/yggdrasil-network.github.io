@@ -34,6 +34,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+
 ## Shell accounts
 
 ### BAN.AI Public Access Multics Service
@@ -104,6 +105,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
   
 - [Arceliar's Interactive Network Map](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e])
 - [y.yakamo.org Static World Map](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/static/map.png)
+
+### IPv6 address information 
+- http://[300:aa35:f9c1:dcce::2]/
 
 ----
 

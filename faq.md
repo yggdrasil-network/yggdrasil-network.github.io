@@ -87,7 +87,7 @@ You can set the `IfName` configuration setting to `"none"`. This will load Yggdr
 
 Yes, Yggdrasil should not interfere with existing VPNs. VPN traffic can be sent while using Yggdrasil.
 
-### Does Yggdrasil work with networks like i2p and TOR?
+### Does Yggdrasil work with networks like Tor or I2P?
 
 Yggdrasil can peer over Tor or I2P. See [/public-peers/tree/master/other](https://github.com/yggdrasil-network/public-peers/tree/master/other) for public peers.
 

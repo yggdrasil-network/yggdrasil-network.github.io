@@ -187,3 +187,5 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ## iPerf3
 
 - `iperf3 -6 -c y.thingylabs.io` on [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+  - Link: 10 GBit
+  - Location: Nuremberg, Germany

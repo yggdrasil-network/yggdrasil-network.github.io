@@ -3,6 +3,10 @@ tags: dontlink
 sitemap: true
 ---
 
+# Installing manually on Windows
+
+Yggdrasil is supported on Windows. You can either [download the latest binary from CircleCI](builds.md).
+
 ## TAP Driver
 
 Yggdrasil depends on the OpenVPN TAP driver to work on Windows. There are two flavours of this driver:

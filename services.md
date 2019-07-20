@@ -181,3 +181,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - DC-hub by *whoami* `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
   - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)
+
+----
+
+## [iPerf3](https://iperf.fr)
+
+- `iperf3 -6 -c y.thingylabs.io` on [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+  - Link: 10 GBit
+  - Location: Nuremberg, Germany

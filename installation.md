@@ -21,3 +21,7 @@ Installation guides are available for the following platforms/distributions.
 ## iOS
 
 - [App installation](installation-ios-app.md)
+
+## Windows
+
+- [Manual install as a Windows service](installation-windows.md)

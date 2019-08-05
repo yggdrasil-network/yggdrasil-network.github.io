@@ -22,15 +22,66 @@ div.wrapper section p a code {
 section {
   flex: auto;
   max-width: 100vw;
+  margin-right: 20px;
+  @media screen and (max-width: 767px) {
+	border: 0;
+	padding-right: 25px;
+  }
 }
 
 header {
   flex: initial;
   position: relative;
-  width: 240px !important;
   margin-right: 1em;
+  @media screen and (max-width: 767px) {
+	  font-size: 0;
+	  &:before {
+		content:'\2630';
+		display: block;
+	        position: absolute;
+		left: 0px;
+		font-size: 32px;	
+	        top: -30px;
+	  }
+	  img {
+		display: none;
+	  }
+	  a:first-child {
+		position: absolute;
+		top: -30px;
+		left: 50px;
+	  }
+ 	  &:hover {
+		padding: 0;
+		font-size: initial;
+		a:first-child {
+			position: unset;
+			pointer-events: none;
+		}
+		position: fixed;
+		height: 100%;
+		overflow: scroll;
+		background-color: white;
+		top: 0px;
+		width: 100%;
+		z-index: 100;
+		p {
+			a {	
+				font-size: 24px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				display: block;
+			}
+			br {
+				display: none;
+			}
+		}
+		&:before {
+			display: none;
+		}
+	  }
+	}
 }
-
 pre {
   overflow-x: scroll;
 }

@@ -150,6 +150,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Will ask 1.1.1.1 over TLS, recursive resolving currently disabled due to inferior speed.
   - `200:a120:8cf8:2ad5:7509:7341:c861:34aa` port 53 hosted by [sin](https://2f30.org)
     - Supports clearnet resolution of standard DNS domains via root lookups
+  - `200:d0c4:68ee:e87b:c206:67b8:5fa5:d4be` port 53, hosted by [Medium](https://github.com/medium-isp)
+    - Internal Yggdrasil services resolver
 
 ----
 

@@ -179,9 +179,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## Direct Connect
 
-- DC-hub by *whoami* `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
-  - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)
-
 - bepis DC-hub run by *Jeff* `adc://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]:1511`
 
 ----

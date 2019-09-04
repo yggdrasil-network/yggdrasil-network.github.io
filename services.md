@@ -59,13 +59,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - cathugger's node via Yggdrasil at `201:4806:21d5:c971:407f:4ea9:4d7d:e491` port `6667` (TCP)
 - Jeff's node via Yggdrasil at `203:e0b0:ec08:4e1f:f004:19a9:577a:90ba` port `6667` (TCP)
 
-### Umbrellix
-
-- Main channel is `#lounge`
-- Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
-- Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
-- It's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
-
 ### PirateIRC
 
 - `y.irc.pirateirc.net` accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port `6697` (TCP+SSL)
@@ -168,15 +161,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### Yggdrasil website copy
   - http://127.0.0.1:43110/1PffaPsQp81gec3GbLDTzH3cY57WuRfC36
   
-----
-
-## Gopher Holes
-
-### Umbrellix Gopher
-
-  - `gopher-y.umbrellix.net` or `202:8fb5:1490:594d:7e29:98fd:8d79:953f`
-  - Hole not updated with details of Yggdrasil, yet.
-
 ----
 
 ## Direct Connect

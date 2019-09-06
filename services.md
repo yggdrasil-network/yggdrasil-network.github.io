@@ -26,7 +26,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.
   - Accessible via Yggdrasil at `http://[303:60d4:3d32:a2b9::4]/`.
-  - Accessible via I2P at `http://meshforum.i2p` or `http://hp2uzysaur74tbeojtlcsl7apsy2jgqxydd7b5asgvztihz76jia.b32.i2p/`.
 
 ### Wikis
 
@@ -108,6 +107,20 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### IPv6 address information 
 - http://[300:aa35:f9c1:dcce::2]/
+
+----
+
+## NNTP
+
+### pztrn's NNTP server
+
+- [Website with rules, news and documentation](https://nntp.pztrn.name).
+- Registration required to access all groups beyond `local.regreq` which is used for registration requests. No anonymous postings allowed.
+- ygg.* hierarchy for talks about Yggdrasil! :)
+- Accessible via Yggdrasil at `201:e64d:1a9:d2b0:9c74:f285:ea73:5e05` ports `119` (plain text) and `563` (TLSv1.0+ only).
+- Accessible via public Internet at `nntp.pztrn.name` ports `119` (plain text) and `563` (TLSv1.0+ only).
+- SSL warnings via Yggdrasil expected, certificate is for *.pztrn.name. You can workaround it by adding entry in hosts file.
+- Peering is welcome, especially via Yggdrasil.
 
 ----
 

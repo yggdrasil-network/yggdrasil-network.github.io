@@ -43,7 +43,9 @@ A new configuration file has the following format. Please note that some of the 
 {
   # Listen address for peer connections. Default is to listen for all
   # TCP connections over IPv4 and IPv6 with a random port.
-  Listen: "[::]:xxxxx"
+  Listen: [
+    tcp://[::]:xxxxx
+  ]
 
   # Listen address for admin connections Default is to listen for local
   # connections either on TCP/9001 or a UNIX socket depending on your
@@ -186,9 +188,8 @@ Note that any field not specified in the configuration will use its default valu
 ## Configuration Options
 
 - `Listen`
-    - A string, in the form of `"ip:port"`, on which to listen for (TCP) connections from peers.
+    - A list of strings in the form `[ "tcp://listenAddress:listenPort", ... ]`, on which to listen for (TCP) connections from peers.
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
-    - The default is to listen on all addresses (`[::]`) with a random port.
 - `AdminListen`
     - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
     - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.

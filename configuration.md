@@ -41,28 +41,19 @@ A new configuration file has the following format. Please note that some of the 
 
 ```
 {
-  # Listen address for peer connections. Default is to listen for all
-  # TCP connections over IPv4 and IPv6 with a random port.
-  Listen: [
-    tcp://[::]:xxxxx
-  ]
-
-  # Listen address for admin connections Default is to listen for local
-  # connections either on TCP/9001 or a UNIX socket depending on your
-  # platform. Use this value for yggdrasilctl -endpoint=X.
-  AdminListen: tcp://localhost:9001
-
-  # List of connection strings for static peers in URI format, e.g.
-  # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j.
+  # List of connection strings for outbound peer connections in URI format,
+  # e.g. tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j. These connections
+  # will obey the operating system routing table, therefore you should
+  # use this section when you may connect via different interfaces.
   Peers: [
     tcp://a.b.c.d:xxxxx
     tcp://d.c.b.a:xxxxx
   ]
 
-  # List of connection strings for static peers in URI format, arranged
-  # by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
-  # SOCKS peerings will NOT be affected by this option and should go in
-  # the "Peers" section instead.
+  # List of connection strings for outbound peer connections in URI format,
+  # arranged by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }.
+  # Note that SOCKS peerings will NOT be affected by this option and should
+  # go in the "Peers" section instead.
   InterfacePeers: {
     "eth0": [
       tcp://a.b.c.d:xxxxx
@@ -70,14 +61,33 @@ A new configuration file has the following format. Please note that some of the 
     ]
   }
 
-  # Read timeout for connections, specified in milliseconds. If less
-  # than 6000 and not negative, 6000 (the default) is used. If negative,
-  # reads won't time out.
-  ReadTimeout: 0
+  # Listen addresses for incoming connections. You will need to add
+  # listeners in order to accept incoming peerings from non-local nodes.
+  # Multicast peer discovery will work regardless of any listeners set
+  # here. Each listener should be specified in URI format as above, e.g.
+  # tcp://0.0.0.0:0 or tcp://[::]:0 to listen on all interfaces.
+  Listen: [
+    tcp://[::]:xxxxx
+  ]
 
-  # List of peer encryption public keys to allow or incoming TCP
-  # connections from. If left empty/undefined then all connections
-  # will be allowed by default.
+  # Listen address for admin connections. Default is to listen for local
+  # connections either on TCP/9001 or a UNIX socket depending on your
+  # platform. Use this value for yggdrasilctl -endpoint=X. To disable
+  # the admin socket, use the value "none" instead.
+  AdminListen: tcp://localhost:9001
+
+  # Regular expressions for which interfaces multicast peer discovery
+  # should be enabled on. If none specified, multicast peer discovery is
+  # disabled. The default value is .* which uses all interfaces.
+  MulticastInterfaces:
+  [
+    .*
+  ]
+
+  # List of peer encryption public keys to allow incoming TCP peering
+  # connections from. If left empty/undefined then all connections will
+  # be allowed by default. This does not affect outgoing peerings, nor
+  # does it affect link-local peers discovered via multicast.
   AllowedEncryptionPublicKeys: []
 
   # Your public encryption key. Your peers may ask you for this to put
@@ -94,13 +104,12 @@ A new configuration file has the following format. Please note that some of the 
   # Your private signing key. DO NOT share this with anyone!
   SigningPrivateKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Regular expressions for which interfaces multicast peer discovery
-  # should be enabled on. If none specified, multicast peer discovery is
-  # disabled. The default value is .* which uses all interfaces.
-  MulticastInterfaces:
-  [
-    .*
-  ]
+  # The port number to be used for the link-local TCP listeners for the
+  # configured MulticastInterfaces. This option does not affect listeners
+  # specified in the Listen option. Unless you plan to firewall link-local
+  # traffic, it is best to leave this as the default value of 0. This
+  # option cannot currently be changed by reloading config during runtime.
+  LinkLocalTCPPort: 0
 
   # Local network interface name for TUN/TAP adapter, or "auto" to select
   # an interface automatically, or "none" to run without TUN/TAP.
@@ -156,24 +165,22 @@ A new configuration file has the following format. Please note that some of the 
     # Enable or disable tunnel routing.
     Enable: false
 
-    # IPv6 CIDR subnets, mapped to the EncryptionPublicKey to which they  
-    # should be routed, e.g. { "aaaa:bbbb:cccc::/e": "boxpubkey", ... }
-    IPv6Destinations: {}
+    # IPv6 subnets belonging to remote nodes, mapped to the node's public  
+    # key, e.g. { "aaaa:bbbb:cccc::/e": "boxpubkey", ... }
+    IPv6RemoteSubnets: {}
 
-    # Optional IPv6 source subnets which are allowed to be tunnelled in  
-    # addition to this node's Yggdrasil address/subnet. If not  
-    # specified, only traffic originating from this node's Yggdrasil  
-    # address or subnet will be tunnelled.
-    IPv6Sources: []
+    # IPv6 subnets belonging to this node's end of the tunnels. Only traffic  
+    # from these ranges (or the Yggdrasil node's IPv6 address/subnet)  
+    # will be tunnelled.
+    IPv6LocalSubnets: []
 
-    # IPv4 CIDR subnets, mapped to the EncryptionPublicKey to which they  
-    # should be routed, e.g. { "a.b.c.d/e": "boxpubkey", ... }
-    IPv4Destinations: {}
+    # IPv4 subnets belonging to remote nodes, mapped to the node's public  
+    # key, e.g. { "a.b.c.d/e": "boxpubkey", ... }
+    IPv4RemoteSubnets: {}
 
-    # IPv4 source subnets which are allowed to be tunnelled. Unlike for  
-    # IPv6, this option is required for bridging IPv4 traffic. Only  
-    # traffic with a source matching these subnets will be tunnelled.
-    IPv4Sources: []
+    # IPv4 subnets belonging to this node's end of the tunnels. Only traffic  
+    # from these ranges will be tunnelled.
+    IPv4LocalSubnets: []
   }
 
   # Advanced options for tuning the switch. Normally you will not need
@@ -183,6 +190,13 @@ A new configuration file has the following format. Please note that some of the 
     # Maximum size of all switch queues combined (in bytes).
     MaxTotalQueueSize: 4194304
   }
+
+  # By default, nodeinfo contains some defaults including the platform,
+  # architecture and Yggdrasil version. These can help when surveying
+  # the network and diagnosing network routing problems. Enabling
+  # nodeinfo privacy prevents this, so that only items specified in
+  # "NodeInfo" are sent back if specified.
+  NodeInfoPrivacy: false
 
   # Optional node info. This must be a { "key": "value", ... } map
   # or set as null. This is entirely optional but, if set, is visible

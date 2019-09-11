@@ -54,13 +54,21 @@ A new configuration file has the following format. Please note that some of the 
 
   # List of connection strings for static peers in URI format, e.g.
   # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j.
-  Peers: []
+  Peers: [
+    tcp://a.b.c.d:xxxxx
+    tcp://d.c.b.a:xxxxx
+  ]
 
   # List of connection strings for static peers in URI format, arranged
   # by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
   # SOCKS peerings will NOT be affected by this option and should go in
   # the "Peers" section instead.
-  InterfacePeers: {}
+  InterfacePeers: {
+    "eth0": [
+      tcp://a.b.c.d:xxxxx
+      tcp://d.c.b.a:xxxxx
+    ]
+  }
 
   # Read timeout for connections, specified in milliseconds. If less
   # than 6000 and not negative, 6000 (the default) is used. If negative,

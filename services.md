@@ -172,7 +172,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Supports clearnet resolution of standard DNS domains via root lookups
   - `200:d0c4:68ee:e87b:c206:67b8:5fa5:d4be` port 53, hosted by [Medium](https://github.com/medium-isp)
     - Internal Yggdrasil services resolver
-
+  - `200:5bf2:a7a5:27c7:54b8:6669:eb74:1813` port 53, hosted by [User2k](https://user2k.eu)
+    - Medium DNS + OpenDNS + Google DNS + CloudFlare DNS
 ----
 
 ## ZeroNet

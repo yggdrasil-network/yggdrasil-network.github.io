@@ -84,11 +84,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Matrix
+## XMPP
 
 ### netwhood.online
 
-- `http://[202:12a9:e5:4474:d473:82be:16ac:9381]:8008` run by [abslimit](http://netwhood.online/feedback/)
+- `netwhood.online`, run by [abslimit](http://netwhood.online/feedback/)
+  - SRV record `_xmpp-client._tcp` is prioritized for `y.netwhood.online` (`202:12a9:e5:4474:d473:82be:16ac:9381`). XMPP-client must try yggdrasil address at first.
+  - SRV record `_xmpp-server._tcp` is prioritized for `y.netwhood.online` too. XMPP s2s connections must try yggdrasil address at first. Lets peer?
+  - "HTTP upload" XEP module is tied to `netwhood.online`, it will connect through the Internet. It can not be prioritized for yggdrasil.
 
 ----
 
@@ -146,6 +149,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
     
 ### Minetest
   - `300:aa35:f9c1:dcce::3:30000`, admin Admin
+  
+### Xonotic
+  - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
+    - DNS name: `xonotic.y.netwhood.online:26000`
 
 ----
 

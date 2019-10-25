@@ -47,7 +47,8 @@ A new configuration file has the following format. Please note that some of the 
   # use this section when you may connect via different interfaces.
   Peers: [
     tcp://a.b.c.d:xxxxx
-    tcp://d.c.b.a:xxxxx
+    socks://e.f.g.h:xxxxx/a.b.c.d:xxxxx
+    tls://a.b.c.d:xxxxx
   ]
 
   # List of connection strings for outbound peer connections in URI format,
@@ -57,7 +58,7 @@ A new configuration file has the following format. Please note that some of the 
   InterfacePeers: {
     "eth0": [
       tcp://a.b.c.d:xxxxx
-      tcp://d.c.b.a:xxxxx
+      tls://a.b.c.d:xxxxx
     ]
   }
 
@@ -68,6 +69,7 @@ A new configuration file has the following format. Please note that some of the 
   # tcp://0.0.0.0:0 or tcp://[::]:0 to listen on all interfaces.
   Listen: [
     tcp://[::]:xxxxx
+    tls://[::]:xxxxx
   ]
 
   # Listen address for admin connections. Default is to listen for local
@@ -210,19 +212,21 @@ Note that any field not specified in the configuration will use its default valu
 ## Configuration Options
 
 - `Listen`
-    - A list of strings in the form `[ "tcp://listenAddress:listenPort", ... ]`, on which to listen for (TCP) connections from peers.
+    - A list of strings in the form `[ "tcp://listenAddress:listenPort", "tls://listenAddress:listenPort", ... ]`, on which to listen for TCP or TLS connections from peers.
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
+    - A `tcp://` listener can only accept `tcp://` peer connections, and a `tls://` listener can only accept `tls://` peer connections
 - `AdminListen`
     - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
     - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.
     - The default is to listen on the loopback interface (`tcp://localhost:9001`) which ensures that only local connections to the admin socket are allowed.
     - Note that if you change the listen address to a non-loopback address, this may allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
 - `Peers`
-    - A list of strings in the form `[ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
+    - A list of strings in the form `[ "tcp://peerAddress:peerPort", "tls://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry should begin with `tcp://` or `socks://proxyAddress:proxyPort/`.
 - `InterfacePeers`
-    - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
+    - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "tls://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
+    - A `tcp://` peer connection can only connect to a `tcp://` listener, and a `tls://` peer connection can only connect to a `tls://` listener
 - `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.

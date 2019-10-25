@@ -294,17 +294,17 @@ Note that any field not specified in the configuration will use its default valu
         - `Enable`
             - Enables crypto-key routing.
             - If enabled, the following crypto-key routes will be used by Yggdrasil. If disabled, the below options have no effect.
-        - `IPv6Destinations`
+        - `IPv6RemoteSubnets`
             - A list of routes in the form `{ "aaaa:bbbb:cccc::/e": "EncryptionPublicKey", ... }`
             - For each entry, an IPv6 route entry will be created that sends traffic destined for `aaaa:bbbb:cccc::/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
-        - `IPv6Sources`
+        - `IPv6LocalSubnets`
             - A list of allowed source subnets in the form `[ "aaaa:bbbb:cccc::/e" ]`
             - Specifies a list of source IPv6 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
             - Traffic from the Yggdrasil node's IPv6 address and routed subnet are always allowed.
-        - `IPv4Destinations`
+        - `IPv4RemoteSubnets`
             - A list of routes in the form `{ "a.b.c.d/e": "EncryptionPublicKey", ... }`
             - For each entry, an IPv4 route entry will be created that sends traffic destined for `a.b.c.d/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
-        - `IPv4Sources`
+        - `IPv4LocalSubnets`
             - A list of allowed source subnets in the form `[ "a.b.c.d/e" ]`
             - Specifies a list of source IPv4 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
 - `SwitchOptions`

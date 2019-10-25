@@ -214,7 +214,7 @@ Note that any field not specified in the configuration will use its default valu
 - `Listen`
     - A list of strings in the form `[ "tcp://listenAddress:listenPort", "tls://listenAddress:listenPort", ... ]`, on which to listen for TCP or TLS connections from peers.
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
-    - A `tcp://` listener can only accept `tcp://` peer connections, and a `tls://` listener can only accept `tls://` peer connections
+    - Note that a `tcp://` listener can only accept `tcp://` peer connections, and a `tls://` listener can only accept `tls://` peer connections
 - `AdminListen`
     - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
     - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.
@@ -226,7 +226,7 @@ Note that any field not specified in the configuration will use its default valu
     - Each entry should begin with `tcp://` or `socks://proxyAddress:proxyPort/`.
 - `InterfacePeers`
     - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "tls://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
-    - A `tcp://` peer connection can only connect to a `tcp://` listener, and a `tls://` peer connection can only connect to a `tls://` listener
+    - Note that a `tcp://` peer connection can only connect to a `tcp://` listener, and a `tls://` peer connection can only connect to a `tls://` listener
 - `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.

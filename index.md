@@ -11,7 +11,7 @@ Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjde
 
 ## Project Status
 
-The project is currently in early stages but it is being actively developed. We have recently released [version 0.3.10](changelog.md) and are still regularly working on updates.
+The project is currently in early stages but it is being actively developed. We have recently released [version 0.3.11](changelog.md) and are still regularly working on updates.
 
 A small number of users have been using and stress-testing Yggdrasil quite heavily for a number of purposes, including but not limited to secure remote access (SSH and VNC), access to Matrix, Jabber and IRC servers and even some video streams, large file transfers and performance tests. We have a number of [internal services](services.md) available, contributed and operated by the community.
 

@@ -52,11 +52,7 @@ IPv6RemoteSubnets: {
 As with a typical routing table, more specific routes are preferred.
 
 The `IPv6LocalSubnets` and `IPv4LocalSubnets` options are used to specify which source
-addresses are eligible to be routed across a tunnel. For IPv6, this is optional
-as each Yggdrasil node already has an address and a routed subnet, and these are
-always allowed as source addresses. Specifying additional source addresses means
-that you can use the tunnel to route between networks. For IPv4, this is
-mandatory as Yggdrasil nodes do not have IPv4 addresses by default.
+addresses are eligible to be routed across a tunnel. These options are mandatory.
 
 ### Bridging networks
 

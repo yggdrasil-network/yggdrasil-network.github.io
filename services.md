@@ -26,6 +26,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.
   - Accessible via Yggdrasil at `http://[303:60d4:3d32:a2b9::4]/`.
+  
+- [Yggedit](http://[301:b614:c68e:b27f::1]/) - a reddit like social network/forum
+  - Accessible via Yggdrasil at `http://[301:b614:c68e:b27f::1]/`.
 
 ### Wikis
 

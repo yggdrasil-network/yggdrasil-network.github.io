@@ -12,6 +12,10 @@ sitemap: true
 
 - See the [macOS platform page](platform-macos.md).
 
+## OpenWrt
+
+- See the [OpenWrt platform page](platform-openwrt.md).
+
 ## iOS
 
 - See the [iOS platform page](platform-ios.md).

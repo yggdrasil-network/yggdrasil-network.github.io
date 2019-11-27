@@ -214,3 +214,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - `iperf3 -6 -c y.thingylabs.io` on [ygg.thingylabs.io](https://ygg.thingylabs.io/)
   - Link: 10 GBit
   - Location: Nuremberg, Germany
+
+----
+
+## Bitcoin
+
+### Node by [vkeb6rza](https://vkeb6rza.github.io/) at `204:381:4c98:df09:d15b:ab1e:894b:d99e`
+  - Port 8333 - Bitcoin Core with BIP157 and BIP158 experimental support
+  - Port 9735 - Lightning Network - `038758ca700b8c4c73d1b86440acb963be93e5b11f9d6f363041be43572c8cbd43@[204:381:4c98:df09:d15b:ab1e:894b:d99e]:9735`
+  - Port 9911 - LND Watchtower
+  - Port 50001 - Electrum server

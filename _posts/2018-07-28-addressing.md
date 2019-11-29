@@ -100,7 +100,7 @@ So full connection process looks something like the following:
 5. The node checks that the destination `NodeID` and bitmask match the `NodeID` of the closest node (if not, then it means the destination node doesn't exist / is offline / is unreachable while the network re-converges due some disruption).
 6. The node sends a session ping to the destination.
 7. The node receives a session pong from the destination, learning their public ephemeral key.
-8. The nodes can now send regular IPv6 traffic to eachother, encrypted with the ephemeral shared secret, using the session's cached `coords` to avoid future lookups (unless the session is unresponsive for too long, in which case any new sends will also trigger a ping, or a new DHT lookup if the pings fail).
+8. The nodes can now send regular IPv6 traffic to each other, encrypted with the ephemeral shared secret, using the session's cached `coords` to avoid future lookups (unless the session is unresponsive for too long, in which case any new sends will also trigger a ping, or a new DHT lookup if the pings fail).
 
 ### Conclusion
 

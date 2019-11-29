@@ -371,7 +371,7 @@ interface eth0
 ```
 
 Note that a `/64` prefix has fewer bits of address space available to check against the node's ID, which in turn means hash collisions are more likely.
-As such, it is unwise to rely on addresses as a form of identify verification for the `300::/8` address range.
+As such, it is unwise to rely on addresses as a form of identity verification for the `300::/8` address range.
 
 ## Generating Stronger Addresses (and Prefixes)
 

@@ -23,15 +23,15 @@ Otherwise, you can generate a configuration file in the following ways:
 
 Yggdrasil can accept a configuration file either through `stdin` or by being given a path on the filesystem to a configuration file:
 
-- **Using stdin**: `yggdrasilctl --useconf < /etc/yggdrasil.conf`
-- **Using file:** `yggdrasilctl --useconffile /etc/yggdrasil.conf`
+- **Using stdin**: `yggdrasil -useconf < /etc/yggdrasil.conf`
+- **Using file:** `yggdrasil -useconffile /etc/yggdrasil.conf`
 
 ## Normalising Configuration
 
 If you want to see the original format of the configuration file, or convert between HJSON and JSON formats, you can use the `-normaliseconf` option, e.g.
 
-- **Convert from HJSON to JSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf -json`
-- **Convert from JSON to HJSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf`
+- **Convert from HJSON to JSON**: `yggdrasil -normaliseconf -useconffile /etc/yggdrasil.conf -json`
+- **Convert from JSON to HJSON**: `yggdrasil -normaliseconf -useconffile /etc/yggdrasil.conf`
 
 Normalising the configuration also adds any missing configuration items with their default values. This can be useful when upgrading to a newer version of Yggdrasil that adds new configuration options. Many of our distribution packages normalise the configuration automatically during upgrade.
 

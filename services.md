@@ -89,6 +89,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## XMPP
 
+### chat.station.moe
+
+- `chat.station.moe`, run by [zhoreeq](https://github.com/zhoreeq)
+    - Webchat is at [http://[305:1bba:6a3:7f24::23]/](http://[305:1bba:6a3:7f24::23]/) or http://chat.station.moe/. General chat room is at `ygg@conference.station.moe`.
+    - Unnecessary TLS is removed. XMPP clients should allow authorization over plaintext and disable TLS/SSL/STARTTLS enforcement.
+    - XMPP federation is enabled inside Yggdrasil network. [Example config file for Prosody](https://gist.github.com/zhoreeq/0f293cc7c338554369261cfdfab55ddc).
+
 ### netwhood.online
 
 - `netwhood.online`, run by [abslimit](http://netwhood.online/feedback/)

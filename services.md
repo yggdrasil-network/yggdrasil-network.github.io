@@ -148,6 +148,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
 
+### IPFS Bootstrap Swarm
+
+- Irvine, CA Based Server Boostrap Node hosted by @KylerChin
+`/ip6/202:d0ca:a9d7:b4e8:bd3c:ffde:5c89:a3d7/tcp/4001/ipfs/QmZEiPvrfZHapq4uiyTDEcR2szCUhDnjdS4q3Uv2b1Uh88`
+
 ----
 
 ## Gaming

@@ -25,7 +25,7 @@ echo '[yggdrasil]
 name = Yggdrasil
 baseurl = https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/rpm/
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RP^CGPG-KEY-yggdrasil' | sudo tee /etc/yum.repos.d/yggdrasil.repo
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-yggdrasil' | sudo tee /etc/yum.repos.d/yggdrasil.repo
 ```
 
 Create the `yggdrasil` group on your system:

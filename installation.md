@@ -11,6 +11,7 @@ Installation guides are available for the following platforms/distributions.
 - [Debian, Ubuntu, elementaryOS, Linux Mint and similar](installation-linux-deb.md)
 - [Red Hat Enterprise Linux, Fedora, CentOS and similar](installation-linux-rpm.md)
 - [Ubiquiti EdgeOS](installation-linux-edgeos.md)
+- [OpenWrt](installation-linux-openwrt.md)
 - [Manual install or build from source](installation-linux-other.md)
 
 ## macOS

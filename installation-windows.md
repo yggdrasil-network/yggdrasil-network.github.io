@@ -3,61 +3,67 @@ tags: dontlink
 sitemap: true
 ---
 
-# Installing manually on Windows
+# Installing using the Windows installer
 
-Yggdrasil is supported on Windows. You can either [download the latest binary from CircleCI](builds.md).
+Yggdrasil is supported on Windows. You can [download the latest installer from
+GitHub](https://github.com/yggdrasil-network/yggdrasil-go/releases).
 
-## TAP Driver
+## TUN driver
 
-Yggdrasil depends on the OpenVPN TAP driver to work on Windows. There are two flavours of this driver:
+Starting with version 0.3.13, Yggdrasil on Windows uses the Wireguard TUN
+driver. If this is not installed on the system already, it will be installed
+automatically by the Yggdrasil installer.
 
-- [NDIS 5](https://swupdate.openvpn.org/community/releases/tap-windows-9.9.2_3.exe) (`tap-windows-9.9.2_3`) - recommended
-- [NDIS 6](https://swupdate.openvpn.org/community/releases/tap-windows-9.21.2.exe) (`tap-windows-9.21.2`) - functional
+For this reason, it is important that you use the correct installer for your
+architecture - make sure to use the `x64` installer on 64-bit Windows and the
+`x86` installer on 32-bit Windows.
 
-Yggdrasil works with either driver, although the performance is remarkably better with the older NDIS 5 driver, therefore it is recommended to use that instead of the NDIS 6 driver.
+Please note that the OpenVPN TAP driver is **no longer supported**.
 
-Please note that if you already have OpenVPN for Windows, you likely have one of the two drivers installed already and should not install it again.
+Once Yggdrasil is started, a new virtual network adapter will be created called
+`Yggdrasil` by default, although this can be renamed using the `IfName` option
+in the configuration file (below). The virtual network adapter will *not* be
+visible on the system when Yggdrasil is not running.
 
-## Installation
+## Configuration
 
-Start by [downloading the latest Yggdrasil binary](builds.md) and use Windows Explorer to copy it into a sensible location and rename it to `yggdrasil.exe`.
+The Yggdrasil installer will automatically generate an `yggdrasil.conf`
+configuration file, if one does not exist, in the following locations:
 
-The below examples assume that you placed `yggdrasil.exe` into `C:\Program Files\Yggdrasil`.
+- 64-bit Windows: `C:\Program Files\Yggdrasil`
+- 32-bit Windows: `C:\Program Files (x86)\Yggdrasil`
 
-## Generate configuration
+## Windows Service
 
-Before starting Yggdrasil, you should generate configuration. Open a Command Prompt as Administrator:
+Yggdrasil is installed as a Windows service that starts automatically with
+Windows. You can start, stop and restart Yggdrasil using the Services MMC
+snap-in (`services.msc`) or, in more recent versions of Windows, the "Services"
+tab in Task Manager.
+
+You will need to restart the Yggdrasil service after each change to the
+configuration file.
+
+## Windows Firewall
+
+Windows Firewall may prompt for the Yggdrasil process to allow incoming or
+outgoing connections. If so, you should allow this or Yggdrasil may not be able
+to establish peerings correctly.
+
+Note that Yggdrasil, by default, does allow incoming traffic over the
+`Yggdrasil` virtual adapter, therefore you may wish to designate the `Yggdrasil`
+virtual network adapter as a public network in the Windows Firewall so that
+unexpected incoming connections are blocked automatically.
+
+If you do, pay particular attention to ensure that file sharing (SMB), remote
+procedure call (RPC) or remote desktop (RDP) services are not allowed on public
+networks unless you explicitly need them to be accessible from remote Yggdrasil
+hosts.
+
+## yggdrasilctl
+
+The `yggdrasilctl` utility is also installed into the same location above. You
+can query Yggdrasil's runtime state using this tool using a Command Prompt or
+PowerShell command line, e.g.
 ```
-"C:\Program Files\Yggdrasil\yggdrasil.exe" -genconf > "C:\Program Files\Yggdrasil\yggdrasil.conf"
+"C:\Program Files\Yggdrasil\yggdrasilctl.exe" getPeers
 ```
-
-## Run Yggdrasil
-
-### Run once
-
-Open a Command Prompt as Administrator and start Yggdrasil using your generated configuration:
-```
-"C:\Program Files\Yggdrasil\yggdrasil.exe" -useconffile "C:\Program Files\Yggdrasil\yggdrasil.conf"
-```
-Alternatively, start Yggdrasil in auto-configuration mode:
-```
-"C:\Program Files\Yggdrasil\yggdrasil.exe" -autoconf
-```
-
-### Run as a background service
-
-Running as a background system service means that Yggdrasil will automatically start up in the background when Windows boots.
-
-Assuming that Yggdrasil is installed into `C:\Program Files\Yggdrasil` and your configuration *already exists* in `C:\Program Files\Yggdrasil\yggdrasil.conf`, as above, then you can install Yggdrasil as a Windows service. Open a Command Prompt as Administrator:
-```
-sc create yggdrasil binpath= "\"C:\Program Files\Yggdrasil\yggdrasil.exe\" -useconffile \"C:\Program Files\Yggdrasil\yggdrasil.conf\""
-sc config yggdrasil displayname= "Yggdrasil Service"
-sc config yggdrasil start= "auto"
-sc start yggdrasil
-```
-Alternatively, if you want the service to autoconfigure instead of using an `yggdrasil.conf`, replace the `sc create` line from above with:
-```
-sc create yggdrasil binpath= "\"C:\Program Files\Yggdrasil\yggdrasil.exe\" -autoconf"
-```
-
-The Yggdrasil service can then be stopped and started using `services.msc`, or in more recent versions of Windows, the Task Manager.

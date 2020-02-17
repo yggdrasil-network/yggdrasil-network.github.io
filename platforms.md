@@ -16,10 +16,6 @@ sitemap: true
 
 - See the [iOS platform page](platform-ios.md).
 
-## Windows
-
-- See the [Windows platform page](platform-windows.md).
-
 ## EdgeRouter
 
 - See the [EdgeRouter platform page](platform-edgerouter.md).

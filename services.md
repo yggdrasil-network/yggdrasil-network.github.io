@@ -85,6 +85,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - Yggdrasil's SSL port uses same certificate as the public Internet node, so you **will** receive SSL warning, this is expected
 - Join `#en` for english discussions
 
+### ED12 IRC
+
+- `y.kaotisk-hund.tk` is accessible via Yggdrasil at `202:68fd:1f72:8505:74d6:b751:29ce:b5bb` port `6667` (TCP)
+
+- Main channel is `#general`
+- Other channels can be listed with description as their topic
+- Also accessible via cjdns at `fc42:7cfa:b830:e988:f192:717f:6576:ed12` port `6667` (TCP)
+
 ----
 
 ## XMPP

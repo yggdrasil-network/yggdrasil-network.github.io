@@ -252,7 +252,7 @@ Returns:
 #### `removeRoute`
 
 Expects:
-- `subnet=` `string` for the subnet to remove the route route for
+- `subnet=` `string` for the subnet to remove the route for
 - `box_pub_key=` `string` for the public key that is routed to
 
 Removes an existing crypto-key route.

@@ -383,7 +383,7 @@ This can partially mitigate the fact that IPv6 addresses are only 128 bits long,
 In short, if you plan to advertise a prefix, or if you want your address to be exceptionally difficult to collide with, then it is strongly advised that you burn some CPU cycles generating a harder-to-collide set of keys, using the following tool:
 
 ```
-go run misc/genkeys.go
+go run cmd/genkeys/main.go
 ```
 
 This continually generates new keys and prints them out each time a new best set of keys is discovered.

@@ -9,6 +9,8 @@ After every push to the `master` branch of the [GitHub repository](https://githu
 
 If you prefer to live dangerously and want to test bleeding-edge features or changes, development builds are [available from the `develop` branch](builds-develop.md), although these may not be as stable.
 
+Looking for Windows installers? [Click here to go to AppVeyor](https://ci.appveyor.com/project/neilalexander/yggdrasil-go/build/artifacts).
+
 For convenience, the latest builds are linked below:
 
 <h3>yggdrasil</h3>

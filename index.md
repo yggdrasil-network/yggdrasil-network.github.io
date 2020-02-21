@@ -11,7 +11,7 @@ Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjde
 
 ## Project Status
 
-The project is currently in early stages but it is being actively developed. We have recently released [version 0.3.12](changelog.md) and are still regularly working on updates.
+The project is currently in early stages but it is being actively developed. We have recently released [version 0.3.13](changelog.md) and are still regularly working on updates.
 
 A small number of users have been using and stress-testing Yggdrasil quite heavily for a number of purposes, including but not limited to secure remote access (SSH and VNC), access to Matrix, Jabber and IRC servers and even some video streams, large file transfers and performance tests. We have a number of [internal services](services.md) available, contributed and operated by the community.
 
@@ -21,7 +21,7 @@ Binaries are [automatically built](https://circleci.com/gh/yggdrasil-network/ygg
 
 ## Implementation
 
-Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including [Linux](platform-linux.md), [Windows](platform-windows.md), [macOS](platform-macos.md), NetBSD, FreeBSD, OpenBSD and [Ubiquiti EdgeOS](platform-edgerouter.md)) although with various minor caveats. See the [Platforms](platforms.md) page for more information.
+Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including [Linux](platform-linux.md), [Windows](platform-windows.md), [macOS](platform-macos.md), FreeBSD, OpenBSD and [Ubiquiti EdgeOS](platform-edgerouter.md)) although with various minor caveats. See the [Platforms](platforms.md) page for more information.
 
 ## Get Involved
 

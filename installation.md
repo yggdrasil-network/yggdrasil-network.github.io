@@ -24,4 +24,4 @@ Installation guides are available for the following platforms/distributions.
 
 ## Windows
 
-- [Manual install as a Windows service](installation-windows.md)
+- [Windows `.msi` installer](installation-windows.md)

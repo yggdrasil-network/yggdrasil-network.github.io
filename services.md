@@ -110,6 +110,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - SRV record `_xmpp-client._tcp` is prioritized for `y.netwhood.online` (`202:12a9:e5:4474:d473:82be:16ac:9381`). XMPP-client must try yggdrasil address at first.
   - SRV record `_xmpp-server._tcp` is prioritized for `y.netwhood.online` too. XMPP s2s connections must try yggdrasil address at first. Lets peer?
   - "HTTP upload" XEP module is tied to `netwhood.online`, it will connect through the Internet. It can not be prioritized for yggdrasil.
+  
+### infradian.icu and ultradian.club
+- `infradian.icu` and `ultradian.club`, run by [Umbrellix](http://yww.umbrellix.net/contact/)
+  - The SRV record `_xmpp-server._tcp` for all of the relevant subdomains has a domain that points to `202:8fb5:1490:594d:7e29:98fd:8d79:953f` at priority 1, and the clearnet machine which that represents at priority 2 (so that clearnet XMPPers/Snikketers/Jabberers will be able to message you if you are on infradian or ultradian)
+  - The SRV record `_xmpp-client._tcp` for @ only has the domain which points to `202:8fb5:1490:594d:7e29:98fd:8d79:953f`. There is a non-obvious way to connect over clearnet, which will not be disclosed here.
+  - HTTP upload, unlike on the other domain Umbrellix has which is clearnet-based, is disabled.
 
 ----
 

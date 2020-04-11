@@ -22,6 +22,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## Websites
 
+### Search
+
+- [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.
+  - Accessible via Yggdrasil at `http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/`.
+
 ### Forums
 
 - [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.

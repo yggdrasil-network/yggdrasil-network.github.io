@@ -20,6 +20,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+### Clearnet Tunnel Service
+
+- Automated GRE over Yggdrasil service for clearnet IPv4 access. 
+  - Accessible at http://[301:a003:3f0f:1aa0::1001]/dokuwiki/doku.php?id=ygre:howto
+
 ## Websites
 
 ### Search

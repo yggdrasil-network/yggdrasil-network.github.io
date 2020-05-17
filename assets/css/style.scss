@@ -155,3 +155,9 @@ div.blogpost div#overview div#excerpt {
   text-decoration: none;
   font-size: 1em;
 }
+
+a:hover, a:focus {
+    color:#0be;
+    font-weight: initial;
+    text-decoration: underline;
+}

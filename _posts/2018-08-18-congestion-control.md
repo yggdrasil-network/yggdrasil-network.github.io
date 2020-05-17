@@ -27,7 +27,7 @@ This post attempts to explain Yggdrasil's congestion control mechanism, why past
 
 The first thing to try is not to implement any explicit buffering in Yggdrasil.
 Packets are received from a socket, we look up where the packet needs to go next, and then we send on that socket.
-This immediately leads to blocking network operations and poor performance, so we need need separate read and write threads (goroutines, in our case).
+This immediately leads to blocking network operations and poor performance, so we need separate read and write threads (goroutines, in our case).
 Initially, we used buffered channels and non-blocking channel sends.
 This means that, instead of the reader goroutine writing to the socket to send, it would pass it to a channel which a dedicated writer goroutine would read from.
 The problem with this approach is that Go channels with non-blocking sends are [FIFO](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) and [tail dropped](https://en.wikipedia.org/wiki/Tail_drop).
@@ -56,7 +56,7 @@ What we want is for multiple streams of traffic to be handled independently, to 
 Then, we can reward different traffic streams to prioritize based on lowest bandwidth (i.e. size of queue / age of oldest packet in queue, with a separate queue per traffic stream).
 Now we let traffic streams compete for bandwidth.
 The winning strategy, to get more bandwidth during times of congestion, is to attempt to use *less* bandwidth, which I argue is exactly the behavior we want to encourage.
-Streams of traffic that play nice get a fair share of bandwidth, which includes pretty much every sane TCP implementation, and streams that flood goto timeout.
+Streams of traffic that play nice get a fair share of bandwidth, which includes pretty much every sane TCP implementation, and streams that flood go to timeout.
 
 ### Yggdrasil's congestion control
 
@@ -99,7 +99,7 @@ Still, because we won't really know without trying, adding the required new pack
 
 Yggdrasil has gone through a number of different congestion control mechanisms since the TCP link layer was introduced.
 The current congestion control mechanism rewards traffic streams which utilize less bandwidth by prioritizing them higher than streams using more bandwidth.
-Cooperative stream obtain a fair share of bandwidth, while stream which attempt to use more than their fair share are given lower priority, and are forced to throttle down as a result.
+Cooperative streams obtain a fair share of bandwidth, while streams which attempt to use more than their fair share are given lower priority, and are forced to throttle down as a result.
 When packet drops become necessary, a random drop mechanism is used which penalizes large queues the most, which should signal congestion to the worst offenders.
 Much of this is a precursor to backpressure routing, which, if it works out in practice as well as it does on paper, should give the network a nearly-optimal latency/bandwidth trade-off.
 

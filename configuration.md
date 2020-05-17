@@ -23,15 +23,15 @@ Otherwise, you can generate a configuration file in the following ways:
 
 Yggdrasil can accept a configuration file either through `stdin` or by being given a path on the filesystem to a configuration file:
 
-- **Using stdin**: `yggdrasilctl --useconf < /etc/yggdrasil.conf`
-- **Using file:** `yggdrasilctl --useconffile /etc/yggdrasil.conf`
+- **Using stdin**: `yggdrasil -useconf < /etc/yggdrasil.conf`
+- **Using file:** `yggdrasil -useconffile /etc/yggdrasil.conf`
 
 ## Normalising Configuration
 
 If you want to see the original format of the configuration file, or convert between HJSON and JSON formats, you can use the `-normaliseconf` option, e.g.
 
-- **Convert from HJSON to JSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf -json`
-- **Convert from JSON to HJSON**: `yggdrasilctl -normaliseconf -useconffile /etc/yggdrasil.conf`
+- **Convert from HJSON to JSON**: `yggdrasil -normaliseconf -useconffile /etc/yggdrasil.conf -json`
+- **Convert from JSON to HJSON**: `yggdrasil -normaliseconf -useconffile /etc/yggdrasil.conf`
 
 Normalising the configuration also adds any missing configuration items with their default values. This can be useful when upgrading to a newer version of Yggdrasil that adds new configuration options. Many of our distribution packages normalise the configuration automatically during upgrade.
 
@@ -41,33 +41,55 @@ A new configuration file has the following format. Please note that some of the 
 
 ```
 {
-  # Listen address for peer connections. Default is to listen for all
-  # TCP connections over IPv4 and IPv6 with a random port.
-  Listen: "[::]:xxxxx"
+  # List of connection strings for outbound peer connections in URI format,
+  # e.g. tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j. These connections
+  # will obey the operating system routing table, therefore you should
+  # use this section when you may connect via different interfaces.
+  Peers: [
+    tcp://a.b.c.d:xxxxx
+    socks://e.f.g.h:xxxxx/a.b.c.d:xxxxx
+    tls://a.b.c.d:xxxxx
+  ]
 
-  # Listen address for admin connections Default is to listen for local
+  # List of connection strings for outbound peer connections in URI format,
+  # arranged by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }.
+  # Note that SOCKS peerings will NOT be affected by this option and should
+  # go in the "Peers" section instead.
+  InterfacePeers: {
+    "eth0": [
+      tcp://a.b.c.d:xxxxx
+      tls://a.b.c.d:xxxxx
+    ]
+  }
+
+  # Listen addresses for incoming connections. You will need to add
+  # listeners in order to accept incoming peerings from non-local nodes.
+  # Multicast peer discovery will work regardless of any listeners set
+  # here. Each listener should be specified in URI format as above, e.g.
+  # tcp://0.0.0.0:0 or tcp://[::]:0 to listen on all interfaces.
+  Listen: [
+    tcp://[::]:xxxxx
+    tls://[::]:xxxxx
+  ]
+
+  # Listen address for admin connections. Default is to listen for local
   # connections either on TCP/9001 or a UNIX socket depending on your
-  # platform. Use this value for yggdrasilctl -endpoint=X.
+  # platform. Use this value for yggdrasilctl -endpoint=X. To disable
+  # the admin socket, use the value "none" instead.
   AdminListen: tcp://localhost:9001
 
-  # List of connection strings for static peers in URI format, e.g.
-  # tcp://a.b.c.d:e or socks://a.b.c.d:e/f.g.h.i:j.
-  Peers: []
+  # Regular expressions for which interfaces multicast peer discovery
+  # should be enabled on. If none specified, multicast peer discovery is
+  # disabled. The default value is .* which uses all interfaces.
+  MulticastInterfaces:
+  [
+    .*
+  ]
 
-  # List of connection strings for static peers in URI format, arranged
-  # by source interface, e.g. { "eth0": [ tcp://a.b.c.d:e ] }. Note that
-  # SOCKS peerings will NOT be affected by this option and should go in
-  # the "Peers" section instead.
-  InterfacePeers: {}
-
-  # Read timeout for connections, specified in milliseconds. If less
-  # than 6000 and not negative, 6000 (the default) is used. If negative,
-  # reads won't time out.
-  ReadTimeout: 0
-
-  # List of peer encryption public keys to allow or incoming TCP
-  # connections from. If left empty/undefined then all connections
-  # will be allowed by default.
+  # List of peer encryption public keys to allow incoming TCP peering
+  # connections from. If left empty/undefined then all connections will
+  # be allowed by default. This does not affect outgoing peerings, nor
+  # does it affect link-local peers discovered via multicast.
   AllowedEncryptionPublicKeys: []
 
   # Your public encryption key. Your peers may ask you for this to put
@@ -84,13 +106,12 @@ A new configuration file has the following format. Please note that some of the 
   # Your private signing key. DO NOT share this with anyone!
   SigningPrivateKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-  # Regular expressions for which interfaces multicast peer discovery
-  # should be enabled on. If none specified, multicast peer discovery is
-  # disabled. The default value is .* which uses all interfaces.
-  MulticastInterfaces:
-  [
-    .*
-  ]
+  # The port number to be used for the link-local TCP listeners for the
+  # configured MulticastInterfaces. This option does not affect listeners
+  # specified in the Listen option. Unless you plan to firewall link-local
+  # traffic, it is best to leave this as the default value of 0. This
+  # option cannot currently be changed by reloading config during runtime.
+  LinkLocalTCPPort: 0
 
   # Local network interface name for TUN/TAP adapter, or "auto" to select
   # an interface automatically, or "none" to run without TUN/TAP.
@@ -146,24 +167,22 @@ A new configuration file has the following format. Please note that some of the 
     # Enable or disable tunnel routing.
     Enable: false
 
-    # IPv6 CIDR subnets, mapped to the EncryptionPublicKey to which they  
-    # should be routed, e.g. { "aaaa:bbbb:cccc::/e": "boxpubkey", ... }
-    IPv6Destinations: {}
+    # IPv6 subnets belonging to remote nodes, mapped to the node's public  
+    # key, e.g. { "aaaa:bbbb:cccc::/e": "boxpubkey", ... }
+    IPv6RemoteSubnets: {}
 
-    # Optional IPv6 source subnets which are allowed to be tunnelled in  
-    # addition to this node's Yggdrasil address/subnet. If not  
-    # specified, only traffic originating from this node's Yggdrasil  
-    # address or subnet will be tunnelled.
-    IPv6Sources: []
+    # IPv6 subnets belonging to this node's end of the tunnels. Only traffic  
+    # from these ranges (or the Yggdrasil node's IPv6 address/subnet)  
+    # will be tunnelled.
+    IPv6LocalSubnets: []
 
-    # IPv4 CIDR subnets, mapped to the EncryptionPublicKey to which they  
-    # should be routed, e.g. { "a.b.c.d/e": "boxpubkey", ... }
-    IPv4Destinations: {}
+    # IPv4 subnets belonging to remote nodes, mapped to the node's public  
+    # key, e.g. { "a.b.c.d/e": "boxpubkey", ... }
+    IPv4RemoteSubnets: {}
 
-    # IPv4 source subnets which are allowed to be tunnelled. Unlike for  
-    # IPv6, this option is required for bridging IPv4 traffic. Only  
-    # traffic with a source matching these subnets will be tunnelled.
-    IPv4Sources: []
+    # IPv4 subnets belonging to this node's end of the tunnels. Only traffic  
+    # from these ranges will be tunnelled.
+    IPv4LocalSubnets: []
   }
 
   # Advanced options for tuning the switch. Normally you will not need
@@ -173,6 +192,13 @@ A new configuration file has the following format. Please note that some of the 
     # Maximum size of all switch queues combined (in bytes).
     MaxTotalQueueSize: 4194304
   }
+
+  # By default, nodeinfo contains some defaults including the platform,
+  # architecture and Yggdrasil version. These can help when surveying
+  # the network and diagnosing network routing problems. Enabling
+  # nodeinfo privacy prevents this, so that only items specified in
+  # "NodeInfo" are sent back if specified.
+  NodeInfoPrivacy: false
 
   # Optional node info. This must be a { "key": "value", ... } map
   # or set as null. This is entirely optional but, if set, is visible
@@ -186,20 +212,21 @@ Note that any field not specified in the configuration will use its default valu
 ## Configuration Options
 
 - `Listen`
-    - A string, in the form of `"ip:port"`, on which to listen for (TCP) connections from peers.
+    - A list of strings in the form `[ "tcp://listenAddress:listenPort", "tls://listenAddress:listenPort", ... ]`, on which to listen for TCP or TLS connections from peers.
     - Note that, due to Go language design choices, `[::]` listens on IPv4 and IPv6 on most platforms, while an empty IP or `0.0.0.0` listens only to IPv4.
-    - The default is to listen on all addresses (`[::]`) with a random port.
+    - Note that a `tcp://` listener can only accept `tcp://` peer connections, and a `tls://` listener can only accept `tls://` peer connections
 - `AdminListen`
     - Port to listen on for the admin socket, specified in URI format, i.e. `tcp://localhost:9001`.
     - On supported platforms, the admin socket can listen on a UNIX domain socket instead, i.e. `unix:///var/run/yggdrasil.sock`.
     - The default is to listen on the loopback interface (`tcp://localhost:9001`) which ensures that only local connections to the admin socket are allowed.
     - Note that if you change the listen address to a non-loopback address, this may allow other hosts on the network to manage the Yggdrasil process. This probably isn't desirable.
 - `Peers`
-    - A list of strings in the form `[ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
+    - A list of strings in the form `[ "tcp://peerAddress:peerPort", "tls://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ]` of peers to connect to.
     - Peer hostnames can be specified either using IPv4 addresses, IPv6 addresses or DNS names.
     - Each entry should begin with `tcp://` or `socks://proxyAddress:proxyPort/`.
 - `InterfacePeers`
-    - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
+    - Like peers above, but arranged using specific interface names: `{ "eth0": [ "tcp://peerAddress:peerPort", "tls://peerAddress:peerPort", "socks://proxyAddress:proxyPort/peerAddress:peerPort", ... ], "eth1": [], ... }` of peers to connect to.
+    - Note that a `tcp://` peer connection can only connect to a `tcp://` listener, and a `tls://` peer connection can only connect to a `tls://` listener
 - `AllowedEncryptionPublicKeys`
     - A list of strings in the form `["key", "key", ...]`, where `key` is each node's `EncryptionPublicKey` key which you would like to allow connections from.
     - This option allows you to restrict which other nodes can connect to your Yggdrasil node as a peer. It applies to incoming TCP connections.
@@ -267,17 +294,17 @@ Note that any field not specified in the configuration will use its default valu
         - `Enable`
             - Enables crypto-key routing.
             - If enabled, the following crypto-key routes will be used by Yggdrasil. If disabled, the below options have no effect.
-        - `IPv6Destinations`
+        - `IPv6RemoteSubnets`
             - A list of routes in the form `{ "aaaa:bbbb:cccc::/e": "EncryptionPublicKey", ... }`
             - For each entry, an IPv6 route entry will be created that sends traffic destined for `aaaa:bbbb:cccc::/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
-        - `IPv6Sources`
+        - `IPv6LocalSubnets`
             - A list of allowed source subnets in the form `[ "aaaa:bbbb:cccc::/e" ]`
             - Specifies a list of source IPv6 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
             - Traffic from the Yggdrasil node's IPv6 address and routed subnet are always allowed.
-        - `IPv4Destinations`
+        - `IPv4RemoteSubnets`
             - A list of routes in the form `{ "a.b.c.d/e": "EncryptionPublicKey", ... }`
             - For each entry, an IPv4 route entry will be created that sends traffic destined for `a.b.c.d/e` to the node with the specified `EncryptionPublicKey` (effectively your "remote" ranges).
-        - `IPv4Sources`
+        - `IPv4LocalSubnets`
             - A list of allowed source subnets in the form `[ "a.b.c.d/e" ]`
             - Specifies a list of source IPv4 addresses which are allowed to be sent over the tunnel (essentially your "local" ranges).
 - `SwitchOptions`
@@ -344,7 +371,7 @@ interface eth0
 ```
 
 Note that a `/64` prefix has fewer bits of address space available to check against the node's ID, which in turn means hash collisions are more likely.
-As such, it is unwise to rely on addresses as a form of identify verification for the `300::/8` address range.
+As such, it is unwise to rely on addresses as a form of identity verification for the `300::/8` address range.
 
 ## Generating Stronger Addresses (and Prefixes)
 
@@ -356,7 +383,7 @@ This can partially mitigate the fact that IPv6 addresses are only 128 bits long,
 In short, if you plan to advertise a prefix, or if you want your address to be exceptionally difficult to collide with, then it is strongly advised that you burn some CPU cycles generating a harder-to-collide set of keys, using the following tool:
 
 ```
-GOPATH=$PWD go run -tags debug misc/genkeys.go
+go run cmd/genkeys/main.go
 ```
 
 This continually generates new keys and prints them out each time a new best set of keys is discovered.

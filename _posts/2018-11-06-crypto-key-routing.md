@@ -33,62 +33,58 @@ is released:
 TunnelRouting:
 {
   Enable: false
-  IPv6Destinations: {}
-  IPv6Sources: []
-  IPv4Destinations: {}
-  IPv4Sources: []
+  IPv6RemoteSubnets: {}
+  IPv6LocalSubnets: []
+  IPv4RemoteSubnets: {}
+  IPv4LocalSubnets: []
 }
 ```
 
-The `IPv6Destinations` and `IPv4Destinations` options are used to specify
+The `IPv6RemoteSubnets` and `IPv4RemoteSubnets` options are used to specify
 crypto-key routes. The subnet refers to an encryption public key of another
 node, for example:
 ```
-IPv6Destinations: {
+IPv6RemoteSubnets: {
   "fd64:642b:1a20::/48": "ef78da7fc983c6c210609529921a701ca3e43fa5cfd79f5f20cc67bf66e45c1a",
   "fd25:8a33:9311:a53b::/64": "417fd0a66a104f050ae3544b3bc03eeb3648dded4a8c1fb085d65ffa25e83d6e"
 }
 ```
 As with a typical routing table, more specific routes are preferred.
 
-The `IPv6Sources` and `IPv4Sources` options are used to specify which source
-addresses are eligible to be routed across a tunnel. For IPv6, this is optional
-as each Yggdrasil node already has an address and a routed subnet, and these are
-always allowed as source addresses. Specifying additional source addresses means
-that you can use the tunnel to route between networks. For IPv4, this is
-mandatory as Yggdrasil nodes do not have IPv4 addresses by default.
+The `IPv6LocalSubnets` and `IPv4LocalSubnets` options are used to specify which source
+addresses are eligible to be routed across a tunnel. These options are mandatory.
 
 ### Bridging networks
 
 Assume that node A is `a.a.a.a/24` and `aaaa:aaaa:aaaa:aaaa::/64` and node B is `b.b.b.b/24` and `bbbb:bbbb:bbbb:bbbb::/64`. On node A, use the following `TunnelRouting` configuration:
 ```
 Enable: true
-IPv6Destinations: {
+IPv6RemoteSubnets: {
   "bbbb:bbbb:bbbb:bbbb::/64": "xxxxxxxxxxxxxx"
 }
-IPv6Sources: {
+IPv6LocalSubnets: {
   aaaa:aaaa:aaaa:aaaa::/64
 }
-IPv4Destinations: {
+IPv4RemoteSubnets: {
   "b.b.b.b/24": "xxxxxxxxxxxxxx"
 }
-IPv4Sources: {
+IPv4LocalSubnets: {
   a.a.a.a/24
 }
 ```
 On node B, use the reverse `TunnelRouting` configuration:
 ```
 Enable: true
-IPv6Destinations: {
+IPv6RemoteSubnets: {
   "aaaa:aaaa:aaaa:aaaa::/64": "xxxxxxxxxxxxxx"
 }
-IPv6Sources: {
+IPv6LocalSubnets: {
   bbbb:bbbb:bbbb:bbbb::/64
 }
-IPv4Destinations: {
+IPv4RemoteSubnets: {
   "a.a.a.a/24": "xxxxxxxxxxxxxx"
 }
-IPv4Sources: {
+IPv4LocalSubnets: {
   b.b.b.b/24
 }
 ```

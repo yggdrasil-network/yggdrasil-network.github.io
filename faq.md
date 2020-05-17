@@ -83,6 +83,14 @@ yggdrasilctl -endpoint=127.0.0.1:12345
 
 You can set the `IfName` configuration setting to `"none"`. This will load Yggdrasil, but will not create a TUN/TAP adapter, meaning that your host will not be exposed to the Yggdrasil network. This does of course mean that you won't be able to send any traffic from that node to Yggdrasil either!
 
+### Does Yggdrasil work alongside an existing VPN?
+
+Yes, Yggdrasil should not interfere with existing VPNs. VPN traffic can be sent while using Yggdrasil.
+
+### Does Yggdrasil work with networks like Tor or I2P?
+
+Yggdrasil can peer over Tor or I2P. See [/public-peers/tree/master/other](https://github.com/yggdrasil-network/public-peers/tree/master/other) for public peers.
+
 ### I want to allow outgoing connections from my machine but prevent unwanted incoming connections.
 
 Generally this requires you to use a firewall. The steps for this will vary from platform to platform.

@@ -22,15 +22,93 @@ div.wrapper section p a code {
 section {
   flex: auto;
   max-width: 100vw;
+  margin-right: 20px;
+  @media screen and (max-width: 768px) {
+	margin-top: 20px;
+	border: 0;
+	float: none;
+	position: relative;
+	flex: initial;
+	word-break: break-word;
+	overflow: hidden;
+	table {
+		thead {
+			th {
+				min-width: 90px;
+			}
+		}
+	}
+  }
 }
 
 header {
   flex: initial;
   position: relative;
-  width: 240px !important;
   margin-right: 1em;
+  @media screen and (max-width: 768px) {
+	  > p {
+		padding-right: 20%;
+	  }
+	  font-size: 0;
+	  margin: 0;
+	  padding: 0;
+	  &:before {
+		content:'\2261';
+		display: block;
+	        position: absolute;
+		left: 0px;
+		font-size: 40px;	
+	        top: -38px;
+	  }
+	  img {
+		display: none;
+	  }
+	  > a {
+		position: absolute;
+		top: -23px;
+		left: 50px;
+	  }
+	  a {
+		&:hover {
+			font-weight: initial;
+		}
+	  }
+ 	  &:hover {
+		padding: 0;
+		font-size: initial;
+		> a {
+			pointer-events: none;
+			position: initial;
+		}
+		position: fixed;
+		overflow-y: scroll;
+		background-color: white;
+		top: 0px;
+		left: 0;
+		right: 0;
+		bottom: 0;		
+		width: 100%;
+		z-index: 100;
+		padding-top: 20px;
+		padding-bottom: 50px;
+		padding-left: 20px;
+		p {
+			a {	
+				font-size: 24px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				display: block;
+			}
+			br {
+				display: none;
+			}
+		}
+		&:before {
+			display: none;
+		}
+	  }
+	}
 }
-
 pre {
   overflow-x: scroll;
 }
@@ -76,4 +154,10 @@ div.blogpost div#overview div#excerpt {
   color: #444444;
   text-decoration: none;
   font-size: 1em;
+}
+
+a:hover, a:focus {
+    color:#0be;
+    font-weight: initial;
+    text-decoration: underline;
 }

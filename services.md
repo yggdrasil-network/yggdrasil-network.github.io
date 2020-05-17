@@ -20,19 +20,35 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
+### Clearnet Tunnel Service
+
+- Automated GRE over Yggdrasil service for clearnet IPv4 access. 
+  - Accessible at http://[301:a003:3f0f:1aa0::1001]/dokuwiki/doku.php?id=ygre:howto
+
 ## Websites
+
+### Search
+
+- [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.
+  - Accessible via Yggdrasil at `http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/`.
 
 ### Forums
 
 - [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.
   - Accessible via Yggdrasil at `http://[303:60d4:3d32:a2b9::4]/`.
-  - Accessible via I2P at `http://meshforum.i2p` or `http://hp2uzysaur74tbeojtlcsl7apsy2jgqxydd7b5asgvztihz76jia.b32.i2p/`.
+  
+- [Yggedit](http://[301:b614:c68e:b27f::1]/) - a link aggregator / reddit alternative
+  - Accessible via Yggdrasil at `http://[301:b614:c68e:b27f::1]/`.
+
+- [Yggy Forum](http://[301:b614:c68e:b27f::2]/) - a fast forum with many features
+  - Accessible via Yggdrasil at `http://[301:b614:c68e:b27f::2]/`.
 
 ### Wikis
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
 
 ----
+
 
 ## Shell accounts
 
@@ -82,13 +98,37 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - Yggdrasil's SSL port uses same certificate as the public Internet node, so you **will** receive SSL warning, this is expected
 - Join `#en` for english discussions
 
+### ED12 IRC
+
+- `y.kaotisk-hund.tk` is accessible via Yggdrasil at `202:68fd:1f72:8505:74d6:b751:29ce:b5bb` port `6667` (TCP)
+
+- Main channel is `#general`
+- Other channels can be listed with description as their topic
+- Also accessible via cjdns at `fc42:7cfa:b830:e988:f192:717f:6576:ed12` port `6667` (TCP)
+
 ----
 
-## Matrix
+## XMPP
+
+### chat.station.moe
+
+- `chat.station.moe`, run by [zhoreeq](https://github.com/zhoreeq)
+    - Webchat is at [http://[305:1bba:6a3:7f24::23]/](http://[305:1bba:6a3:7f24::23]/) or http://chat.station.moe/. General chat room is at `ygg@conference.station.moe`.
+    - Unnecessary TLS is removed. XMPP clients should allow authorization over plaintext and disable TLS/SSL/STARTTLS enforcement.
+    - XMPP federation is enabled inside Yggdrasil network. [Example config file for Prosody](https://gist.github.com/zhoreeq/0f293cc7c338554369261cfdfab55ddc).
 
 ### netwhood.online
 
-- `http://[202:12a9:e5:4474:d473:82be:16ac:9381]:8008` run by [abslimit](http://netwhood.online/feedback/)
+- `netwhood.online`, run by [abslimit](http://netwhood.online/feedback/)
+  - SRV record `_xmpp-client._tcp` is prioritized for `y.netwhood.online` (`202:12a9:e5:4474:d473:82be:16ac:9381`). XMPP-client must try yggdrasil address at first.
+  - SRV record `_xmpp-server._tcp` is prioritized for `y.netwhood.online` too. XMPP s2s connections must try yggdrasil address at first. Lets peer?
+  - "HTTP upload" XEP module is tied to `netwhood.online`, it will connect through the Internet. It can not be prioritized for yggdrasil.
+  
+### infradian.icu and ultradian.club
+- `infradian.icu` and `ultradian.club`, run by [Umbrellix](http://yww.umbrellix.net/contact/)
+  - The SRV record `_xmpp-server._tcp` for all of the relevant subdomains has a domain that points to `202:8fb5:1490:594d:7e29:98fd:8d79:953f` at priority 1, and the clearnet machine which that represents at priority 2 (so that clearnet XMPPers/Snikketers/Jabberers will be able to message you if you are on infradian or ultradian)
+  - The SRV record `_xmpp-client._tcp` for @ only has the domain which points to `202:8fb5:1490:594d:7e29:98fd:8d79:953f`. There is a non-obvious way to connect over clearnet, which will not be disclosed here.
+  - HTTP upload, unlike on the other domain Umbrellix has which is clearnet-based, is disabled.
 
 ----
 
@@ -105,6 +145,23 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [Arceliar's Interactive Network Map](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e])
 - [y.yakamo.org Static World Map](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/static/map.png)
 
+### IPv6 address information 
+- http://[300:aa35:f9c1:dcce::2]/
+
+----
+
+## NNTP
+
+### pztrn's NNTP server
+
+- [Website with rules, news and documentation](https://nntp.pztrn.name).
+- Registration required to access all groups beyond `local.regreq` which is used for registration requests. No anonymous postings allowed.
+- ygg.* hierarchy for talks about Yggdrasil! :)
+- Accessible via Yggdrasil at `201:e64d:1a9:d2b0:9c74:f285:ea73:5e05` ports `119` (plain text) and `563` (TLSv1.0+ only).
+- Accessible via public Internet at `nntp.pztrn.name` ports `119` (plain text) and `563` (TLSv1.0+ only).
+- SSL warnings via Yggdrasil expected, certificate is for *.pztrn.name. You can workaround it by adding entry in hosts file.
+- Peering is welcome, especially via Yggdrasil.
+
 ----
 
 ## BitTorrent
@@ -118,6 +175,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
 
+### IPFS Bootstrap Swarm
+
+- Irvine, CA Based Server Boostrap Node hosted by @KylerChin
+`/ip6/202:d0ca:a9d7:b4e8:bd3c:ffde:5c89:a3d7/tcp/4001/ipfs/QmZEiPvrfZHapq4uiyTDEcR2szCUhDnjdS4q3Uv2b1Uh88`
+
 ----
 
 ## Gaming
@@ -126,6 +188,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
     - DNS name: `mc.y.creativeserver.net`
     - Survival mode map, ask piele to be whitelisted
+    
+### Minetest
+  - `300:aa35:f9c1:dcce::3:30000`, admin Admin
+  
+### Xonotic
+  - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
+    - DNS name: `xonotic.y.netwhood.online:26000`
 
 ----
 
@@ -143,7 +212,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Will ask 1.1.1.1 over TLS, recursive resolving currently disabled due to inferior speed.
   - `200:a120:8cf8:2ad5:7509:7341:c861:34aa` port 53 hosted by [sin](https://2f30.org)
     - Supports clearnet resolution of standard DNS domains via root lookups
-
+  - `200:d0c4:68ee:e87b:c206:67b8:5fa5:d4be` port 53, hosted by [Medium](https://github.com/medium-isp)
+    - Internal Yggdrasil services resolver
+  - `200:5bf2:a7a5:27c7:54b8:6669:eb74:1813` port 53, hosted by [User2k](https://user2k.eu)
+    - Medium DNS, OpenDNS, Google DNS and CloudFlare DNS
 ----
 
 ## ZeroNet
@@ -172,5 +244,22 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## Direct Connect
 
-- DC-hub by *whoami* `adc://[202:9877:2815:cd91:336:2a16:bfd9:7258]:1511`
-  - Works with clients who support IPv6 and ADC. Ncdc or Airdcpp for example (eiskaltdc++ not support IPv6)
+- bepis DC-hub run by *Jeff* `adc://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]:1511`
+
+----
+
+## [iPerf3](https://iperf.fr)
+
+- `iperf3 -6 -c y.thingylabs.io` on [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+  - Link: 10 GBit
+  - Location: Nuremberg, Germany
+
+----
+
+## Bitcoin
+
+### Node by [vkeb6rza](https://vkeb6rza.github.io/) at `204:381:4c98:df09:d15b:ab1e:894b:d99e`
+  - Port 8333 - Bitcoin Core with BIP157 and BIP158 experimental support
+  - Port 9735 - Lightning Network - `038758ca700b8c4c73d1b86440acb963be93e5b11f9d6f363041be43572c8cbd43@[204:381:4c98:df09:d15b:ab1e:894b:d99e]:9735`
+  - Port 9911 - LND Watchtower
+  - Port 50001 - Electrum server

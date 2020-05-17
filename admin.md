@@ -118,7 +118,7 @@ For each IPv6 address:
 - `bytes_recvd` (`uint64`) contains the number of bytes received from that peer
 - `endpoint` (`string`) contains the connected IPv4/IPv6 address and port of the peering
 - `port` (`uint8`) contains the local switch port number for that peer
-- `uptime` (`uint32`) contains the number of seconds since the peer connection was established
+- `uptime` (`float64`) contains the number of seconds since the peer connection was established
 
 #### `addPeer`
 
@@ -252,7 +252,7 @@ Returns:
 #### `removeRoute`
 
 Expects:
-- `subnet=` `string` for the subnet to remove the route route for
+- `subnet=` `string` for the subnet to remove the route for
 - `box_pub_key=` `string` for the public key that is routed to
 
 Removes an existing crypto-key route.

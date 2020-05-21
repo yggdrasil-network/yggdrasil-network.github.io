@@ -362,6 +362,7 @@ On Linux, something like the following should be sufficient to advertise a prefi
 interface eth0
 {
         AdvSendAdvert on;
+        AdvDefaultLifetime 0;
         prefix 300:1111:2222:3333::/64 {
             AdvOnLink on;
             AdvAutonomous on;

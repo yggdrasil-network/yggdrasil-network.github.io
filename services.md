@@ -49,7 +49,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-
 ## Shell accounts
 
 ### BAN.AI Public Access Multics Service
@@ -117,13 +116,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
     - Unnecessary TLS is removed. XMPP clients should allow authorization over plaintext and disable TLS/SSL/STARTTLS enforcement.
     - XMPP federation is enabled inside Yggdrasil network. [Example config file for Prosody](https://gist.github.com/zhoreeq/0f293cc7c338554369261cfdfab55ddc).
 
-### netwhood.online
-
-- `netwhood.online`, run by [abslimit](http://netwhood.online/feedback/)
-  - SRV record `_xmpp-client._tcp` is prioritized for `y.netwhood.online` (`202:12a9:e5:4474:d473:82be:16ac:9381`). XMPP-client must try yggdrasil address at first.
-  - SRV record `_xmpp-server._tcp` is prioritized for `y.netwhood.online` too. XMPP s2s connections must try yggdrasil address at first. Lets peer?
-  - "HTTP upload" XEP module is tied to `netwhood.online`, it will connect through the Internet. It can not be prioritized for yggdrasil.
-  
 ### infradian.icu and ultradian.club
 - `infradian.icu` and `ultradian.club`, run by [Umbrellix](http://yww.umbrellix.net/contact/)
   - The SRV record `_xmpp-server._tcp` for all of the relevant subdomains has a domain that points to `202:8fb5:1490:594d:7e29:98fd:8d79:953f` at priority 1, and the clearnet machine which that represents at priority 2 (so that clearnet XMPPers/Snikketers/Jabberers will be able to message you if you are on infradian or ultradian)
@@ -263,3 +255,14 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - Port 9735 - Lightning Network - `038758ca700b8c4c73d1b86440acb963be93e5b11f9d6f363041be43572c8cbd43@[204:381:4c98:df09:d15b:ab1e:894b:d99e]:9735`
   - Port 9911 - LND Watchtower
   - Port 50001 - Electrum server
+
+----
+
+## VoIP
+
+### netwhood.online mumble server
+  - `200:5802:538e:6a8f:3cb3:1e3c:8019:a9e8`, port `64738`
+  - umurmurd daemon
+  - Same Let's Encrypt certificate as at [netwhood.online](https://netwhood.online/).
+
+----

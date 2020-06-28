@@ -34,7 +34,7 @@ As long as you are not using this deprecated address range on your network, you 
 
 ### Can the network be crawled?
 
-Currently it is possible to crawl the network to reveal the spanning tree relationships. This is how the [network map](http://51.15.204.214) and popularity contest are generated. However, it is considered a design weakness that this is even possible currently and will hopefully be fixed in the future.
+Currently it is possible to crawl the network to reveal the spanning tree relationships by querying nodes in the DHT. This is how the [network map](http://51.15.204.214) and popularity contest are generated today. However, it is considered a design weakness that this is even possible currently and will hopefully be fixed in the future.
 
 ### Can I run a crawler?
 

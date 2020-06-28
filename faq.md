@@ -32,6 +32,14 @@ Yggdrasil uses the `0200::/7` range, which is a range deprecated by the IETF. It
 
 As long as you are not using this deprecated address range on your network, you will not experience any routing conflicts.
 
+### Can the network be crawled?
+
+Currently it is possible to crawl the network to reveal the spanning tree relationships. This is how the [network map](http://51.15.204.214) and popularity contest are generated. However, it is considered a design weakness that this is even possible currently and will hopefully be fixed in the future.
+
+### Can I run a crawler?
+
+Please don't run your own network crawler. Crawlers generate a lot of network-wide protocol traffic and effect is amplified by each additional crawler. If you really really *really* want information about the network today, use an [existing data source within the network](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3001/nodeinfo.json) instead of crawling yourself.
+
 ### I've just installed Yggdrasil and I can't ping anyone. What have I missed?
 
 Yggdrasil requires that you configure either a static peer to another Yggdrasil node, or that you discover another Yggdrasil node *on the same subnet* using multicast discovery (which is enabled by default). If you have not added or discovered any peers, you will not be able to reach beyond your own node.

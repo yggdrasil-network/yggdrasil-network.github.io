@@ -255,6 +255,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - Port 9735 - Lightning Network - `038758ca700b8c4c73d1b86440acb963be93e5b11f9d6f363041be43572c8cbd43@[204:381:4c98:df09:d15b:ab1e:894b:d99e]:9735`
   - Port 9911 - LND Watchtower
   - Port 50001 - Electrum server
+  
+### Node by [jsarenik](https://github.com/jsarenik) at `301:44a5:3cd0:16c9:20a:f5ff:fe64:22b0`
+  - also at tunneled IPv6 [`2001:470:6f:200:20a:f5ff:fe64:22b0`](https://bitnodes.io/nodes/2001:470:6f:200:20a:f5ff:fe64:22b0-8333/))
+  - Port 8333 - Bitcoin Core 0.20.0 pruned node (`prune=25550`)
 
 ----
 

@@ -46,7 +46,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### Wikis
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
-- [HowtoYgg](http://[300:529f:150c:eafe::6]/doku.php) run by newbie. Russian language and other.
+- [HowtoYgg](http://[300:529f:150c:eafe::6]/doku.php) - Yggdrasil User Guide run by newbie. Russian language and other.
   - Accessible via Yggdrasil at `http://[300:529f:150c:eafe::6]/doku.php`
 ----
 

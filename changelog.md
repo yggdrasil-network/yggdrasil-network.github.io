@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - in case of vulnerabilities.
 -->
 
-## [0.3.14] - 2020-01-01
+## [0.3.14] - 2020-04-01
 ### Fixed
 - Fixes a memory leak that may occur if packets are incorrectly never removed from a switch queue
 

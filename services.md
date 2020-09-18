@@ -267,3 +267,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - Same Let's Encrypt certificate as at [netwhood.online](https://netwhood.online/).
 
 ----
+
+### Hidden Murmur
+Mumble server is accessible from Yggdrasil, Tor and I2P. Run by [acetone](http://[324:9de3:fea4:f6ac::ace]/).
+  - `324:9de3:fea4:f6ac::cafe`, port `64738`
+  - Web page: 
+    - Yggdrasil: `http://[324:9de3:fea4:f6ac::cafe]/`
+    - Tor: `http://z2tg7kdh4yuade6ahvgz2hmu2vbey6alkfhbildeqphgola6zm7it7ad.onion/`
+    - I2P: `http://plpu63ftpi5wdr42ew7thndoyaclrjqmcmngu2az4tahfqtfjoxa.b32.i2p/`
+
+----

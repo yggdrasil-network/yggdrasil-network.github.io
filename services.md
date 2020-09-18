@@ -22,8 +22,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ### Clearnet Tunnel Service
 
-- Automated GRE over Yggdrasil service for clearnet IPv4 access. 
+- Automated GRE over Yggdrasil service for clearnet IPv4 access:
   - Accessible at http://[301:a003:3f0f:1aa0::1001]/dokuwiki/doku.php?id=ygre:howto
+ 
+- Proxy to Internet, Tor and I2P networks:
+  - Web page: `http://[324:9de3:fea4:f6ac::ace]/`
 
 ## Websites
 
@@ -269,7 +272,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ----
 
 ### Hidden Murmur
-Mumble server is accessible from Yggdrasil, Tor and I2P. Run by acetone (`Home page: http://[324:9de3:fea4:f6ac::ace]/`).
+Mumble server is accessible from Yggdrasil, Tor and I2P. Run by acetone.
   - `324:9de3:fea4:f6ac::cafe`, port `64738`
   - Web page: 
     - Yggdrasil: `http://[324:9de3:fea4:f6ac::cafe]/`

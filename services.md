@@ -112,12 +112,20 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### BonoboNET
 
 - Main channel is `#general`
+    - Other notable channels are `#networking` and `#programming`
+    - `/list` will list them all
 - Accessible via the public internet at `41.157.98.109` port `9006`
+   - Or on yggdrasil at `200:f8fd:8493:cf13:618b:6684:6964:f00b` port `6667`
+   - Or on CRXN at `10.6.4.1` port `6667`
 - On yggdrasil at `200:c2a4:4104:ce7b:c778:46ef:e914:96bf` port `6667`
-- On yggdrasil at `200:f8fd:8493:cf13:618b:6684:6964:f00b` port `6667`
+   - Or on CRXN at `10.1.0.3` port `6667`
 - On yggdrasil at `200:c307:591a:fc3e:66e9:a5c1:85b2:edc6` port `6667`
 - On yggdrasil at `201:cb93:9864:4f8c:d2d7:264b:6fe:ba73` port `6667`
 - On yggdrasil at `200:a4df:d66c:3f3a:b551:5224:c32f:cf8d` port `6667`
+- On yggdrasil at `200:74e1:ddb:836b:8d46:6478:be06:8ff7` port `6667`
+   - Or on cjdns at `fcc6:30a9:c8c6:49b4:58e5:b320:b312:58d7` port `6667`
+   - Or on CRXN at `10.0.0.7` port `6667`
+- More information can be found at the [BonoboNET homepage](http://[205:e59c:110d:4c0e:c3af:10df:3d56:41f3]/projects/bonobonet/) - we're using NGIRCD and open to peering
 
 ----
 

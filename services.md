@@ -109,6 +109,16 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - Other channels can be listed with description as their topic
 - Also accessible via cjdns at `fc42:7cfa:b830:e988:f192:717f:6576:ed12` port `6667` (TCP)
 
+### BonoboNET
+
+- Main channel is `#general`
+- Accessible via the public internet at `41.157.98.109` port `9006`
+- On yggdrasil at `200:c2a4:4104:ce7b:c778:46ef:e914:96bf`
+- On yggdrasil at `200:f8fd:8493:cf13:618b:6684:6964:f00b`
+- On yggdrasil at `200:c307:591a:fc3e:66e9:a5c1:85b2:edc6`
+- On yggdrasil at `201:cb93:9864:4f8c:d2d7:264b:6fe:ba73`
+- On yggdrasil at `200:a4df:d66c:3f3a:b551:5224:c32f:cf8d`
+
 ----
 
 ## XMPP

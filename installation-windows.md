@@ -28,10 +28,11 @@ visible on the system when Yggdrasil is not running.
 ## Configuration
 
 The Yggdrasil installer will automatically generate an `yggdrasil.conf`
-configuration file, if one does not exist, in the following locations:
+configuration file, if one does not exist, in:
 
-- 64-bit Windows: `C:\Program Files\Yggdrasil`
-- 32-bit Windows: `C:\Program Files (x86)\Yggdrasil`
+```
+%ALLUSERSPROFILE%\Yggdrasil\yggdrasil.conf
+```
 
 ## Windows Service
 

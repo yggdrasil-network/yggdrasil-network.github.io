@@ -3,6 +3,12 @@ tags: dontlink
 sitemap: true
 ---
 
+# Installing using the brew cask
+
+```sh
+brew cask install yggdrasil
+```
+
 # Installing using the macOS installer
 
 Yggdrasil is supported on macOS. Visit our [Builds](builds.md) page and download

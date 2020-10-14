@@ -210,6 +210,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
     - DNS name: `xonotic.y.netwhood.online:26000`
 
+### Super Tux Kart
+  - `[224:9de3:fea4:f6ac:6d7c:68f5:6c8e:f9a9]:7711` 
+    - Download game from [clearnet site](https://supertuxkart.net/Download) or [intranet repository](http://[324:9de3:fea4:f6ac::ace]/files/software/games/SuperTuxKart/). 
 ----
 
 ## DNS

@@ -238,7 +238,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ## ZeroNet
 
 ### ZeroNet Public tracker
-  - `zero://203:5871:3e33:413c:a824:cb7b:2604:92ab:24589`
+  - `zero://201:d53:22ac:5084:2591:2a5e:eafd:6aa7`
   - Add the tracker to your `zeronet.conf` file
   - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to `zeronet.conf` otherwise it wont connect.
   

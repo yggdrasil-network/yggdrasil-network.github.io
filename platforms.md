@@ -28,12 +28,5 @@ sitemap: true
 
 ## OpenBSD
 
-- Works in TAP mode, but currently doesn't work in TUN mode.
-- You may need to create the TAP adapter first if it doesn't already exist, i.e. `ifconfig tap0 create`.
-- OpenBSD is not capable of listening on both IPv4 and IPv6 at the same time on the same socket, therefore you may need to specify both an IPv4 and an IPv6 listener, like so:
-```
-Listen: [
-    tcp://[::]:12345
-    tcp://0.0.0.0:12345
-]
-```
+- Yggdrasil is well supported on OpenBSD.
+- IfName should only contain the interface name instead of the full path, i.e. `tun0` not `/dev/tun0`

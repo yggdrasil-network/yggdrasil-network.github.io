@@ -30,6 +30,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ## Websites
 
+### Repositaries
+- [mirror.yandex.ru proxy](http://[301:fd1:86e3:521c::36]/)
+  - Accesable via DN42 at `http://172.23.158.41/` or `http://[fd91:9191:9191:3::1]/`
+
 ### Search
 
 - [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.

@@ -177,10 +177,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
     - DNS name: `mc.y.creativeserver.net`
     - Survival mode map, ask piele to be whitelisted
-    
-### Minetest
-  - `300:aa35:f9c1:dcce::3:30000`, admin Admin
-  
+      
 ### Xonotic
   - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
     - DNS name: `xonotic.y.netwhood.online:26000`
@@ -210,7 +207,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ## ZeroNet
 
 ### ZeroNet Public tracker
-  - `zero://203:5871:3e33:413c:a824:cb7b:2604:92ab:24589`
+  - `zero://201:d53:22ac:5084:2591:2a5e:eafd:6aa7`
   - Add the tracker to your `zeronet.conf` file
   - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to `zeronet.conf` otherwise it wont connect.
   

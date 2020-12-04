@@ -35,14 +35,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.
   - Accessible via Yggdrasil at `http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/`.
 
-### Forums
-  
-- [Yggedit](http://[301:b614:c68e:b27f::1]/) - a link aggregator / reddit alternative
-  - Accessible via Yggdrasil at `http://[301:b614:c68e:b27f::1]/`.
-
-- [Yggy Forum](http://[301:b614:c68e:b27f::2]/) - a fast forum with many features
-  - Accessible via Yggdrasil at `http://[301:b614:c68e:b27f::2]/`.
-
 ### Wikis
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`

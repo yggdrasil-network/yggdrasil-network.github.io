@@ -35,11 +35,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.
   - Accessible via Yggdrasil at `http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/`.
 
-### Forums
-
-- [Mesh Forum](http://[303:60d4:3d32:a2b9::4]/) - a chit-chat forum about everything. Run by @pztrn.
-  - Accessible via Yggdrasil at `http://[303:60d4:3d32:a2b9::4]/`.
-
 ### Wikis
 
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
@@ -89,10 +84,10 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### ILITA IRC
 
 - Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
-- Accessible via Yggdrasil at `303:60d4:3d32:a2b9::3` ports `16667` (TCP), `16697` (TCP+SSL)
-- Accessible via public Internet at `irc.pztrn.name` ports `16667` (TCP), `16697` (TCP+SSL)
-- Accessible via I2P at `irc.ilita.i2p` (and servers in the network are linked via I2P)
-- Yggdrasil's SSL port uses same certificate as the public Internet node, so you **will** receive SSL warning, this is expected
+- Accessible via Yggdrasil at `324:9de3:fea4:f6ac::ace` port `6667` (TCP)
+- Accessible via I2P at `irc.acetone.i2p` port `6667` (TCP)
+- Accessible via Yggdrasil web interface at `http://[324:9de3:fea4:f6ac::41]/`
+- Accessible via Tor web interface at `http://ilitafrzzgxymv6umx2ux7kbz3imyeko6cnqkvy4nisjjj4qpqkrptid.onion/`
 - Join `#en` for english discussions
 
 ### ED12 IRC
@@ -158,20 +153,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## NNTP
-
-### pztrn's NNTP server
-
-- [Website with rules, news and documentation](https://nntp.pztrn.name).
-- Registration required to access all groups beyond `local.regreq` which is used for registration requests. No anonymous postings allowed.
-- ygg.* hierarchy for talks about Yggdrasil! :)
-- Accessible via Yggdrasil at `201:e64d:1a9:d2b0:9c74:f285:ea73:5e05` ports `119` (plain text) and `563` (TLSv1.0+ only).
-- Accessible via public Internet at `nntp.pztrn.name` ports `119` (plain text) and `563` (TLSv1.0+ only).
-- SSL warnings via Yggdrasil expected, certificate is for *.pztrn.name. You can workaround it by adding entry in hosts file.
-- Peering is welcome, especially via Yggdrasil.
-
-----
-
 ## BitTorrent
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[301:4541:2f84:1188:216:3eff:fe34:ec44]:6969/announce`
@@ -201,9 +182,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
     - DNS name: `xonotic.y.netwhood.online:26000`
 
-### Super Tux Kart
-  - `[224:9de3:fea4:f6ac:6d7c:68f5:6c8e:f9a9]:7711` 
-    - Download game from [clearnet site](https://supertuxkart.net/Download) or [intranet repository](http://[324:9de3:fea4:f6ac::ace]/files/software/games/SuperTuxKart/). 
 ----
 
 ## DNS

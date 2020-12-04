@@ -92,8 +92,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### ILITA IRC
 
 - Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
-- Accessible via Yggdrasil at `324:9de3:fea4:f6ac::ace` ports `6667` (TCP)
-- Accessible via I2P at `irc.acetone.i2p` ports `6667` (TCP)
+- Accessible via Yggdrasil at `324:9de3:fea4:f6ac::ace` port `6667` (TCP)
+- Accessible via I2P at `irc.acetone.i2p` port `6667` (TCP)
 - Accessible via Yggdrasil web interface at `http://[324:9de3:fea4:f6ac::41]/`
 - Accessible via Tor web interface at `http://ilitafrzzgxymv6umx2ux7kbz3imyeko6cnqkvy4nisjjj4qpqkrptid.onion/`
 - Join `#en` for english discussions

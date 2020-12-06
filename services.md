@@ -47,23 +47,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Shell accounts
-
-### BAN.AI Public Access Multics Service
-
- - `dps8@[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]`
-   - Open anonymous Guest access and free user account registration.
-   - Direct Yggdrasil access via [telnet](telnet://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), [mosh](mosh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]), and [ssh](ssh://[201:85d7:5968:d14a:9aca:fe9e:37ed:5ea4]).
-   - More information and access available via [cjdns](http://[fc18:cd5:92ad:5ed6:9960:ad6f:d723:b971]/multics), [tor](http://stopaiepslgjzczi.onion/multics), and [clearnet](https://ban.ai/multics) as well.
-
-----
-
 ## IRC
-
-### meshIRC
-
-- Accessible via Yggdrasil at `201:870:9573:4095:f4e6:dfde:cc68:c783` port `6667` (TCP)
-- Accessible via cjdns at `fcdc:71fe:e8c2:f3ba:ca93:80f4:3d97:2096` port `6667` (TCP)
 
 ### benisnet
 
@@ -81,10 +65,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### PirateIRC
 
 - `y.irc.pirateirc.net` accessible via Yggdrasil at `201:677d:1809:c5eb:202a:d39:e598:305` port `6697` (TCP+SSL)
-
-### 2f30/Cyberia IRC
-
-- `irc.y.fz.is accessible` via Yggdrasil at `201:918e:f16:bd05:e1f4:7435:7182:42d5` port `6697` (TCP+SSL)
 
 ### ILITA IRC
 
@@ -124,13 +104,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ----
 
 ## XMPP
-
-### chat.station.moe
-
-- `chat.station.moe`, run by [zhoreeq](https://github.com/zhoreeq)
-    - Webchat is at [http://[305:1bba:6a3:7f24::23]/](http://[305:1bba:6a3:7f24::23]/) or http://chat.station.moe/. General chat room is at `ygg@conference.station.moe`.
-    - Unnecessary TLS is removed. XMPP clients should allow authorization over plaintext and disable TLS/SSL/STARTTLS enforcement.
-    - XMPP federation is enabled inside Yggdrasil network. [Example config file for Prosody](https://gist.github.com/zhoreeq/0f293cc7c338554369261cfdfab55ddc).
 
 ### infradian.icu and ultradian.club
 - `infradian.icu` and `ultradian.club`, run by [Umbrellix](http://yww.umbrellix.net/contact/)
@@ -176,39 +149,6 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## Gaming
-
-### Minecraft
-  - `202:baed:9808:83c8:738:4041:bd8b:8c1d`, hosted by piele
-    - DNS name: `mc.y.creativeserver.net`
-    - Survival mode map, ask piele to be whitelisted
-      
-### Xonotic
-  - `201:9d54:3c57:d6d2:e8d7:a8ce:841f:eb89:26000` 
-    - DNS name: `xonotic.y.netwhood.online:26000`
-
-----
-
-## DNS
-
-### Public DNS Server
-  - `200:8993:bb44:e1f3:bde7:6234:3f3e:fdd1` port 53, hosted by [Famicoman](https://phillymesh.net)
-    - Supports clearnet resolution of standard DNS domains
-    - Supports resolution of [OpenNIC](https://www.opennic.org/) domains
-	- [DNSCrypt on port 5353](https://servers.opennicproject.org/edit.php?srv=ns7.nh.nl.dns.opennic.glue)
-  - `200:c493:950a:d576:a413:faef:990b:fb76` port 53, hosted by [Asymptote Club](https://asymptote.club)
-    - OpenNIC resolver
-  - `219:8496:8f7b:b1e8:13a6:87d2:a3ca:b13d` port 53, hosted by [jcgruenhage](https://jcg.re)
-    - Supports clearnet resolution of standard DNS domains
-    - Will ask 1.1.1.1 over TLS, recursive resolving currently disabled due to inferior speed.
-  - `200:a120:8cf8:2ad5:7509:7341:c861:34aa` port 53 hosted by [sin](https://2f30.org)
-    - Supports clearnet resolution of standard DNS domains via root lookups
-  - `200:d0c4:68ee:e87b:c206:67b8:5fa5:d4be` port 53, hosted by [Medium](https://github.com/medium-isp)
-    - Internal Yggdrasil services resolver
-  - `200:5bf2:a7a5:27c7:54b8:6669:eb74:1813` port 53, hosted by [User2k](https://user2k.eu)
-    - Medium DNS, OpenDNS, Google DNS and CloudFlare DNS
-----
-
 ## ZeroNet
 
 ### ZeroNet Public tracker
@@ -245,24 +185,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
   - Link: 10 GBit
   - Location: Nuremberg, Germany
 
-----
-
-## Bitcoin
-
-### Node by [vkeb6rza](https://vkeb6rza.github.io/) at `204:381:4c98:df09:d15b:ab1e:894b:d99e`
-  - Port 8333 - Bitcoin Core with BIP157 and BIP158 experimental support
-  - Port 9735 - Lightning Network - `038758ca700b8c4c73d1b86440acb963be93e5b11f9d6f363041be43572c8cbd43@[204:381:4c98:df09:d15b:ab1e:894b:d99e]:9735`
-  - Port 9911 - LND Watchtower
-  - Port 50001 - Electrum server
-
-----
-
-## VoIP
-
-### netwhood.online mumble server
-  - `200:5802:538e:6a8f:3cb3:1e3c:8019:a9e8`, port `64738`
-  - umurmurd daemon
-  - Same Let's Encrypt certificate as at [netwhood.online](https://netwhood.online/).
+---
 
 ### Hidden Murmur
 Mumble server is accessible from Yggdrasil, Tor and I2P. Run by acetone.

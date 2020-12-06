@@ -40,6 +40,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
 - [HowtoYgg](http://[300:529f:150c:eafe::6]/doku.php) - Yggdrasil User Guide run by newbie. Russian language and other.
   - Accessible via Yggdrasil at `http://[300:529f:150c:eafe::6]/doku.php`
+  
+### Forums
+
+- [LoFi Forum](http://[320:bfe2:bf50:3c25::f]/) run by zhoreeq at `http://[320:bfe2:bf50:3c25::f]/`. Russian and English languages.
+
 ----
 
 ## Shell accounts
@@ -84,7 +89,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### ILITA IRC
 
 - Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
-- Accessible via Yggdrasil at `324:9de3:fea4:f6ac::ace` port `6667` (TCP)
+- Accessible via Yggdrasil at `324:9de3:fea4:f6ac::41` port `6667` (TCP)
 - Accessible via I2P at `irc.acetone.i2p` port `6667` (TCP)
 - Accessible via Yggdrasil web interface at `http://[324:9de3:fea4:f6ac::41]/`
 - Accessible via Tor web interface at `http://ilitafrzzgxymv6umx2ux7kbz3imyeko6cnqkvy4nisjjj4qpqkrptid.onion/`

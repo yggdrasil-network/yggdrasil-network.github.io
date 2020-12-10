@@ -43,6 +43,9 @@ The following services are available on the Yggdrasil network, courtesy of our c
   
 ### Forums
 
+
+- [RAMBLE](http://[200:718d:c499:3fce:c5e:65c6:73d6:f46d]/) A reddit-like site bridging services from the clearnet, Yggdrasil, TOR, and I2P. Interact with the community through the network of your choice. Privacy and simplicty focused.
+
 - [LoFi Forum](http://[320:bfe2:bf50:3c25::f]/) run by zhoreeq at `http://[320:bfe2:bf50:3c25::f]/`. Russian and English languages.
 
 ----

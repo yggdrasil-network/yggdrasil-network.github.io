@@ -13,7 +13,7 @@ will also work on any other RPM-based distribution.
 
 ## Install RPM package from COPR repository
 
-There's a [Fedora COPR repository](https://copr.fedorainfracloud.org/coprs/leisteth/yggdrasil/) available, which provides recent versions of Yggdrasil - *not only for Fedora, but also for CentOS/RHEL!*
+There's a [Fedora COPR repository](https://copr.fedorainfracloud.org/coprs/rany/yggdrasil/) available, which provides recent versions of Yggdrasil - *only for Fedora!*
 
 
 ### Fedora
@@ -21,38 +21,11 @@ There's a [Fedora COPR repository](https://copr.fedorainfracloud.org/coprs/leist
 Installation on Fedora is easy as:
 
 ```bash
-dnf copr enable leisteth/yggdrasil
+dnf copr enable rany/yggdrasil
 dnf install yggdrasil
 ```
 
 ... and you're ready to go!
-
-
-### CentOS / RHEL
-
-Paste the following into a new file `/etc/yum.repos.d/yggdrasil.repo`:
-
-```
-[leisteth-yggdrasil]
-name=Copr repo for yggdrasil owned by leisteth
-baseurl=https://copr-be.cloud.fedoraproject.org/results/leisteth/yggdrasil/epel-7-$basearch/
-type=rpm-md
-skip_if_unavailable=True
-gpgcheck=1
-gpgkey=https://copr-be.cloud.fedoraproject.org/results/leisteth/yggdrasil/pubkey.gpg
-repo_gpgcheck=0
-enabled=1
-enabled_metadata=1
-```
-
-*Don't forget to change the `baseurl` according to your RHEL/CentOS version! In the config above, version 7 is used.*
-
-Install yggdrasil:
-
-```bash
-yum update
-yum install yggdrasil
-```
 
 
 ## One-off package install from CircleCI (not recommended!)

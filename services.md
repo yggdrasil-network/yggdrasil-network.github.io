@@ -149,6 +149,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - Irvine, CA Based Server Boostrap Node hosted by @KylerChin
 `/ip6/202:d0ca:a9d7:b4e8:bd3c:ffde:5c89:a3d7/tcp/4001/ipfs/QmZEiPvrfZHapq4uiyTDEcR2szCUhDnjdS4q3Uv2b1Uh88`
+- Saint Petersburg, RU Bootstrap Node, operated by [loskiq](https://t.me/loskiq)
+`/ip6/21a:982f:ae8e:2b3f:ec1e:d01e:cf4d:7f11/udp/4001/quic/p2p/12D3KooWSvwB2N2yxsGE4ULPKuv7GCAxRW9XnEYHei4oH7vuwcG3`
 
 ----
 

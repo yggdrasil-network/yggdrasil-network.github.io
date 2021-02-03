@@ -11,7 +11,7 @@ Yggdrasil is supported on iOS.
 
 Start by downloading the [TestFlight app](https://itunes.apple.com/us/app/testflight/id899247664?mt=8) from the App Store.
 
-Then visit the [Yggdrasil TestFlight URL](https://testflight.apple.com/join/jZNsIkRr) from your iPhone or iPad to enroll. You can then download (and upgrade) the app from within TestFlight.
+Then visit the [Yggdrasil TestFlight URL](https://testflight.apple.com/join/3lNLRNUH) from your iPhone or iPad to enroll. You can then download (and upgrade) the app from within TestFlight.
 
 Upon opening Yggdrasil for the first time, you will be prompted to add a VPN configuration. You must allow this - Yggdrasil will not work without it.
 

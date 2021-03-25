@@ -152,19 +152,11 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 ----
 
-## ZeroNet
+## WebIndexP2P
 
-### ZeroNet Public tracker
-  - `zero://201:d53:22ac:5084:2591:2a5e:eafd:6aa7`
-  - Add the tracker to your `zeronet.conf` file
-  - Don't forget to also add `fileserver_ip = 200:xxxx:your:ygg:ip:here` to `zeronet.conf` otherwise it wont connect.
-  
-### Yggdrasil landing page
-  - http://127.0.0.1:43110/1H2hcep9CaGYrYycMJwFx7Jr5jA81oLC34
-  
-### Yggdrasil website copy
-  - http://127.0.0.1:43110/1PffaPsQp81gec3GbLDTzH3cY57WuRfC36
-  
+### General Sherman Tree
+  - `ws://[200:e990:4450:8c75:e842:4159:1266:fb18]:9472`
+
 ----
 
 ## Gopher Holes

@@ -24,7 +24,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - Automated GRE over Yggdrasil service for clearnet IPv4 access:
   - Accessible at http://[301:a003:3f0f:1aa0::1001]/dokuwiki/doku.php?id=ygre:howto
- 
+
 - Proxy to Internet, Tor and I2P networks:
   - Web page: `http://[324:9de3:fea4:f6ac::ace]/`
 
@@ -40,7 +40,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [Internal Yggdrasil wiki](http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/) run by Jeff at `http://[203:e0b0:ec08:4e1f:f004:19a9:577a:90ba]/wiki/`
 - [HowtoYgg](http://[300:529f:150c:eafe::6]/doku.php) - Yggdrasil User Guide run by newbie. Russian language and other.
   - Accessible via Yggdrasil at `http://[300:529f:150c:eafe::6]/doku.php`
-  
+
 ### Forums
 
 
@@ -64,6 +64,12 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - Accessible via Yggdrasil at `202:8fb5:1490:594d:7e29:98fd:8d79:953f` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
 - Accessible via cjdns at `fcda:c930:1c80:ef8a:4fb:6c65:8506:1dd2` ports `194` (TCP), `994` (TCP+SSL), `6667` (TCP), `6697` (TCP+SSL)
 - It's preferred that you act like you're just another random clearnetter - Umbrellix is primarily a clearnet IRC network
+
+### BunkerTreff
+
+- primarily english/german IRC Network
+- Main channel is #general
+- Accessible via Yggdrasil at 202:4768:121:63c1:418f:d523:3826:a0d5 ports 6667 (TCP)
 
 ### PirateIRC
 
@@ -123,13 +129,13 @@ The following services are available on the Yggdrasil network, courtesy of our c
 - [y.yakamo.org API](http://y.yakamo.org:3000/) network research & map view of the network:
   - [Current Nodes](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/current)
   - [Discovered NodeInfo](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/nodeinfo)
-  
+
 ### Network Maps
-  
+
 - [Arceliar's Interactive Network Map](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e])
 - [y.yakamo.org Static World Map](http://[301:4541:2f84:1188:216:3eff:feb6:65a3]:3000/static/map.png)
 
-### IPv6 address information 
+### IPv6 address information
 - http://[300:aa35:f9c1:dcce::2]/
 
 ----
@@ -185,7 +191,7 @@ The following services are available on the Yggdrasil network, courtesy of our c
 ### Hidden Murmur
 Mumble server is accessible from Yggdrasil, Tor and I2P. Run by acetone.
   - `324:9de3:fea4:f6ac::cafe`, port `64738`
-  - Web page: 
+  - Web page:
     - Yggdrasil: `http://[324:9de3:fea4:f6ac::cafe]/`
     - Tor: `http://z2tg7kdh4yuade6ahvgz2hmu2vbey6alkfhbildeqphgola6zm7it7ad.onion/`
     - I2P: `http://plpu63ftpi5wdr42ew7thndoyaclrjqmcmngu2az4tahfqtfjoxa.b32.i2p/`

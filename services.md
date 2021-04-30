@@ -34,6 +34,8 @@ The following services are available on the Yggdrasil network, courtesy of our c
 
 - [YaCy](http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/) - an internal search engine.
   - Accessible via Yggdrasil at `http://[301:4541:2f84:1188:216:3eff:fe38:cefc]:8090/`.
+- [Nexus Cognitron](http://[200:f843:ff9e:be18:a84c:522e:3d67:8297]) - the biggest scientific library (LibGen fork).
+  - Accessible via Yggdrasil at `http://[200:f843:ff9e:be18:a84c:522e:3d67:8297]`.
 
 ### Wikis
 

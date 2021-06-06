@@ -21,5 +21,5 @@ If you are interested in or would like to get involved in the Yggdrasil project,
 
 - [Install](installation.md) and [configure](configuration.md) Yggdrasil on your own computer or router to join the network.
 - Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org) (or [read our channel backlog](https://view.matrix.org/room/!DwmKuvGvRKciqyFcxv:matrix.org/))
-- Visit our our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), particularly our [Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) page, to report problems, help debug, or contribute to the code.
+- Visit our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), particularly our [Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) page, to report problems, help debug, or contribute to the code.
 

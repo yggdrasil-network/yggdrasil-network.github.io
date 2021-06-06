@@ -5,19 +5,17 @@ sitemap: true
 
 # Yggdrasil
 
-Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4.
-
-Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing algorithm based on a globally-agreed spanning tree and greedy routing in a metric space, and aims to implement some novel local backpressure routing techniques. In theory, Yggdrasil should scale well on networks with internet-like topologies. Take a look at the [About](about.md) page for a detailed overview.
+Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4. For more information, see our [about](about.md) page.
 
 ## Project Status
 
-The project is currently in early stages but it is being actively developed. We have recently released [version 0.3.15](changelog.md) and are still regularly working on updates.
+The project is currently in early stages, but it is being actively developed.
 
-Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including Linux, Windows, macOS, FreeBSD, OpenBSD and Ubiquiti EdgeRouter).
+Yggdrasil is written in Go. The codebase is fairly small and easy to navigate. It has been tested on a number of platforms (including Linux, Windows, macOS, FreeBSD, OpenBSD and Ubiquiti EdgeRouter). See our [developers](developers.md) page for more info.
 
-A small number of users have been using and stress-testing Yggdrasil quite heavily for a number of purposes, including but not limited to secure remote access (SSH and VNC), access to Matrix, Jabber and IRC servers and even some video streams, large file transfers and performance tests. We have a number of [internal services](services.md) available, contributed and operated by the community.
+A small number of users have been using and stress-testing Yggdrasil quite heavily for a variety of use cases. We have a number of [internal services](services.md) available, contributed and operated by the community.
 
-It is entirely possible that occasional breaking changes may still happen in future versions but generally Yggdrasil works well and has proven to be reasonably stable so far, with recent builds reaching weeks of uptime without crashes or failures.
+It is likely that occasional breaking changes will still happen in future versions, but generally Yggdrasil works well and has proven to be reasonably stable so far, with recent builds reaching weeks of uptime without crashes or failures.
 
 ## Get Involved
 

@@ -5,7 +5,7 @@ sitemap: true
 
 # Yggdrasil
 
-Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4. For more information, see our [about](about.md) page.
+Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms, and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4. For more information, see our [about](about.md) page.
 
 ## Project Status
 
@@ -21,5 +21,5 @@ If you are interested in or would like to get involved in the Yggdrasil project,
 
 - [Install](installation.md) and [configure](configuration.md) Yggdrasil on your own computer or router to join the network.
 - Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org) (or [read our channel backlog](https://view.matrix.org/room/!DwmKuvGvRKciqyFcxv:matrix.org/)
-- Visit our our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), and in particular, the [Open Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) which contain bugs waiting to be fixed, etc.
+- Visit our our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go), particularly our [Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues) to report or help debug problems.
 

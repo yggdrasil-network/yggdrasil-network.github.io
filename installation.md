@@ -24,7 +24,7 @@ Yggdrasil is well supported on macOS. The preferred installation method is the `
 
 ## Windows
 
-Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and may have bugs:
+Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested.
 
 ## FreeBSD
 
@@ -36,7 +36,7 @@ Yggdrasil is well supported on EdgeOS 2.x and [packages are available](installat
 
 ## Android
 
-An [Yggdrasil port to Android](https://github.com/yggdrasil-network/yggdrasil-android/releases) has been contributed by the community:
+An [Yggdrasil port to Android](https://github.com/yggdrasil-network/yggdrasil-android/releases) has been contributed by the community.
 
 ## iOS
 

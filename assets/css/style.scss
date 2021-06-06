@@ -1,169 +1,90 @@
 ---
-tags: dontlink
 ---
 
-@import "jekyll-theme-minimal";
+@import "{{ site.theme }}";
 
-body {
-  color: #333333;
-  font: 14px/1.5 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+div.linkmenu {
+	float: right;
 }
 
-img#logo {
-	width: 80%;
-}
+div.titleflex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+	align-items: center;
+	justify-content: space-between;
 
-div.wrapper {
-  display: inline-flex;
-  margin-left: none;
-  margin-right: none;
-  width: 100%;
-}
-
-div.wrapper section p a code {
-  color: rgb(38, 124, 185);
-}
-
-section {
-  flex: auto;
-  max-width: 100vw;
-  margin-right: 20px;
-  @media screen and (max-width: 768px) {
-	margin-top: 20px;
-	border: 0;
-	float: none;
-	position: relative;
-	flex: initial;
-	word-break: break-word;
-	overflow: hidden;
-	table {
-		thead {
-			th {
-				min-width: 90px;
-			}
-		}
+	> span.logo {
+		max-width: 12em;
 	}
-  }
-}
 
-header {
-  flex: initial;
-  position: relative;
-  margin-right: 4em;
-  max-width: 200px;
-  @media screen and (max-width: 768px) {
-	  > p {
-		padding-right: 20%;
-	  }
-	  font-size: 0;
-	  margin: 0;
-	  padding: 0;
-	  &:before {
-		content:'\2261';
-		display: block;
-	        position: absolute;
-		left: 0px;
-		font-size: 40px;	
-	        top: -38px;
-	  }
-	  img {
-		display: none;
-	  }
-	  > a {
-		position: absolute;
-		top: -23px;
-		left: 50px;
-	  }
-	  a {
-		&:hover {
-			font-weight: initial;
-		}
-	  }
- 	  &:hover {
-		padding: 0;
-		font-size: initial;
+	> span.links {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
 		> a {
-			pointer-events: none;
-			position: initial;
+			display: inline-block;
+			padding: 0.75em;
 		}
-		position: fixed;
-		overflow-y: scroll;
-		background-color: white;
-		top: 0px;
-		left: 0;
-		right: 0;
-		bottom: 0;		
-		width: 100%;
-		z-index: 100;
-		padding-top: 20px;
-		padding-bottom: 50px;
-		padding-left: 20px;
-		p {
-			a {	
-				font-size: 24px;
-				padding-top: 2px;
-				padding-bottom: 2px;
-				display: block;
-			}
-			br {
-				display: none;
-			}
-		}
-		&:before {
-			display: none;
-		}
-	  }
 	}
 }
-pre {
-  overflow-x: scroll;
+
+@media only screen and (max-width: 768px) {
+	div.titleflex {
+		justify-content: center;
+
+		> span.logo {
+			flex-basis: 100%;
+		}
+
+		> span.links {
+			margin-top: 1em;
+			flex-basis: 100%;
+			justify-content: center;
+
+			> a {
+				padding: 0.35em;
+			}
+		}
+	}
 }
 
-pre.highlight {
-  width: auto;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+.markdown-body {
+	-webkit-font-smoothing: antialiased;
 }
 
 div.blogpost {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 100px minmax(200px, 1fr);
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 100px minmax(200px, 1fr);
 
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 div.blogpost div#date div#day {
-  font-size: 2.25em;
-  text-align: center;
-  margin-top: 0.1em;
+	font-size: 2.25em;
+	text-align: center;
+	margin-top: 0.1em;
 }
 
 div.blogpost div#date div#month {
-  font-size: 0.6em;
-  text-align: center;
-  text-transform: uppercase;
+	font-size: 0.6em;
+	text-align: center;
+	text-transform: uppercase;
 
-  position: relative;
-  top: -1em;
+	position: relative;
+	top: -1em;
 }
 
 div.blogpost div#overview div#title {
-  margin-top: 0.75em;
+	margin-top: 0.75em;
 }
 
 div.blogpost div#overview div#excerpt {
-  padding-top: 0.2em;
-  color: #444444;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-a:hover, a:focus {
-    color:#0be;
-    font-weight: initial;
-    text-decoration: underline;
+	padding-top: 0.2em;
+	color: #444444;
+	text-decoration: none;
+	font-size: 1em;
 }

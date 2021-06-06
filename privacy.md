@@ -1,5 +1,4 @@
 ---
-tags: dontlink
 sitemap: true
 ---
 

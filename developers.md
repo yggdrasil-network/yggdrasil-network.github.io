@@ -5,7 +5,7 @@ tags: dontlink
 
 # Developers
 
-TODO general developer resources.
+This page is meant to have general developer resources and links to developer tools. It's very much a work-in-progress.
 
 ## Build Artifacts
 

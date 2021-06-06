@@ -6,6 +6,11 @@ tags: dontlink
 
 body {
   color: #333333;
+  font: 14px/1.5 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img#logo {
+	width: 80%;
 }
 
 div.wrapper {
@@ -44,7 +49,8 @@ section {
 header {
   flex: initial;
   position: relative;
-  margin-right: 1em;
+  margin-right: 4em;
+  max-width: 200px;
   @media screen and (max-width: 768px) {
 	  > p {
 		padding-right: 20%;

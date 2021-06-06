@@ -16,10 +16,6 @@ Our official stance is that it is still alpha software. Expect things to not be 
 
 It is not a goal of the Yggdrasil project to provide anonymity. Your direct peers may be able to determine your location if, for example, you are peering over the Internet.
 
-### Does Yggdrasil work on my platform?
-
-Quite likely! Take a look at the [Platforms](platforms.md) page - you'll find platform-specific notes there.
-
 ### Does Yggdrasil require IPv6?
 
 Your system must be IPv6-capable, which just about all modern operating systems are.

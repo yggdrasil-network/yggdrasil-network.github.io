@@ -19,8 +19,6 @@ A small number of users have been using and stress-testing Yggdrasil quite heavi
 
 It is entirely possible that occasional breaking changes may still happen in future versions but generally Yggdrasil works well and has proven to be reasonably stable so far, with recent builds reaching weeks of uptime without crashes or failures.
 
-Binaries are [automatically built](https://circleci.com/gh/yggdrasil-network/yggdrasil-go) each time that we commit to the Git repository for a number of platforms. Feel free to [download them](https://github.com/yggdrasil-network/yggdrasil-go/releases), play with them, stress-test them or even use them in your own environments. However, be prepared to upgrade frequently and we wouldn't recommend relying on Yggdrasil for anything mission-critical at this stage!
-
 ## Get Involved
 
 If you are interested in or would like to get involved in the Yggdrasil project, please feel free to join us!

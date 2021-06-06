@@ -122,7 +122,7 @@ known critical bugs.
 The true goal of this project is to test the scalability of the Yggdrasil
 routing scheme, therefore it needs as many participants to run and test the
 software as possible so that we can study the behaviour of the network as it
-grows. We've done our best to support [as many platforms as possible](platforms.md)
+grows. We've done our best to support [as many platforms as possible](installation.md)
 and have a number of [public peers](https://github.com/yggdrasil-network/public-peers)
 that you can connect to in order to join the network, so please feel free to
 experiment.

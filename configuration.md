@@ -1,5 +1,6 @@
 ---
 sitemap: true
+tags: dontlink
 ---
 
 # Configuration

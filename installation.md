@@ -6,6 +6,12 @@ sitemap: true
 
 Yggdrasil can be downloaded for major platforms from our [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases) page. Additionally, installation guides are available for the following platforms/distributions.
 
+Once you have installed Yggdrasil, take a look at:
+
+- [Configuration](configuration.md) — information about configuring Yggdrasil 
+- [Public Peers](https://github.com/yggdrasil-network/public-peers) — public nodes to connect to
+- [Public Services](services.md) — services running inside the Yggdrasil Network
+
 ## Linux
 
 Yggdrasil is well supported on Linux. There are a number of distribution packages and additional installation instructions available:

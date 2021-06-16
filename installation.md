@@ -30,7 +30,7 @@ Yggdrasil is well supported on macOS. The preferred installation method is the `
 
 ### Windows
 
-Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested.
+Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested. On Windows 7 and Server 2008 R2, you must install hotfix KB2921916 ([64-bit](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x64.msu), [32-bit](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x86.msu)) before installing Yggdrasil.
 
 ### FreeBSD
 

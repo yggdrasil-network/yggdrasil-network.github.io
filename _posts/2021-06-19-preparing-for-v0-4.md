@@ -5,6 +5,8 @@ date:   2021-06-19 21:00:00 +0000
 author: Neil Alexander, Arceliar
 ---
 
+### Version 0.4 is coming soon
+
 In the coming weeks, we will be preparing to release Yggdrasil v0.4. This is a significant change from the v0.3 branch with an all-new protocol implementing an improved routing scheme.
 
 This release brings some new and significant benefits:

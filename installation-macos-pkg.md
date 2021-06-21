@@ -5,8 +5,7 @@ sitemap: true
 
 # Installing using the macOS installer
 
-Yggdrasil is supported on macOS. Visit our [Builds](builds.md) page and download
-the relevant `.pkg` file
+Yggdrasil is supported on macOS. Download the macOS `.pkg` file from [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases). 
 
 ## Install using Finder
 

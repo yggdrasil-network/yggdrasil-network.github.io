@@ -32,6 +32,14 @@ Yggdrasil is well supported on macOS. The preferred installation method is the `
 
 Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested. 
 
+### iOS
+
+There are [experimental Yggdrasil for iOS builds available on TestFlight](https://testflight.apple.com/join/jZNsIkRr) based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html). The [source code](https://github.com/yggdrasil-network/yggdrasil-ios) is also available.
+
+### Android
+
+An [Yggdrasil port to Android](https://github.com/yggdrasil-network/yggdrasil-android/releases) has been contributed by the community.
+
 ### FreeBSD
 
 Yggdrasil is well supported on FreeBSD and [an official `net/yggdrasil` port](https://www.freshports.org/net/yggdrasil/) is available.
@@ -39,11 +47,3 @@ Yggdrasil is well supported on FreeBSD and [an official `net/yggdrasil` port](ht
 ### Ubiquiti EdgeRouter
 
 Yggdrasil is well supported on EdgeOS 2.x and [packages are available](installation-linux-edgeos.md).
-
-### Android
-
-An [Yggdrasil port to Android](https://github.com/yggdrasil-network/yggdrasil-android/releases) has been contributed by the community.
-
-### iOS
-
-Yggdrasil is supported on iOS but no binary builds exist at this time. You will need an Apple Developer subscription, access to the Network Extensions entitlements and to [build the app from source](https://github.com/yggdrasil-network/yggdrasil-ios).

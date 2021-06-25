@@ -46,7 +46,7 @@ The `scalability1` test set involves running the network over line, tree, or squ
 
 ![scalability1-line](/assets/images/2021-06-26/scalability1-line.svg)
 ![scalability1-rtree](/assets/images/2021-06-26/scalability1-rtree.svg)
-![scalability1-grid](/assets/images/2021-06-26/scalability1-grid.svg)
+![scalability1-grid](/assets/images/2021-06-26/scalability1-grid4.svg)
 
 There's not a whole lot to say here, `v0.4rc3` is just an improvement across the board. Note that it's a little surprising how the bandwidth use *decreases* as the network grows. I think this is an artifact of how the test works. Each network measures reliability by pinging a fixed number of paths (200). The bandwidth used by these pings counts towards the test results. In the line network, increasing the network size also increases the path length at an equal rate, so the bandwidth use per node stays about the same. In the grid and rtree networks, path length doesn't increases as rapidly as the number of nodes, so the bandwith from the 200 test pings is increasing slower than the network size, which results in decreased average bandwidth use per node. In the future, it may be interesting to run some variation of this test without the pings, to get a better measurement of how the idle protocol traffic scales.
 

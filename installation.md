@@ -34,11 +34,16 @@ Yggdrasil works on Windows and [an MSI installer is available](installation-wind
 
 ### iOS
 
-There are [experimental Yggdrasil for iOS builds available on TestFlight](https://testflight.apple.com/join/jZNsIkRr) based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html). The [source code](https://github.com/yggdrasil-network/yggdrasil-ios) is also available.
+Yggdrasil is supported on iOS with the following applications:
+
+* [Yggdrasil for iOS on TestFlight](https://testflight.apple.com/join/jZNsIkRr), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html) ([source code](https://github.com/yggdrasil-network/yggdrasil-ios))
 
 ### Android
 
-An [Yggdrasil port to Android](https://github.com/yggdrasil-network/yggdrasil-android/releases) has been contributed by the community.
+Yggdrasil is supported on Android with the following applications:
+
+* [Yggdrasil for Android](https://github.com/yggdrasil-network/yggdrasil-android/releases), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html)
+* [Crispa for Android](https://github.com/yggdrasil-network/crispa-android/releases), contributed by the community
 
 ### FreeBSD
 

@@ -51,7 +51,7 @@ The `mobility2` test is essentially a much more aggressive variation of the abov
 ![mobility2_arrival_progress](/assets/images/2021-06-26/mobility2_arrival_progress.svg)
 ![mobility2_traffic_progress](/assets/images/2021-06-26/mobility2_traffic_progress.svg)
 
-The main feature to note is that, aside from having terrible reliability in this test, `v0.3.16` uses a ridiculous amount of bandwidth when mobility is involved. With `v0.4rc3`, the bandwith use drops to at or below around 10KBps, depending on how mobile things are. I'm fairly certain that most of this bandwith is still a reaction to mobility events in the network, because (as we're about to see) the bandwith use a pretty low in static networks.
+The main feature to note is that, aside from having terrible reliability in this test, `v0.3.16` uses a ridiculous amount of bandwidth when mobility is involved. With `v0.4rc3`, the bandwith use drops to at or below around 10KBps, depending on how mobile things are. I'm fairly certain that most of this bandwith is still a reaction to mobility events in the network, because (as we're about to see) the bandwith use is pretty low in static networks.
 
 #### Scalability1
 

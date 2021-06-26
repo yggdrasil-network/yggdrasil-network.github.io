@@ -5,9 +5,9 @@ date:   2021-06-26 21:00:00 +0000
 author: Arceliar
 ---
 
-### The Problem with v0.3
+### Revisiting v0.3
 
-In the current stable release of Yggdrasil, `v0.3.16`, routing works basically the same way that it has always worked since release. Traffic is forwarded by greedy routing in a metric space. In essence, each node has a distance label (`coords` in the code), and given the distance label of any two nodes, you can calculate the distance of some path between them. Traffic is forwarded to whichever peer minimizes that distance to the destination. This has been discussed in an [earlier blog post](2018-07-17-world-tree.md), so lets not worry about the details of how it works for now. Instead, we'll focus on what happens when it *doesn't* work.
+In the current stable release of Yggdrasil, `v0.3.16`, routing works basically the same way that it has always worked since release. Traffic is forwarded by greedy routing in a metric space. In essence, each node has a "distance label", and given the distance label of any two nodes, you can calculate the distance of some path between them. In the code, this label is usually called `coords`, as it represents a position in the tree, but technically we don't care about the position itself, we only care that it works as a distance label. Traffic is forwarded to whichever peer minimizes that distance to the destination. This has been discussed in an [earlier blog post](2018-07-17-world-tree.md), so lets not worry about the details of how it works for now. Instead, we'll focus on what happens when it *doesn't* work.
 
 To be able to send traffic to a destination `D`, the sender `S` must look up the node's distance label and key in the DHT. This happens just before session setup, where ephemeral keys are exchanged. You can think of it a bit like a DNS lookup: it maps some known static information (the node's Yggdrasil IPv6 address) onto some unknown or dynamic information (the node's static key and dynamic distance label). If anything happens to the network that causes the destination node `D`'s distance label to change, then all traffic to `D` will drop until the `S` can look up `D`'s new distance label. However, that lookup depends on the DHT, and the DHT *also* uses distance labels for communication, so DHT lookups for `D` will fail for some amount of time, until the out-of-date information about `D` times out or is replaced. While that's happening, `S` cannot communicate with `D`, even if the path between `S` and `D` is unaffected. Further exacerbating the problem, the DHT search is an iterative process, which requires round trip communication with multiple nodes. These nodes are, for the most part, randomly distributed across the physical network, meaning most of them are likely to be near the edge of the network, where connections are comparatively unreliable and costly to use. If any part of the lookup fails, then this delays search progress (if it doesn't cause the search to fail entirely).
 
@@ -46,12 +46,12 @@ These mobility tests are an area where Yggdrasil has struggled up to now, as see
 
 #### Mobility2
 
-The `mobility2` test is essentially a variation of the above. Nodes periodically move a random (increasing) step size with a 15s delay before testing 200 random paths. This test also monitors bandwidth usage.
+The `mobility2` test is essentially a much more aggressive variation of the above. Nodes periodically move a random (increasing) step size with a 15s delay before testing 200 random paths. This test also monitors bandwidth usage.
 
 ![mobility2_arrival_progress](/assets/images/2021-06-26/mobility2_arrival_progress.svg)
 ![mobility2_traffic_progress](/assets/images/2021-06-26/mobility2_traffic_progress.svg)
 
-The main feature to note is that, asside from having terrible reliability in this test, `v0.3.16` uses a ridiculous amount of bandwidth when mobility is involved. With `v0.4rc3`, the bandwith use drops to at or below around 10KBps, depending on how mobile things are. I'm fairly certain that most of this bandwith is still a reaction to mobility events in the network, because (as we're about to see) the bandwith use a pretty low in static networks.
+The main feature to note is that, aside from having terrible reliability in this test, `v0.3.16` uses a ridiculous amount of bandwidth when mobility is involved. With `v0.4rc3`, the bandwith use drops to at or below around 10KBps, depending on how mobile things are. I'm fairly certain that most of this bandwith is still a reaction to mobility events in the network, because (as we're about to see) the bandwith use a pretty low in static networks.
 
 #### Scalability1
 
@@ -66,4 +66,6 @@ There's not a whole lot to say here, `v0.4rc3` is just an improvement across the
 ### Conclusion
 
 The upcoming v0.4 release changes how packets are routed through the network. It's hard to predict exactly how this will affect network performance, but benchmarks in simulated networks may give us some insight into what we can expect. If the above benchmarks are at least qualitatively accurate, then we have reason to be optimistic about performance in the next release.
+
+If things go according to plan, then these changes should improve the user experience and overall usefulness of the network. Changes to the network state should no longer affect existing traffic flows, as long as the path the flow is using is unaffected. In cases where the path *is* affected, it should take much less time for the network to detect this and route around the damage (when it's possible to do so). With or without disruptive changes in the network, there should be reduced bandwidth from protocol traffic, leading to lower data use and longer battery life in energy constrained environments (e.g. mobile phones).
 

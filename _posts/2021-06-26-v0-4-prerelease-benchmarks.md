@@ -65,7 +65,7 @@ There's not a whole lot to say here, `v0.4rc3` is just an improvement across the
 
 ### Conclusion
 
-The upcoming v0.4 release changes how packets are routed through the network. While it's hard to say exactly how things will perform in the real world, the performance gains in the simulated networks give us reason to be optimistic.
+The upcoming v0.4 release changes how packets are routed through the network. While it's hard to say exactly how things will behave in the real world, the performance gains in the simulated networks give us reason to be optimistic.
 
 If things go according to plan, then these changes should improve the user experience and overall usefulness of the network. Changes to the network state should no longer affect existing traffic flows, as long as the path the flow is using is unaffected. In cases where the path *is* affected, it should take much less time for the network to detect this and route around the damage (when it's possible to do so). With or without disruptive changes in the network, there should be reduced bandwidth from protocol traffic, leading to lower data use and longer battery life in energy constrained environments (e.g. mobile phones).
 

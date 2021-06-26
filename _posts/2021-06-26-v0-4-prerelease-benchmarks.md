@@ -22,11 +22,11 @@ Most of these changes aim to improve performance in dynamic networks and reduce 
 Without repeating too much from that earlier blog post, the basic goal here is to insulate the routing from changes to distance labels.
 This happens through a mix of reactive opportunistic source routing and falling back to to proactive DHT-based routing, both of which use distance labels for path setup, but neither of which is broken when the distance labels change (provided that the links in the path still work).
 
-Since it may take a while to see how this affects performance in a live network, and becuause it's a bit difficult to actually measure these things in a real network, it seems like it would be useful to look at some results from benchmarks on simulated networks.
+Since it may take a while to see how this affects performance in a live network, and because it's a bit difficult to actually measure these things in a real network, it seems like it would be useful to look at some results from benchmarks on simulated networks.
 
 ### Mesh Network Lab
 
-All of the results shown here are from [meshnet-lab](https://github.com/mwarning/meshnet-lab). You should probably just read the documentation if you want to know more, but to summarize: meshnet-lab simulates mesh networks using network namespace on linux. Each node is give a network namespace, which can be linked to other namespaces to simulate an arbitrary topology. Links are added and removed as needed to e.g. simulate movement in a mobile adhoc network.
+All of the results shown here are from [meshnet-lab](https://github.com/mwarning/meshnet-lab). You should probably just read the documentation if you want to know more, but to summarize: meshnet-lab simulates mesh networks using network namespace on linux. Each node is given a network namespace, which can be linked to other namespaces to simulate an arbitrary topology. Links are added and removed as needed to e.g. simulate movement in a mobile adhoc network.
 
 Although meshnet-lab supports many other mesh networking protocols, this post will focus on comparing Yggdrasil `v0.3.16` (the latest stable release) with `v0.4rc3` (the most recent release candidate). Comparisons with other mesh routers would be interesting, but it would be best if those were done by an unbiased 3rd party (and using a stable `v0.4.X` release instead of a release candidate). Instead, this post will try to highlight (qualitatively) what sort of performance changes we expect to see in the new release.
 

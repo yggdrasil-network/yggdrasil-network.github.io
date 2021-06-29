@@ -22,10 +22,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Websites
 
-### Search
+- [Yggdrasil Network](http://[302:20d:da5d:123d:20c:29ff:fe2c:39be]/) - this website
+  - `http://[302:20d:da5d:123d:20c:29ff:fe2c:39be]/`
 
-- [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - an internal search engine.
-  - Accessible via Yggdrasil at `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`.
+- [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
+  - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
+
+- [Yggdrasil v0.4 Map](http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7])
+  - `http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7`
 
 ----
 

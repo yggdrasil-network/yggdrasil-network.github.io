@@ -28,8 +28,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
   - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
 
-- [Yggdrasil v0.4 Map](http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7])
-  - `http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7`
+- [Yggdrasil v0.4 Map](http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7]/)
+  - `http://[202:d7cd:bd04:6bbc:acc6:b002:da12:86c7]/`
+
+- [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
+  - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
+
+- [Drommedaris Services Project](http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/)
+  - `http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/`
 
 ----
 

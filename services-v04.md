@@ -37,6 +37,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Drommedaris Services Project](http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/)
   - `http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/`
 
+- [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
+  - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
+
 ----
 
 ## IRC

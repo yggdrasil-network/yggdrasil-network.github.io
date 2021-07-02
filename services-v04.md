@@ -43,6 +43,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
   - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
 
+- [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
+  - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
+
+- [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
+  - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
+
 ----
 
 ## IRC

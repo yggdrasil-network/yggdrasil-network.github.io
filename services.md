@@ -52,6 +52,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
   - `http://[324:71e:281a:9ed3::ace]/`
 
+- [Alexandria - Content Mirror run by Toronto Mesh](http://[200:4233:d244:4f72:fbba:cf19:5d1a:fbb])
+  - http://[200:4233:d244:4f72:fbba:cf19:5d1a:fbb]
+  - https://y.alexandria.tomesh.net/
+
+- [Toronto Mesh Matrix Server](https://y.matrix.tomesh.net) - Matrix Server (Requires DNS)
+  - https://y.matrix.tomesh.net
 ----
 
 ## Proxy services
@@ -101,7 +107,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## DNS
 
 - `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
-  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS
+  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS   
+- `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55` - Basic `Named` DNS clear-net server maintained [darkdrgn2k](github.com/darkdrgn2k/)
 
 ----
 

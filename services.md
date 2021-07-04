@@ -48,6 +48,16 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
   - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
+ 
+- [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
+  - `http://[324:71e:281a:9ed3::ace]/`
+
+----
+
+## Proxy services
+
+- HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
+  - `324:71e:281a:9ed3::53` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
 
 ----
 
@@ -55,7 +65,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### BonoboNET
 
-- Accessible on Yggdrasil at the following servers:
+- Accessible via Yggdrasil at the following servers:
   - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
   - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
 - Notable channels are `#general`, `#networking` and `#programming`
@@ -63,8 +73,16 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### benisnet
 
-- Accessible on Yggdrasil at the following servers:
+- Accessible via Yggdrasil at the following servers:
   - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
+
+### ILITA IRC
+
+- Primarily Russian IRC network of users and developers of meshnets and overlay networks (like I2P) — English is fine too
+- Accessible via Yggdrasil at the following servers:
+  - `324:71e:281a:9ed3::41` port `6667`
+- Join `#en` for english discussions
+- More information can be found at the [ILITA homepage](http://[324:71e:281a:9ed3::41]/) with additional information about access
 
 ----
 
@@ -77,3 +95,19 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## IPFS
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
+
+----
+
+## DNS
+
+- `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
+  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS
+
+----
+
+## VoIP
+
+### Hidden Murmur
+
+- [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
+  - `324:71e:281a:9ed3::cafe` port `64738`

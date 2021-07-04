@@ -108,7 +108,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
   - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS   
-- `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55` - Basic `Named` DNS clear-net server maintained [darkdrgn2k](github.com/darkdrgn2k/)
+- `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55` - Basic `Named` DNS clear-net server maintained [darkdrgn2k](http://github.com/darkdrgn2k/) running [OpenNIC](https://www.opennic.org/)
 
 ----
 

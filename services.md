@@ -58,6 +58,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Toronto Mesh Matrix Server](https://y.matrix.tomesh.net/) - Matrix Server (requires DNS)
   - `https://y.matrix.tomesh.net/`
+
 ----
 
 ## Proxy services
@@ -109,7 +110,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
   - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS   
 - `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55`, hosted by [darkdrgn2k](http://github.com/darkdrgn2k/)
-  - Basic `Named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
+  - Basic `named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
 
 ----
 

@@ -63,6 +63,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
 
+### benisnet
+
+- Accessible on Yggdrasil at the following servers:
+  - `benisnet irc 203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
+
 ----
 
 ## BitTorrent

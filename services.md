@@ -5,7 +5,7 @@ sitemap: true
 
 # Services (v0.4 network)
 
-The following services are available on the Yggdrasil v0.4 network, courtesy of our community users. If you host a service on the Yggdrasil network, please feel free to [open a pull request](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services-v04.md) to list it here.
+The following services are available on the Yggdrasil v0.4 network, courtesy of our community users. If you host a service on the Yggdrasil network, please feel free to [open a pull request](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services.md) to list it here.
 
 ----
 
@@ -17,6 +17,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
   - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
+
+## Proxy services
+
+- HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
+  - `324:71e:281a:9ed3::53` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
 
 ----
 
@@ -48,6 +53,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
   - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
+ 
+- [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
+  - `http://[324:71e:281a:9ed3::ace]/`
 
 ----
 
@@ -66,6 +74,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - Accessible on Yggdrasil at the following servers:
   - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
 
+### ILITA IRC
+
+- Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
+- Accessible via Yggdrasil at `324:71e:281a:9ed3::41` port `6667`
+- Accessible via Yggdrasil web interface at `http://[324:9de3:fea4:f6ac::41]/web`
+- [Web page](http://[324:71e:281a:9ed3::41]/) with additional information about access
+- Join `#en` for english discussions
+
 ----
 
 ## BitTorrent
@@ -77,3 +93,18 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## IPFS
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
+
+----
+
+## DNS
+
+- `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
+  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS
+
+----
+
+## VoIP
+
+### Hidden Murmur
+Mumble server is accessible from Yggdrasil, Tor and I2P. [Web page](http://[324:71e:281a:9ed3::cafe]/)
+  - `324:71e:281a:9ed3::cafe`, port `64738`

@@ -20,13 +20,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
-## Proxy services
-
-- HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
-  - `324:71e:281a:9ed3::53` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
-
-----
-
 ## Websites
 
 - [Yggdrasil Network](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39be]/) - this website
@@ -58,6 +51,13 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
  
 - [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
   - `http://[324:71e:281a:9ed3::ace]/`
+
+----
+
+## Proxy services
+
+- HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
+  - `324:71e:281a:9ed3::53` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
 
 ----
 

@@ -108,4 +108,4 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Hidden Murmur
 [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
-  - `324:71e:281a:9ed3::cafe`, port `64738`
+  - `324:71e:281a:9ed3::cafe` port `64738`

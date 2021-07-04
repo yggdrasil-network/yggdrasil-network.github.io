@@ -57,7 +57,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## Proxy services
 
 - HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
-  - `324:71e:281a:9ed3::53` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
+  - `324:71e:281a:9ed3::ace` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
 
 ----
 

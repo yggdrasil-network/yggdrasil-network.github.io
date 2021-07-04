@@ -18,6 +18,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
+----
+
 ## Proxy services
 
 - HTTP proxy to other networks like a Yggdrasil, Tor (+clearnet), I2P:
@@ -78,7 +80,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - Primarily russian IRC network of users and developers of meshnets and overlay networks (like I2P) - English is fine too
 - Accessible via Yggdrasil at `324:71e:281a:9ed3::41` port `6667`
-- Accessible via Yggdrasil web interface at `http://[324:9de3:fea4:f6ac::41]/web`
 - [Web page](http://[324:71e:281a:9ed3::41]/) with additional information about access
 - Join `#en` for english discussions
 
@@ -106,5 +107,5 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## VoIP
 
 ### Hidden Murmur
-Mumble server is accessible from Yggdrasil, Tor and I2P. [Web page](http://[324:71e:281a:9ed3::cafe]/)
+[Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
   - `324:71e:281a:9ed3::cafe`, port `64738`

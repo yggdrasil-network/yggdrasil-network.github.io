@@ -64,7 +64,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ### benisnet
 
 - Accessible on Yggdrasil at the following servers:
-  - `benisnet irc 203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
+  - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
 
 ----
 

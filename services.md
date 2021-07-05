@@ -59,6 +59,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Toronto Mesh Matrix Server](https://y.matrix.tomesh.net/) - Matrix Server (requires DNS)
   - `https://y.matrix.tomesh.net/`
 
+- [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
+  - `https://[302:a2a5:dead:ded::a2a5]/`
 ----
 
 ## Proxy services
@@ -111,6 +113,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS   
 - `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55`, hosted by [darkdrgn2k](http://github.com/darkdrgn2k/)
   - Basic `named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
+- `302:db60::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Praha, Czechia
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
+- `300:6223::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Bratislava, Slovakia
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
+- `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
 
 ----
 
@@ -120,3 +128,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
   - `324:71e:281a:9ed3::cafe` port `64738`
+
+----
+
+## NTP
+
+- `202:a2a5:dead:ded:9a54:4ab5:6aa7:1645` port `123`, hosted by [nikat](https://[302:a2a5:dead:ded::a2a5]/)

@@ -64,6 +64,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Causa Arcana](http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/) - Russian blog about information technologies, security and cryptoanarchism
   - `http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/`
+  - `http://y.causa-arcana.com`
  
 ----
 

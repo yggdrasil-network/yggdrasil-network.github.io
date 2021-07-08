@@ -65,6 +65,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Causa Arcana](http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/) - Russian blog about information technologies, security and cryptoanarchism
   - `http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/`
  
+- [Git hosting](http://[301:298f:8cbc:189b::aaac]/) - Gitea, mirror of [git.3301.su](https://git.3301.su/) hosted by [cofob](https://t.me/cofob)
+  - `http://[301:298f:8cbc:189b::aaac]/`
+
 ----
 
 ## Proxy services
@@ -122,6 +125,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `300:6223::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Bratislava, Slovakia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
+- `301:298f:8cbc:189b::aaaa` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
 
 ----

@@ -94,6 +94,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - Accessible via Yggdrasil at the following servers:
   - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
+  - `201:94b8:c01b:bc26:c17a:1a4e:b5e:bb6c` port `6667`
 
 ### ILITA IRC
 

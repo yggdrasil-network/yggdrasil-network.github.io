@@ -159,6 +159,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `[301:298f:8cbc:189b::aaab]` port `25565` 1.17 Minecraft server hosted by [cofob](https://t.me/cofob)
 
+----
+
 ### WebIndexP2P
 
 - `201:436:b73a:ef28:953f:bbfd:49ed:8754` port `9472`. Wip2p node on the default `General Sherman` tree accepting websocket connections.

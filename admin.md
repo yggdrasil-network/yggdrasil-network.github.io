@@ -95,9 +95,9 @@ The `"request"` field contains a verb that describes which request to perform.
 Expects no additional request fields.
 
 Returns known nodes in the DHT.
-- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the remote node
-- `coords` (`string`) contains the coordinates of the node on the spanning tree
-- `last_seen` (`uint32`) contains the number of seconds since the DHT record was last updated
+- `key` (`string`) contains the `PublicKey` of the remote node
+- `port` (`int`)
+- `rest` (`int`)
 
 #### `getPeers`
 
@@ -106,12 +106,10 @@ Expects no additional request fields.
 Returns one or more records containing information about active peer sessions. The first record typically refers to the current node.
 
 For each IPv6 address:
-- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the remote node
-- `bytes_sent` (`uint64`) contains the number of bytes sent to that peer
-- `bytes_recvd` (`uint64`) contains the number of bytes received from that peer
-- `endpoint` (`string`) contains the connected IPv4/IPv6 address and port of the peering
+- `key` (`string`) contains the `PublicKey` of the remote node
 - `port` (`uint8`) contains the local switch port number for that peer
-- `uptime` (`float64`) contains the number of seconds since the peer connection was established
+- `coords` (`[]int`) contains the coordinates of the node on the spanning tree
+- `remote` (`string`) contains the peering URI of the remote peer
 
 #### `getSelf`
 
@@ -120,10 +118,10 @@ Expects no additional request fields.
 Returns exactly one record containing information about the current Yggdrasil node.
 
 For the current IPv6 address:
-- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the current node
+- `key` (`string`) contains the `EncryptionPublicKey` of the current node
 - `build_name` (`string`) contains the build name, if available (e.g. `yggdrasil`, `yggdrasil-develop`)
 - `build_version` (`string`) contains the build version, if available (e.g. `0.3.0`, `0.2.7-0091`)
-- `coords` (`string`) contains the coordinates of the node on the spanning tree
+- `coords` (`[]int`) contains the coordinates of the node on the spanning tree
 - `subnet` (`string`) contains the routed IPv6 subnet for this host
 
 #### `getSessions`
@@ -133,12 +131,7 @@ Expects no additional request fields.
 Returns zero or more records containing information about open sessions between the current Yggdrasil node and other nodes. Open sessions indicate that traffic has been exchanged with the remote node recently.
 
 For each IPv6 address:
-- `box_pub_key` (`string`) contains the `EncryptionPublicKey` of the remote node
-- `bytes_sent` (`uint64`) contains the number of bytes sent across that session
-- `bytes_recvd` (`uint64`) contains the number of bytes received across that session
-- `coords` (`string`) contains the coordinates of the remote node on the spanning tree
-- `mtu` (`uint8`) contains the negotiated session MTU between the local end and the remote end of the session
-- `was_mtu_fixed` (`bool`) shows whether or not the MTU has been adjusted since the session was opened to compensate for read errors
+- `key` (`string`) contains the `EncryptionPublicKey` of the remote node
 
 #### `getTunTap`
 

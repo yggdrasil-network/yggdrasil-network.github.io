@@ -71,6 +71,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Minecraft server homepage](http://[301:298f:8cbc:189b::aaab]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/) hosted by [cofob](https://t.me/cofob)
   - `http://[301:298f:8cbc:189b::aaab]/`
 
+- [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
+  - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
+
 ----
 
 ## Proxy services

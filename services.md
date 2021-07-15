@@ -162,3 +162,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ### Java Edition
 
 - `[301:298f:8cbc:189b::aaab]` port `25565` 1.17 Minecraft server hosted by [cofob](https://t.me/cofob)
+
+----
+
+### WebIndexP2P
+
+- `201:436:b73a:ef28:953f:bbfd:49ed:8754` port `9472`. Wip2p node on the default `General Sherman` tree accepting websocket connections.
+  - If you have IPFS, you can load the Arborist UI at http://127.0.0.1:8080/ipns/arborist.wip2p.eth/ and add the node above as a peer.

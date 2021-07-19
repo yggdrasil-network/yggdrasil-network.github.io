@@ -176,3 +176,4 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `https://acme.yggnode.ygg/acme/acme/directory` RFC8555-compliant CA. All acme clients should work properly.
   - If you use popular software, it can be useful to edit and run [fast-issue script](https://yggnode.cf/40eztv8hh4/request.sh).
+  - `https://[302:a2a5:dead:ded::ace]/acme/acme/directory`

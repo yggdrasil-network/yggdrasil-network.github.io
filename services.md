@@ -169,3 +169,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `201:436:b73a:ef28:953f:bbfd:49ed:8754` port `9472`. Wip2p node on the default `General Sherman` tree accepting websocket connections.
   - If you have IPFS, you can load the Arborist UI at http://127.0.0.1:8080/ipns/arborist.wip2p.eth/ and add the node above as a peer.
+ 
+----
+
+### Certification Authority
+
+- `https://acme.yggnode.ygg/acme/acme/directory` RFC8555-compliant CA. All acme clients should work properly.
+  - If you use popular software, it can be useful to edit and run [fast-issue script](https://yggnode.cf/40eztv8hh4/request.sh).

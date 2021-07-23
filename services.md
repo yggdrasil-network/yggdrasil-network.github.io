@@ -74,6 +74,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
   - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
 
+- [Nexus Cognitron](http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]) - the biggest scientific library (LibGen fork).
+  - Accessible via Yggdrasil at `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`.
+
 ----
 
 ## Proxy services

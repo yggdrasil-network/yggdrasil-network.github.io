@@ -3,6 +3,8 @@ title: Yggdrasil Network
 description: >
   End-to-end encrypted IPv6 networking to connect worlds
 
+theme: minimal
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

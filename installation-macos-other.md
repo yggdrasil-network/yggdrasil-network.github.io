@@ -85,7 +85,3 @@ sudo yggdrasil -genconf > /etc/yggdrasil.conf
 You can make changes to this file as described in the
 [Configuration](configuration.md) page.
 
-## After installation
-
-Read the [macOS platform page](platform-macos.md) page for further
-information about macOS platform support.

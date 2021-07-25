@@ -7,6 +7,7 @@ sitemap: true
 You can subscribe to our blog [using RSS](https://yggdrasil-network.github.io/feed.xml).
 
 {% for post in site.posts %}
+  {% if post.unlisted != true %}
   <div class='blogpost'>
     <div id='date'>
       <div id='day'>{{ post.date | date: "%-d" }}</div>
@@ -17,4 +18,5 @@ You can subscribe to our blog [using RSS](https://yggdrasil-network.github.io/fe
       <div id='excerpt'>{{ post.excerpt | strip_html }}</div>
     </div>
   </div>
+  {% endif %}
 {% endfor %}

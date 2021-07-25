@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "Crypto-Key Routing"
-date:   2018-11-06 23:00:00 -0000
-author: Neil Alexander
+layout:   post
+title:    "Crypto-Key Routing"
+date:     2018-11-06 23:00:00 -0000
+author:   Neil Alexander
+unlisted: true
 ---
 
 ### Tunnelling over Yggdrasil

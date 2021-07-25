@@ -27,8 +27,3 @@ sudo installer -pkg /path/to/yggdrasil-xxx-macos.pkg -target /
 Once completed, the Yggdrasil configuration will have automatically been
 generated, the `launchd` service will have been installed and the service will
 be running.
-
-## After installation
-
-Read the [macOS platform page](platform-macos.md) page for further
-information about macOS platform support.

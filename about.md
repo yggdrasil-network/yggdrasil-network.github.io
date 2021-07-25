@@ -138,9 +138,3 @@ case it will become worthwhile to look at writing better-optimised
 implementations and/or moving the important parts into other projects (like
 [cjdns](https://github.com/cjdelisle/cjdns))
 
-### Where can I find more technical details?
-
-Take a look at the [Whitepaper](https://github.com/yggdrasil-network/yggdrasil-go/blob/master/doc/Whitepaper.md)
-for a technical deep-dive on how Yggdrasil works, including information about
-the name-dependent and name-independent routing components, cryptography and the
-behaviour of the distributed hash table (DHT).

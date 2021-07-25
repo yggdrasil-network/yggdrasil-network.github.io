@@ -145,8 +145,9 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-minimal (0.1.1)
-      jekyll (~> 3.5)
+    jekyll-theme-primer (0.5.4)
+      jekyll (> 3.5, < 5.0)
+      jekyll-github-metadata (~> 2.9)
       jekyll-seo-tag (~> 2.0)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
@@ -223,7 +224,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed
   jekyll-sitemap
-  jekyll-theme-minimal
+  jekyll-theme-primer
 
 BUNDLED WITH
    2.0.2

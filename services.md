@@ -18,8 +18,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
-- [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland now, Netherlands available August 2021) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted. [Our Clearnet Site](https://incognet.io/)
-- `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
+- [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland now, Netherlands available August 2021) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
+  - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
+  - [Clearnet site](https://incognet.io/) at `https://incognet.io/`
 
 ----
 

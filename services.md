@@ -85,7 +85,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[301:298f:8cbc:189b::aaab]/`.
   - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`.
 
-
+- [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
+  - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
 
 ----
 

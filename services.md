@@ -183,3 +183,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `201:436:b73a:ef28:953f:bbfd:49ed:8754` port `9472`. Wip2p node on the default `General Sherman` tree accepting websocket connections.
   - If you have IPFS, you can load the Arborist UI at http://127.0.0.1:8080/ipns/arborist.wip2p.eth/ and add the node above as a peer.
+
+### Direct Connect
+
+- `adc://[302:9240:e45e:f7e4:356b:1283:bedc:e326]:1511` - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).

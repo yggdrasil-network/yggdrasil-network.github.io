@@ -18,7 +18,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - Containers can reach the Internet on request through a VPN internet provider
   - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
 
-- [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland now, Netherlands available August 2021) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
+- [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland and Netherlands) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
   - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
   - [Clearnet site](https://incognet.io/) at `https://incognet.io/`
 
@@ -81,12 +81,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Nexus Cognitron](http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]) - the biggest scientific library (LibGen fork).
   - Accessible via Yggdrasil at `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`.
 
-- [Invidious YouTube Proxy](http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/) - A public multi-network YouTube Proxy sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
-  - `http://[301:298f:8cbc:189b::aaab]/`.
-  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`.
-
 - [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
   - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
+
+- [Invidious YouTube Proxy](http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/) - A public multi-network YouTube Proxy sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
+  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`.
+
+- [Teddit - Reddit frontend](http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/) - A fast, private Reddit front-end served over the Yggdrasil Network sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
+  - `http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/`
 
 ----
 

@@ -69,11 +69,23 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Causa Arcana](http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/) - Russian blog about information technologies, security and cryptoanarchism
   - `http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/`
  
-- [Git hosting](http://[301:298f:8cbc:189b::aaac]/) - Gitea, mirror of [git.3301.su](https://git.3301.su/) hosted by [cofob](https://t.me/cofob)
-  - `http://[301:298f:8cbc:189b::aaac]/`
+- [Cofob's homepage](http://[325:5a4:d1c9:db96::c0fb])
+  - `http://[325:5a4:d1c9:db96::c0fb]/`
 
-- [Minecraft server homepage](http://[301:298f:8cbc:189b::aaab]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/) hosted by [cofob](https://t.me/cofob)
-  - `http://[301:298f:8cbc:189b::aaab]/`
+- [Funkwhale pod](http://[300:eaff:4343:a381::5]/) - Platform to enjoy and share music, hosted by [cofob](https://t.me/cofob)
+  - `http://[300:eaff:4343:a381::5]/`
+
+- [Bitwarden instance](https://[300:eaff:4343:a381::bb]/) - BitwardenRS server, hosted by [cofob](https://t.me/cofob)
+  - `https://[300:eaff:4343:a381::bb]/`
+
+- [Privatebin](https://[300:eaff:4343:a381::4])
+  - `https://[300:eaff:4343:a381::4]`
+
+- [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea, hosted by [cofob](https://t.me/cofob)
+  - `http://[325:5a4:d1c9:db96::2]/`
+
+- [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/), hosted by [cofob](https://t.me/cofob)
+  - `http://[325:5a4:d1c9:db96::3]/`
 
 - [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
   - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
@@ -149,12 +161,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
-- `301:298f:8cbc:189b::aaaa` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
-- `301:e9b7:c2c:b52e::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
-- `300:de9b:ea32:3e4a::53` port `53`, hosted by [cofob](https://t.me/cofob), Germany
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
+- `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
+  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/ru/emerdns) 
 
 ----
 
@@ -177,7 +185,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `[301:298f:8cbc:189b::aaab]` port `25565` 1.17 Minecraft server hosted by [cofob](https://t.me/cofob)
+- `[325:5a4:d1c9:db96::3]` port `25565` 1.17.1 Minecraft server hosted by [cofob](https://t.me/cofob)
 
 ----
 

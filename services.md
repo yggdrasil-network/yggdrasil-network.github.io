@@ -72,19 +72,19 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Cofob's homepage](http://[325:5a4:d1c9:db96::c0fb])
   - `http://[325:5a4:d1c9:db96::c0fb]/`
 
-- [Funkwhale pod](http://[300:eaff:4343:a381::5]/) - Platform to enjoy and share music, hosted by [cofob](https://t.me/cofob)
+- [Funkwhale pod](http://[300:eaff:4343:a381::5]/) - Platform to enjoy and share music
   - `http://[300:eaff:4343:a381::5]/`
 
-- [Bitwarden instance](https://[300:eaff:4343:a381::bb]/) - BitwardenRS server, hosted by [cofob](https://t.me/cofob)
+- [Bitwarden instance](https://[300:eaff:4343:a381::bb]/) - BitwardenRS server
   - `https://[300:eaff:4343:a381::bb]/`
 
-- [Privatebin](https://[300:eaff:4343:a381::4])
+- [Privatebin](https://[300:eaff:4343:a381::4]) - Pastebin where the server has zero knowledge of pasted data
   - `https://[300:eaff:4343:a381::4]`
 
-- [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea, hosted by [cofob](https://t.me/cofob)
+- [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea git hosting
   - `http://[325:5a4:d1c9:db96::2]/`
 
-- [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/), hosted by [cofob](https://t.me/cofob)
+- [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/)
   - `http://[325:5a4:d1c9:db96::3]/`
 
 - [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
@@ -162,7 +162,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
 - `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/ru/emerdns) 
+  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns) 
 
 ----
 

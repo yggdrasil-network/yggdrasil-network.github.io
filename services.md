@@ -196,4 +196,4 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Direct Connect
 
-- `adc://[302:9240:e45e:f7e4:356b:1283:bedc:e326]:1511` - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+- `adc://[301:8858:62d6:6535:356b:1283:bedc:e326]:1511` - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).

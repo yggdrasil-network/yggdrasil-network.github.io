@@ -102,6 +102,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Teddit - Reddit frontend](http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/) - A fast, private Reddit front-end served over the Yggdrasil Network sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
   - `http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/`
 
+- [Yggeddit](http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/) - A Reddit/4chan type site!
+  - `http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/`
+
 ----
 
 ## Proxy services

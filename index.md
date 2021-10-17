@@ -3,7 +3,7 @@ tags: dontlink
 sitemap: true
 ---
 
-Yggdrasil is an implementation of a new name-independent routing scheme and functions as a fully end-to-end encrypted IPv6 network.
+Yggdrasil is an implementation of a new name-independent routing scheme and functions as an end-to-end encrypted IPv6 network.
 
 It is lightweight, easy to configure, supported on multiple platforms, and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. You do not need to have IPv6 Internet connectivity from your ISP — it also works just fine over IPv4.
 
@@ -23,7 +23,7 @@ The highlights of Yggdrasil are that it is:
     <div class='icon'>
         <img src='/assets/images/iconoir/lock.svg' />
         <div>Encrypted</div>
-        <p>Traffic sent across the network is end-to-end encrypted always</p>
+        <p>Traffic sent across the network is always fully end-to-end encrypted</p>
     </div>
     <div class='icon'>
         <img src='/assets/images/iconoir/group.svg' />

@@ -3,6 +3,65 @@
 
 @import "jekyll-theme-primer";
 
+div#indexicons {
+	margin-top: 2.5em;
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div#indexicons div.icon {
+	display: flex;
+	flex-direction: column;
+	max-width: 10em;
+	align-items: center;
+	align-content: stretch;
+}
+
+div#indexicons div.icon img {
+	width: 3em;
+}
+
+div#indexicons div.icon div {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+div#indexicons div.icon p {
+	text-align: center;
+	margin-top: 1em;
+}
+
+div#indextable {
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div#indextable div.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+div#indextable div.row img {
+	width: 2em;
+	height: 2em;
+	margin: 0.5em;
+	margin-left: 1em;
+}
+
+div#indextable div.row p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0.5em;
+}
+
 div.linkmenu {
 	float: right;
 }

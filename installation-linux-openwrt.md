@@ -3,30 +3,29 @@ tags: dontlink
 sitemap: true
 ---
 
-# Installing on OpenWrt 19.07
+# Installing on OpenWrt
 
-Yggdrasil is supported on the OpenWrt based router.
+`yggdrasil` v0.4+ packages are available in OpenWRT since 21.02.
 
+To configure Yggdrasil with the LuCI web interface, install the package `luci-app-yggdrasil`.
 
-Perform installation steps over SSH by connecting to the Router as the
-`root` user, e.g. `ssh root@192.168.1.1`, or another admin-level user if
-configured.
+## Configuration
 
-## Package install from repository
+Use the LuCI web interface to configure Yggdrasil, see the "Network" section.
 
-Install the `yggdrasil` package:
+Alternatively, you can configure Yggdrasil with just a command line.
+
+To show currently configured options, run the following command:
+
 ```
-opkg update
-opkg install yggdrasil
-```
-
-Yggdrasil can then be updated in the future by updating the packages:
-```
-opkg update
-opkg upgrade yggdrasil
+uci show yggdrasil
 ```
 
-## After installation
+To add a new peer:
 
-Read the [OpenWrt platform page](platform-openwrt.md) page for information
-on how to configure Yggdrasil and guidance on modifying the configuration.
+```
+uci add yggdrasil peer
+uci set yggdrasil.@peer[-1].uri='tcp://1.2.3.4:5678'
+uci commit
+/etc/init.d/yggdrasil restart
+```

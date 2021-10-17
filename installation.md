@@ -19,6 +19,7 @@ Yggdrasil is well supported on Linux. There are a number of distribution package
 - [Debian, Ubuntu, elementaryOS, Linux Mint and similar](installation-linux-deb.md)
 - [Red Hat Enterprise Linux, Fedora, CentOS and similar](installation-linux-rpm.md)
 - [Gentoo Linux](installation-linux-gentoo.md)
+- [OpenWRT](installation-linux-openwrt.md)
 - [Manual install or build from source](installation-linux-other.md)
 
 ### macOS

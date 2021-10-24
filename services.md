@@ -133,7 +133,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ### ILITA IRC
 
 - Primarily Russian IRC network of users and developers of meshnets and overlay networks (like I2P) — English is fine too
-- Accessible via Yggdrasil at the following servers:
+- Accessible via Yggdrasil at the following server:
   - `324:71e:281a:9ed3::41` port `6667`
 - Join `#en` for english discussions
 - More information can be found at the [ILITA homepage](http://[324:71e:281a:9ed3::41]/) with additional information about access
@@ -155,7 +155,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## DNS
 
 - `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
-  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), Google DNS   
+  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), [OpenNIC](https://www.opennic.org/) and legacy clearnet
+  - At the same address, port `80`, [Mario DNS tool](https://notabug.org/acetone/mario-dns) is [available](http://[324:71e:281a:9ed3::53])
 - `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55`, hosted by [darkdrgn2k](http://github.com/darkdrgn2k/)
   - Basic `named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
 - `302:db60::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Praha, Czechia

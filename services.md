@@ -66,9 +66,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
   - `https://[302:a2a5:dead:ded::a2a5]/`
 
-- [Causa Arcana](http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/) - Russian blog about information technologies, security and cryptoanarchism
-  - `http://[200:f0a1:c2ef:37a2:467f:9f74:ae64:9954]/`
- 
 - [Cofob's homepage](http://[325:5a4:d1c9:db96::c0fb])
   - `http://[325:5a4:d1c9:db96::c0fb]/`
 

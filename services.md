@@ -118,6 +118,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - Accessible via Yggdrasil at the following servers:
   - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
   - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
+  - `215:15c:84e0:8dd5:7590:bfcd:61cf:cff7` port `6667`
+  - `300:7232:2b0e:d6e9:216:3eff:fe3c:c82b` port `6667`/`6697`
 - Notable channels are `#general`, `#networking` and `#programming`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
 

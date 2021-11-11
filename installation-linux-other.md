@@ -94,5 +94,5 @@ You can make changes to this file as described in the
 
 ## After installation
 
-Read the [Linux platform page](platform-linux.md) page for further
+Read the [Linux platform page](configuration.html) page for further
 information about Linux platform support.

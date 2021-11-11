@@ -75,5 +75,5 @@ systemctl restart yggdrasil
 
 ## After installation
 
-Read the [Linux platform page](configuration.html) page for further
+Read the [Linux platform page](configuration.md) page for further
 information about Linux platform support.

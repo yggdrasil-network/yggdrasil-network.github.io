@@ -102,6 +102,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggeddit](http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/) - A Reddit/4chan type site!
   - `http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/`
 
+- [Columbus Coffee Pot](http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc/) - A CRXN controllable coffee pot with Yggdrasil webcam stream
+  - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc`
+
 ----
 
 ## Proxy services

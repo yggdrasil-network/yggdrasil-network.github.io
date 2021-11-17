@@ -122,6 +122,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `300:7232:2b0e:d6e9:216:3eff:fe3c:c82b` port `6667`/`6697`
 - Notable channels are `#general`, `#networking` and `#programming`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
+- Web IRC:
+  - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]:1024`
 
 ### benisnet
 

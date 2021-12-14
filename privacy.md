@@ -36,4 +36,4 @@ If you are concerned about the storage or collection of logging information on a
 
 With regards to our iOS application when distributed via TestFlight or the App Store specifically, information collected through TestFlight or the App Store pertaining to usage demographics and/or crash analytics may be made available to the developers of the iOS application by Apple, as outlined in [Apple's own Privacy Policy](https://www.apple.com/uk/legal/privacy/en-ww/). 
 
-No other information is collected. The Yggdrasil application (and the accompanying VPN network extension) itself does not collect any information whatsoever. If you do not wish to share usage information and/or crash analytics as a result of distribution via Apple, you should review the Privacy settings on your device or produce your own build using the source code available.
+No other information is collected. The Yggdrasil application itself, as well as the accompanying VPN network extension, will not collect any personal or analytic information whatsoever. 

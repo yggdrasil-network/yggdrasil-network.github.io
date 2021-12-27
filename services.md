@@ -189,6 +189,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## NTP
 
 - `202:a2a5:dead:ded:9a54:4ab5:6aa7:1645` port `123`, hosted by [nikat](https://[302:a2a5:dead:ded::a2a5]/)
+- `223:180a:b95f:6a53:5c70:e704:e9fc:8b8f` port `123`, hosted by mkb2191
 
 ----
 

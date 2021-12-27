@@ -112,6 +112,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - HTTP proxy to other networks like Yggdrasil, Tor, I2P and clearnet:
   - `324:71e:281a:9ed3::ace` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
 
+### Tor bridges
+- `[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]:16728 835FFE642EFA3BB7936663D2365A15D319FB6226` operated by [Vort](https://github.com/Vort) ([homepage](http://[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]) | [metrics](https://metrics.torproject.org/rs.html#details/835FFE642EFA3BB7936663D2365A15D319FB6226))
+- `[21f:5234:5548:31e5:a334:854b:5752:f4fc]:9770 6C4C89ABE4D06987AB1F51C06939410282A1BF58` operated by tbxv ([homepage](http://[21f:5234:5548:31e5:a334:854b:5752:f4fc]))
+
 ----
 
 ## IRC

@@ -116,7 +116,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 *Note:* If you modified your `torrc` file to exclude groups of non-exit nodes (e.g. using `ExcludeNodes` with country codes, using `ExcludeExitNodes` is fine), Tor will strictly follow the constraints. However because Yggdrasil addresses are not and will not be listed in any IP-to-country databases, Tor cannot guarantee that bridge you entered falls under whatever exclusion policies you specified and will refuse to connect to bridge. In that case you can add `GeoIPExcludeUnknown 0` to your `torrc`.
 
-- `[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]:16728 835FFE642EFA3BB7936663D2365A15D319FB6226` operated by [Vort](https://github.com/Vort) ([homepage](http://[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]) | [metrics](https://metrics.torproject.org/rs.html#details/835FFE642EFA3BB7936663D2365A15D319FB6226))
+- `[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]:16728 835FFE642EFA3BB7936663D2365A15D319FB6226` operated by [Vort](https://github.com/Vort) ([homepage](http://[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]), [metrics](https://metrics.torproject.org/rs.html#details/835FFE642EFA3BB7936663D2365A15D319FB6226))
 - `[21f:5234:5548:31e5:a334:854b:5752:f4fc]:9770 6C4C89ABE4D06987AB1F51C06939410282A1BF58` operated by tbxv ([homepage](http://[21f:5234:5548:31e5:a334:854b:5752:f4fc]))
 
 ----

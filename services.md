@@ -69,15 +69,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Cofob's homepage](http://[325:5a4:d1c9:db96::c0fb])
   - `http://[325:5a4:d1c9:db96::c0fb]/`
 
-- [Funkwhale pod](http://[300:eaff:4343:a381::5]/) - Platform to enjoy and share music
-  - `http://[300:eaff:4343:a381::5]/`
-
-- [Bitwarden instance](https://[300:eaff:4343:a381::bb]/) - BitwardenRS server
-  - `https://[300:eaff:4343:a381::bb]/`
-
-- [Privatebin](https://[300:eaff:4343:a381::4]) - Pastebin where the server has zero knowledge of pasted data
-  - `https://[300:eaff:4343:a381::4]`
-
 - [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea git hosting
   - `http://[325:5a4:d1c9:db96::2]/`
 
@@ -104,6 +95,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Columbus Coffee Pot](http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc/) - A CRXN controllable coffee pot with Yggdrasil webcam stream
   - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc`
+
+- [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
+  - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
 ----
 

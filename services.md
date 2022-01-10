@@ -176,6 +176,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
 - `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns) 
+- `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
+  - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
 
 ----
 

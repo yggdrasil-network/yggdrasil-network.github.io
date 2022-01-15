@@ -32,6 +32,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Public Peers](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/)
   - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/`
 
+- [Popularity Contest](http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/)
+  - `http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/`
+
 - [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
   - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
 

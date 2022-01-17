@@ -102,6 +102,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
+- [Mesh.Party Lemmy Instance](https://lemmy.mesh.party/) - Yggdrasil and clearnet accessible lemmy instance run by @Stephen304. Requires DNS.
+  - `https://lemmy.mesh.party/`
+
 ----
 
 ## Proxy services

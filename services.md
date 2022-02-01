@@ -13,11 +13,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Linux containers
 
-- LXD containers hosted on HP ProLiant DL360 Gen9 hardware (dual Xeon E5-2603v3, 128GB RAM, RAID6) at `300:7232:2b0e:d6e9::1`
-  - Comes with a native routed Yggdrasil IPv6 address, and a specific allocation of resources based on requirements
-  - Containers can reach the Internet on request through a VPN internet provider
-  - Contact [neilalexander](https://matrix.to/#/@neilalexander:matrix.org) if you'd like a container to host interesting services on the Yggdrasil network
-
 - [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland and Netherlands) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
   - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
   - [Clearnet site](https://incognet.io/) at `https://incognet.io/`

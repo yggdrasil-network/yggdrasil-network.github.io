@@ -35,6 +35,11 @@ The highlights of Yggdrasil are that it is:
         <div>Cross-platform</div>
         <p>Supported on Linux, macOS, Windows, iOS, Android and more</p>
     </div>
+    <div class='icon'>
+        <img src='/assets/images/iconoir/network.svg' />
+        <div>Work behind NAT</div>
+        <p>Works on NAT Networks or behind Firewalls like CGNAT</p>
+    </div>
 </div>
 
 This is still an alpha-stage project and there may be some breaking changes in the future. Despite that, Yggdrasil is generally stable enough for day-to-day use and a small number of users have been using and stress-testing Yggdrasil quite heavily for a variety of use cases. If you are interested in or would like to get involved in the Yggdrasil project, start below:

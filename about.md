@@ -37,85 +37,30 @@ ISP networks are also typically structured in design and often hierarchical in n
 
 Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single global network topology. 
 
-A spanning tree has the following properties:
+A spanning tree is used to provide synchronisation and to allow nodes to allocate themselves a set of tree coordinates, which are used to exchange and establish bootstrap and path setup messages. Nodes then set up paths through the network to their keyspace neighbours, effectively arranging the network into a virtual line, ordered by public keys. Intermediate nodes then populate their routing tables with these paths, enabling nodes to forward packets closer to their destination public key.
 
-1. There is always a single "root" node at the "top" of the tree
-1. Every other node in the spanning tree has:
-  - Exactly one parent
-  - One or more children
-1. Every node is connected to at least one other node
-
-By arranging every device in such a way that they all agree on the same global
-spanning tree, we can do some things that we previously couldn't do before:
-
-1. We can assign a "locator" to a device, effectively a path from the root of
-the tree downwards
-1. We can determine where our destination is on the tree up front relative to
-the source
-1. We always have a single worst-case-scenario path to every node by
-"walking the tree"
-1. We have the ability to infer a number of possible routes (both direct and
-indirect) from the structure of the tree, and even take "shortcuts"
-1. We can spread out information about the tree itself across nodes and not need
-to store it all centrally
-
-By using a distributed hash table (DHT) to share routing information, this
-allows any single device on the network to find out enough information to route
-to another node, without depending on centralised infrastructure.
-
-Cryptographic signatures are used when exchanging routing information between
-peers, such that the network can agree on the same candidate to be the global
-root and to lay out the coordinates of each node beneath it.
+Cryptographic signatures are used to secure tree announcements, bootstrap and path messages against tampering or forgery.
 
 ### What are the benefits?
 
-It should be efficient for the following reasons:
+There are a number of benefits to a routing scheme such as this:
 
-1. It lets every device on the network make the same assumptions about the
-topology of the network
-1. The use of locators for sending traffic across the network simplifies the
-switching layer, as forwarding does not require nodes to maintain state tables
-of anything beyond their own peers
-1. All route determination is automatic - no manual configuration of routes is
-required
-1. Devices don't need to store lots of information about the topology of the
-network - in fact, storing information about only a small number of nodes is
-usually enough to reach the entire network
-1. We can bridge reliable/static networks very easily with dynamic/non-static
-networks without flooding large amounts of routing information between different
-areas (i.e. point-to-point or mesh wireless networks)
-1. The network responds gracefully to changes in topology without intervention,
-and networks can even join and split without interrupting connectivity between
-local nodes
-
-We believe that Yggdrasil should be able to scale to very large networks as a
-result.
+1. Devices need to only maintain a comparatively small amount of state in order to function and to be able to forward packets — there is no need for any Yggdrasil node to maintain "full routing tables" like in BGP, and most nodes only have a handful of routing table entries in total
+1. Paths are discovered and built through the network automatically, so manual configuration of routing entries is not required — the only configuration needed is the peering connections between nodes themselves
+1. The network can setup and tear down paths quickly without needing to discard all routing state, which helps significantly in handling node mobility events without dropping many packets if at all
+1. We can bridge reliable/static networks very easily with dynamic/non-static networks without needing to flood large amounts of state
+1. Networks automatically form when any two or more Yggdrasil nodes are connected to each other, even if those connections are entirely ad-hoc in nature
+1. Sparse routing knowledge and only small amounts of protocol traffic should mean that Yggdrasil is able to efficiently scale to very large networks
 
 ### What is the status of the project?
 
-Yggdrasil is currently an alpha project, early in development but actively
-maintained. Our expectation is that a future “beta” quality release should know
-enough to be compatible in the face of wire format changes, and reasonably
-feature complete. A “stable” 1.0 release, if it ever happens, would probably be
-feature complete, with no expectation of future wire format changes, and free of
-known critical bugs.
+Yggdrasil is currently an alpha project, early in development but actively maintained. Our expectation is that a future “beta” quality release should know enough to be compatible in the face of wire format changes, and reasonably feature complete. A “stable” 1.0 release, if it ever happens, would probably be feature complete, with no expectation of future wire format changes, and free of known critical bugs.
 
-The true goal of this project is to test the scalability of the Yggdrasil
-routing scheme, therefore it needs as many participants to run and test the
-software as possible so that we can study the behaviour of the network as it
-grows. We've done our best to support [as many platforms as possible](installation.md)
-and have a number of [public peers](https://github.com/yggdrasil-network/public-peers)
-that you can connect to in order to join the network, so please feel free to
-experiment.
+The true goal of this project is to test the scalability of the Yggdrasil routing scheme, therefore it needs as many participants to run and test the software as possible so that we can study the behaviour of the network as it grows. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the network, so please feel free to experiment. That said, we don't recommend running mission critical or life-or-death workloads over Yggdrasil yet — there may be failure modes that we don't yet know about.
 
 The project is likely to reach a number of possible outcomes:
 
-1. The project may reach a reasonably stable state but never attract a large
-enough number of users
-1. The project may attract a large enough number of users but reveal inherent
-design flaws in the process (a learning exercise for a future project perhaps)
-1. The project may end up working perfectly even as the network grows, in which
-case it will become worthwhile to look at writing better-optimised
-implementations and/or moving the important parts into other projects (like
-[cjdns](https://github.com/cjdelisle/cjdns))
+1. The project may reach a reasonably stable state but never attract a large enough number of users
+1. The project may attract a large enough number of users but reveal inherent design flaws in the process (a learning exercise for a future project or protocol version perhaps)
+1. The project may end up working perfectly even as the network grows, in which case it will become worthwhile to look at writing better-optimised implementations and/or moving the important parts into other projects
 

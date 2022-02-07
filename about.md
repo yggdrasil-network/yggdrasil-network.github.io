@@ -4,57 +4,38 @@ sitemap: true
 
 # About
 
-Yggdrasil is a proof-of-concept to explore a wholly different approach to
-network routing. Whereas current computer networks depend heavily on very
-centralised design and configuration, Yggdrasil breaks this mould by making use
-of a global spanning tree to form a scalable IPv6 encrypted mesh network.
+Yggdrasil is an experimental implementation of a new routing scheme designed for mesh or even Internet-like networks. The current implementation is built as an overlay network, where network nodes are userspace software routers, connected together using virtual peerings over local area networks, point-to-point links or the Internet. 
 
-The following table illustrates high-level differences between traditional
-networks like the internet, and the Yggdrasil network:
+Compared to the structured and typically hierarchial routing schemes in use today on many networks, Yggdrasil is strongly decentralised and largely self-arranging. Each node on the network is identified by a cryptographic public key and IPv6 addresses are generated from this key. The network topology is adaptive, aiming to make use of whichever links are available in order to provide full routability between all network participants. This is made possible by the fact that all Yggdrasil nodes are routers, sharing routing knowledge and forwarding traffic on behalf of other network participants.
+
+In order to ensure that traffic is private as it is routed across other network nodes, all traffic is end-to-end encrypted at all times. Even plain-text application traffic is encrypted in transit. Network traffic is also effectively "sealed sender" in that the source address information is also encrypted and only the destination address is left unencrypted in the packet headers, making it very difficult for intermediate nodes on the network to examine usage patterns or to identify specific traffic flows. 
+
+The following table illustrates high-level differences between traditional networks like the Internet, and the Yggdrasil Network:
 
 |                                                                 | Traditional | Yggdrasil |
 | --------------------------------------------------------------- | ----------- | --------- |
 | End-to-end encryption for all traffic across the network        | No          | Yes       |
 | Decentralised routing information shared using a DHT            | No          | Yes       |
-| Cryptographically-bound IPv6 addresses                          | No          | Yes       |
+| Cryptographically-bound addressing with no central authority    | No          | Yes       |
 | Node is aware of its relative location to other nodes           | No          | Yes       |
-| IPv6 address remains with the device even if moved              | No          | Yes       |
+| Mobile addressing that stays with the device as it moves around | No          | Yes       |
 | Topology extends gracefully across different mediums, i.e. mesh | No          | Yes       |
 
 ### What are the problems today?
 
-The internet as we know it today doesn't conform to a well-defined topology.
-This has largely happened over time - as the internet has grown, more and more
-networks have been "bolted together". The lack of defined topology gives us some
-unavoidable problems:
+The internet as we know it today doesn't conform to a well-defined topology. This has largely happened over time - as the internet has grown, more and more networks have been "bolted together" with peering arrangements between service providers. The lack of defined topology gives us some unavoidable problems:
 
-1. The routing tables that hold a "map" of the internet are huge and inefficient
-1. There isn't really any way for a computer to know where it is located on the
-internet relative to anything else
-1. It's difficult to examine where a packet will go on its journey from source
-to destination without actually sending it
-1. It's very difficult to install reliable networks into locations that change
-often or are non-static, i.e. wireless mesh networks
+1. The routing tables that hold a "map" of the internet are huge and inefficient, as every provider has to relay information about IP prefixes belonging to all other providers
+1. There isn't really any way for a computer to know where it is located on the internet relative to anything else — most machines are only aware of a "default gateway"
+1. It's difficult to examine where a packet will go on its journey from source to destination without actually sending it
 
-These problems have been partially mitigated (but not really
-solved) through centralisation - rather than your computers at home holding a
-copy of the global routing table, your ISP does it for you. Your computers and
-network devices are configured just to "send it upstream" and to let your ISP
-decide where it goes from there, but this does leave you entirely at the mercy
-of your ISP who can redirect your traffic anywhere they like and to inspect,
-manipulate or intercept it.
+These problems have been somewhat mitigated (but not really solved) through centralisation - rather than your computers at home holding a copy of the global routing table, your service provider does so on your behalf. Your computers and network devices are configured just to "send traffic upstream" and to let your provider decide where it goes from there. This leaves you entirely at the mercy of your ISP who can redirect your traffic anywhere they like and to inspect, manipulate or intercept it. 
 
-In addition, wireless meshing requires you to know a lot about the network
-around you, which would not typically be the case when you have outsourced this
-knowledge to your ISP. Many existing wireless mesh routing schemes are not
-scalable or efficient, and do not bridge well with existing networks.
+ISP networks are also typically structured in design and often hierarchical in nature, and as a result, many existing routing protocols have been designed with this in mind. Some optimisations such as prefix aggregation are used to try and reduce the number of routing entries that a provider must send out into the world. These protocols are usually not suitable for use in a network where the topology is not well defined or changes frequently — a wireless mesh network, for example, therefore it has been very difficult in the past for communities to build their own wireless mesh infrastructure on an ad-hoc basis. 
 
 ### What does Yggdrasil do differently?
 
-Yggdrasil takes a very different approach. Rather than just accepting that the
-internet is a sprawling conglomeration of unstructured networks connected
-together in an unstructured fashion, we instead arrange the routing scheme of
-the entire network into a global spanning tree.
+Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single global network topology. 
 
 A spanning tree has the following properties:
 

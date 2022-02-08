@@ -8,7 +8,7 @@ Yggdrasil is an experimental implementation of a new routing scheme designed for
 
 Compared to the structured and typically hierarchial routing schemes in use today on many networks, Yggdrasil is strongly decentralised and largely self-arranging. Each node on the network is identified by a cryptographic public key and IPv6 addresses are generated from this key. The network topology is adaptive, aiming to make use of whichever links are available in order to provide full routability between all network participants. This is made possible by the fact that all Yggdrasil nodes are routers, sharing routing knowledge and forwarding traffic on behalf of other network participants.
 
-In order to ensure that traffic is private as it is routed across other network nodes, all traffic is end-to-end encrypted at all times. Even plain-text application traffic is encrypted in transit. Network traffic is also effectively "sealed sender" in that the source address information is also encrypted and only the destination address is left unencrypted in the packet headers, making it very difficult for intermediate nodes on the network to examine usage patterns or to identify specific traffic flows. 
+In order to ensure that traffic is private as it is routed across other network nodes, all traffic is end-to-end encrypted at all times. Even plain-text application traffic is encrypted in transit, ensuring that intermediate nodes cannot read traffic as it is forwarded through the network.
 
 The following table illustrates high-level differences between traditional networks like the Internet, and the Yggdrasil Network:
 
@@ -38,6 +38,8 @@ ISP networks are also typically structured in design and often hierarchical in n
 Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single global network topology. 
 
 A spanning tree is used to provide synchronisation and to allow nodes to allocate themselves a set of tree coordinates, which are used to exchange and establish bootstrap and path setup messages. Nodes then set up paths through the network to their keyspace neighbours, effectively arranging the network into a virtual line, ordered by public keys. Intermediate nodes then populate their routing tables with these paths, enabling nodes to forward packets closer to their destination public key.
+
+In addition, nodes can pathfind using the spanning tree routing to establish a path that is likely shorter than the path through keyspace and then switch a traffic session over to source routing. The typically more direct source route will continue to be used for as long as it is available and will fall back to keyspace routing if the source routed path breaks.
 
 Cryptographic signatures are used to secure tree announcements, bootstrap and path messages against tampering or forgery.
 

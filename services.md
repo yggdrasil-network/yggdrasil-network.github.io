@@ -147,6 +147,15 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
+## Matrix
+
+- h3xcloud matrix server
+  - Accessible via Yggdrasil at the following server:
+    - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
+  - More info at [h3xcloud homepage](http://h3xcloud.ygg/matrix.html) ([IPv6 link](http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]/matrix.html))
+
+----
+
 ## BitTorrent
 
 - [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[300:7232:2b0e:d6e9:216:3eff:fe34:ec44]:6969/announce`

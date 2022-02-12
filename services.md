@@ -70,9 +70,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea git hosting
   - `http://[325:5a4:d1c9:db96::2]/`
 
-- [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/)
-  - `http://[325:5a4:d1c9:db96::3]/`
-
 - [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
   - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
 

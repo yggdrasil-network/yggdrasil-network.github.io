@@ -14,11 +14,11 @@ All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming 
 
 ### Is Yggdrasil stable?
 
-Our official stance is that it is still alpha software. Expect things to not be wholly smooth, and expect to have to upgrade often to the latest builds. That said, there is a small community of users who have not experienced any stability problems so far. Yggdrasil very rarely crashes.
+Yggdrasil is relatively stable and very rarely crashes, although our official stance is that it is still alpha software and comes with all of the usual warnings. You should expect things to not be wholly smooth in all cases and therefore you should probably not run any mission-critical or life-and-death workloads over Yggdrasil at this time. You should also make sure that you stay up-to-date as often as possible with the latest versions to ensure that your node continues to be compatible as we make protocol changes.
 
 ### Is Yggdrasil anonymous?
 
-It is not a goal of the Yggdrasil project to provide anonymity. Your direct peers may be able to determine your location if, for example, you are peering over the Internet.
+No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers over the Internet will be able to see your IP address and may be able to use this information to determine your location or identity. Multicast-discovered peerings on the same network will typically expose your device MAC address. Other nodes on the network may be able to discern some information about which nodes you are peered with. 
 
 ### Will my machine be exposed to other users of the network?
 

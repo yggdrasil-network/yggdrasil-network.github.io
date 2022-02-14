@@ -4,6 +4,10 @@ sitemap: true
 
 # FAQ
 
+### Why Yggdrasil?
+
+Yggdrasil was created in order to build a decentralised routing scheme for mesh networks that can potentially operate at a global scale, motivated in particular by significant performance and scaling issues that were present in [cjdns](https://github.com/cjdelisle/cjdns) at the time. However, Yggdrasil is not a fork — it is a separate standalone project. See the [About](about.md) page for more information around the problems we are trying to solve.
+
 ### Is Yggdrasil safe?
 
 All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming that our crypto is solid, it cannot be decrypted or read by any intermediate nodes, and can only be decrypted by the recipient for which it was intended. However, please note that Yggdrasil has not been officially externally audited.

@@ -33,6 +33,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
   - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
 
+- [Sky TV News (Invidious)](http://[301:6ad2:20f6:91be::2]/watch?v=9Auq9mYxFEE&local=true&autoplay=true) - Watch YouTube videos and livestreams
+  - `http://[301:6ad2:20f6:91be::2]/watch?v=9Auq9mYxFEE&local=true&autoplay=true`
+
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 

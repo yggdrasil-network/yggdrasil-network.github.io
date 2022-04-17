@@ -70,20 +70,17 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea git hosting
   - `http://[325:5a4:d1c9:db96::2]/`
 
-- [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/)
-  - `http://[325:5a4:d1c9:db96::3]/`
-
 - [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
   - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
 
 - [Nexus Cognitron](http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]) - the biggest scientific library (LibGen fork).
-  - Accessible via Yggdrasil at `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`.
+  - `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`
 
 - [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
   - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
 
 - [Invidious YouTube Proxy](http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/) - A public multi-network YouTube Proxy sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
-  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`.
+  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`
 
 - [Teddit - Reddit frontend](http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/) - A fast, private Reddit front-end served over the Yggdrasil Network sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
   - `http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/`
@@ -117,7 +114,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### BonoboNET
 
-- Accessible via Yggdrasil at the following servers:
+- Accessible via following servers:
   - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
   - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
   - `215:15c:84e0:8dd5:7590:bfcd:61cf:cff7` port `6667`
@@ -150,15 +147,16 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## Matrix
 
 - h3xcloud matrix server
-  - Accessible via Yggdrasil at the following server:
-    - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
+  - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
   - More info at [h3xcloud homepage](http://h3xcloud.ygg/matrix.html) ([IPv6 link](http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]/matrix.html))
 
 ----
 
 ## BitTorrent
 
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[300:7232:2b0e:d6e9:216:3eff:fe34:ec44]:6969/announce`
+- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker
+  - `http://tracker.y.neilalexander.eu:6969/announce`
+  - `http://[300:7232:2b0e:d6e9:216:3eff:fe34:ec44]:6969/announce`
 
 ----
 
@@ -208,11 +206,13 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `[325:5a4:d1c9:db96::3]` port `25565` 1.17.1 Minecraft server hosted by [cofob](https://t.me/cofob)
-- `202:235:decc:eef8:7dc:a2d4:dbde:12ca` port `25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
+- `[325:5a4:d1c9:db96::3]:25565` 1.17.1 Minecraft server hosted by [cofob](https://t.me/cofob)
+  - [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/)
+
+- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition
-- `202:235:decc:eef8:7dc:a2d4:dbde:12ca` port `19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
+- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
 ----
 
@@ -223,10 +223,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Direct Connect
 
-- `adc://[301:8858:62d6:6535:356b:1283:bedc:e326]:1511` - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+- `adc://[301:8858:62d6:6535:356b:1283:bedc:e326]:1511`
+  - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+
 ----
 
 ## NNCP
 
-- 203:5096:b2e:5bf3:b3c8:194a:a64f:dd0d port 5400.  This is the [quux.org NNCP public relay](https://www.complete.org/quux-org-nncp-public-relay) hosted by [jgoerzen](https://www.complete.org/john-goerzen/).
+- `203:5096:b2e:5bf3:b3c8:194a:a64f:dd0d` port `5400`. This is the [quux.org NNCP public relay](https://www.complete.org/quux-org-nncp-public-relay) hosted by [jgoerzen](https://www.complete.org/john-goerzen/).
 

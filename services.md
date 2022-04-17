@@ -183,6 +183,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns) 
 - `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
+- `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
+  - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
 
 ----
 

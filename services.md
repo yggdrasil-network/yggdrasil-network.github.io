@@ -228,7 +228,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Direct Connect
 
-- `adc://[301:8858:62d6:6535:356b:1283:bedc:e326]:1511`
+- `adc://hub.1337.cx:1511`
   - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
 
 ----
@@ -236,4 +236,3 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## NNCP
 
 - `203:5096:b2e:5bf3:b3c8:194a:a64f:dd0d` port `5400`. This is the [quux.org NNCP public relay](https://www.complete.org/quux-org-nncp-public-relay) hosted by [jgoerzen](https://www.complete.org/john-goerzen/).
-

@@ -198,6 +198,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
   - `324:71e:281a:9ed3::cafe` port `64738`
 
+### Deavmi's MumbleShack
+
+- `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `64738`
 ----
 
 ## NTP

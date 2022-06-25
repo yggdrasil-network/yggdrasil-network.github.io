@@ -30,9 +30,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Popularity Contest](http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/)
   - `http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/`
 
-- [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
-  - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
-
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 
@@ -152,20 +149,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - h3xcloud matrix server
   - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
   - More info at [h3xcloud homepage](http://h3xcloud.ygg/matrix.html) ([IPv6 link](http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]/matrix.html))
-
-----
-
-## BitTorrent
-
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker
-  - `http://tracker.y.neilalexander.eu:6969/announce`
-  - `http://[300:7232:2b0e:d6e9:216:3eff:fe34:ec44]:6969/announce`
-
-----
-
-## IPFS
-
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
 
 ----
 

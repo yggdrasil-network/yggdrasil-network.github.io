@@ -96,6 +96,13 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
+## BitTorrent
+
+- Torrent tracker at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` operated by jeff
+  - Yggdrasil only — filters out non-Yggdrasil IP addresses automatically from announcements
+
+----
+
 ## Proxy services
 
 - HTTP proxy to other networks like Yggdrasil, Tor, I2P and clearnet:

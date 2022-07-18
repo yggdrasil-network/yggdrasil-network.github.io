@@ -98,8 +98,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## BitTorrent
 
-- Torrent tracker at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` operated by jeff
-  - Yggdrasil only — filters out non-Yggdrasil IP addresses automatically from announcements
+- Yggdrasil-only torrent tracker, operated by jeff:
+  - With DNS: `http://yggtracker.i2p.rocks/` (statistics at `http://yggtracker.i2p.rocks/stats`)
+  - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
+  - Filters out non-Yggdrasil IP addresses automatically from announcements
 
 ----
 

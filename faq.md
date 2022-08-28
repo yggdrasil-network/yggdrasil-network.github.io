@@ -110,7 +110,9 @@ This also uses less CPU, as we can send more data for every system call on the T
 
 ### Does Yggdrasil work alongside an existing VPN?
 
-Yes, Yggdrasil should not interfere with existing VPNs on many platforms. VPN traffic can be sent while using Yggdrasil.
+Yes, Yggdrasil will work alongside many VPNs on most platforms.
+
+Please note that some VPN software (for example, [Mullvad VPN](https://mullvad.net/en/help/using-mullvad-vpn-app/#killswitch)) tries to prevent traffic leaking by adding firewall rules or drop routes. This can interfere with Yggdrasil in some cases. You will need to reconfigure your VPN software to not drop traffic in this way or contact the vendor of the VPN software for support, as we are unable to prevent this from within Yggdrasil itself.
 
 ### Does Yggdrasil work with networks like Tor or I2P?
 

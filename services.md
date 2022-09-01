@@ -91,8 +91,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
-- [Kvazar](http://[203:7693:ae20:18a6:7689:cb63:c53d:43c6]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
-  - `http://[203:7693:ae20:18a6:7689:cb63:c53d:43c6]`
+- [Kvazar](http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
+  - `http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]`
 
 ----
 

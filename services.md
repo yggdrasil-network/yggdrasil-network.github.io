@@ -30,9 +30,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Popularity Contest](http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/)
   - `http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/`
 
-- [YaCy](http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/) - internal search engine
-  - `http://[300:7232:2b0e:d6e9:216:3eff:fe38:cefc]:8090/`
-
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 
@@ -74,13 +71,13 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
 
 - [Nexus Cognitron](http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]) - the biggest scientific library (LibGen fork).
-  - Accessible via Yggdrasil at `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`.
+  - `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`
 
 - [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
   - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
 
 - [Invidious YouTube Proxy](http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/) - A public multi-network YouTube Proxy sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
-  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`.
+  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`
 
 - [Teddit - Reddit frontend](http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/) - A fast, private Reddit front-end served over the Yggdrasil Network sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
   - `http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/`
@@ -93,6 +90,18 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
+
+- [Kvazar](http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
+  - `http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]`
+
+----
+
+## BitTorrent
+
+- Yggdrasil-only torrent tracker, operated by jeff:
+  - With DNS: `http://yggtracker.i2p.rocks/` (statistics at `http://yggtracker.i2p.rocks/stats`)
+  - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
+  - Filters out non-Yggdrasil IP addresses automatically from announcements
 
 ----
 
@@ -114,7 +123,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### BonoboNET
 
-- Accessible via Yggdrasil at the following servers:
+- Accessible via following servers:
   - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
   - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
   - `215:15c:84e0:8dd5:7590:bfcd:61cf:cff7` port `6667`
@@ -147,21 +156,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## Matrix
 
 - h3xcloud matrix server
-  - Accessible via Yggdrasil at the following server:
-    - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
+  - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
   - More info at [h3xcloud homepage](http://h3xcloud.ygg/matrix.html) ([IPv6 link](http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]/matrix.html))
-
-----
-
-## BitTorrent
-
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s public tracker available at `http://tracker.y.neilalexander.eu:6969/announce` or `http://[300:7232:2b0e:d6e9:216:3eff:fe34:ec44]:6969/announce`
-
-----
-
-## IPFS
-
-- [neilalexander](https://matrix.to/#/@neilalexander:matrix.org)'s IPFS gateway is available at `http://ipfs.y.neilalexander.eu/ipfs/` ([test link](http://ipfs.y.neilalexander.eu/ipfs/QmZiSAYkU7gZtqYeZWL21yuwgFtRnJu1JjDzR6Qd2qdDBr/))
 
 ----
 
@@ -182,6 +178,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns) 
 - `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
+- `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
+  - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
 
 ----
 
@@ -191,6 +189,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
   - `324:71e:281a:9ed3::cafe` port `64738`
+
+### Deavmi's MumbleShack
+
+- `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `64738`
 
 ----
 
@@ -205,10 +207,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `202:235:decc:eef8:7dc:a2d4:dbde:12ca` port `25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
+- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition
-- `202:235:decc:eef8:7dc:a2d4:dbde:12ca` port `19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
+- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
 ----
 
@@ -219,4 +221,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Direct Connect
 
-- `adc://[301:8858:62d6:6535:356b:1283:bedc:e326]:1511` - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+- `adc://hub.1337.cx:1511`
+  - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+
+----
+
+## NNCP
+
+- `203:5096:b2e:5bf3:b3c8:194a:a64f:dd0d` port `5400`. This is the [quux.org NNCP public relay](https://www.complete.org/quux-org-nncp-public-relay) hosted by [jgoerzen](https://www.complete.org/john-goerzen/).

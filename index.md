@@ -3,9 +3,7 @@ tags: dontlink
 sitemap: true
 ---
 
-Yggdrasil is an implementation of a new name-independent routing scheme and functions as an end-to-end encrypted IPv6 network.
-
-It is lightweight, easy to configure, supported on multiple platforms, and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. You do not need to have IPv6 Internet connectivity from your ISP — it also works just fine over IPv4.
+Yggdrasil is an overlay network implementation of a new routing scheme for mesh networks. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet and other networks.
 
 The highlights of Yggdrasil are that it is:
 
@@ -36,6 +34,8 @@ The highlights of Yggdrasil are that it is:
         <p>Supported on Linux, macOS, Windows, iOS, Android and more</p>
     </div>
 </div>
+
+The current implementation of Yggdrasil is a lightweight userspace software router which is easy to configure and supported on a wide range of platforms. It provides end-to-end encrypted IPv6 routing between all network participants. Peerings between nodes can be configured using TCP/TLS connections over local area networks, point-to-point links or the Internet. Even though the Yggdrasil Network provides IPv6 routing between nodes, peering connections can be set up over either IPv4 or IPv6.
 
 This is still an alpha-stage project and there may be some breaking changes in the future. Despite that, Yggdrasil is generally stable enough for day-to-day use and a small number of users have been using and stress-testing Yggdrasil quite heavily for a variety of use cases. If you are interested in or would like to get involved in the Yggdrasil project, start below:
 

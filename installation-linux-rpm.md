@@ -27,6 +27,17 @@ dnf install yggdrasil
 
 ... and you're ready to go!
 
+### openSUSE
+
+Installation on openSUSE is easy as:
+
+```bash
+zypper ar --refresh obs://home:Dead_Mozay home:Dead_Mozay
+zypper --gpg-auto-import-keys refresh
+zypper install -l -y yggdrasil-go
+```
+
+... and you're ready to go!
 
 ## One-off package install from CircleCI (not recommended!)
 

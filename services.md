@@ -207,9 +207,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `[325:5a4:d1c9:db96::3]:25565` 1.17.1 Minecraft server hosted by [cofob](https://t.me/cofob)
-  - [Minecraft server homepage](http://[325:5a4:d1c9:db96::3]/) - mirror of [2buldzha2t.ru](https://2buldzha2t.ru/)
-
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition

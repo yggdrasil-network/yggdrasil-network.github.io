@@ -8,16 +8,6 @@ sitemap: true
 Yggdrasil is supported on Linux. You can either [download the latest binary from
 CircleCI](builds.md) or you can build from source.
 
-## Download binaries
-
-Download the relevant Linux `yggdrasil` and `yggdrasilctl` binaries from the
-[Builds](builds.md) page.
-
-Copy these into a suitable location:
-```
-sudo cp {yggdrasil,yggdrasilctl} /usr/local/bin
-```
-
 ## Build from source
 
 Linux has most of the tools needed to build Yggdrasil from source - you just

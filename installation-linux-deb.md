@@ -11,6 +11,19 @@ Yggdrasil is supported on Debian Linux. Debian binary packages exist to simplify
 the installation of Yggdrasil. These will also work on any Debian-based
 distribution, e.g. elementaryOS.
 
+## One-off installation
+
+Debian packages are built and are available in the [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases).
+Install the package using `dpkg -i filename.deb`.
+
+## Package install from your distribution
+
+Some Debian-based distributions may have an `yggdrasil-go` package available in
+their repositories:
+```
+sudo apt-get install yggdrasil
+```
+
 ## Package install from the S3 repository
 
 On some platforms, e.g. Raspberry Pi, you may need to start by installing
@@ -39,6 +52,9 @@ Install Yggdrasil:
 ```
 sudo apt-get install yggdrasil
 ```
+
+## After installation 
+
 Configuration will be generated automatically into `/etc/yggdrasil.conf` when
 the package is installed, and the Yggdrasil service will automatically be
 installed into `systemd`.
@@ -49,32 +65,10 @@ sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil
 ```
 
-## One-off package install from CircleCI
-
-Visit our [Builds](builds.md) page and download the relevant `.deb` file, then
-install it on your system. If you want to install the latest `.deb` from the
-`master` branch:
-```
-curl -so- "https://circleci.com/api/v1.1/project/github/yggdrasil-network/yggdrasil-go/latest/artifacts?branch=master&filter=successful" | \
-egrep -o "https.*yggdrasil\-.*$(dpkg --print-architecture).deb" | \
-while read line; do curl -O $line && dpkg -i $(basename $line); done
-```
-Configuration will be generated automatically into `/etc/yggdrasil.conf` when
-the package is installed, and the Yggdrasil service will automatically be
-installed into systemd and started.
-
-### Making configuration changes
-
-Modify the `/etc/yggdrasil.conf` file and then either reload the config:
-```
-systemctl reload yggdrasil
-```
-... or restart the Yggdrasil daemon altogether:
+To make configuration changes, modify the `/etc/yggdrasil.conf` file and then restart the Yggdrasil daemon:
 ```
 systemctl restart yggdrasil
 ```
-
-## After installation
 
 Read the [Linux platform page](configuration.md) page for further
 information about Linux platform support.

@@ -14,11 +14,3 @@ If you'd like to talk to us about the project or the source code, please join ou
 ## Platforms
 
 Yggdrasil has been tested on a number of platforms (including Linux, Windows, macOS, FreeBSD, OpenBSD and Ubiquiti EdgeRouter). There are also packages available for a number of distributions/platforms.
-
-## Build Artifacts
-
-Build artifacts from our CI are made available (for 30 days after building) for the following GitHub branches:
-
-- [`master`](builds.md) (stable) builds
-- [`develop`](builds-develop.md) (unstable) builds, for testing soon-to-be-released changes
-- [`future`](builds-future.md) (testing) builds, likely to be broken or incompatible with the stable release

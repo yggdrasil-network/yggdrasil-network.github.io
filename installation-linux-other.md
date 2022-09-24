@@ -5,8 +5,7 @@ sitemap: true
 
 # Installing manually on Linux
 
-Yggdrasil is supported on Linux. You can either [download the latest binary from
-CircleCI](builds.md) or you can build from source.
+Yggdrasil is supported on Linux.
 
 ## Build from source
 

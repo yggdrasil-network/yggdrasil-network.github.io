@@ -5,14 +5,21 @@ sitemap: true
 
 # Installing using the Windows installer
 
-Yggdrasil is supported on Windows. You can [download the latest installer from
-GitHub](https://github.com/yggdrasil-network/yggdrasil-go/releases).
+Yggdrasil is supported on Windows on a **best effort basis only**.
+You can [download the latest installer from GitHub](https://github.com/yggdrasil-network/yggdrasil-go/releases).
 
 On Windows 7 and Server 2008 R2, you must install hotfix KB2921916 before installing
 Yggdrasil:
 
 * [KB2921916 for 64-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x64.msu)
 * [KB2921916 for 32-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x86.msu)
+
+## Warning
+
+The Windows port does not currently have a maintainer and is therefore not
+as well tested or developed as other platforms. If you are a Windows user that
+is proficient in Go and would like to volunteer to maintain the Windows port,
+please reach out to us in our Matrix channel. 
 
 ## TUN driver
 

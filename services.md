@@ -181,6 +181,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
 - `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
   - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
+- `201:8845:9622:204:8966:1479:2811:1` port `53`, hosted by [PufferOverflow](https://puffer.blog/)
+  - Simple clear-net DNS proxy, currently using Level 3 DNS as upstream servers
 
 ----
 

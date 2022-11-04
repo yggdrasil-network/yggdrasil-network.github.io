@@ -94,6 +94,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Kvazar](http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
   - `http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]`
 
+- [Bible4u](http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]) - Uncensored Bible for Darknet.
+  - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
+  - `https://ygg.bible4u.net`
+
 ----
 
 ## BitTorrent

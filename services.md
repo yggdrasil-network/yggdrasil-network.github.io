@@ -36,9 +36,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
 
-- [Drommedaris Services Project](http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/)
-  - `http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/`
-
 - [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
   - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
 
@@ -85,9 +82,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggeddit](http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/) - A Reddit/4chan type site!
   - `http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/`
 
-- [Columbus Coffee Pot](http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc/) - A CRXN controllable coffee pot with Yggdrasil webcam stream
-  - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc`
-
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
@@ -129,14 +123,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ### BonoboNET
 
 - Accessible via following servers:
-  - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
-  - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
-  - `215:15c:84e0:8dd5:7590:bfcd:61cf:cff7` port `6667`
+  - `201:5920:bb25:e003:c9f4:4dd9:df4b:dfef` port `6667`/`6607`
+  - `200:3bea:7cd5:eb3e:7c81:e7de:a426:41a8` port `6667`/`6697`
   - `300:7232:2b0e:d6e9:216:3eff:fe3c:c82b` port `6667`/`6697`
-  - `200:e1ad:d2cf:7580:3d78:fce:4ff4:b618` port `6667`/`6697`
-  - `204:208c:fb24:4d76:6162:6b44:9418:2897` port `6667`/`6697`
   - `204:fb3e:d9e:9f20:7af1:27ab:6aed:df32` port `6667`/`6697`
   - `200:8101:e046:d91e:d4a2:aad1:f3a0:8ef1` port `6667`/`6697`
+  - `201:f742:6335:a85d:8378:9b21:1105:d0bf` port `6667`/`6697`
 - Notable channels are `#general`, `#networking` and `#programming`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
 - Web IRC:

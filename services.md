@@ -242,3 +242,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## Linux repositories
 
 - `21d:73cc:25d9:1fe:5a4a:47df:eb39:7f`, debian, ubuntu and termux repos [http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m](http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m) by [@Jorropo](https://github.com/Jorropo).
+
+----
+
+## iPerf3 for speedtests
+
+- [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+  - `iperf3 -6 -c ygg-only.thingylabs.io`
+  - `iperf3 -4 -c ygg-uplink.thingylabs.io`

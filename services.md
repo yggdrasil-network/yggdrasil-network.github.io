@@ -36,9 +36,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
 
-- [Drommedaris Services Project](http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/)
-  - `http://[201:754:2ca2:57f8:461:f090:b1cd:685e]/`
-
 - [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
   - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
 
@@ -85,14 +82,15 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggeddit](http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/) - A Reddit/4chan type site!
   - `http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/`
 
-- [Columbus Coffee Pot](http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc/) - A CRXN controllable coffee pot with Yggdrasil webcam stream
-  - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]/ccc`
-
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
 - [Kvazar](http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
   - `http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]`
+
+- [Bible4u](http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]) - Uncensored Bible for Darknet.
+  - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
+  - `https://ygg.bible4u.net`
 
 ----
 
@@ -107,8 +105,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Proxy services
 
-- HTTP proxy to other networks like Yggdrasil, Tor, I2P and clearnet:
-  - `324:71e:281a:9ed3::ace` port `8888` hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
+- Proxy to other networks like Yggdrasil, Tor, I2P and clearnet hosted by [acetone](http://[324:71e:281a:9ed3::ace]/):
+  - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
+  - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
 
 ### Tor bridges
 
@@ -117,6 +116,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]:16728 835FFE642EFA3BB7936663D2365A15D319FB6226` operated by [Vort](https://github.com/Vort) ([homepage](http://[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]), [metrics](https://metrics.torproject.org/rs.html#details/835FFE642EFA3BB7936663D2365A15D319FB6226))
 - `[21f:5234:5548:31e5:a334:854b:5752:f4fc]:9770 6C4C89ABE4D06987AB1F51C06939410282A1BF58` operated by tbxv ([homepage](http://[21f:5234:5548:31e5:a334:854b:5752:f4fc]))
 - `[200:831:e16b:809b:7a64:1e06:e6de:dff]:443 EDF357DF8A6BD23C6DB3710500DC0DF498F37B14`  operated by jeff ([metrics](https://metrics.torproject.org/rs.html#details/EDF357DF8A6BD23C6DB3710500DC0DF498F37B14))
+- `[204:362b:892:ecae:ff3:46a7:73c9:1388]:9001 F873E91048B40656694BE94ACAB6F0D32CAF8E17` operated by [Werwolf](https://matrix.to/#/@werwolf2517:matrix.org) ([homepage](http://itrus.su)
 
 ----
 
@@ -125,14 +125,12 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ### BonoboNET
 
 - Accessible via following servers:
-  - `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `6667`/`6697`
-  - `202:89be:399d:8ee1:306a:9d32:a0d4:6ecb` port `6667`/`6697`
-  - `215:15c:84e0:8dd5:7590:bfcd:61cf:cff7` port `6667`
+  - `201:5920:bb25:e003:c9f4:4dd9:df4b:dfef` port `6667`/`6607`
+  - `200:3bea:7cd5:eb3e:7c81:e7de:a426:41a8` port `6667`/`6697`
   - `300:7232:2b0e:d6e9:216:3eff:fe3c:c82b` port `6667`/`6697`
-  - `200:e1ad:d2cf:7580:3d78:fce:4ff4:b618` port `6667`/`6697`
-  - `204:208c:fb24:4d76:6162:6b44:9418:2897` port `6667`/`6697`
   - `204:fb3e:d9e:9f20:7af1:27ab:6aed:df32` port `6667`/`6697`
   - `200:8101:e046:d91e:d4a2:aad1:f3a0:8ef1` port `6667`/`6697`
+  - `201:f742:6335:a85d:8378:9b21:1105:d0bf` port `6667`/`6697`
 - Notable channels are `#general`, `#networking` and `#programming`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
 - Web IRC:
@@ -181,6 +179,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
 - `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
   - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
+- `201:8845:9622:204:8966:1479:2811:1` port `53`, hosted by [PufferOverflow](https://puffer.blog/)
+  - Simple clear-net DNS proxy, currently using Level 3 DNS as upstream servers
 
 ----
 
@@ -236,3 +236,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 ## Linux repositories
 
 - `21d:73cc:25d9:1fe:5a4a:47df:eb39:7f`, debian, ubuntu and termux repos [http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m](http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m) by [@Jorropo](https://github.com/Jorropo).
+
+----
+
+## iPerf3 for speedtests
+
+- [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+  - `iperf3 -6 -c ygg-only.thingylabs.io`
+  - `iperf3 -4 -c ygg-uplink.thingylabs.io`

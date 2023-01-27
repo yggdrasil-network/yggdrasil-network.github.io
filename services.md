@@ -9,13 +9,18 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
-## Hosting
+## Commercial services
 
-### Linux containers
+### Hosting
 
 - [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland and Netherlands) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
   - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
   - [Clearnet site](https://incognet.io/) at `https://incognet.io/`
+
+### IT consultancies
+
+- [Thingylabs GmbH](http://[229:c4a4:1a58:94b:d9a:57de:afbe:8939]/) - A consultancy specialized in technologies such as TypeScript, Kubernetes, Docker, Node.js, JavaScript, React, Containerization, Microservices, CI/CD, REST/GraphQL, Agile, AWS/Azure, and DevOps.
+  - `http://[229:c4a4:1a58:94b:d9a:57de:afbe:8939]/`
 
 ----
 

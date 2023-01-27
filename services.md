@@ -99,6 +99,16 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
+## Web message passing
+
+### Signalhub
+
+- [ygg.thingylabs.io](https://ygg.thingylabs.io/) networks bridged:
+  - IPv4: `https://signalhub.thingylabs.io`
+  - Ygg IPv6: `https://signalhub-ygg-only.thingylabs.io`
+
+----
+
 ## BitTorrent
 
 - Yggdrasil-only torrent tracker, operated by jeff:

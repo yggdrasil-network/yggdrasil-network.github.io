@@ -213,6 +213,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
+- `[201:92e3:d9df:4932:ca24:586a:4475:6e8b]:25565` or `minecraft.zederbreys.online`(Backup domain in case of ip-address change) 1.19.3 - A simple server for survival, without donation and admin rights, where it's just cool to survive together. The server will be maintained for a long time, and migrated to new versions of minecraft with support for older versions.
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition

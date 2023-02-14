@@ -11,12 +11,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Commercial services
 
-### Hosting
-
-- [IncogNET LLC](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/) - "Privacy By Design" - Multi-Network (Clearnet, Tor, I2P) CloudLinux Shared, AMD Ryzen Powered KVM Virtual Servers w/ NVMe Storage (Finland and Netherlands) and an Ad, Tracker, and "BS" Blocking VPN service. Crypto accepted.
-  - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
-  - [Clearnet site](https://incognet.io/) at `https://incognet.io/`
-
 ### IT consultancies
 
 - [Thingylabs GmbH](http://[229:c4a4:1a58:94b:d9a:57de:afbe:8939]/) - A consultancy specialized in technologies such as TypeScript, Kubernetes, Docker, Node.js, JavaScript, React, Containerization, Microservices, CI/CD, REST/GraphQL, Agile, AWS/Azure, and DevOps.
@@ -31,9 +25,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Public Peers](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/)
   - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/`
-
-- [Popularity Contest](http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/)
-  - `http://[300:7232:2b0e:d6e9:216:3eff:feb6:65a3]/`
 
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
@@ -53,45 +44,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
   - `http://[324:71e:281a:9ed3::ace]/`
 
-- [Alexandria - Content Mirror run by Toronto Mesh](http://[200:4233:d244:4f72:fbba:cf19:5d1a:fbb]/)
-  - `http://[200:4233:d244:4f72:fbba:cf19:5d1a:fbb]/`
-  - `https://y.alexandria.tomesh.net/`
-
-- [Toronto Mesh Matrix Server](https://y.matrix.tomesh.net/) - Matrix Server (requires DNS)
-  - `https://y.matrix.tomesh.net/`
-
 - [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
   - `https://[302:a2a5:dead:ded::a2a5]/`
-
-- [Cofob's homepage](http://[325:5a4:d1c9:db96::c0fb])
-  - `http://[325:5a4:d1c9:db96::c0fb]/`
-
-- [Git hosting](http://[325:5a4:d1c9:db96::2]/) - Gitea git hosting
-  - `http://[325:5a4:d1c9:db96::2]/`
-
-- [Speedtest server](http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/)
-  - `http://[200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81]:8989/`
-
-- [Nexus Cognitron](http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]) - the biggest scientific library (LibGen fork).
-  - `http://[203:c721:fd6c:91bc:7a45:663c:1b36:f3df]`
 
 - [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
   - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
 
-- [Invidious YouTube Proxy](http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/) - A public multi-network YouTube Proxy sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
-  - `http://[200:168a:c80a:b258:1dfe:f920:4414:6897]/`
-
-- [Teddit - Reddit frontend](http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/) - A fast, private Reddit front-end served over the Yggdrasil Network sponsored by [IncogNET](http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/)
-  - `http://[201:b0d3:9811:7146:ae3f:bfb8:d91:76fa]/`
-
-- [Yggeddit](http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/) - A Reddit/4chan type site!
-  - `http://[200:d6f6:f10a:2ec1:2013:3dcb:bfde:702]/`
-
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
-
-- [Kvazar](http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]) - Web-oriented [Exploring platform](https://github.com/kvazar-network/webapp) for [Kevacoin Blockchain](https://kevacoin.org)
-  - `http://[203:9fd0:95df:54d7:29db:5ee1:fe2d:95c7]`
 
 - [Bible4u](http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]) - Uncensored Bible for Darknet.
   - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
@@ -145,7 +105,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - Accessible via Yggdrasil at the following servers:
   - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
-  - `201:94b8:c01b:bc26:c17a:1a4e:b5e:bb6c` port `6667`
 
 ### ILITA IRC
 
@@ -154,14 +113,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `324:71e:281a:9ed3::41` port `6667`
 - Join `#en` for english discussions
 - More information can be found at the [ILITA homepage](http://[324:71e:281a:9ed3::41]/) with additional information about access
-
-----
-
-## Matrix
-
-- h3xcloud matrix server
-  - `http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]:8008`
-  - More info at [h3xcloud homepage](http://h3xcloud.ygg/matrix.html) ([IPv6 link](http://[200:aa16:b502:5d1:c445:d9c3:bfc9:3708]/matrix.html))
 
 ----
 
@@ -220,11 +171,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
 ----
-
-### WebIndexP2P
-
-- `201:436:b73a:ef28:953f:bbfd:49ed:8754` port `9472`. Wip2p node on the default `General Sherman` tree accepting websocket connections.
-  - If you have IPFS, you can load the Arborist UI at http://127.0.0.1:8080/ipns/arborist.wip2p.eth/ and add the node above as a peer.
 
 ### Direct Connect
 

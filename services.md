@@ -193,6 +193,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## iPerf3 for speedtests
 
-- [ygg.thingylabs.io](https://ygg.thingylabs.io/)
+- [ygg.thingylabs.io](https://ygg.thingylabs.io/) hosted by [Thingylabs GmbH](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`

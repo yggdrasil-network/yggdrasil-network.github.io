@@ -13,7 +13,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### IT consultancies
 
-- [Thingylabs GmbH](http://[22a:7afe:9b4b:3fc1:ca4b:e08:4e9a:2bfa]/) - A consultancy specialized in technologies such as TypeScript, Kubernetes, Docker, Node.js, JavaScript, React, Containerization, Microservices, CI/CD, REST/GraphQL, Agile, AWS/Azure, and DevOps.
+- [Thingylabs GmbH](http://[22a:7afe:9b4b:3fc1:ca4b:e08:4e9a:2bfa]/) - An IT consultancy for Web, Cloud, and Apps.
   - `http://[22a:7afe:9b4b:3fc1:ca4b:e08:4e9a:2bfa]/`
 
 ----

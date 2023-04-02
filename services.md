@@ -57,6 +57,10 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
   - `https://ygg.bible4u.net`
 
+- [Yggdrasil Search Portal](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - Intranet crawler and [open source](https://github.com/d47081/YGGo) search engine.
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo/`
+
+
 ----
 
 ## BitTorrent

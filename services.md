@@ -84,8 +84,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - `[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]:16728 835FFE642EFA3BB7936663D2365A15D319FB6226` operated by [Vort](https://github.com/Vort) ([homepage](http://[21b:321:3243:ecb6:a4cf:289c:c0f1:d6eb]), [metrics](https://metrics.torproject.org/rs.html#details/835FFE642EFA3BB7936663D2365A15D319FB6226))
 - `[21f:5234:5548:31e5:a334:854b:5752:f4fc]:9770 6C4C89ABE4D06987AB1F51C06939410282A1BF58` operated by tbxv ([homepage](http://[21f:5234:5548:31e5:a334:854b:5752:f4fc]))
-- `[200:831:e16b:809b:7a64:1e06:e6de:dff]:443 EDF357DF8A6BD23C6DB3710500DC0DF498F37B14`  operated by jeff ([metrics](https://metrics.torproject.org/rs.html#details/EDF357DF8A6BD23C6DB3710500DC0DF498F37B14))
-- `[204:362b:892:ecae:ff3:46a7:73c9:1388]:9001 F873E91048B40656694BE94ACAB6F0D32CAF8E17` operated by [Werwolf](https://matrix.to/#/@werwolf2517:matrix.org) ([homepage](http://itrus.su)
+- `[224:6723:7ae0:5655:e600:51c9:4300:a2fb]:9001 F873E91048B40656694BE94ACAB6F0D32CAF8E17` operated by [Werwolf](https://matrix.to/#/@werwolf2517:matrix.org) ([homepage](http://itrus.su), [metrics](https://metrics.torproject.org/rs.html#details/F873E91048B40656694BE94ACAB6F0D32CAF8E17))
+- `obfs4 [218:4feb:a509:9db2:2b34:6e7e:e071:5dee]:1992 F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4 cert=0GcjnEnZ0rJ8/nfxo4ZSkjMZ0fqHSrvj/MdwEtbbuzx8qgqFTaqHTuWelGw2MxJ5wW2QaQ iat-mode=0` operated by Marek Küthe ([homepage](https://p2p-node.de), [metrics](https://metrics.torproject.org/rs.html#details/F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4))
 
 ----
 

@@ -13,8 +13,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### IT consultancies
 
-- [Thingylabs GmbH](http://[22a:7afe:9b4b:3fc1:ca4b:e08:4e9a:2bfa]/) - An IT consultancy for Web, Cloud, and Apps.
-  - `http://[22a:7afe:9b4b:3fc1:ca4b:e08:4e9a:2bfa]/`
+- [Thingylabs GmbH](http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/) - An IT consultancy for Web, Cloud, and Apps.
+  - `http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/`
 
 ----
 

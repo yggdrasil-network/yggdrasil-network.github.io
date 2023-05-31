@@ -60,7 +60,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - Intranet search portal with distributed index and [open source engine](https://github.com/YGGverse/YGGo)
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo`
 
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ Yggdrasil radio stations catalog with [open sources](https://github.com/YGGverse/YGGwave) and [database](https://github.com/YGGverse/YGGwave/tree/main/SIGNALS)
+- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ Radio stations catalog with [open sources](https://github.com/YGGverse/YGGwave) and [database](https://github.com/YGGverse/YGGwave/tree/main/SIGNALS)
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
 
 ----

@@ -60,6 +60,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Yggdrasil Search Portal](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - Intranet crawler and [open source](https://github.com/d47081/YGGo) search engine.
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo/`
 
+- [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
+  - `http://[30a:5fad::e]`
 
 ----
 

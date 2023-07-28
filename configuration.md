@@ -17,6 +17,8 @@ Yggdrasil supports configuration in either HJSON or JSON format. HJSON is the de
 
 If you installed Yggdrasil through one of the platform packages (i.e. macOS, Debian, RPM) then a default configuration file may already exist in `/etc/yggdrasil.conf`.
 
+On some systems, configuration file could be located at `/etc/yggdrasil/yggdrasil.conf`.
+
 Otherwise, you can generate a configuration file in the following ways:
 
 | **Generate HJSON**: | `yggdrasil -genconf > /etc/yggdrasil.conf` |

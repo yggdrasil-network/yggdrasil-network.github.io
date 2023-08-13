@@ -57,11 +57,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
   - `https://ygg.bible4u.net`
 
-- [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - Intranet search portal with distributed index and [open source engine](https://github.com/YGGverse/YGGo)
+- [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - [open source](https://github.com/YGGverse/YGGo) Search portal with distributed index and API
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo`
 
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ Radio stations catalog with [open sources](https://github.com/YGGverse/YGGwave) and [database](https://github.com/YGGverse/YGGwave/tree/main/SIGNALS)
+- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
+ 
+- [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
 
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`

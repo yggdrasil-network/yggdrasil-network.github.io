@@ -174,7 +174,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- <code class="language-plaintext highlighter-rouge">201:92e3:d9df:4932:ca24:586a:4475:6e8b</code> or <code title="If it doesn't work try &quot;mc.ygg.at&quot;" class="language-plaintext highlighter-rouge">mc.ygg</code> 1.20.1 - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasi! Site: <a href="http://web.mc.ygg.at">web.mc.ygg</a>
+- `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.20.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition

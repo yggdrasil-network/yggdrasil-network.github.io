@@ -177,7 +177,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `[201:92e3:d9df:4932:ca24:586a:4475:6e8b]:25565` or `minecraft.zederbreys.online` 1.19.3 - A simple server for survival, without donation and admin rights, where it's just cool to survive together. The server will be maintained for a long time, and migrated to new versions of minecraft with support for older versions.
+- `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.20.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition

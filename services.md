@@ -20,20 +20,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Websites
 
-- [Yggdrasil Network](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39be]/) - this website
-  - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39be]/`
-
-- [Public Peers](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/)
-  - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/`
-
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
-
-- [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
-  - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
 
 - [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
   - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
@@ -46,9 +37,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
   - `https://[302:a2a5:dead:ded::a2a5]/`
-
-- [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
-  - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
 
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`

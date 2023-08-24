@@ -20,20 +20,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Websites
 
-- [Yggdrasil Network](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39be]/) - this website
-  - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39be]/`
-
-- [Public Peers](http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/)
-  - `http://[319:3cf0:dd1d:47b9:20c:29ff:fe2c:39bd]/`
-
 - [Yggdrasil v0.4 Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
-
-- [CRXN statistics page](http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/)
-  - `http://[200:21fe:6a74:aca4:6884:614f:cd24:67c3]/munin/`
 
 - [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
   - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
@@ -47,9 +38,6 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
   - `https://[302:a2a5:dead:ded::a2a5]/`
 
-- [RAMBLE](http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/) - A reddit like site that bridges the clearnet, I2P, Tor and Yggdrasil networks.
-  - `http://[200:b846:2eaa:4ed5:260c:a883:4df4:f79f]/`
-
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
@@ -57,11 +45,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
   - `https://ygg.bible4u.net`
 
-- [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - Intranet search portal with distributed index and [open source engine](https://github.com/YGGverse/YGGo)
+- [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - [open source](https://github.com/YGGverse/YGGo) Search portal with distributed index and API
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo`
 
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ Radio stations catalog with [open sources](https://github.com/YGGverse/YGGwave) and [database](https://github.com/YGGverse/YGGwave/tree/main/SIGNALS)
+- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
+ 
+- [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
 
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`
@@ -174,7 +165,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ### Java Edition
 
-- `[201:92e3:d9df:4932:ca24:586a:4475:6e8b]:25565` or `minecraft.zederbreys.online` 1.19.3 - A simple server for survival, without donation and admin rights, where it's just cool to survive together. The server will be maintained for a long time, and migrated to new versions of minecraft with support for older versions.
+- `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.20.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition

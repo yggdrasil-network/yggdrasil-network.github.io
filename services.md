@@ -54,6 +54,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
 
+- [YGGtracker](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker) - [open source](https://github.com/YGGverse/YGGtracker) BitTorrent catalog for Yggdrasil
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker`
+
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`
 

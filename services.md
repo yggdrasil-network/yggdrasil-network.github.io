@@ -69,7 +69,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
   - Filters out non-Yggdrasil IP addresses automatically from announcements
 
-- Yggdrasil-compatible torrent tracker, operated by [YGGtracker](https://github.com/YGGverse/YGGtracker):
+- Yggdrasil-only torrent tracker, operated by [YGGverse](https://github.com/YGGverse):
   - Announce: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/announce`
   - Scrape: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/scrape`
   - Statistics: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/stats`

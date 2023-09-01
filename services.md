@@ -48,11 +48,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - [open source](https://github.com/YGGverse/YGGo) Search portal with distributed index and API
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo`
 
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) ~ [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
+- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) - [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
  
 - [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
+
+- [YGGtracker](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker) - [open source](https://github.com/YGGverse/YGGtracker) BitTorrent catalog and tracker
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker`
 
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`
@@ -65,6 +68,11 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - With DNS: `http://yggtracker.i2p.rocks/` (statistics at `http://yggtracker.i2p.rocks/stats`)
   - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
   - Filters out non-Yggdrasil IP addresses automatically from announcements
+
+- Yggdrasil-only torrent tracker, operated by [YGGverse](https://github.com/YGGverse):
+  - Announce: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/announce`
+  - Stats: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/stats`
+  - Scrape: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/scrape`
 
 ----
 

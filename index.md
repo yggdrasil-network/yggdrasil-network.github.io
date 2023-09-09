@@ -3,7 +3,7 @@ tags: dontlink
 sitemap: true
 ---
 
-Yggdrasil is an overlay network implementation of a new routing scheme for mesh networks. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet and other networks.
+Yggdrasil is an implementation of a new compact routing scheme for mesh networks. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet and other networks.
 
 The highlights of Yggdrasil are that it is:
 
@@ -57,5 +57,3 @@ This is still an alpha-stage project and there may be some breaking changes in t
         <p markdown='1'>Visit our [developers](developers.md) page and our [GitHub](https://github.com/yggdrasil-network/yggdrasil-go). Report bugs and problems to us as [GitHub Issues](https://github.com/yggdrasil-network/yggdrasil-go/issues).</p>
     </div>
 </div>
-
-

@@ -10,22 +10,30 @@ Yggdrasil was created in order to build a decentralised routing scheme for mesh 
 
 ### Is Yggdrasil safe?
 
-All traffic sent across the Yggdrasil network is encrypted end-to-end. Assuming that our crypto is solid, it cannot be decrypted or read by any intermediate nodes, and can only be decrypted by the recipient for which it was intended. However, please note that Yggdrasil has not been officially externally audited.
+All traffic sent across the Yggdrasil Network is encrypted end-to-end, such that it cannot be decrypted or read by any intermediate nodes, and can only be decrypted by the recipient for which it was intended.
+
+However, it is still a public network, therefore you should take adequate precautions when using Yggdrasil, such as using a firewall and not exposing services you do not want others to be able to reach.
+
+We also feel that it is important to highlight that, even though Yggdrasil is using industry-standard cryptography, our codebase has not been officially externally audited.
 
 ### Is Yggdrasil stable?
 
-Yggdrasil is relatively stable and very rarely crashes, although our official stance is that it is still alpha software and comes with all of the usual warnings. You should expect things to not be wholly smooth in all cases and therefore you should probably not run any mission-critical or life-and-death workloads over Yggdrasil at this time. You should also make sure that you stay up-to-date as often as possible with the latest versions to ensure that your node continues to be compatible as we make protocol changes.
+Yggdrasil is relatively stable and very rarely crashes, although our official stance is that it is still alpha software and comes with all of the usual warnings. You should expect things to not be wholly smooth in all cases and therefore you should probably not run any mission-critical or life-and-death workloads over Yggdrasil at this time.
+
+You should also make sure that you stay up-to-date as often as possible with the latest versions to ensure that your node continues to be compatible as we make protocol changes.
 
 ### Is Yggdrasil anonymous?
 
-No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers over the Internet will be able to see your IP address and may be able to use this information to determine your location or identity. Multicast-discovered peerings on the same network will typically expose your device MAC address. Other nodes on the network may be able to discern some information about which nodes you are peered with. 
+No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers over the Internet will be able to see your IP address and may be able to use this information to determine your location or identity. Multicast-discovered peerings on the same network will typically expose your device MAC address. Other nodes on the network may be able to discern some information about which nodes you are peered with.
 
 ### Will my machine be exposed to other users of the network?
 
 Typically yes, you will be routable from other nodes on the network. If you want to restrict incoming connections to your machine, you should use an IPv6 firewall. The steps for this will vary from platform to platform.
 
 #### Linux (with `ip6tables`)
+
 Assuming your TUN/TAP adapter is named `tun0`:
+
 ```
 ip6tables -A INPUT -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ip6tables -A INPUT -i tun0 -m conntrack --ctstate INVALID -j DROP
@@ -33,16 +41,18 @@ ip6tables -A INPUT -i tun0 -j DROP
 ```
 
 #### Windows (with Windows Firewall)
+
 Windows, by default, should classify the TAP adapter as a "Public Network". Configure Windows Firewall to prevent incoming connections on Public networks.
 
 #### macOS (with built-in firewall)
+
 macOS has an application firewall, therefore any firewall policies applied on other interfaces will also apply to the Yggdrasil interface.
 
 ### Can I run an Yggdrasil router without a TUN interface?
 
 Yes, you can set the `IfName` configuration setting to `"none"`. This will prevent Yggdrasil from creating a TUN interface.
 
-You will be able to create and accept peering connections and will continue to route traffic on behalf of your peers, but you will not be reachable from within the Yggdrasil Network, nor will you be able to send traffic into the network either. In this mode, other users on the network will receive no response if they try to reach or ping your node addresses. 
+You will be able to create and accept peering connections and will continue to route traffic on behalf of your peers, but you will not be reachable from within the Yggdrasil Network, nor will you be able to send traffic into the network either. In this mode, other users on the network will receive no response if they try to reach or ping your node addresses.
 
 ### Does Yggdrasil require IPv6?
 
@@ -74,15 +84,16 @@ Stuck for peers? Try adding a [public peer](https://github.com/yggdrasil-network
 
 ### Does Yggdrasil add or remove peerings automatically?
 
-Peerings may be automatically established to nodes on the same subnet if multicast peering is enabled on both nodes, however, Yggdrasil will never add or remove remote peerings automatically over other networks like the Internet. 
+Peerings may be automatically established to nodes on the same subnet if multicast peering is enabled on both nodes, however, Yggdrasil will never add or remove remote peerings automatically over other networks like the Internet.
 
-### I've installed the Yggdrasil Debian package and now I can't find the logs.
+### I've installed the Yggdrasil Debian package and now I can't find the logs
 
 The Debian package installs the Yggdrasil service into systemd, therefore you can query systemd for the logs:
+
 - `systemctl status yggdrasil`
 - `journalctl -u yggdrasil`
 
-### I've modified the configuration file but nothing has changed.
+### I've modified the configuration file but nothing has changed
 
 Yggdrasil only loads the configuration at startup. Restart the Yggdrasil process or service to load the new configuration. If you are troubleshooting peering connections, check the logging output and/or examine the output of `yggdrasilctl getPeers` to see if any peers are connected.
 
@@ -122,4 +133,4 @@ Yggdrasil can peer over Tor or I2P. See [/public-peers/tree/master/other](https:
 
 No. At worst, the root node may be used in worst-case-scenario paths between
 other nodes in the absence of being able to determine better routes, but this
-is not advantageous. 
+is not advantageous.

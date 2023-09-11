@@ -37,9 +37,9 @@ Domain Name System (DNS) and other name/service lookup mechanisms are specifical
 
 As a decentralised routing protocol design, we believe it is important that routing decisions are only ever made using information that can be securely and independently verified by any given node in a low-cost fashion. We therefore consider most interactive link quality metrics to be out-of-scope at this time, although this will likely change in the future as the protocol becomes more mature.
 
-We are aware of the fact that this, combined with the ability to freely and easily create peerings over the Internet, means that suboptimal peerings are likely to appear on the public Yggdrasil testbed.
+We are aware of the fact that this, combined with the ability to freely and easily create peerings over the Internet, means that suboptimal peerings are likely to appear on the public Yggdrasil testbed network.
 
-Network congestion is managed automatically at each node using a form of fair packet queuing. This attempts to balance traffic flows between different nodes equally where possible, as well as ensuring that single nodes cannot saturate all available link bandwidth over a given peering or set of peerings.
+Network congestion is managed automatically at each node using a form of fair packet queuing. This attempts to balance traffic flows between different nodes equally where possible, as well as ensuring that single nodes cannot saturate all available link bandwidth over a given peering or set of peerings. This also helps to keep overall network latency down where possible.
 
 ### Comparison with other projects
 

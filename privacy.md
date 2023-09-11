@@ -1,6 +1,6 @@
 ---
 sitemap: true
-dontlink: true
+tags: dontlink
 ---
 
 # Privacy

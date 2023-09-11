@@ -1,5 +1,6 @@
 ---
 sitemap: true
+dontlink: true
 ---
 
 # Privacy
@@ -24,7 +25,7 @@ Yggdrasil supports publishing node information by means of the `NodeInfo` sectio
 
 By default, the `NodeInfo` may also contain information about the version of Yggdrasil being run as well as the operating system and processor architecture. You can choose not to publish this information by setting the `NodeInfoPrivacy` option in your configuration file. Otherwise, `NodeInfo` is entirely optional and you can leave it empty. On iOS, this is shown under "Node Info" in the Settings page.
 
-You are not obliged to share anything via node information. Any information entered into this section is publicly accessible and may be stored by network crawlers or by any other network user. You should therefore not publish any sensitive information in your `NodeInfo`. 
+You are not obliged to share anything via node information. Any information entered into this section is publicly accessible and may be stored by network crawlers or by any other network user. You should therefore not publish any sensitive information in your `NodeInfo`.
 
 ### Peerings
 
@@ -34,6 +35,6 @@ If you are concerned about the storage or collection of logging information on a
 
 ### Yggdrasil for iOS
 
-With regards to our iOS application when distributed via TestFlight or the App Store specifically, information collected through TestFlight or the App Store pertaining to usage demographics and/or crash analytics may be made available to the developers of the iOS application by Apple, as outlined in [Apple's own Privacy Policy](https://www.apple.com/uk/legal/privacy/en-ww/). 
+With regards to our iOS application when distributed via TestFlight or the App Store specifically, information collected through TestFlight or the App Store pertaining to usage demographics and/or crash analytics may be made available to the developers of the iOS application by Apple, as outlined in [Apple's own Privacy Policy](https://www.apple.com/uk/legal/privacy/en-ww/).
 
-No other information is collected. The Yggdrasil application itself, as well as the accompanying VPN network extension, will not collect any personal or analytic information whatsoever. 
+No other information is collected. The Yggdrasil application itself, as well as the accompanying VPN network extension, will not collect any personal or analytic information whatsoever.

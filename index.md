@@ -3,7 +3,7 @@ tags: dontlink
 sitemap: true
 ---
 
-Yggdrasil is an implementation of a new compact routing scheme for mesh networks. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet and other networks.
+Yggdrasil is a new and experimental compact routing scheme. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet, as well as an enabling technology for true decentralised mesh networks.
 
 The highlights of Yggdrasil are that it is:
 
@@ -11,7 +11,7 @@ The highlights of Yggdrasil are that it is:
     <div class='icon'>
         <img src='/assets/images/iconoir/planet.svg' />
         <div>Scalable</div>
-        <p>Supports large, complex or even internet-scale topologies</p>
+        <p>Supports large, complex or even Internet-scale topologies</p>
     </div>
     <div class='icon'>
         <img src='/assets/images/iconoir/cloud-check.svg' />
@@ -35,7 +35,7 @@ The highlights of Yggdrasil are that it is:
     </div>
 </div>
 
-The current implementation of Yggdrasil is a lightweight userspace software router which is easy to configure and supported on a wide range of platforms. It provides end-to-end encrypted IPv6 routing between all network participants. Peerings between nodes can be configured using TCP/TLS connections over local area networks, point-to-point links or the Internet. Even though the Yggdrasil Network provides IPv6 routing between nodes, peering connections can be set up over either IPv4 or IPv6.
+The [current implementation](implementation.md) of Yggdrasil is a lightweight userspace software router which is easy to configure and supported on a wide range of platforms. It provides end-to-end encrypted IPv6 routing between all network participants. Peerings between nodes can be configured using TCP/TLS connections over local area networks, point-to-point links or the Internet. Even though the Yggdrasil Network provides IPv6 routing between nodes, peering connections can be set up over either IPv4 or IPv6 networks.
 
 This is still an alpha-stage project and there may be some breaking changes in the future. Despite that, Yggdrasil is generally stable enough for day-to-day use and a small number of users have been using and stress-testing Yggdrasil quite heavily for a variety of use cases. If you are interested in or would like to get involved in the Yggdrasil project, start below:
 

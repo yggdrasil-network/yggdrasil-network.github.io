@@ -6,7 +6,7 @@ sitemap: true
 
 The public Yggdrasil Network is a testbed overlay network running the Yggdrasil routing protocol.
 
-All network nodes are userspace software routers that run under a single process. The router optionally provides a virtual TUN adapter to the host operating system which allows sending and receiving IPv6 traffic over the Yggdrasil Network. Peering connections between these nodes are established over local area networks, point-to-point links or the Internet using mainly TCP connections. There are a number of [Public Peers](https://publicpeers.neilalexander.dev) that can be used to join the public network.
+All network nodes are userspace software routers that run under a single process. The router optionally provides a virtual TUN adapter to the host operating system which allows sending and receiving IPv6 traffic over the Yggdrasil Network. Peering connections between these nodes are established over local area networks, point-to-point links or the Internet using mainly TCP/TLS connections. There are a number of [Public Peers](https://publicpeers.neilalexander.dev) that can be used to join the public network.
 
 Implementing Yggdrasil as an overlay network allows us to test the protocol and routing scheme at scale relatively easily, as the user-space router can easily run on most computers. Users also do not need to be physically close to one another in order to join or test the network. Users can just download the software and establish some peerings over the Internet or other over networks. However, the Yggdrasil design does not constrain it to only being implemented as an overlay network — it could also be implemented as a native routing protocol with physical links instead.
 

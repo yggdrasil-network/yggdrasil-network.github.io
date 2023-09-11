@@ -123,7 +123,7 @@ This also uses less CPU, as we can send more data for every system call on the T
 
 Yes, Yggdrasil will work alongside many VPNs on most platforms.
 
-Please note that some VPN software (for example, [Mullvad VPN](https://mullvad.net/en/help/using-mullvad-vpn-app/#killswitch)) tries to prevent traffic leaking by adding firewall rules or blackhole routing table entries. This can interfere with Yggdrasil in some cases. You will need to reconfigure your VPN software to not drop traffic in this way or contact the vendor of the VPN software for support, as we are unable to prevent this from within Yggdrasil.
+Please note that some VPN software (for example, [Mullvad VPN](https://mullvad.net/en/help/using-mullvad-vpn-app/#killswitch) and Cloudflare WARP) tries to prevent traffic leaking by adding firewall rules or blackhole routing table entries. This can interfere with Yggdrasil in some cases. You will need to reconfigure your VPN software to not drop traffic in this way or contact the vendor of the VPN software for support, as we are unable to prevent this from within Yggdrasil.
 
 ### Does Yggdrasil work with networks like Tor or I2P?
 

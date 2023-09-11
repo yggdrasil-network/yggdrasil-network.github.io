@@ -5,7 +5,7 @@ sitemap: true
 
 # Services (v0.4 network)
 
-The following services are available on the Yggdrasil v0.4 network, courtesy of our community users. If you host a service on the Yggdrasil network, please feel free to [open a pull request](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services.md) to list it here.
+The following services are available on the Yggdrasil v0.4 network, courtesy of our community users. If you host a service on the Yggdrasil Network or find that a service is no longer available, please feel free to [open a pull request on GitHub](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services.md)
 
 ----
 
@@ -31,7 +31,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
   - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
- 
+
 - [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
   - `http://[324:71e:281a:9ed3::ace]/`
 
@@ -50,7 +50,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) - [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
- 
+
 - [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
 
@@ -132,13 +132,13 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55`, hosted by [darkdrgn2k](http://github.com/darkdrgn2k/)
   - Basic `named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
 - `302:db60::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Praha, Czechia
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `300:6223::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Bratislava, Slovakia
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)   
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome) 
+  - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns) 
+  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns)
 - `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
 - `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
@@ -177,6 +177,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Bedrock Edition
+
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
 ----

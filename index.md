@@ -3,7 +3,7 @@ tags: dontlink
 sitemap: true
 ---
 
-Yggdrasil is a new and experimental compact routing scheme. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet, as well as an enabling technology for true decentralised mesh networks.
+Yggdrasil is a new and experimental compact routing scheme. It is designed to be a future-proof decentralised alternative to the structured routing protocols commonly used today on the Internet, as well as an enabling technology for large-scale decentralised mesh networks.
 
 The highlights of Yggdrasil are that it is:
 

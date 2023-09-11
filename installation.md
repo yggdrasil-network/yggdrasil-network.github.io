@@ -8,7 +8,7 @@ Yggdrasil can be downloaded for major platforms from our [GitHub Releases](https
 
 Once you have installed Yggdrasil, take a look at:
 
-- [Configuration](configuration.md) — information about configuring Yggdrasil 
+- [Configuration](configuration.md) — information about configuring Yggdrasil
 - [Public Peers](https://github.com/yggdrasil-network/public-peers) — public nodes to connect to
 - [Public Services](services.md) — services running inside the Yggdrasil Network
 
@@ -31,20 +31,20 @@ Yggdrasil is well supported on macOS. The preferred installation method is the `
 
 ### Windows
 
-Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested. 
+Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested.
 
 ### iOS
 
 Yggdrasil is supported on iOS with the following applications:
 
-* [Yggdrasil for iOS on TestFlight](https://testflight.apple.com/join/jZNsIkRr), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html) ([source code](https://github.com/yggdrasil-network/yggdrasil-ios))
+- [Yggdrasil for iOS on TestFlight](https://testflight.apple.com/join/jZNsIkRr), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html) ([source code](https://github.com/yggdrasil-network/yggdrasil-ios))
 
 ### Android
 
 Yggdrasil is supported on Android with the following applications:
 
-* [Yggdrasil for Android](https://github.com/yggdrasil-network/yggdrasil-android/releases), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html)
-* [Crispa for Android](https://github.com/yggdrasil-network/crispa-android/releases), contributed by the community
+- [Yggdrasil for Android](https://github.com/yggdrasil-network/yggdrasil-android/releases), reference client based on the [v0.4 release candidate](https://yggdrasil-network.github.io/2021/06/19/preparing-for-v0-4.html)
+- [Crispa for Android](https://github.com/yggdrasil-network/crispa-android/releases), contributed by the community
 
 ### FreeBSD
 

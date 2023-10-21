@@ -45,7 +45,7 @@ The major down side to this approach is that bloom filters can and will generate
 
 Just to put some hard numbers on things: we use 8192-bit bloom filters with 8 hash functions. If there is a node that acts as a gateway to a subnet with 200 nodes in it, then that has a false positive rate of about 1 in a million (that is, we expect that network needs about a million nodes before the gateway sees *any* false positive lookup traffic). A majority of lookup traffic is true positives up to a gateway to a 500 node subnet in a 1 million node network.
 
-So in practice, most nodes should not see any meaningful number of false positives, unless the are acting as the gateway to a very large subnet (or are in a network many orders of magnitude larger than the current v0.4 network). In our current network, a handful of nodes may find themselves in the "core" region, where they receive false positive lookup traffic from most lookups. We hope this is still preferable to constant idle DHT maintenance traffic and potentially very high memory requirements.
+So in practice, most nodes should not see any meaningful number of false positives, unless they are acting as the gateway to a very large subnet (or are in a network many orders of magnitude larger than the current v0.4 network). In our current network, a handful of nodes may find themselves in the "core" region, where they receive false positive lookup traffic from most lookups. We hope this is still preferable to constant idle DHT maintenance traffic and potentially very high memory requirements.
 
 #### CRDT Tree
 

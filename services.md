@@ -82,6 +82,9 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
   - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
 
+- Community-driven proxy catalog with configuration examples by [YGGverse](https://github.com/YGGverse/YGGbro):
+  - `http://[316:c51a:62a3:8b9::4]/YGGverse/YGGbro`
+
 ### Tor bridges
 
 *Note:* If you modified your `torrc` file to exclude groups of non-exit nodes (e.g. using `ExcludeNodes` with country codes, using `ExcludeExitNodes` is fine), Tor will strictly follow the constraints. However because Yggdrasil addresses are not and will not be listed in any IP-to-country databases, Tor cannot guarantee that bridge you entered falls under whatever exclusion policies you specified and will refuse to connect to bridge. In that case you can add `GeoIPExcludeUnknown 0` to your `torrc`.

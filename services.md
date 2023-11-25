@@ -45,17 +45,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
   - `https://ygg.bible4u.net`
 
-- [YGGo](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo) - [open source](https://github.com/YGGverse/YGGo) Search portal with distributed index and API
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggo`
+- [Yo!](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yo/) - [open source](https://github.com/YGGverse/Yo) search project for Yggdrasil with page snaps / history
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yo/`
 
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave) - [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave`
+- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave/) - [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave/`
 
-- [YGGstate](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate) - [open source](https://github.com/YGGverse/YGGstate) Yggdrasil network explorer
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggstate`
-
-- [YGGtracker](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker) - [open source](https://github.com/YGGverse/YGGtracker) BitTorrent catalog and tracker
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker`
+- [YGGtracker](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker/) - [open source](https://github.com/YGGverse/YGGtracker) BitTorrent catalog and tracker
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker/`
 
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`

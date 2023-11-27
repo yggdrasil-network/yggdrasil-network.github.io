@@ -64,13 +64,15 @@ This may be best illustrated by example.
 Suppose a node has generated the address: `200:1111:2222:3333:4444:5555:6666:7777`.
 Then the node may also use addresses from the prefix: `300:1111:2222:3333::/64` (note the `200` changed to `300`, a separate `/8` is used for prefixes, but the rest of the first 64 bits are the same).
 
+You can find your routed subnet by running `yggdrasilctl getSelf` and finding the `IPv6 subnet`. It is also logged at Yggdrasil startup.
+
 On Linux, something like the following should be sufficient to advertise a prefix and a route to `200::/7` using radvd to a network attached to the `eth0` interface:
 
 1. Enable IPv6 forwarding (e.g. `sysctl -w net.ipv6.conf.all.forwarding=1` or add it to `sysctl.conf`)
 
-2. `ip addr add 300:1111:2222:3333::1/64 dev eth0` or similar, to assign an address for the router to use in that prefix, where the LAN is reachable through `eth0`
+2. `ip addr add 300:1111:2222:3333::1/64 dev eth0` or similar — replacing `300:1111:2222:3333::` with your routed subnet from `yggdrasilctl getSelf` — to assign an address for the router to use in that prefix, where the LAN is reachable through `eth0`
 
-3. Install/run `radvd` with something like the following in `/etc/radvd.conf`:
+3. Install/run `radvd` with something like the following in `/etc/radvd.conf` — again, replacing the `300:1111:2222:3333::` with your routed subnet:
 ```
 interface eth0
 {

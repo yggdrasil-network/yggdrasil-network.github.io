@@ -145,7 +145,8 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
   - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
 - `201:8845:9622:204:8966:1479:2811:1` port `53`, hosted by [PufferOverflow](https://puffer.blog/)
   - Simple clear-net DNS proxy, currently using Level 3 DNS as upstream servers
-
+- `301:23b4:991a:634d::53` port `53`, hosted by [YGGverse](https://github.com/YGGverse), Latvia
+  - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet
 ----
 
 ## VoIP

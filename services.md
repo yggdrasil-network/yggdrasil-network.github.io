@@ -225,21 +225,10 @@ Visit [project repo](https://github.com/YGGverse/web-api) to launch API server w
 
 ### Servers
 
-#### Yggdrasil
-
-- `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/api/`
-
-#### Alfis
-
-- `http://api.ygg`
-
-#### Hybrid
-
-- `http://api.ygg.at`
-
-#### Clearnet
-
-- `https://yggapi.duckdns.org`
+- `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/api/` - Yggdrasil
+- `http://api.ygg` - Alfis
+- `http://api.ygg.at` - Hybrid
+- `https://yggapi.duckdns.org` - Clearnet / SSL
 
 ### Methods 
 

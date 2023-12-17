@@ -212,3 +212,54 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 - [ygg.thingylabs.io](https://ygg.thingylabs.io/) hosted by [Thingylabs GmbH](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
+ 
+----
+
+## API
+
+### web-api
+
+Yggdrasil network info through web
+
+Visit [project repo](https://github.com/YGGverse/web-api) to launch API server with native Yggdrasil/IPv6 support. 
+
+### Servers
+
+#### Yggdrasil
+
+- `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/api/`
+
+### Alfis
+
+- `http://api.ygg`
+
+### Hybrid
+
+- `http://api.ygg.at`
+
+### Clearnet
+
+- `https://yggapi.duckdns.org`
+
+### Methods 
+
+#### Socket
+
+Useful also for open ports check
+
+`GET /net/socket.php`
+
+##### Arguments 
+
+- `port` - required
+- `host` - optional, remote by default
+
+#### Dig 
+
+`GET /net/dig.php`
+
+##### Arguments 
+
+- `name` - required, host name
+- `record` - required, `A|AAA|SRV` remote by default ([supported records](https://github.com/YGGverse/web-api#records-support))
+- `records` - required if `record` not provided, array of records

@@ -223,6 +223,10 @@ Yggdrasil network info through web
 
 Visit [project repo](https://github.com/YGGverse/web-api) to launch API server with native Yggdrasil/IPv6 support. 
 
+#### Example
+
+`http://[201:23b4:991a:634d:8359:4521:5576:15b7]/api/net/dig.php?name=yo.ygg&records[]=A&records[]=AAAA`
+
 ### Servers
 
 - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/api/` - Yggdrasil

@@ -188,6 +188,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ----
 
+## Half-Life
+
+### Xash3D
+
+- `[300:eaff:7fab:181b::e949]:7588` - Xash3D server by [Skunk](http://[300:eaff:7fab:181b::e621]/) 
+
+----
+
 ### Direct Connect
 
 - `adc://hub.1337.cx:1511`

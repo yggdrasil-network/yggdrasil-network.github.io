@@ -190,10 +190,14 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 ## Half-Life
 
+[HLState](https://github.com/YGGverse/HLState) monitor for Half-Life based on `0200::/7` [HLServers](https://github.com/YGGverse/HLServers/tree/yggdrasil) registry:
+
+- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]/hlstate/`
+
 ### Xash3D
 
 - `[300:eaff:7fab:181b::e949]:7588` - Xash3D server by [Skunk](http://[300:eaff:7fab:181b::e621]/) 
-- `[201:5eb5:f061:678e:7565:6338:c02c:5251]:27015` - Xash3D server by [YGGverse](https://github.com/YGGverse) with Crossfire map and 4 bots
+- `[201:5eb5:f061:678e:7565:6338:c02c:5251]:27015` - Xash3D server by [YGGverse](https://github.com/YGGverse) with Crossfire map and 4 [funny](https://github.com/YGGverse/hlsdk-portable/tree/bot10-extra-skins) bots
   - `94.140.114.89:27015` - Clearnet alias to invide your friends
 
 ----

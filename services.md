@@ -192,7 +192,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 [HLState](https://github.com/YGGverse/HLState) monitor for Half-Life based on `0200::/7` [HLServers](https://github.com/YGGverse/HLServers/tree/yggdrasil) registry:
 
-- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]/hlstate/`
+- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]/hl/` or just `http://hl.ygg`
 
 ### Xash3D
 

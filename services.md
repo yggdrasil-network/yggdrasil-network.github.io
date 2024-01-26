@@ -62,6 +62,7 @@ The following services are available on the Yggdrasil v0.4 network, courtesy of 
 
 - [KevaChat](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/) - chat in blockchain
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/`
+  - `gemini://[301:23b4:991a:634d::1965]`
 
 ----
 

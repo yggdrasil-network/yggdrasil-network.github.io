@@ -3,9 +3,9 @@ tags: dontlink
 sitemap: true
 ---
 
-# Services (v0.4 network)
+# Services
 
-The following services are available on the Yggdrasil v0.4 network, courtesy of our community users. If you host a service on the Yggdrasil Network or find that a service is no longer available, please feel free to [open a pull request on GitHub](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services.md)
+The following services are available on the Yggdrasil Network, courtesy of our community users. If you host a service on the Yggdrasil Network or find that a service is no longer available, please feel free to [open a pull request on GitHub](https://github.com/yggdrasil-network/yggdrasil-network.github.io/edit/master/services.md)
 
 ----
 

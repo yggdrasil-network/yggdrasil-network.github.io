@@ -12,7 +12,11 @@ Once you have installed Yggdrasil, take a look at:
 - [Public Peers](https://github.com/yggdrasil-network/public-peers) — public nodes to connect to
 - [Public Services](services.md) — services running inside the Yggdrasil Network
 
+---
+
 🚨 **Please remember to check for Yggdrasil updates regularly.** 🚨 Yggdrasil does not have a built-in method of notifying you when new versions are available. You may want to subscribe to the [GitHub Releases Atom feed](https://github.com/yggdrasil-network/yggdrasil-go/releases.atom) or consider [watching the GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go) (a "Custom" watch can be used to subscribe to release notifications only). Release notifications are also sent in our [Matrix room](https://matrix.to/#/#yggdrasil:matrix.org).
+
+---
 
 ### Linux
 

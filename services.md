@@ -13,7 +13,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### IT consultancies
 
-- [Thingylabs GmbH](http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/) - An IT consultancy for Web, Cloud, and Apps.
+- [Thingylabs GmbH](https://yyy.thingylabs.io/) - An IT consultancy for Web, Cloud, and Apps.
+  - `https://yyy.thingylabs.io/`
   - `http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/`
 
 ----
@@ -224,6 +225,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## iPerf3 for speedtests
 
-- [ygg.thingylabs.io](https://ygg.thingylabs.io/) hosted by [Thingylabs GmbH](https://www.thingylabs.io/)
+- [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/) hosted by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`

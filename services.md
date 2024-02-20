@@ -64,6 +64,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [KevaChat](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/) - chat in blockchain
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/`
   - `gemini://[301:23b4:991a:634d::1965]`
+ 
+- [Kvazar](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kvazar/) - Observe Kevacoin Universe
+  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kvazar/`
+  - `gemini://[301:23b4:991a:634d::db]`
 
 ----
 

@@ -228,3 +228,12 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/) hosted by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
+ 
+----
+
+## Cryptocurrency
+
+List of Yggdrasil peers to connect bitcoin-based wallets
+
+### KevaCoin
+  - `[201:23b4:991a:634d:8359:4521:5576:15b7]:9338`

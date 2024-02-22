@@ -48,6 +48,7 @@ A peering URI will look similar to one of the following:
 
 | **Direct TCP connection**: | `tcp://hostname:port` |
 | **Direct TCP+TLS connection**: | `tls://hostname:port` |
+| **Direct QUIC connection**: | `quic://hostname:port` |
 | **Via a SOCKS proxy**: | `socks://proxyhostname:proxyport/hostname:port` |
 
 By default, only link-local auto-peering is enabled. This connects devices that are connected directly to each other at layer 2, including devices on the same LAN, directly connected by ethernet or configured to use the same ad-hoc wireless network.

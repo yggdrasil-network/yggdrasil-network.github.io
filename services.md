@@ -221,6 +221,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 - `21d:73cc:25d9:1fe:5a4a:47df:eb39:7f`, debian, ubuntu and termux repos [http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m](http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m) by [@Jorropo](https://github.com/Jorropo).
 
+  ----
+  ### OWRX
+  `200:c1e6:6196:816b:6758:5ed8:6e3b:a0f8` at 8072 port
+
 ----
 
 ## iPerf3 for speedtests

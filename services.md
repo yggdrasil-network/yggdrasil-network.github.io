@@ -228,3 +228,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/) hosted by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
+
+----
+
+## OpenWebRX / WebSDR / KiwiSDR / AirSpy
+
+ - http://[200:c1e6:6196:816b:6758:5ed8:6e3b:a0f8]:8072

@@ -188,6 +188,16 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 - `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
+### Minetest
+
+- `[203:e93b:9902:9064:5efe:575b:3284:e1d2]:30000` Minetest server hosted by [mittwerk](mittwerk@yggdrasil.link)
+
+----
+
+## Mindustry 
+
+- `[203:e93b:9902:9064:5efe:575b:3284:e1d2]:6567` hosted by [mittwerk](mittwerk@yggdrasil.link)
+
 ----
 
 ## Half-Life
@@ -206,8 +216,11 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### Direct Connect
 
+- `adc://[203:e93b:9902:9064:5efe:575b:3284:e1d2]:1511`
 - `adc://hub.1337.cx:1511`
   - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
+ 
+ 
 
 ----
 

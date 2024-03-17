@@ -206,15 +206,22 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## Half-Life
 
-[HLState](https://github.com/YGGverse/HLState) monitor for Half-Life based on `0200::/7` [HLServers](https://github.com/YGGverse/HLServers/tree/yggdrasil) registry:
+### Stats
 
-- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]/hl/` or just `http://hl.ygg`
+- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]/hl/` - [Open Source](https://github.com/YGGverse/HLState) `0200::/7` tracker of `hl.ygg:27010` master server
+  - `http://hl.ygg` - Alfis DNS alias
 
-### Xash3D
+### Masters
 
-- `[300:eaff:7fab:181b::e949]:7588` - Xash3D server by [Skunk](http://[300:eaff:7fab:181b::e621]/) 
-- `[201:5eb5:f061:678e:7565:6338:c02c:5251]:27015` - Xash3D server by [YGGverse](https://github.com/YGGverse) with Crossfire map and 4 [funny](https://github.com/YGGverse/hlsdk-portable/tree/bot10-extra-skins) bots
-  - `94.140.114.89:27015` - Clearnet alias to invide your friends
+- `http://[201:5eb5:f061:678e:7565:6338:c02c:5251]:27010` - Xash3D / FWGS `0200::/7` server by [YGGverse](https://github.com/YGGverse)
+  - `hl.ygg:27010` - Alfis DNS alias
+
+### Game servers
+
+- `[300:eaff:7fab:181b::e949]:7588` - Xash3D / FWGS server by [Skunky](http://[300:eaff:7fab:181b::e621]/) 
+- `[201:5eb5:f061:678e:7565:6338:c02c:5251]:27015` - Xash3D / FWGS server by [YGGverse](https://github.com/YGGverse) with Crossfire map and funny bots
+  - `hl.ygg:27015` - Alfis DNS alias
+  - `94.140.114.89:27015` - Clearnet alias
 
 ----
 

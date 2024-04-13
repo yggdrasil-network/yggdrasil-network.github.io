@@ -45,7 +45,10 @@ ip6tables -A INPUT -i tun0 -j DROP
 ##### with `ufw`
 
 ```
- ufw deny in on tun0 proto ipv6
+# The default of ufw is to block all incoming connections
+# The following blocks incoming connections if the default has been set to allow:
+# ufw default allow
+ufw deny in on tun0 proto ipv6
 ```
 
 #### Windows (with Windows Firewall)

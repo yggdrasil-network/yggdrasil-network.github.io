@@ -40,13 +40,3 @@ As a decentralised routing protocol design, we believe it is important that rout
 We are aware of the fact that this, combined with the ability to freely and easily create peerings over the Internet, means that suboptimal peerings are likely to appear on the public Yggdrasil testbed network.
 
 Network congestion is managed automatically at each node using a form of fair packet queuing. This attempts to balance traffic flows between different nodes equally where possible, as well as ensuring that single nodes cannot saturate all available link bandwidth over a given peering or set of peerings. This also helps to keep overall network latency down where possible.
-
-### Comparison with other projects
-
-The Yggdrasil Network often attract comparisons with other projects attempting to create anonymous overlays, such as Tor, I2P, Lokinet and others. These projects are very different to Yggdrasil, in part because they are attempting to provide anonymity, which Yggdrasil does not, and in part because they are intentionally overlay-by-design rather than by convenience. Any anonymity or pseudonymity that can occur with the Yggdrasil testbed network is purely coincidental and should not be relied upon.
-
-Yggdrasil is frequently compared with VPN projects such as Wireguard, Tailscale, Nebula and Zerotier. Although the Yggdrasil Network can be used as a kind of point-to-point VPN if appropriately configured, it is not a primary goal of ours to provide VPN tunnelling.
-
-We do not see Yggdrasil as being in competition with these projects as they are attempting to solve a different set of problems.
-
-The Yggdrasil Network does not natively provide access to the public Internet or to other networks, although it can be achieved with proxies or other tunnelling solutions.

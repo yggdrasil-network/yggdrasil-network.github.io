@@ -56,3 +56,13 @@ The project is likely to reach a number of possible outcomes:
 1. The project may reach a reasonably stable state but never attract a large enough number of users
 1. The project may attract a large enough number of users but reveal inherent design flaws in the process (a learning exercise for a future project or protocol version perhaps)
 1. The project may end up working perfectly even as the network grows, in which case it will become worthwhile to look at writing better-optimised implementations and/or moving the important parts into other projects
+
+### How does Yggdrasil compare to other projects?
+
+The Yggdrasil Network often attract comparisons with other projects attempting to create anonymous overlays, such as Tor, I2P, Lokinet and others. These projects are very different to Yggdrasil, in part because they are attempting to provide anonymity, which Yggdrasil does not, and in part because they are intentionally overlay-by-design rather than by convenience. Any anonymity or pseudonymity that can occur with the Yggdrasil testbed network is purely coincidental and should not be relied upon.
+
+Yggdrasil is frequently compared with VPN projects such as Wireguard, Tailscale, Nebula and Zerotier. Although the Yggdrasil Network can be used as a kind of point-to-point VPN if appropriately configured, it is not a primary goal of ours to provide VPN tunnelling.
+
+We do not see Yggdrasil as being in competition with these projects as they are attempting to solve a different set of problems.
+
+The Yggdrasil Network does not natively provide access to the public Internet or to other networks, although it can be achieved with proxies or other tunnelling solutions.

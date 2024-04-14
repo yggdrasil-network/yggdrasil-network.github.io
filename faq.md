@@ -30,14 +30,25 @@ No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers
 
 Typically yes, you will be routable from other nodes on the network. If you want to restrict incoming connections to your machine, you should use an IPv6 firewall. The steps for this will vary from platform to platform.
 
-#### Linux (with `ip6tables`)
+#### Linux
 
 Assuming your TUN/TAP adapter is named `tun0`:
+
+##### with `ip6tables`
 
 ```
 ip6tables -A INPUT -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ip6tables -A INPUT -i tun0 -m conntrack --ctstate INVALID -j DROP
 ip6tables -A INPUT -i tun0 -j DROP
+```
+
+##### with `ufw`
+
+```
+# The default of ufw is to block all incoming connections
+# The following blocks incoming connections if the default has been set to allow by:
+# ufw default allow
+ufw deny in on tun0 proto ipv6
 ```
 
 #### Windows (with Windows Firewall)

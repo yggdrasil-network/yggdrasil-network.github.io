@@ -249,7 +249,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## iPerf3 for speedtests
 
-- [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/) hosted by [Thingylabs](https://www.thingylabs.io/)
+- [ygg.thingylabs.io](https://ygg.thingylabs.io/speedtest.html) sponsored by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
  

@@ -10,11 +10,11 @@ Yggdrasil was created in order to build a decentralised routing scheme for mesh 
 
 ### Is Yggdrasil safe?
 
-All traffic sent across the Yggdrasil Network is encrypted end-to-end, such that it cannot be decrypted or read by any intermediate nodes, and can only be decrypted by the recipient for which it was intended.
+All traffic sent across the Yggdrasil Network is encrypted end-to-end, such that it cannot be decrypted or read by any intermediate nodes and can only be decrypted by the recipient for which it was intended.
 
 However, it is still a public network, therefore you should take adequate precautions when using Yggdrasil, such as using a firewall and not exposing services you do not want others to be able to reach.
 
-We also feel that it is important to highlight that, even though Yggdrasil is using industry-standard cryptography, our codebase has not been officially externally audited.
+We also feel that it is important to highlight that, even though Yggdrasil is using industry-standard cryptographic implementations from the Go standard library, our codebase has not been officially externally audited.
 
 ### Is Yggdrasil stable?
 
@@ -24,7 +24,9 @@ You should also make sure that you stay up-to-date as often as possible with the
 
 ### Is Yggdrasil anonymous?
 
-No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers over the Internet will be able to see your IP address and may be able to use this information to determine your location or identity. Multicast-discovered peerings on the same network will typically expose your device MAC address. Other nodes on the network may be able to discern some information about which nodes you are peered with.
+No, it is not a goal of the Yggdrasil project to provide anonymity. Direct peers over the Internet will be able to see your IP address and may be able to use this information to determine your location or identity. Multicast-discovered peerings on the same network will typically expose your device MAC address.
+
+Other nodes on the network may be able to discern some information about which nodes you are peered with due to debug information currently exposed on the network, although the protocol design does not depend upon much of this.
 
 ### Will my machine be exposed to other users of the network?
 
@@ -63,7 +65,7 @@ macOS has an application firewall, therefore any firewall policies applied on ot
 
 Yes, you can set the `IfName` configuration setting to `"none"`. This will prevent Yggdrasil from creating a TUN interface.
 
-You will be able to create and accept peering connections and will continue to route traffic on behalf of your peers, but you will not be reachable from within the Yggdrasil Network, nor will you be able to send traffic into the network either. In this mode, other users on the network will receive no response if they try to reach or ping your node addresses.
+You will be able to create and accept peering connections and will continue to route traffic on behalf of your peers, but you will not be reachable from within the Yggdrasil Network, nor will you be able to send traffic into the network either. In this mode, other users on the network will receive no response if they try to reach or ping your node's Yggdrasil IPv6 addresses.
 
 ### Does Yggdrasil require IPv6?
 

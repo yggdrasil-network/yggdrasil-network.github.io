@@ -6,18 +6,11 @@ sitemap: true
 
 Yggdrasil is a new and experimental compact routing scheme designed for mesh or even Internet-like networks. It is predominanently a shortest-path scheme, whereby the network will attempt to find the most direct path to the destination.
 
-Compared to the structured and typically hierarchial routing schemes in use today on many networks, Yggdrasil is strongly decentralised and largely self-arranging. Each node on the network is identified by a cryptographic public key and, in our [current experimental implementation](implementation.md), IPv6 addresses are generated from this key. The network topology is adaptive, aiming to make use of whichever links are available in order to provide full routability between all network participants. This is made possible by the fact that all Yggdrasil nodes are routers, sharing routing knowledge and forwarding traffic on behalf of other network participants.
+Compared to the structured and typically hierarchial routing schemes in use today on many networks, Yggdrasil is strongly decentralised, largely self-arranging and mostly self-healing. The network topology is adaptive, aiming to make use of whichever links are available in order to provide full routability between all network participants. All nodes in Yggdrasil with multiple peers act as routers and will forward traffic on behalf of other nodes.
 
-The following table illustrates high-level differences between traditional networks like the Internet, and the Yggdrasil Network:
+Each node on the network is identified by a cryptographic public key and, in our [current experimental implementation](implementation.md), stable IPv6 addresses are generated from this key. This allows all IPv6-supporting applications to operate over Yggdrasil largely without modification. The address is fully mobile and stays with the node as it moves around the network.
 
-|                                                                 | Traditional | Yggdrasil |
-| --------------------------------------------------------------- | ----------- | --------- |
-| End-to-end encryption for all traffic across the network        | No          | Yes       |
-| Decentralised routing information shared using a DHT            | No          | Yes       |
-| Cryptographically-bound addressing with no central authority    | No          | Yes       |
-| Node is aware of its relative location to other nodes           | No          | Yes       |
-| Mobile addressing that stays with the device as it moves around | No          | Yes       |
-| Topology extends gracefully across different mediums, i.e. mesh | No          | Yes       |
+Yggdrasil's design means that it is well suited towards truly ad-hoc wireless mesh networks which many other existing routing protocols struggle with.
 
 ### What are the problems today?
 
@@ -33,13 +26,13 @@ ISP networks are also typically structured in design and often hierarchical in n
 
 ### What does Yggdrasil do differently?
 
-Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single global network topology in a distributed fashion.
+Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single distributed global network topology.
 
-A spanning tree is used to provide synchronisation and to allow nodes to allocate themselves a set of tree coordinates, which are used to exchange and establish bootstrap and path setup messages. Nodes then set up paths through the network to their keyspace neighbours, effectively arranging the network into a virtual line, ordered by public keys. Intermediate nodes then populate their routing tables with these paths, enabling nodes to forward packets closer to their destination public key.
+A spanning tree is used to provide synchronisation and to allow nodes to allocate themselves a set of tree coordinates, which are used to exchange and establish bootstrap and path setup messages. Nodes then exchange bloom filters which contain information about which keyspace neighbours are reachable through each node. Intermediate nodes then populate their routing tables with these paths, enabling nodes to forward packets closer to their destination public key.
 
-In addition, nodes can pathfind using the spanning tree routing to establish a path that is likely shorter than the path through keyspace and then switch a traffic session over to source routing. The typically more direct source route will continue to be used for as long as it is available and will fall back to keyspace routing if the source routed path breaks.
+In addition, nodes can pathfind using the spanning tree routing to establish a path that is likely shorter than the path through keyspace. The typically more direct source route will continue to be used for as long as it is available and will fall back to keyspace routing if the tree-routed path breaks.
 
-Cryptographic signatures are used to secure tree announcements, bootstrap and path messages against tampering or forgery.
+Cryptographic signatures are used to secure protocol messages against tampering or forgery.
 
 ### What are the benefits?
 
@@ -49,7 +42,7 @@ There are a number of benefits to a routing scheme such as this:
 1. Paths are discovered and built through the network automatically, so manual configuration of routing entries is not required — the only configuration needed is the peering connections between nodes themselves
 1. The network can setup and tear down paths quickly without needing to discard all routing state, which helps significantly in handling node mobility events without dropping many packets if at all
 1. We can bridge reliable/static networks very easily with dynamic/non-static networks without needing to flood large amounts of state
-1. Networks automatically form when any two or more Yggdrasil nodes are connected to each other, even if those connections are entirely ad-hoc in nature
+1. Networks automatically form when any two or more Yggdrasil nodes are connected to each other, even if those connections are entirely ad-hoc in nature, which allows building true wireless mesh networks
 1. Sparse routing knowledge and only small amounts of protocol traffic should mean that Yggdrasil is able to efficiently scale to very large networks
 
 ### What is the status of the project?

@@ -16,6 +16,8 @@ Once you have installed Yggdrasil, take a look at:
 
 🚨 **Please remember to check for Yggdrasil updates regularly.** 🚨 Yggdrasil does not have a built-in method of notifying you when new versions are available. You may want to subscribe to the [GitHub Releases Atom feed](https://github.com/yggdrasil-network/yggdrasil-go/releases.atom) or consider [watching the GitHub repository](https://github.com/yggdrasil-network/yggdrasil-go) (a "Custom" watch can be used to subscribe to release notifications only). Release notifications are also sent in our [Matrix room](https://matrix.to/#/#yggdrasil:matrix.org).
 
+💡 **To run Yggdrasil in read-mode** without exposing local ports, consider using [Yggstack](https://github.com/yggdrasil-network/yggstack), which provides SOCKS5 proxy server and TCP port forwarder functionalities, allowing secure and flexible network operations without the need for root/administrator access or TUN adapter support.
+
 ---
 
 ### Linux

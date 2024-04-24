@@ -58,8 +58,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
   - `http://[30a:5fad::e]`
 
-- [Online Chess](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/chesslablab/) - [ChesslaBlab](https://github.com/chesslablab) instance for Yggdrasil
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/chesslablab/`
+- [Online Chess](http://[301:23b4:991a:634d::cbb]) - [ChesslaBlab](https://github.com/chesslablab) instance for Yggdrasil
+  - `http://[301:23b4:991a:634d::cbb]`
 
 - [KevaChat](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/) - chat in blockchain
   - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/`

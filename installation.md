@@ -39,6 +39,11 @@ Yggdrasil is well supported on macOS. The preferred installation method is the `
 
 Yggdrasil works on Windows and [an MSI installer is available](installation-windows.md), but the installer is supported on a best-effort basis only and is not well tested.
 
+Also, you can install Yggdrasil through Winget package manager (Windows 10 and later):
+```
+winget install YggdrasilNetwork.Yggdrasil
+```
+
 ### iOS
 
 Yggdrasil is supported on iOS with the following applications:

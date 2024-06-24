@@ -8,6 +8,11 @@ sitemap: true
 Yggdrasil is supported on Windows on a **best effort basis only**.
 You can [download the latest installer from GitHub](https://github.com/yggdrasil-network/yggdrasil-go/releases).
 
+Alternatively, on Windows 10 and later, you can install Yggdrasil through Winget package manager:
+```
+winget install YggdrasilNetwork.Yggdrasil
+```
+
 On Windows 7 and Server 2008 R2, you must install hotfix KB2921916 before installing
 Yggdrasil:
 

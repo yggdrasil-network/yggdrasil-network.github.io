@@ -4,65 +4,46 @@ sitemap: true
 
 # About
 
-Yggdrasil is a new and experimental compact routing scheme designed for mesh or even Internet-like networks. It is predominanently a shortest-path scheme, whereby the network will attempt to find the most direct path to the destination.
+Yggdrasil is an experimental compact routing scheme that is **fully decentralised** and only requires a small amount of state to work. It is predominanently a shortest-path scheme, whereby the network will attempt to find the most direct path to the destination.
 
-Compared to the structured and typically hierarchial routing schemes in use today on many networks, Yggdrasil is strongly decentralised, largely self-arranging and mostly self-healing. The network topology is adaptive, aiming to make use of whichever links are available in order to provide full routability between all network participants. All nodes in Yggdrasil with multiple peers act as routers and will forward traffic on behalf of other nodes.
+<img src="/assets/images/about/first.svg" style="max-height: 12em; max-width: 22em; margin: 1em; float: right; clear: both;" />
 
-Each node on the network is identified by a cryptographic public key and, in our [current experimental implementation](implementation.md), stable IPv6 addresses are generated from this key. This allows all IPv6-supporting applications to operate over Yggdrasil largely without modification. The address is fully mobile and stays with the node as it moves around the network.
+Nodes are equal participants and connect to each other using **peering connections** which carry network traffic. Peerings can be set up over any IP network — whether that's a direct wired or wireless link, a local area network or even the Internet. In some cases, peerings can also be set up automatically by nearby devices on the same network using multicast discovery.
 
-Yggdrasil's design means that it is well suited towards truly ad-hoc wireless mesh networks which many other existing routing protocols struggle with.
+All nodes on an Yggdrasil network are routers and will automatically pass traffic to help it get closer to its destination where possible. This means that, even in a network that is only sparsely connected, **all nodes will be reachable** by all other nodes on that network. It doesn't even matter if a node is behind a NAT — once a peering is established, traffic flows in both directions over that peering.
 
-### What are the problems today?
+Yggdrasil is also designed to tolerate changes in the network. For example, if a link fails, the network will self-heal and use other links to route traffic where available. This makes it **suitable for use in mesh networks**, where the network topolopy can and often will change.
 
-The Internet as we know it today doesn't conform to a well-defined topology. This has largely happened over time - as the Internet has grown, more and more networks have been "bolted together" with peering arrangements between service providers. The lack of defined topology gives us some unavoidable problems:
+Each node on the network has a location-independent **cryptographic identity** and, in our [current experimental implementation](implementation.md), stable IPv6 addresses are generated from this key. This allows IPv6-supporting applications to work over Yggdrasil largely without modification. The address is fully mobile and stays with the node as it moves around the network.
 
-1. The routing tables that hold a "map" of the Internet are huge and inefficient, as every provider has to relay information about IP prefixes belonging to all other providers
-1. There isn't really any way for a computer to know where it is located on the Internet relative to anything else — most machines are only aware of a "default gateway"
-1. It's difficult to examine where a packet will go on its journey from source to destination without actually sending it
+### Why Yggdrasil?
 
-These problems have been somewhat mitigated (but not really solved) through centralisation - rather than your computers at home holding a copy of the global routing table, your service provider does so on your behalf. Your computers and network devices are configured just to "send traffic upstream" and to let your provider decide where it goes from there. This leaves you entirely at the mercy of your ISP who can redirect your traffic anywhere they like and to inspect, manipulate or intercept it.
+Many networks that exist today are hierarchical in nature, require extensive manual configuration and often rely on a certain degree of centralisation in order to scale. This often makes it difficult or impractical to set up networks quickly on an ad-hoc basis and so most people are heavily reliant on their Internet Service Providers (ISPs).
 
-ISP networks are also typically structured in design and often hierarchical in nature, and as a result, many existing routing protocols have been designed with this in mind. Some optimisations such as prefix aggregation are used to try and reduce the number of routing entries that a provider must send out into the world. These protocols are usually not suitable for use in a network where the topology is not well defined or changes frequently — a wireless mesh network, for example, therefore it has been very difficult in the past for communities to build their own wireless mesh infrastructure on an ad-hoc basis.
+On the other hand, Yggdrasil requires **very little configuration** in order to work and full multi-hop networks can be built up very quickly and easily using Yggdrasil.
 
-### What does Yggdrasil do differently?
+Nodes do not need to be assigned an address from a centralised authority; they can **generate their own cryptographic identity** and, more importantly, they can keep this address as they roam. Once peering connections are established, routing information is propagated quickly and automatically throughout the network.
 
-Yggdrasil takes a very different approach to sharing routing knowledge. Rather than distributing address ranges as paths through centrally assigned autonomous systems, Yggdrasil instead builds up a single distributed global network topology.
+This ability to provide full end-to-end routability between all network nodes means that Yggdrasil is potentially an enabling technology for true edge computing scenarios, as well as real-world mesh networks, as it **does not rely on the Internet** to function.
 
-A spanning tree is used to provide synchronisation and to allow nodes to allocate themselves a set of tree coordinates, which are used to exchange and establish bootstrap and path setup messages. Nodes then exchange bloom filters which contain information about which keyspace neighbours are reachable through each node. Intermediate nodes then populate their routing tables with these paths, enabling nodes to forward packets closer to their destination public key.
+### How does Yggdrasil compare to other projects?
 
-In addition, nodes can pathfind using the spanning tree routing to establish a path that is likely shorter than the path through keyspace. The typically more direct source route will continue to be used for as long as it is available and will fall back to keyspace routing if the tree-routed path breaks.
+Yggdrasil is often compared to other projects attempting to create anonymous overlays, such as Tor, I2P, Lokinet and others. These projects are very different to Yggdrasil, in part because they try to guarantee anonymity. Yggdrasil does not aim to provide and **does not guarantee anonymity**. These projects are also intentionally overlay-by-design rather than by convenience, whereas Yggdrasil only exists as an overlay network today because it is an easy way to test the design.
 
-Cryptographic signatures are used to secure protocol messages against tampering or forgery.
+Yggdrasil is frequently compared with VPN projects such as Wireguard, Tailscale, Nebula and Zerotier. Although it is possible to use Yggdrasil to build up private networks and/or point-to-point VPN links, this isn't explicitly our primary goal. It's also important to understand that connecting any single node of a private network to another network (such as a public peer) will result in **both networks being bridged together**.
 
-### What are the benefits?
-
-There are a number of benefits to a routing scheme such as this:
-
-1. Devices need to only maintain a comparatively small amount of state in order to function and to be able to forward packets — there is no need for any Yggdrasil node to maintain "full routing tables" like in BGP, and most nodes only have a handful of routing table entries in total
-1. Paths are discovered and built through the network automatically, so manual configuration of routing entries is not required — the only configuration needed is the peering connections between nodes themselves
-1. The network can setup and tear down paths quickly without needing to discard all routing state, which helps significantly in handling node mobility events without dropping many packets if at all
-1. We can bridge reliable/static networks very easily with dynamic/non-static networks without needing to flood large amounts of state
-1. Networks automatically form when any two or more Yggdrasil nodes are connected to each other, even if those connections are entirely ad-hoc in nature, which allows building true wireless mesh networks
-1. Sparse routing knowledge and only small amounts of protocol traffic should mean that Yggdrasil is able to efficiently scale to very large networks
+Finally, Yggdrasil has **no native exit nodes**, nor does it have any concept of exit nodes, for providing access to the public Internet or to other networks. This can be achieved using proxies or other tunnelling solutions on top of Yggdrasil but this is not something we explicitly aim to provide.
 
 ### What is the status of the project?
 
-Yggdrasil is currently an alpha project, early in development but actively maintained. Our expectation is that a future “beta” quality release should know enough to be compatible in the face of wire format changes, and reasonably feature complete. A “stable” 1.0 release, if it ever happens, would probably be feature complete, with no expectation of future wire format changes, and free of known critical bugs.
+Yggdrasil is currently an **alpha-level research project**, with on-going development but actively maintained. Our expectation is that a future beta-quality release should know enough to be compatible in the face of wire format changes, and reasonably feature complete. A “stable” 1.0 release, if it ever happens, would probably be feature complete, with no expectation of future wire format changes, and free of known critical bugs.
 
-The true goal of this project is to test the scalability of the Yggdrasil routing scheme and we are doing so with our [overlay network implementation](implementation.md). We need as many participants to run and test the software as possible so that we can study the behaviour of the network as it grows. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the network, so please feel free to experiment. That said, we don't recommend running mission critical or life-or-death workloads over Yggdrasil yet — there may be failure modes that we don't yet know about.
+The true goal of this project is to test the scalability of the Yggdrasil routing scheme and we are doing so with our [overlay network implementation](implementation.md). Studying the behaviour of the network in the real world is most easily achieved with a large number of participants running the software and joining the public test network. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the network, so please feel free to experiment.
+
+That said, we **recommend against running any mission-critical workloads** over Yggdrasil and it may be dangerous to rely solely on Yggdrasil for any life-or-death situation. There may be failure modes that we don't yet know about yet!
 
 The project is likely to reach a number of possible outcomes:
 
 1. The project may reach a reasonably stable state but never attract a large enough number of users
 1. The project may attract a large enough number of users but reveal inherent design flaws in the process (a learning exercise for a future project or protocol version perhaps)
 1. The project may end up working perfectly even as the network grows, in which case it will become worthwhile to look at writing better-optimised implementations and/or moving the important parts into other projects
-
-### How does Yggdrasil compare to other projects?
-
-The Yggdrasil Network often attract comparisons with other projects attempting to create anonymous overlays, such as Tor, I2P, Lokinet and others. These projects are very different to Yggdrasil, in part because they are attempting to provide anonymity, which Yggdrasil does not, and in part because they are intentionally overlay-by-design rather than by convenience. Any anonymity or pseudonymity that can occur with the Yggdrasil testbed network is purely coincidental and should not be relied upon.
-
-Yggdrasil is frequently compared with VPN projects such as Wireguard, Tailscale, Nebula and Zerotier. Although the Yggdrasil Network can be used as a kind of point-to-point VPN if appropriately configured, it is not a primary goal of ours to provide VPN tunnelling.
-
-We do not see Yggdrasil as being in competition with these projects as they are attempting to solve a different set of problems.
-
-The Yggdrasil Network does not natively provide access to the public Internet or to other networks, although it can be achieved with proxies or other tunnelling solutions.

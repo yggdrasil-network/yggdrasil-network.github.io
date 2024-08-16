@@ -16,16 +16,6 @@ distribution, e.g. elementaryOS.
 Debian packages are built and are available in the [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases).
 Install the package using `dpkg -i filename.deb`.
 
-## Package install from your distribution
-
-Some Debian-based distributions may have an `yggdrasil-go` package available in
-their repositories:
-```
-sudo apt-get install yggdrasil
-```
-
-⚠️ **WARNING**: Distribution packages are often out-of-date! If you are unable to connect to peers, this is probably due to a minor (0.x) version mismatch. Use `apt show yggdrasil` to verify the package version against the latest [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases).
-
 ## Package install from the S3 repository
 
 On some platforms, e.g. Raspberry Pi, you may need to start by installing
@@ -54,6 +44,16 @@ Install Yggdrasil:
 ```
 sudo apt-get install yggdrasil
 ```
+
+## Package install from your distribution
+
+Some Debian-based distributions may have an `yggdrasil-go` package available in
+their repositories:
+```
+sudo apt-get install yggdrasil
+```
+
+⚠️ **WARNING**: Distribution packages are often out-of-date! If you are unable to connect to peers, this is probably due to a minor (0.x) version mismatch. Use `apt show yggdrasil` to verify the package version against the latest [GitHub Releases](https://github.com/yggdrasil-network/yggdrasil-go/releases).
 
 ## After installation
 

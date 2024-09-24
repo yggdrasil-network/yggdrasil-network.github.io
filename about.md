@@ -40,7 +40,7 @@ Yggdrasil is currently an **alpha-level research project**, with on-going develo
 
 The true goal of this project is to test the scalability of the Yggdrasil routing scheme and we are doing so with our [overlay network implementation](implementation.md). Studying the behaviour of the network in the real world is most easily achieved with a large number of participants running the software and joining the public test network. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the network, so please feel free to experiment.
 
-That said, we **recommend against running any mission-critical workloads** over Yggdrasil and it may be dangerous to rely solely on Yggdrasil for any life-or-death situation. There may be failure modes that we don't yet know about yet!
+That said, we **recommend against running any mission-critical workloads** over Yggdrasil and it may be dangerous to rely solely on Yggdrasil for any life-or-death situation. There may be failure modes that we don't yet know about!
 
 The project is likely to reach a number of possible outcomes:
 

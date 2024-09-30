@@ -33,10 +33,32 @@ tls://f.g.h.i:e?priority=2
 
 Note that the `priority` field only influences traffic between two peerings to the same node. It does not affect routing decisions across different nodes and cannot be used, for example, to avoid sending traffic to one remote peer over another.
 
+### Prioritised multicast interfaces
+If like above you have multiple network interfaces but are using multicast peers, but want to prefer one network interface over the other, you can specify the `Priority` for a given multicast interface.
+
+Lower numbers are better. In this example, peerings that are automatically discovered and established over `eth0` will be preferred over `eth1`:
+
+```
+MulticastInterfaces: [
+  {
+    Regex: eth0
+    Beacon: true
+    Listen: true
+    Priority: 1
+  }, 
+  {
+    Regex: eth1
+    Beacon: true
+    Listen: true
+    Priority: 2
+  }
+]
+```
+
 ### Multiple Tor circuits
 Peering over Tor is possible using the SOCKS proxy support, although it is typically discouraged as Tor peerings are often slow and fragile. Most notably, Tor circuits can be broken at any time, taking down your Yggdrasil peering connection with it.
 
-To mitigate this, enable the `IsolateSOCKSAuth ` option in Tor and then establish **multiple connections to the same peer** using different SOCKS usernames and passwords. The usernames and passwords can be anything, but these unique pairs will force Tor to use a separate circuit for each peering connection, providing path redundancy, instead of reusing the same circuit:
+To mitigate this, enable the `IsolateSOCKSAuth ` option in Tor and then establish **multiple connections to the same peer** using different SOCKS usernames and passwords. The usernames and passwords can be anything, but these unique pairs will force Tor to use a separate circuit for each peering connection, providing redundancy against one of those circuits breaking:
 
 ```
 Peers: [

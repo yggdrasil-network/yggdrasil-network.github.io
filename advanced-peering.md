@@ -5,7 +5,7 @@ tags: dontlink
 
 # Advanced Peerings
 This document contains information on more advanced peering setups. 
-### Multi-homed machine
+### Multi-homed outbound peerings
 On a machine that has multiple network interfaces, where more than one interface can be used to reach a given peer (or the Internet), the `InterfacePeers` option can be used instead of the `Peers` option to create peerings over specific interfaces.
 
 It is possible to connect to the **same peer multiple times** using different interfaces, creating a highly-available peering configuration:
@@ -55,7 +55,7 @@ MulticastInterfaces: [
 ]
 ```
 
-### Multiple Tor circuits
+### Multiple outbound Tor circuits
 Peering over Tor is possible using the SOCKS proxy support, although it is typically discouraged as Tor peerings are often slow and fragile. Most notably, Tor circuits can be broken at any time, taking down your Yggdrasil peering connection with it.
 
 To mitigate this, enable the `IsolateSOCKSAuth ` option in Tor and then establish **multiple connections to the same peer** using different SOCKS usernames and passwords. The usernames and passwords can be anything, but these unique pairs will force Tor to use a separate circuit for each peering connection, providing redundancy against one of those circuits breaking:

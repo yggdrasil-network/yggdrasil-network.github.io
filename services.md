@@ -157,6 +157,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
 - `201:8845:9622:204:8966:1479:2811:1` port `53`, hosted by [PufferOverflow](https://puffer.blog/)
   - Simple clear-net DNS proxy, currently using Level 3 DNS as upstream servers
+- `201:72f6:9b56:e977:2d40:c7da:667b:f7a0` port `53`, hosted by [lcharles123](https://github.com/lcharles123)
+  - Simple clear-net DNS proxy, located in US
+- `201:d5df:f4ca:b9b3:5ea0:f8f8:c87:1611` port `53`, hosted by [lcharles123](https://github.com/lcharles123)
+  - Simple clear-net DNS proxy, located in Germany
 
 ----
 
@@ -178,7 +182,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `202:a2a5:dead:ded:9a54:4ab5:6aa7:1645` port `123`, hosted by [nikat](https://[302:a2a5:dead:ded::a2a5]/)
 - `223:180a:b95f:6a53:5c70:e704:e9fc:8b8f` port `123`, hosted by mkb2191
 - `200:8ce3:6def:9d4d:a976:9dfb:f0a6:91ce` port `123`, hosted by [Unkn0wnCat](https://kevink.dev), stratum 2, [NTP Pool Monitored](https://www.ntppool.org/scores/45.9.61.155)
-
+- `201:72f6:9b56:e977:2d40:c7da:667b:f7a0` port `123`, hosted by [lcharles123](https://github.com/lcharles123), Located in US
+  - `ygg.nerdvm.mywire.org`
 ----
 
 ## Minecraft

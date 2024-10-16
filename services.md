@@ -149,8 +149,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
-- `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns)
+- `301:84f7:4bc0:2f3a::53` port `53`, hosted by [sem](https://t.me/sergeymtv), Moscow, Russia
+  - [Alfis](https://github.com/Revertron/Alfis), clearnet.
 - `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
   - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
 - `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)

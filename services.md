@@ -232,7 +232,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### Direct Connect
 
-- `adc://[203:e93b:9902:9064:5efe:575b:3284:e1d2]:1511`
+- `adc://[20c:c3d2:8c38:a030:9d87:93db:53f7:df79]:1511`
 - `adc://hub.1337.cx:1511`
   - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
  

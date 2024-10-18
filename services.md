@@ -266,3 +266,11 @@ List of Yggdrasil peers to connect bitcoin-based wallets
 
 ### KevaCoin
   - `[201:23b4:991a:634d:8359:4521:5576:15b7]:9338`
+
+----
+
+## Telnet Bulletin Board Systems (BBS)
+
+- Archaic Binary - 200:387c:63c2:1e7:504:65a2:6300:e4f9
+  - WebSocket `http://ygg.archaicbinary.net`
+  - Telnet (Needs ANSI-BBS Compat. Client) `ygg.archaicbinary.net:23`

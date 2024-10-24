@@ -266,3 +266,18 @@ List of Yggdrasil peers to connect bitcoin-based wallets
 
 ### KevaCoin
   - `[201:23b4:991a:634d:8359:4521:5576:15b7]:9338`
+
+----
+
+## Other
+
+### Twister P2P
+
+[twister](http://twister.net.co) is decentralized microblogging platform based on bitcoind and bittorrent protocols
+
+#### DNS
+- `seed.twisterarmy.dedyn.io` - Clearnet and Yggdrasil connections by [twisterarmy](https://twisterarmy.github.io)
+
+#### Peers
+- `[301:23b4:991a:634d::33]:28333` / `TCP` or `29333` / `UDP+TCP`
+- `[301:5eb5:f061:678e::33]:28333` / `TCP` or `29333` / `UDP+TCP`

@@ -21,14 +21,14 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## Websites
 
+- [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
+  - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
+
 - [Yggdrasil Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
-
-- [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
-  - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
 
 - [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
   - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
@@ -42,33 +42,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
-- [Bible4u](http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]) - Uncensored Bible for Darknet.
-  - `http://[220:da17:52a1:76f3:fb99:f612:3f50:c9b]`
-  - `https://ygg.bible4u.net`
-
-- [Yo!](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yo/) - [open source](https://github.com/YGGverse/Yo) search project for Yggdrasil with page snaps / history
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yo/`
-
-- [YGGwave](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave/) - [open source](https://github.com/YGGverse/YGGwave) Radio stations catalog
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggwave/`
-
-- [YGGtracker](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker/) - [open source](https://github.com/YGGverse/YGGtracker) BitTorrent catalog and tracker
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker/`
-
-- [YaCy Yggdrasil](http://[30a:5fad::e]) - [YaCy](https://yacy.net) instance for Yggdrasil search.
-  - `http://[30a:5fad::e]`
-
-- [Online Chess](http://[301:23b4:991a:634d::cbb]) - [ChesslaBlab](https://github.com/chesslablab) instance for Yggdrasil
-  - `http://[301:23b4:991a:634d::cbb]`
-
-- [KevaChat](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/) - chat in blockchain
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kevachat/`
-  - `gemini://[301:23b4:991a:634d::1965]`
- 
-- [Kvazar](http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kvazar/) - Observe Kevacoin Universe
-  - `http://[201:23b4:991a:634d:8359:4521:5576:15b7]/kvazar/`
-  - `gemini://[301:23b4:991a:634d::db]`
-
 ----
 
 ## BitTorrent
@@ -77,11 +50,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - With DNS: `http://yggtracker.i2p.rocks/` (statistics at `http://yggtracker.i2p.rocks/stats`)
   - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
   - Filters out non-Yggdrasil IP addresses automatically from announcements
-
-- Yggdrasil-only torrent tracker, operated by [YGGverse](https://github.com/YGGverse):
-  - Announce: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]:2023/announce`
-  - Stats: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]:2023/stats`
-  - Scrape: `http://[201:23b4:991a:634d:8359:4521:5576:15b7]:2023/scrape`
 
 ----
 
@@ -141,26 +109,12 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
   - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), [OpenNIC](https://www.opennic.org/) and legacy clearnet
   - At the same address, port `80`, [Mario DNS tool](https://notabug.org/acetone/mario-dns) is [available](http://[324:71e:281a:9ed3::53])
-- `200:2892:d0f:bc20:8a8e:c7be:9d9e:ab55`, hosted by [darkdrgn2k](http://github.com/darkdrgn2k/)
-  - Basic `named` DNS clear-net server maintained running [OpenNIC](https://www.opennic.org/)
 - `302:db60::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Praha, Czechia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `300:6223::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Bratislava, Slovakia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
-- `325:5a4:d1c9:db96::53` port `53`, hosted by [cofob](https://t.me/cofob), Moscow, Russia
-  - [Alfis](https://github.com/Revertron/Alfis), [EmerDNS](https://emercoin.com/en/emerdns)
-- `200:9ea3:dd3a:ebbd:726a:89b7:5657:c046` port `53`
-  - [CRXN](http://deavmi.assigned.network/projects/crxn) DNS but provides clearnet too
-- `300:c0de:3488:123a::53` port `53`, hosted by [h3xcode](https://h3xco.de)
-  - [Alfis](https://github.com/Revertron/Alfis) and legacy clearnet (Cloudflare DNS)
-- `201:8845:9622:204:8966:1479:2811:1` port `53`, hosted by [PufferOverflow](https://puffer.blog/)
-  - Simple clear-net DNS proxy, currently using Level 3 DNS as upstream servers
-- `201:72f6:9b56:e977:2d40:c7da:667b:f7a0` port `53`, hosted by [lcharles123](https://github.com/lcharles123)
-  - Simple clear-net DNS proxy, located in US
-- `201:d5df:f4ca:b9b3:5ea0:f8f8:c87:1611` port `53`, hosted by [lcharles123](https://github.com/lcharles123)
-  - Simple clear-net DNS proxy, located in Germany
 
 ----
 
@@ -171,10 +125,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
   - `324:71e:281a:9ed3::cafe` port `64738`
 
-### Deavmi's MumbleShack
-
-- `200:ad55:3db7:b8cf:3aa8:664b:bca3:bd81` port `64738`
-
 ----
 
 ## NTP
@@ -184,6 +134,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `200:8ce3:6def:9d4d:a976:9dfb:f0a6:91ce` port `123`, hosted by [Unkn0wnCat](https://kevink.dev), stratum 2, [NTP Pool Monitored](https://www.ntppool.org/scores/45.9.61.155)
 - `201:72f6:9b56:e977:2d40:c7da:667b:f7a0` port `123`, hosted by [lcharles123](https://github.com/lcharles123), Located in US
   - `ygg.nerdvm.mywire.org`
+
 ----
 
 ## Minecraft
@@ -191,21 +142,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 ### Java Edition
 
 - `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.20.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
-- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:25565` 1.17.1 Minecraft server hosted by [Salem Yaslem](https://sy.sa/)
-
-### Bedrock Edition
-
-- `[202:235:decc:eef8:7dc:a2d4:dbde:12ca]:19132` Minecraft bedrock server hosted by [Salem Yaslem](https://sy.sa/)
 
 ### Minetest
 
 - `[203:e93b:9902:9064:5efe:575b:3284:e1d2]:30000` Minetest server hosted by [mittwerk](mittwerk@yggdrasil.link)
-
-----
-
-## Mindustry 
-
-- `[203:e93b:9902:9064:5efe:575b:3284:e1d2]:6567` hosted by [mittwerk](mittwerk@yggdrasil.link)
 
 ----
 
@@ -223,20 +163,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### Game servers
 
-- `[300:eaff:7fab:181b::e949]:7588` - Xash3D / FWGS server by [Skunky](http://[300:eaff:7fab:181b::e621]/) 
+- `[300:eaff:7fab:181b::e949]:7588` - Xash3D / FWGS server by [Skunky](http://[300:eaff:7fab:181b::e621]/)
 - `[201:5eb5:f061:678e:7565:6338:c02c:5251]:27015` - Xash3D / FWGS server by [YGGverse](https://github.com/YGGverse) with Crossfire map and funny bots
   - `hl.ygg:27015` - Alfis DNS alias
   - `94.140.114.89:27015` - Clearnet alias
-
-----
-
-### Direct Connect
-
-- `adc://[20c:c3d2:8c38:a030:9d87:93db:53f7:df79]:1511`
-- `adc://hub.1337.cx:1511`
-  - Recommended client is [ncdc](https://dev.yorhel.nl/ncdc).
- 
- 
 
 ----
 
@@ -246,23 +176,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ----
 
-## Linux repositories
-
-- `21d:73cc:25d9:1fe:5a4a:47df:eb39:7f`, debian, ubuntu and termux repos [http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m](http://[21d:73cc:25d9:1fe:5a4a:47df:eb39:7f]/m) by [@Jorropo](https://github.com/Jorropo).
-
-----
-
 ## iPerf3 for speedtests
 
 - [ygg.thingylabs.io/speedtest.html](https://ygg.thingylabs.io/speedtest.html) sponsored by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
- 
-----
-
-## Cryptocurrency
-
-List of Yggdrasil peers to connect bitcoin-based wallets
-
-### KevaCoin
-  - `[201:23b4:991a:634d:8359:4521:5576:15b7]:9338`

@@ -55,9 +55,11 @@ Each multicast interface block has the following options:
 
 ### `AllowedPublicKeys`
 
-A list of public keys that will be allowed to connect to this node.
+A list of public keys from which your node will allow incoming peering connections.
 
-If no public keys are specified in this section then all nodes will be able to connect based on the `Listen` and/or `MulticastInterfaces` configuration. If public keys are specified, whitelisting is enabled and only nodes with those public keys will be able to connect.
+If public keys are specified, whitelisting is enabled and only nodes with those public keys will be able to peer. If no public keys are specified in this section then peering connections will be allowed as per the `Listen` and/or `MulticastInterfaces` configuration.
+
+**NOTE:** This option does not control who can send you traffic over the Yggdrasil Network. For that you need an IPv6 firewall.
 
 ### `IfName`
 

@@ -14,8 +14,8 @@ A list of outbound peering connections to make. Peers are specified in URL forma
 * `tcp://1.1.1.1:1234` (TCP)
 * `tls://1.1.1.1:1234` (TCP+TLS)
 * `quic://1.1.1.1:1234` (QUIC+TLS)
-* `socks://2.2.2.2:2345/1.1.1.1:1234` (TCP via the SOCKS proxy at `2.2.2.2:2345`)
-* `sockstls://2.2.2.2:2345/1.1.1.1:1234` (TLS via the SOCKS proxy at `2.2.2.2:2345`)
+* `socks://2.2.2.2:2345/1.1.1.1:1234` (TCP via SOCKS, i.e. `tcp://1.1.1.1:1234` via the proxy at `2.2.2.2:2345`)
+* `sockstls://2.2.2.2:2345/1.1.1.1:1234` (TCP+TLS via SOCKS, i.e. `tls://1.1.1.1:1234` via the proxy at `2.2.2.2:2345`)
 * `unix:///path/to/sock.sock` (UNIX)
 * `ws://1.1.1.1:1234` or `ws://1.1.1.1:1234/path` (WebSockets, Yggdrasil 0.5.7 or later only)
 * `wss://1.1.1.1:1234` or `wss://1.1.1.1:1234/path` (WebSockets+TLS, Yggdrasil 0.5.7 or later only)
@@ -25,6 +25,7 @@ Additional settings can optionally be added as query-string parameters to the en
 * `password=PASSWORD` — set this only for peers that require a shared secret/password to connect
 * `key=PUBLICKEY` — pin the specified public key for this peer, this will cause the connection to fail if the remote side's key does not match
 * `maxbackoff=DURATION` — control what the maximum backoff/retry time will be if the peering goes down, format like `30s` for seconds or `1m` for minutes
+* `sni=domainname.com` - set the Server Name Indicator (SNI) for TLS peering connections to a different name (TLS and QUIC only)
 
 ### `InterfacePeers`
 
@@ -59,7 +60,7 @@ A list of public keys from which your node will allow incoming peering connectio
 
 If public keys are specified, whitelisting is enabled and only nodes with those public keys will be able to peer. If no public keys are specified in this section then peering connections will be allowed as per the `Listen` and/or `MulticastInterfaces` configuration.
 
-**NOTE:** This option does not control who can send you traffic over the Yggdrasil Network. For that you need an IPv6 firewall.
+**NOTE:** This is not a firewall and does not control who can send you traffic over the Yggdrasil Network or reach open ports and services on your machine. For that you need an IPv6 firewall.
 
 ### `IfName`
 

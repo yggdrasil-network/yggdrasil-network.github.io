@@ -1,5 +1,6 @@
 ---
 sitemap: true
+logo: iconoir/sparks.svg
 ---
 
 # About

@@ -1,5 +1,6 @@
 ---
 sitemap: true
+logo: iconoir/chat-bubble-question.svg
 ---
 
 # FAQ

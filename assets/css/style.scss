@@ -83,9 +83,15 @@ div.titleflex {
 		flex-direction: row;
 		flex-wrap: wrap;
 
-		> a {
+        > a {
 			display: inline-block;
-			padding: 0.75em;
+			padding: 1em;
+
+			> img {
+			    width: 1.2em;
+			    vertical-align: text-bottom;
+				filter: opacity(30%);
+			}
 		}
 	}
 }
@@ -112,6 +118,11 @@ div.titleflex {
 
 .markdown-body {
 	-webkit-font-smoothing: antialiased;
+}
+
+.markdown-body h3 img {
+    vertical-align: text-bottom;
+    margin-right: 0.5em;
 }
 
 div.blogpost {

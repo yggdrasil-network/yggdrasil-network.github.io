@@ -141,7 +141,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### Java Edition
 
-- `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.20.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
+- `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.21.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
 
 ### Minetest
 

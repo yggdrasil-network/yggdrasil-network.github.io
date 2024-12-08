@@ -26,6 +26,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 - [Yggdrasil Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
+  - `http://[227:bc24:9a82:e290:7f4a:f992:2ef6:5b34]:3000/`
+    - [ygg.fvm.mywire.org:3000](http://ygg.fvm.mywire.org:3000/)
 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`

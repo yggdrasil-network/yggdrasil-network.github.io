@@ -42,6 +42,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil Forum](http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]) - Forum in yggdrasil, about yggdrasil
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
+- [IP and Port Checker](http://[201:30d4:d28:2185:b947:8817:cca5:ef95])
+  - `http://[201:30d4:d28:2185:b947:8817:cca5:ef95]`
+
 ----
 
 ## BitTorrent

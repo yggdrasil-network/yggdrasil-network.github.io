@@ -16,6 +16,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Thingylabs GmbH](https://yyy.thingylabs.io/) - An IT consultancy for Web, Cloud, and Apps.
   - `https://yyy.thingylabs.io/`
   - `http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/`
+ 
+- [IncogNET LLC](https://incognet.io/) - Privacy and Free Speech Focused ISP - 5Gbps AMD Epyc VPS, Domain Registrar, WireGuard VPN, Etc.
+  - `http://ygg.incognet.io/`
+  - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
 
 ----
 

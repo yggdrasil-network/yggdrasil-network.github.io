@@ -22,7 +22,7 @@ A list of outbound peering connections to make. Peers are specified in URL forma
 
 Additional settings can optionally be added as query-string parameters to the end of the URL:
 
-* `password=PASSWORD` — set this only for peers that require a shared secret/password to connect, the password must match the remote side or the connection will fail
+* `password=PASSWORD` — set this only for peers that require a shared secret/password to connect, the password must match the remote side or the connection will fail, limited to 64 characters
 * `key=PUBLICKEY` — pin the specified public key for this peer, this will cause the connection to fail if the remote side's public key does not match what you expect
 * `maxbackoff=DURATION` — control what the maximum backoff/retry time will be if the peering goes down, format like `30s` for seconds or `1m` for minutes
 * `sni=domainname.com` - set the Server Name Indication (SNI) for TLS peering connections to a different name (TLS and QUIC only)
@@ -43,7 +43,7 @@ A list of listeners to open for accepting incoming connections. Instead of suppl
 
 Additional settings can optionally be added as query-string parameters to the end of the URL:
 
-* `password=PASSWORD` — optionally require a password to connect to this listener, the connecting node's password must match or the connection will fail
+* `password=PASSWORD` — optionally require a password to connect to this listener, the connecting node's password must match or the connection will fail, limited to 64 characters
 
 ### `MulticastInterfaces`
 

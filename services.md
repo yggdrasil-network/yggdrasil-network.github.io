@@ -84,17 +84,13 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### BonoboNET
 
-- Accessible via following servers:
-  - `201:5920:bb25:e003:c9f4:4dd9:df4b:dfef` port `6667`/`6607`
-  - `200:3bea:7cd5:eb3e:7c81:e7de:a426:41a8` port `6667`/`6697`
-  - `300:7232:2b0e:d6e9:216:3eff:fe3c:c82b` port `6667`/`6697`
-  - `204:fb3e:d9e:9f20:7af1:27ab:6aed:df32` port `6667`/`6697`
-  - `200:8101:e046:d91e:d4a2:aad1:f3a0:8ef1` (`ygg.services.deavmi.assigned.network`) port `6667`/`6697`
-  - `201:f742:6335:a85d:8378:9b21:1105:d0bf` port `6667`/`6697`
+- Accessible via Yggdrasil at the following servers:
+  - **Preferred:** `y.irc.bnet.eu.org` port `6667` (round-robin DNS entry for all servers listed below)
+  - `219:3cf0:dd1d:47b9:555e:75ac:2ab5:493b` port `6667`
+  - `204:fb3e:d9e:9f20:7af1:27ab:6aed:df32` port `6667`
+  - `200:6f99:2afe:41fd:fc3b:b1f7:af9d:f3a0` port `6667`
 - Notable channels are `#general`, `#networking` and `#programming`
 - More information can be found at the [BonoboNET homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/projects/bonobonet/) - we're using unrealircd and open to peering
-- Web IRC:
-  - `http://[200:e1ad:d2cf:7580:3d78:fce:4ff4:b618]:1024`
 
 ### benisnet
 

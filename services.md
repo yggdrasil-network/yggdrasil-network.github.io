@@ -184,3 +184,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [ygg.thingylabs.io/speedtest.html](https://ygg.thingylabs.io/speedtest.html) sponsored by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
+ 
+----
+
+## Reticulum nodes
+
+- `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP

@@ -7,9 +7,9 @@ tags: dontlink
 
 Yggdrasil can run in one of two modes: with a configuration file, or in autoconfigure mode.
 
-A static configuration file simplifies most setups as it allows you to keep the same keypair (and therefore IP address), maintain a list of peers and so on. For most users this will be the recommended configuration. Most Yggdrasil distribution packages will generate an `yggdrasil.conf` configuration file automatically.
+A static configuration file simplifies most setups as it allows you to keep the same keypair (and therefore IP address), maintain a list of peers and so on. For most users this will be the recommended configuration. Most Yggdrasil distribution packages will generate an `yggdrasil.conf` configuration file automatically, although you will likely need to add peers to the configuration file yourself before Yggdrasil will be usable. See the "Manually Connecting to Peers" section below.
 
-However, autoconfigure mode allows you to quickly start Yggdrasil using sane-ish default settings, with `yggdrasil -autoconf`. In this mode, Yggdrasil will automatically attempt to peer with other nodes on the same subnet, but it also generates a random set of keys each time it is started, and therefore a random IP address.
+However, autoconfigure mode allows you to quickly start Yggdrasil using sane-ish default settings, with `yggdrasil -autoconf`. In this mode, Yggdrasil will automatically attempt to peer with other nodes on the same subnet but **will not attempt to connect to public peers by default**. It also generates a random set of keys each time it is started, and therefore a random IP address each time.
 
 Yggdrasil supports configuration in either HJSON or JSON format. HJSON is the default preferred format, as it has comments, although JSON support is available due to ease of manipulation.
 

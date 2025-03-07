@@ -47,7 +47,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `http://[21a:34aa:c782:3ad2:1bf8:73f8:141:66e8]`
 
 - [IP and Port Checker](http://[200:56bd:a9e9:c1fa:8f99:1d3c:3c84:6507])
-  - `http://[201:30d4:d28:2185:b947:8817:cca5:ef95]`
+  - `http://[200:56bd:a9e9:c1fa:8f99:1d3c:3c84:6507]`
 
 ----
 

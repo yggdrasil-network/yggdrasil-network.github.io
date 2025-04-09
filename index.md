@@ -44,7 +44,7 @@ This is still an alpha-stage project and there may be some breaking changes in t
     </div>
     <div class='row'>
         <img src='assets/images/iconoir/multi-bubble.svg' />
-        <p markdown='1'>Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org).</p>
+        <p markdown='1'><strike>Come and chat to us in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org).</strike> (Currently invite-only due to spam attacks against the Matrix network.)</p>
     </div>
     <div class='row'>
         <img src='assets/images/iconoir/multi-window.svg' />

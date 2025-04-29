@@ -71,3 +71,10 @@ Peers: [
 ```
 
 For more information, see the Tor manual for `IsolateSOCKSAuth`. 
+
+### Multicast peerings in combination with a host firewall
+If your device has a firewall enabled, multicast discovery of peers through `MulticastInterfaces` may not work by default. To get this to work, perform the following three steps:
+
+1. Under `MulticastInterfaces`, set `Port` to a fixed TCP port number;
+2. Allow inbound TCP connectivity to this chosen port number through your firewall — this allows inbound peering connections from other devices;
+3. Allow inbound UDP connectivity on port 9001 (optionally with a destination address of `ff02::114`) through your firewall — this enables your device to hear multicast beacons from other devices.

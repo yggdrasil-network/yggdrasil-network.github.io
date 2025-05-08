@@ -13,7 +13,7 @@ Nodes are equal participants and connect to each other using **peering connectio
 
 All nodes on an Yggdrasil network are routers and will automatically pass traffic to help it get closer to its destination where possible. This means that, even in a network that is only sparsely connected, **all nodes will be reachable** by all other nodes on that network. It doesn't even matter if a node is behind a NAT — once a peering is established, traffic flows in both directions over that peering.
 
-Yggdrasil is also designed to tolerate changes in the network. For example, if a link fails, the network will self-heal and use other links to route traffic where available. This makes it **suitable for use in mesh networks**, where the network topolopy can and often will change.
+Yggdrasil is also designed to tolerate changes in the network. For example, if a link fails, the network will self-heal and use other links to route traffic where available. This makes it **suitable for use in mesh networks**, where the network topology can and often will change.
 
 Each node on the network has a location-independent **cryptographic identity** and, in our [current experimental implementation](implementation.md), stable IPv6 addresses are generated from this key. This allows IPv6-supporting applications to work over Yggdrasil largely without modification. The address is fully mobile and stays with the node as it moves around the network.
 

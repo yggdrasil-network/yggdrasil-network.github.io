@@ -121,6 +121,14 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ----
 
+## Code Forges
+
+### [Radicle](https://radicle.xyz) Nodes
+
+ - `z6MkocYY4dgMjo2YeUEwQ4BP4AotL7MyovzJCPiEuzkjg127@[202:f094:502b:1b03:9e0:2c3d:bc8b:428b]:8776` ([web](http://[202:f094:502b:1b03:9e0:2c3d:bc8b:428b])), hosted by [Lorenz](https://lorenz.leutgeb.xyz) on a VPS in Germany.
+
+----
+
 ## VoIP
 
 ### Hidden Murmur

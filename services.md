@@ -49,6 +49,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [IP and Port Checker](http://[200:56bd:a9e9:c1fa:8f99:1d3c:3c84:6507])
   - `http://[200:56bd:a9e9:c1fa:8f99:1d3c:3c84:6507]`
 
+- [Service list by it's port number](http://[201:72f6:9b56:e977:2d40:c7da:667b:f7a0])
+  - `http://[201:72f6:9b56:e977:2d40:c7da:667b:f7a0]`
+
 ----
 
 ## BitTorrent

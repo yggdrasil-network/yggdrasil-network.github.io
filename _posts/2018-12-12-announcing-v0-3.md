@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Announcing Yggdrasil Network v0.3"
-date:   2018-12-12 00:00:00 -0000
+title: "Announcing Yggdrasil Network v0.3"
+date: 2018-12-12 00:00:00 -0000
 author: Neil Alexander, Arceliar
 ---
 
@@ -112,6 +112,7 @@ You can find these installers on the [Builds page](https://yggdrasil-network.git
 On other platforms, simply download the latest binary for your platform and drop
 it into place. Remember to take a backup of your configuration and normalise it,
 which will add any new options for features in v0.3:
+
 ```
 cp /path/to/yggdrasil.conf /var/backups/yggdrasil.conf
 yggdrasil -useconffile /var/backups/yggdrasil.conf -normaliseconf > /path/to/yggdrasil.conf
@@ -122,12 +123,6 @@ yggdrasil -useconffile /var/backups/yggdrasil.conf -normaliseconf > /path/to/ygg
 Our work is far from over. We still have a list of things that can potentially
 be rolled into future releases and we will be looking to see what we should
 prioritise for our next version.
-
-As always, we'll be hanging around in our Matrix/IRC channel too, so please feel
-free to join and chat to us:
-
-- `#yggdrasil:matrix.org` on Matrix
-- `chat.freenode.net` channel `#yggdrasil` on IRC
 
 A big thanks to our contributors, particularly those who have worked on creating
 packages for Yggdrasil and bringing it to their distributions of choice, and to

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Preparing for Yggdrasil v0.4"
-date:   2021-06-19 21:00:00 +0000
+title: "Preparing for Yggdrasil v0.4"
+date: 2021-06-19 21:00:00 +0000
 author: Neil Alexander, Arceliar
 ---
 
@@ -11,11 +11,11 @@ In the coming weeks, we will be preparing to release Yggdrasil v0.4. This is a s
 
 This release brings some new and significant benefits:
 
-* **Improved mobility performance** — For nodes that move around or change peerings frequently. This was largely impractical with v0.3 as the sessions would have to time out and a new search repeated.
-* **Spanning tree changes are now less disruptive** — Previously it was common for sessions to fail or for traffic to be dropped if the root or parent coordinates changed. This is no longer the case as tree routing is largely only used for bootstrapping DHT paths and determining source routes.
-* **Opportunistic source routing** — Session traffic will now use source routing if available, to ensure that the overall connection quality of sessions is preserved. If a source-routed path fails, the traffic will revert to DHT forwarding seamlessly. 
+- **Improved mobility performance** — For nodes that move around or change peerings frequently. This was largely impractical with v0.3 as the sessions would have to time out and a new search repeated.
+- **Spanning tree changes are now less disruptive** — Previously it was common for sessions to fail or for traffic to be dropped if the root or parent coordinates changed. This is no longer the case as tree routing is largely only used for bootstrapping DHT paths and determining source routes.
+- **Opportunistic source routing** — Session traffic will now use source routing if available, to ensure that the overall connection quality of sessions is preserved. If a source-routed path fails, the traffic will revert to DHT forwarding seamlessly.
 
-However, there are also a number of user-impacting changes coming in this release to be aware of, as we have worked to simplify the codebase and reduce complexity. 
+However, there are also a number of user-impacting changes coming in this release to be aware of, as we have worked to simplify the codebase and reduce complexity.
 
 #### Protocol changes
 
@@ -35,7 +35,7 @@ With the new version, the `SessionFirewall` options are no longer present in the
 
 #### Tunnel routing deprecated
 
-We also took the decision to remove tunnel routing from v0.4. We know that this has been a somewhat popular feature with some users, but it ultimately was the source of a significant number of bugs within v0.3. It increased the complexity of the TUN module substantially and often also didn't behave in the way that users expected, particularly those who were used to configuring Wireguard already. 
+We also took the decision to remove tunnel routing from v0.4. We know that this has been a somewhat popular feature with some users, but it ultimately was the source of a significant number of bugs within v0.3. It increased the complexity of the TUN module substantially and often also didn't behave in the way that users expected, particularly those who were used to configuring Wireguard already.
 
 With the new version, the `TunnelRouting` configuration options are no longer present and will not take effect either. It's still possible to tunnel over Yggdrasil by using a number of other technologies: GRE, IPIP, Wireguard and others, using the Yggdrasil IPs as endpoint addresses for the tunnels. We recommend tunnelling one of these protocols over Yggdrasil instead.
 
@@ -55,7 +55,7 @@ Similar tree and DHT structures were reimplemented in [pinecone](https://github.
 
 ###### Treespace
 
-The spanning tree works largely the same way as before. The only significant differences are with the root selection and updates: the root is the node with the lowest ed25519 public key, rather than the highest sha512sum hash of the public key, and the root updates the timestamp for its spanning tree announcements every 30 *minutes* (previously 30 seconds) with a timeout after 60 *minutes* (previously 60 seconds). Parent selection uses whatever non-looping path has advertised the best root & timestamp combination the longest, i.e. the path that sent the update the fastest, unless that path was unstable, in which case any flapping should push the network towards the fastest stable path.
+The spanning tree works largely the same way as before. The only significant differences are with the root selection and updates: the root is the node with the lowest ed25519 public key, rather than the highest sha512sum hash of the public key, and the root updates the timestamp for its spanning tree announcements every 30 _minutes_ (previously 30 seconds) with a timeout after 60 _minutes_ (previously 60 seconds). Parent selection uses whatever non-looping path has advertised the best root & timestamp combination the longest, i.e. the path that sent the update the fastest, unless that path was unstable, in which case any flapping should push the network towards the fastest stable path.
 
 As before, each node uses the path from the root to itself as the node's distance label. Given the distance labels of two nodes, the distance between them can easily be calculated (it's the sum of the distance from each of them to their last common ancestor in the tree). This is used to do greedy routing in a metric space, but this is only used to find paths for protocol traffic. User traffic uses one of the following two routing schemes.
 
@@ -106,6 +106,6 @@ The encryption and session logic has seen some minor changes as well. Since node
 
 We are looking forward to releasing Yggdrasil v0.4 and are optimistic that the benefits will significantly outweigh any disruption caused at this stage. We've also made a number of other fixes and developed both iOS and Android apps, which we will talk more about soon.
 
-We will be continuing to perfect the release candidates and will make announcements both in our [Matrix channel](https://matrix.to/#/#yggdrasil:matrix.org) and on the blog around the time of the release. Please stay tuned for updates!
+We will be continuing to perfect the release candidates and will make announcements both in our <strike>>Matrix channel</strike> and on the blog around the time of the release. Please stay tuned for updates!
 
 As always, please bear in mind that Yggdrasil is not production-grade software and we ask you to continue to [report problems to us on GitHub](https://github.com/yggdrasil-network/yggdrasil-go/issues).

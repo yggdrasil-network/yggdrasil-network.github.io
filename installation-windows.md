@@ -11,15 +11,13 @@ You can [download the latest installer from GitHub](https://github.com/yggdrasil
 On Windows 7 and Server 2008 R2, you must install hotfix KB2921916 before installing
 Yggdrasil:
 
-* [KB2921916 for 64-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x64.msu)
-* [KB2921916 for 32-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x86.msu)
+- [KB2921916 for 64-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x64.msu)
+- [KB2921916 for 32-bit systems](https://download.wireguard.com/windows-toolchain/distfiles/Windows6.1-KB2921916-x86.msu)
 
 ## Warning
 
 The Windows port does not currently have a maintainer and is therefore not
-as well tested or developed as other platforms. If you are a Windows user that
-is proficient in Go and would like to volunteer to maintain the Windows port,
-please reach out to us in our Matrix channel. 
+as well tested or developed as other platforms.
 
 ## TUN driver
 
@@ -35,7 +33,7 @@ Please note that the OpenVPN TAP driver is **no longer supported**.
 
 Once Yggdrasil is started, a new virtual network adapter will be created called
 `Yggdrasil` by default, although this can be renamed using the `IfName` option
-in the configuration file (below). The virtual network adapter will *not* be
+in the configuration file (below). The virtual network adapter will _not_ be
 visible on the system when Yggdrasil is not running.
 
 ## Configuration
@@ -78,6 +76,7 @@ hosts.
 The `yggdrasilctl` utility is also installed into the same location above. You
 can query Yggdrasil's runtime state using this tool using a Command Prompt or
 PowerShell command line, e.g.
+
 ```
 "C:\Program Files\Yggdrasil\yggdrasilctl.exe" getPeers
 ```

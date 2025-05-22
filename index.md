@@ -43,10 +43,6 @@ This is still an alpha-stage project and there may be some breaking changes in t
         <p markdown='1'>[Install](installation.md) and [configure](configuration.md) Yggdrasil on your own computer or router to join the network.</p>
     </div>
     <div class='row'>
-        <img src='assets/images/iconoir/multi-bubble.svg' />
-        <p markdown='1'><strike>Come and chat to us in our Matrix channel.</strike> (Currently invite-only due to spam attacks against the Matrix network.)</p>
-    </div>
-    <div class='row'>
         <img src='assets/images/iconoir/multi-window.svg' />
         <p markdown='1'>Explore the [internal services](services.md) available on the network operated by our users.</p>
     </div>

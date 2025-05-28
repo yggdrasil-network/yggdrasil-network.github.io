@@ -25,7 +25,7 @@ On the other hand, Yggdrasil requires **very little configuration** in order to 
 
 Nodes do not need to be assigned an address from a centralised authority; they can **generate their own cryptographic identity** and, more importantly, they can keep this address as they roam. Once peering connections are established, routing information is propagated quickly and automatically throughout the network.
 
-This ability to provide full end-to-end routability between all network nodes means that Yggdrasil is potentially an enabling technology for true edge computing scenarios, as well as real-world mesh networks, as it **does not rely on the Internet** to function.
+This ability to provide full end-to-end routability between all network nodes means that Yggdrasil is potentially an enabling technology for true edge computing scenarios, as well as real-world mesh networks. Most importantly, **does not rely on the Internet to function**, therefore it can be used to rapidly build networks in places with little or no existing infrastructure.
 
 ### How does Yggdrasil compare to other projects?
 

@@ -39,12 +39,12 @@ Finally, Yggdrasil has **no native exit nodes**, nor does it have any concept of
 
 Yggdrasil is currently an **alpha-level research project**, with on-going development but actively maintained. Our expectation is that a future beta-quality release should know enough to be compatible in the face of wire format changes, and reasonably feature complete. A “stable” 1.0 release, if it ever happens, would probably be feature complete, with no expectation of future wire format changes, and free of known critical bugs.
 
-The true goal of this project is to test the scalability of the Yggdrasil routing scheme and we are doing so with our [overlay network implementation](implementation.md). Studying the behaviour of the network in the real world is most easily achieved with a large number of participants running the software and joining the public test network. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the network, so please feel free to experiment.
+The primary goal of this project at this stage is to test the scalability of the Yggdrasil routing scheme and we are doing so with our [overlay network implementation](implementation.md). Studying the behaviour of the network in the real world is most easily achieved with a large number of participants running the software and joining the public test network. We've done our best to support [as many platforms as possible](installation.md) and have a number of [public peers](https://github.com/yggdrasil-network/public-peers) that you can connect to in order to join the test network, so please feel free to experiment.
 
-That said, we **recommend against running any mission-critical workloads** over Yggdrasil and it may be dangerous to rely solely on Yggdrasil for any life-or-death situation. There may be failure modes that we don't yet know about yet!
+That said, as an alpha project, it may be dangerous to rely solely on Yggdrasil for any life-or-death workloads. There may be failure modes that we don't yet know about yet!
 
-The project is likely to reach a number of possible outcomes:
+As we see it, the project is likely to reach a number of possible outcomes:
 
+1. The project may end up working perfectly even as the network grows, in which case we will look to standardise it and write better-optimised implementations and/or moving the important parts into other projects
 1. The project may reach a reasonably stable state but never attract a large enough number of users
 1. The project may attract a large enough number of users but reveal inherent design flaws in the process (a learning exercise for a future project or protocol version perhaps)
-1. The project may end up working perfectly even as the network grows, in which case it will become worthwhile to look at writing better-optimised implementations and/or moving the important parts into other projects

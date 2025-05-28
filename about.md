@@ -5,15 +5,15 @@ logo: iconoir/sparks.svg
 
 # About
 
-Yggdrasil is an experimental compact routing scheme that is **fully decentralised** and only requires a small amount of state to work. It is predominanently a shortest-path scheme, whereby the network will attempt to find the most direct path to the destination.
+Yggdrasil is an experimental software router and routing protocol for building effortless multi-hop computer networks. It is a **fully decentralised** design and only requires a small amount of state to work. It is predominanently a shortest-path routing scheme, whereby the network will attempt to find the most direct path from source to destination.
 
 <img src="/assets/images/about/first.svg" style="max-height: 12em; max-width: 22em; margin: 1em; float: right; clear: both;" />
 
-Nodes are equal participants and connect to each other using **peering connections** which carry network traffic. Peerings can be set up over any IP network — whether that's a direct wired or wireless link, a local area network or even the Internet. In some cases, peerings can also be set up automatically by nearby devices on the same network using multicast discovery.
+Every network node is a router capable of forwarding traffic and connect to each other using **peering connections** which carry network traffic. Peerings can be set up over any IP network — whether that's a direct wired or wireless link, a local area network or even the Internet. In some cases, peerings can also be set up automatically by nearby devices on the same network using multicast discovery, making it as simple as connecting devices together with an Ethernet cable or connecting to the same Wi-Fi network.
 
-All nodes on an Yggdrasil network are routers and will automatically pass traffic to help it get closer to its destination where possible. This means that, even in a network that is only sparsely connected, **all nodes will be reachable** by all other nodes on that network. It doesn't even matter if a node is behind a NAT — once a peering is established, traffic flows in both directions over that peering.
+Yggdrasil nodes automatically pass traffic to help it get closer to its destination where possible. This means that, even in a network that is only sparsely connected, **all nodes will be reachable** by all other nodes on that network. It doesn't even matter if a node is behind a NAT — once a peering is established, traffic flows in both directions over that peering.
 
-Yggdrasil is also designed to tolerate changes in the network. For example, if a link fails, the network will self-heal and use other links to route traffic where available. This makes it **suitable for use in mesh networks**, where the network topology can and often will change.
+Yggdrasil is also designed to tolerate changes in the network. For example, if a link fails, the network will quickly self-heal and use other links to route traffic where available. This makes it **suitable for use in mesh networks**, where links go up and down frequently and the network topology often changes.
 
 Each node on the network has a location-independent **cryptographic identity** and, in our [current experimental implementation](implementation.md), stable IPv6 addresses are generated from this key. This allows IPv6-supporting applications to work over Yggdrasil largely without modification. The address is fully mobile and stays with the node as it moves around the network.
 

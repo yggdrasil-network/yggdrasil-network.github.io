@@ -59,7 +59,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - Filters out non-Yggdrasil IP addresses automatically from announcements
 - Yggdrasil-only torrent tracker:
   - `udp://[302:68d0:f0d5:b88d::fdb]:6969` - announce
-    - `http://[302:68d0:f0d5:b88d::fdb]` - statistics
+  - `http://[302:68d0:f0d5:b88d::fdb]` - statistics
 ----
 
 ## Proxy services

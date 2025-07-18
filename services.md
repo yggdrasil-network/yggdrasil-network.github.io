@@ -200,3 +200,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 ## Reticulum nodes
 
 - `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP
+
+----
+
+## FTP
+
+- `ftp://[302:3817:7b11:248c::fdb]` - personal files collection (`21` port, active/passive anonymous mode)

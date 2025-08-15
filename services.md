@@ -167,6 +167,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 ### Masters
 
 - `[300:dee4:d3c0:953b::2019]:27010` - Xash3D / FWGS `0200::/7` server by lost+skunk
+- `[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:27010` - Xash3D / FWGS `0200::/7` server by P.S.
 
 ### Game servers
 

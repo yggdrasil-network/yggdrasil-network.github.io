@@ -196,6 +196,13 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
  
 ----
+## Monero Nodes
+
+- [XMR.GD](https://xmr.gd/) - Public (Mainnet) Monero Node available on Yggdrasil (And clearnet, Tor, and I2P). Sponsored by [IncogNET](https://incognet.io/)
+  - `ygg.xmr.gd:18089`
+  - `201:2d47:2607:ecaf:2909:2dc5:926d:a8df:18089`
+
+----
 
 ## Reticulum nodes
 

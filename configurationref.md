@@ -80,6 +80,21 @@ The MTU of the interface.
 
 Whether or not the node info should automatically include build information, i.e. the operating system and architecture and the Yggdrasil build version. If privacy is enabled, the node info will not contain this information.
 
+### `PrivateKey`
+
+The private key for this node, specified as a hexadecimal string. If not specified, a random private key will be generated on startup.
+
+### `PrivateKeyPath`
+
+The path to a file containing the private key for this node. This allows storing the private key in an external file instead of embedding it directly in the configuration file.
+
+If both `PrivateKey` and `PrivateKeyPath` are specified, `PrivateKeyPath` takes precedence.
+
+A key or keypair can be generated with:
+```
+openssl genpkey -algorithm Ed25519 -out private.key -outpubkey public.key
+```
+
 ### `NodeInfo`
 
 A free-form section that the node operator can use to put JSON-formatted metadata that may be made available to other nodes.

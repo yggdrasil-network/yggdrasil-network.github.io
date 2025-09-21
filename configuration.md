@@ -44,6 +44,14 @@ If you want to see the original format of the configuration file, or convert bet
 
 Normalising the configuration also adds any missing configuration items with their default values. This can be useful when upgrading to a newer version of Yggdrasil that adds new configuration options. Many of our distribution packages normalise the configuration automatically during upgrade.
 
+### Exporting keys to external files
+
+You can export the private key from an existing configuration file to a separate file:
+
+| **Export private key**: | `yggdrasil -useconffile /etc/yggdrasil.conf -exportkey > yggdrasil.key` |
+
+Once exported, you can remove the `PrivateKey` line from your configuration file and add a `PrivateKeyPath` entry pointing to the exported key file instead.
+
 ### Manually Connecting to Peers
 
 Yggdrasil can be configured to connect to other peers by adding entries into the `Peers` configuration section. At startup, Yggdrasil will attempt to open a connection to these peers.

@@ -5,7 +5,7 @@ sitemap: true
 
 # Installing on NixOS
 
-Yggdrasil is supported on NixOS. Is available in the stable channels unstable channels of nixpkgs with a [NixOS module](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/networking/yggdrasil.nix) for easy configuration.
+Yggdrasil is supported on NixOS. Is available in the stable channel and unstable channel of nixpkgs with a [NixOS module](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/networking/yggdrasil.nix) for easy configuration.
 
 ## Preparation
 
@@ -52,6 +52,8 @@ Now proceed to the configuration.
   };
 }
 ```
+
+Copy the contents in a `yggdrasil.nix` file or something similar and make sure to include it to your NixOS configuration.
 
 ## After configuration
 

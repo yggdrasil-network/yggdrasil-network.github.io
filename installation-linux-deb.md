@@ -18,6 +18,8 @@ Install the package using `dpkg -i filename.deb`.
 
 ## Package install from the S3 repository
 
+**NOTE!** The Debian repository below was issued with a new key `1840CDAC6011C5EA` on 2025-11-11.
+
 On some platforms, e.g. Raspberry Pi, you may need to start by installing
 `dirmngr` if it is not already available:
 ```
@@ -29,7 +31,7 @@ Then import the repository key to your `gpg` keyring and export it to your
 ```
 sudo mkdir -p /usr/local/apt-keys
 gpg --fetch-keys https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt
-gpg --export BC1BF63BD10B8F1A | sudo tee /usr/local/apt-keys/yggdrasil-keyring.gpg > /dev/null
+gpg --export 1C5162E133015D81A811239D1840CDAC6011C5EA | sudo tee /usr/local/apt-keys/yggdrasil-keyring.gpg > /dev/null
 ```
 
 Add the repository into your `apt` sources:

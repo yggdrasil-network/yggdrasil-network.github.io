@@ -52,6 +52,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Services by it's port number](http://[220:73c5:19cd:3cba:de5d:b065:807f:8b67])
   - `http://[220:73c5:19cd:3cba:de5d:b065:807f:8b67]`
 
+- [Yggdrasil search engine](http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8])
+  - `http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8]` 
+
 ----
 
 ## BitTorrent

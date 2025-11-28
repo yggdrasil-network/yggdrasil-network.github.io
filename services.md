@@ -216,3 +216,5 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 ## Reticulum nodes
 
 - `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP
+- `202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148` port `4242` TCP
+- [more...](https://github.com/markqvist/Reticulum/wiki/Community-Node-List#yggdrasil)

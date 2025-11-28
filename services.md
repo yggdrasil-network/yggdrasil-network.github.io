@@ -55,6 +55,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil search engine](http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8])
   - `http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8]` 
 
+- [Ukrainian community forums](http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148])
+  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]` 
+
 ----
 
 ## BitTorrent

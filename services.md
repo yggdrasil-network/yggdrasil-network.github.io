@@ -67,8 +67,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - Without DNS: `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/announce` (statistics at `http://[200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7]/stats`)
   - Filters out non-Yggdrasil IP addresses automatically from announcements
 - Yggdrasil-only torrent tracker:
-  - `udp://[302:68d0:f0d5:b88d::fdb]:6969` - announce
-    - `http://[302:68d0:f0d5:b88d::fdb]` - statistics
+  - `udp://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6969` - announce
+    - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6969` - stats
 ----
 
 ## Proxy services
@@ -210,5 +210,4 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 ## Reticulum nodes
 
 - `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP
-- `202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148` port `4242` TCP
 - [more...](https://github.com/markqvist/Reticulum/wiki/Community-Node-List#yggdrasil)

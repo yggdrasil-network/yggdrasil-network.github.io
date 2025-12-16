@@ -16,7 +16,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Thingylabs GmbH](https://yyy.thingylabs.io/) - An IT consultancy for Web, Cloud, and Apps.
   - `https://yyy.thingylabs.io/`
   - `http://[22a:bd80:1588:5365:e467:c5fa:6123:5018]/`
- 
+
 - [IncogNET LLC](https://incognet.io/) - Privacy and Free Speech Focused ISP - 5Gbps AMD Epyc VPS, Domain Registrar, WireGuard VPN, Etc.
   - `http://ygg.incognet.io/`
   - `http://[202:7f4c:a4fe:e85b:4410:21f4:7b8c:99c]/`
@@ -53,10 +53,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `http://[220:73c5:19cd:3cba:de5d:b065:807f:8b67]`
 
 - [Yggdrasil search engine](http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8])
-  - `http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8]` 
+  - `http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8]`
 
 - [Ukrainian community forums](http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148])
-  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]` 
+  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]`
 
 ----
 
@@ -88,6 +88,14 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `obfs4 [200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7917 79F9F7CBD0E2A4458F11B7874008D783BCF5C523 cert=3ues7AA498O9YrQ1wsdWyz3/n3YBXN88wXP8mppkE0lTw1YB6FSlDMkm3Ry6jXlj0phzMg iat-mode=0` or `[200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7918 79F9F7CBD0E2A4458F11B7874008D783BCF5C523` operated by ValeriusN ([telegram](https://t.me/valeriusN))
 
 ----
+
+## XMPP
+
+### Hell
+
+- hell.am XMPP server, currently registrations are open.
+- TLS should be disabled.
+- join `xmpp:yggdrasil@styx.hell.am?join`
 
 ## IRC
 
@@ -195,7 +203,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [ygg.thingylabs.io/speedtest.html](https://ygg.thingylabs.io/speedtest.html) sponsored by [Thingylabs](https://www.thingylabs.io/)
   - `iperf3 -6 -c ygg-only.thingylabs.io`
   - `iperf3 -4 -c ygg-uplink.thingylabs.io`
- 
+
 ----
 ## Monero Nodes
 

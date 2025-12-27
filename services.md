@@ -56,10 +56,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `http://[200:b48d:469e:c7c7:3e13:c41d:ba4d:d2b8]` 
 
 - [Ukrainian community forums](http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148])
-  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]` 
-
-- [Freedit instance: Reddit-like forums without JavaScript or email requirements](http://[201:9d6a:f4e2:32d9:b005:cee0:2e6:47cd])
-  - `http://[201:9d6a:f4e2:32d9:b005:cee0:2e6:47cd]` 
+  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]`
 
 ----
 

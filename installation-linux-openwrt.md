@@ -7,7 +7,7 @@ sitemap: true
 
 `yggdrasil` v0.4+ packages are available in OpenWRT since 17.01!
 
-To configure Yggdrasil with the LuCI web interface, install the package `luci-app-yggdrasil`.
+To configure Yggdrasil with the LuCI web interface, install the package `luci-proto-yggdrasil`.
 
 ## Configuration
 

@@ -87,7 +87,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 *Note:* If you modified your `torrc` file to exclude groups of non-exit nodes (e.g. using `ExcludeNodes` with country codes, using `ExcludeExitNodes` is fine), Tor will strictly follow the constraints. However because Yggdrasil addresses are not and will not be listed in any IP-to-country databases, Tor cannot guarantee that bridge you entered falls under whatever exclusion policies you specified and will refuse to connect to bridge. In that case you can add `GeoIPExcludeUnknown 0` to your `torrc`.
 
-- `obfs4 [218:4feb:a509:9db2:2b34:6e7e:e071:5dee]:1992 F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4 cert=0GcjnEnZ0rJ8/nfxo4ZSkjMZ0fqHSrvj/MdwEtbbuzx8qgqFTaqHTuWelGw2MxJ5wW2QaQ iat-mode=0` operated by Marek Küthe ([homepage](https://p2p-node.de), [metrics](https://metrics.torproject.org/rs.html#details/F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4))
+- `Bridge [218:4feb:a509:9db2:2b34:6e7e:e071:5dee]:1991 F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4` operated by Marek Küthe ([homepage](https://mk16.de/tor/), [metrics](https://metrics.torproject.org/rs.html#details/F805F6B4E5E203EFE2A7FFB1E5042AFE8BD986B4))
+- `Bridge [220:f022:cd6c:22a9:5285:79e2:2e19:b66a]:1991 6580023D474DD3C06920027530C3B5E39B89DC03` operated by Marek Küthe ([homepage](https://mk16.de/tor/), [metrics](https://metrics.torproject.org/rs.html#details/6580023D474DD3C06920027530C3B5E39B89DC03))
+- `Bridge [219:a32f:307b:8372:25d3:e1d0:c8fb:d2f6]:1991 49A53936AF2895A1612603AAA3C1CF8A01830157` operated by Marek Küthe ([homepage](https://mk16.de/tor/), [metrics](https://metrics.torproject.org/rs.html#details/49A53936AF2895A1612603AAA3C1CF8A01830157))
 - `obfs4 [200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7917 79F9F7CBD0E2A4458F11B7874008D783BCF5C523 cert=3ues7AA498O9YrQ1wsdWyz3/n3YBXN88wXP8mppkE0lTw1YB6FSlDMkm3Ry6jXlj0phzMg iat-mode=0` or `[200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7918 79F9F7CBD0E2A4458F11B7874008D783BCF5C523` operated by ValeriusN ([telegram](https://t.me/valeriusN))
 
 ----

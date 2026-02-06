@@ -117,6 +117,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - Join `#en` for english discussions
 - More information can be found at the [ILITA homepage](http://[324:71e:281a:9ed3::41]/) with additional information about access
 
+### YGGverse
+
+- `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6680` - Shared ZNC bouncer for Yggdrasil, Mycelium, I2P, or Tor channels
+
 ----
 
 ## DNS

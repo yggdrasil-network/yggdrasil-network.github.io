@@ -118,7 +118,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### YGGverse
 
-- `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6680` - Shared ZNC bouncer for Yggdrasil, Mycelium, I2P, or Tor channels
+- `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6680` - ZNC bouncer for Yggdrasil, Mycelium, I2P, or Tor channels
 
 ----
 
@@ -140,7 +140,11 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### [Radicle](https://radicle.xyz) Nodes
 
- - `z6MkocYY4dgMjo2YeUEwQ4BP4AotL7MyovzJCPiEuzkjg127@[202:f094:502b:1b03:9e0:2c3d:bc8b:428b]:8776` ([web](http://[202:f094:502b:1b03:9e0:2c3d:bc8b:428b])), hosted by [Lorenz](https://lorenz.leutgeb.xyz) on a VPS in Germany.
+- `z6MkocYY4dgMjo2YeUEwQ4BP4AotL7MyovzJCPiEuzkjg127@[202:f094:502b:1b03:9e0:2c3d:bc8b:428b]:8776` ([web](http://[202:f094:502b:1b03:9e0:2c3d:bc8b:428b])), hosted by [Lorenz](https://lorenz.leutgeb.xyz) on a VPS in Germany.
+- `z6Mkvky2mnSYCTUMKRdAUoZXBXLLKtnWEkWeYQcGjjnmobAU@[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8776`
+    * [Selective](https://radicle.xyz/guides/seeder#a-selective-seeding-policy) seed, [mention](https://mastodon.social/@yggverse) to add an exception!
+    - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8788` - JSON/API
+    - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8780` - Web explorer
 
 ----
 

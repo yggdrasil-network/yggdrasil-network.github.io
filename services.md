@@ -211,6 +211,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `ygg.xmr.gd:18089`
   - `201:2d47:2607:ecaf:2909:2dc5:926d:a8df:18089`
 
+- [xmr.nadeko.net](https://nadeko.net/monero-node) - Public (Mainnet) Monero Node available on Yggdrasil (And clearnet, Tor, and I2P). Hosted by [Fijxu](https://nadeko.net/)
+  - `200:28fa:d807:e104:5a13:e2c4:eaf:445f:18081`
+
 ----
 
 ## Reticulum nodes

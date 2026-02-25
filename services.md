@@ -223,3 +223,13 @@ Note: do not use square brackets in host!
 
 - `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP
 - [more...](https://github.com/markqvist/Reticulum/wiki/Community-Node-List#yggdrasil)
+
+----
+
+## Rust
+
+### Kellnr
+
+The registry for Rust crates
+
+* `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8180` | http://ygg.ua.srv:8180

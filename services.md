@@ -198,6 +198,20 @@ Note: do not use square brackets in host!
 
 ----
 
+## Hytale
+
+- Bivrost — US-East (Residential FTTH) — No mods — Cross-overlay — Best-effort support — Simple rule(s): Minimal griefing.
+  - `202:79eb:f1b7:799a:f8be:8683:1abd:5338`
+
+----
+
+## Xonotic
+
+- Bivrost — US-East (Ashburn VA) — Clearnet and Cross-overlay — Best-effort support
+   - Press **`** within Xonotic and type or paste: **connect [201:ac2f:89eb:2afe:5f3d:9db9:a7e9:2f75]:26000**
+   
+----
+
 ## NNCP
 
 - `203:5096:b2e:5bf3:b3c8:194a:a64f:dd0d` port `5400`. This is the [quux.org NNCP public relay](https://www.complete.org/quux-org-nncp-public-relay) hosted by [jgoerzen](https://www.complete.org/john-goerzen/).

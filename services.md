@@ -28,6 +28,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil Web directory](http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/)
   - `http://[21e:a51c:885b:7db0:166e:927:98cd:d186]/`
 
+- [Yggdrasil Image-Video-Music Hosting](http://[201:1592:3bff:105:b35f:c25b:4d3:c056]/)
+  - `http://201:1592:3bff:105:b35f:c25b:4d3:c056]/`
+  - `https://imgdump.lol` For Clearnet
+
 - [Yggdrasil Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
   - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
 

@@ -189,16 +189,29 @@ Note: do not use square brackets in host!
 
 ## Half-Life
 
-[Xash3D / FWGS](https://github.com/FWGS/xash3d-fwgs) servers by [lost+skunk](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/user:skunky)
-
-### Master
-
-- `[300:dee4:d3c0:953b::2019]:27010`
+[Xash3D / FWGS](https://github.com/FWGS/xash3d-fwgs) servers ([Documentation](http://howto.ygg.at/yggdrasil:games:half_life_on_xash3d))
 
 ### Game servers
 
-- `[300:eaff:7fab:181b::e949]:7588`
-- `[301:f137:d1ac:920e::2019]:27015` - 9 bots, Yggdrasil only
+- `[300:eaff:7fab:181b::e949]:7588` - [lost+skunk](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/user:skunky)
+- `[301:f137:d1ac:920e::2019]:27015` - lost+skunk, 9 bots, Yggdrasil only
+- `[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:27015` - YGGverse, no bots, crossfire
+
+### Master
+
+- `[300:dee4:d3c0:953b::2019]:27010` - [lost+skunk](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/user:skunky)
+- `[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:27010` - YGGverse
+
+### Status
+
+- `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:27080` - [HLState](https://github.com/YGGverse/hlstate-rs) web-monitor
+
+## NotBlood
+
+[NotBlood](https://github.com/clipmove/NotBlood) game servers ([Documentation](http://howto.ygg.at/yggdrasil:games:notblood))
+
+- `[201:b8dc:421d:4b4d:add6:af78:f9d6:f18c]:23513`
+- `[201:f044:ca34:9cc9:2946:ad06:6f2d:5c4e]:23513`
 
 ----
 

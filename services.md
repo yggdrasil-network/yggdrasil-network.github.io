@@ -122,6 +122,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ### YGGverse
 
+- `202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148` port `6667`
 - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6680` - ZNC bouncer for Yggdrasil, Mycelium, I2P, or Tor channels
 
 ----

@@ -125,6 +125,13 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148` port `6667`
 - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6680` - ZNC bouncer for Yggdrasil, Mycelium, I2P, or Tor channels
 
+
+### sid
+
+- No LIST, very limited commands, focused on privacy and a simple chatting experience. Modeless channels only, prefixed with + as opposed to #. No channel history or logs are kept.
+  - `ygg.strcat.su` port `6667`
+  - `203:fc99:260b:f66:e5c4:180a:f1ee:b2d5` port `6667`
+
 ----
 
 ## DNS
@@ -138,7 +145,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
-
+- `202:1d4e:724e:de52:8273:e2b5:4988:a9ba` port `53`, hosted by [strcat.su](https://strcat.su), Bucharest, Romania
+  - [DNSCrypt](https://dnscrypt.info/public-servers/)
 ----
 
 ## Code Forges

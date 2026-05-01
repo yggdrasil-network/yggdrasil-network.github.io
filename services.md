@@ -153,6 +153,13 @@ Note: do not use square brackets in host!
     - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8788` - JSON/API
     - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8780` - Web explorer
 
+### Gitea and Forgejo
+
+- [Deavmi's Personal Gitea](http://ygg.old.git.deavmi.assigned.network)
+  - `http://[300:8101:e046:d91e::2]`
+- [Deavmi's Personal Forejo](http://ygg.new.git.deavmi.assigned.network)
+  - `http://[300:8101:e046:d91e::3]`
+
 ----
 
 ## VoIP

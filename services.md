@@ -130,7 +130,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 - No LIST, very limited commands, focused on privacy and a simple chatting experience. Modeless channels only, prefixed with + as opposed to #. No channel history or logs are kept.
   - `ygg.strcat.su` port `6667`
-  - `203:fc99:260b:f66:e5c4:180a:f1ee:b2d5` port `6667`
+  - `200:2224:92a8:5138:f21b:15b4:1787:acab` port `6667`
 
 ----
 

@@ -186,6 +186,8 @@ Note: do not use square brackets in host!
 - `200:8ce3:6def:9d4d:a976:9dfb:f0a6:91ce` port `123`, hosted by [Unkn0wnCat](https://kevink.dev), stratum 2, [NTP Pool Monitored](https://www.ntppool.org/scores/45.9.61.155)
 - `201:72f6:9b56:e977:2d40:c7da:667b:f7a0` port `123`, hosted by [lcharles123](https://github.com/lcharles123), Located in US
   - `ygg.nerdvm.mywire.org`
+- `200:ee1d:70c7:13ee:3395:2255:6bf0:9c30` port `123`, hosted by [Octopixel](https://github.com/Octopixel40), Located in EU
+- `205:f771:de8a:d89d:12d4:9263:7902:201a` port `123`, hosted by [Octopixel](https://github.com/Octopixel40), Located in EU
 
 ----
 

@@ -81,6 +81,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
   - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
 
+- Yggdrasil http(s) proxies hosted by [strcat](http://strcat.su):
+  - `200:c0fc:de66:7a1:443a:ddd:df92:e7db` port `1025`
+  - `201:5f3a:888d:b113:5e18:126c:ad91:2272` port `1025`
+
 - Community-driven proxy catalog with configuration examples by [YGGverse](https://github.com/YGGverse/YGGbro):
   - `http://[316:c51a:62a3:8b9::4]/YGGverse/YGGbro`
 

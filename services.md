@@ -81,6 +81,10 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
   - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
 
+- Yggdrasil http(s) proxies hosted by [strcat](http://strcat.su):
+  - `200:c0fc:de66:7a1:443a:ddd:df92:e7db` port `1025`
+  - `201:5f3a:888d:b113:5e18:126c:ad91:2272` port `1025`
+
 - Community-driven proxy catalog with configuration examples by [YGGverse](https://github.com/YGGverse/YGGbro):
   - `http://[316:c51a:62a3:8b9::4]/YGGverse/YGGbro`
 
@@ -145,8 +149,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
-- `202:1d4e:724e:de52:8273:e2b5:4988:a9ba` port `53`, hosted by [strcat.su](https://strcat.su), Bucharest, Romania
-  - [DNSCrypt](https://dnscrypt.info/public-servers/)
+- `202:1d4e:724e:de52:8273:e2b5:4988:a9ba` port `53`, non-filtering, hosted by [strcat.su](https://strcat.su)
+  
 ----
 
 ## Code Forges

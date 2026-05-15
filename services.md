@@ -81,10 +81,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
   - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
 
-- Yggdrasil http(s) proxies hosted by [strcat](http://strcat.su):
-  - `200:c0fc:de66:7a1:443a:ddd:df92:e7db` port `1025`
-  - `201:5f3a:888d:b113:5e18:126c:ad91:2272` port `1025`
-
 - Community-driven proxy catalog with configuration examples by [YGGverse](https://github.com/YGGverse/YGGbro):
   - `http://[316:c51a:62a3:8b9::4]/YGGverse/YGGbro`
 
@@ -134,7 +130,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 - No LIST, very limited commands, focused on privacy and a simple chatting experience. Modeless channels only, prefixed with + as opposed to #. No channel history or logs are kept.
   - `ygg.strcat.su` port `6667`
-  - `200:2224:92a8:5138:f21b:15b4:1787:acab` port `6667`
+  - `200:a754:c7aa:3f12:5ab:d078:d8d4:b59c` port `6667`
 
 ----
 

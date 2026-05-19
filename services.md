@@ -32,8 +32,8 @@ The following services are available on the Yggdrasil Network, courtesy of our c
   - `http://201:1592:3bff:105:b35f:c25b:4d3:c056]/`
   - `https://imgdump.lol` For Clearnet
 
-- [Yggdrasil Map](http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/)
-  - `http://[21e:e795:8e82:a9e2:ff48:952d:55f2:f0bb]/`
+- [Yggdrasil Map](227:bc24:9a82:e290:7f4a:f992:2ef6:5b34]/)
+  - `http://[227:bc24:9a82:e290:7f4a:f992:2ef6:5b34]/`
 
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`

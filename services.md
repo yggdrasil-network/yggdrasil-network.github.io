@@ -150,6 +150,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `302:7991::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Saint Petersburg, Russia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `202:1d4e:724e:de52:8273:e2b5:4988:a9ba` port `53`, non-filtering, hosted by [strcat.su](https://strcat.su)
+- `[300:7c75:d590:c5d8::100]`, port `53`, hosted by [evasil](https://github.com/evasil/), Melbourne, Australia. Alfis and clearnet, no filters.
   
 ----
 

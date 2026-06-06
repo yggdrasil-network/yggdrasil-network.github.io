@@ -273,3 +273,7 @@ Note: do not use square brackets in host!
 The registry for Rust crates
 
 * `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:8180` | http://ygg.ua.srv:8180
+
+## Music
+- [Byteback Music Studio](https://bytebackmusic.org)
+- `http://[200:16b8:aa57:ab3c:e47e:4bc2:cdb2:a67c]/index.html`

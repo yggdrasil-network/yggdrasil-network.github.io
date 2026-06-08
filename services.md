@@ -77,9 +77,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## Proxy services
 
-- Proxy to other networks like Yggdrasil, Tor, I2P and clearnet hosted by [acetone](http://[324:71e:281a:9ed3::ace]/):
-  - SOCKS: `324:71e:281a:9ed3::fa11` port `1080`
-  - HTTP: `324:71e:281a:9ed3::fa11` port `3128`
+- Proxy to other networks like Yggdrasil, Tor, I2P and clearnet hosted by acetone ([webpage](http://[224:7321:62c9:6904:9579:c3c6:5eb7:587f]/)):
+  - SOCKS: `224:7321:62c9:6904:9579:c3c6:5eb7:587f` port `1080`
+  - HTTP: `224:7321:62c9:6904:9579:c3c6:5eb7:587f` port `3128`
 
 - Yggdrasil http(s) proxies hosted by [strcat](http://strcat.su):
   - `200:c0fc:de66:7a1:443a:ddd:df92:e7db` port `1025`

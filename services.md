@@ -258,7 +258,7 @@ Note: do not use square brackets in host!
 
 ## Reticulum nodes
 
-- `200:73eb:2e4:14be:aac7:90b3:784b:71a3` port `4242` TCP
+- `y.rns.rothbard.lab.networks.deavmi.assigned.network` (`300:3dfd:cdb:5b45::8`) port `4242` TCP
 - [more...](https://github.com/markqvist/Reticulum/wiki/Community-Node-List#yggdrasil)
 
 ----

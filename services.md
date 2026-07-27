@@ -95,6 +95,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - `Bridge [220:f022:cd6c:22a9:5285:79e2:2e19:b66a]:1991 6580023D474DD3C06920027530C3B5E39B89DC03` operated by Marek Küthe ([homepage](https://mk16.de/tor/), [metrics](https://metrics.torproject.org/rs.html#details/6580023D474DD3C06920027530C3B5E39B89DC03))
 - `Bridge [219:a32f:307b:8372:25d3:e1d0:c8fb:d2f6]:1991 49A53936AF2895A1612603AAA3C1CF8A01830157` operated by Marek Küthe ([homepage](https://mk16.de/tor/), [metrics](https://metrics.torproject.org/rs.html#details/49A53936AF2895A1612603AAA3C1CF8A01830157))
 - `obfs4 [200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7917 79F9F7CBD0E2A4458F11B7874008D783BCF5C523 cert=3ues7AA498O9YrQ1wsdWyz3/n3YBXN88wXP8mppkE0lTw1YB6FSlDMkm3Ry6jXlj0phzMg iat-mode=0` or `[200:ba50:4b2c:8dc9:9529:38de:5677:57a0]:7918 79F9F7CBD0E2A4458F11B7874008D783BCF5C523` operated by ValeriusN ([telegram](https://t.me/valeriusN))
+- `obfs4 [200:a48e:101d:c12a:b859:ee0e:3b83:382c]:8082 1677AE8B9E02457ED382CCDF80DF26554CD95597 cert=9Rf3PQu2zgcnRPEQd1VSA22X/9MMVpB6n1K9h/OIpvBGHuYj4jpxy2ISlvKdkIujJSzpIg iat-mode=0` operated by biley929 ([GitHub](https://github.com/biley929))
 
 ----
 

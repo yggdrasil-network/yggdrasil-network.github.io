@@ -203,6 +203,9 @@ Note: do not use square brackets in host!
 - `228:39cf:5792:fbd1:d5c7:a750:7ab9:4389` **26.1.2** - Vanilla survival server with minimal mods. The only rule is to not grief.
 - `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.21.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
 - `203:b2b2:24a0:2e7d:a851:3786:3566:a0a3` **1.21.11** - Vanilla survival server, overworld is desert only. Site is [here](http://[203:b2b2:24a0:2e7d:a851:3786:3566:a0a3]/minecraft/)
+- `mc.spectresmp.srv` **Java Edition** - SpectreSMP. Online since 2023. Available on Yggdrasil and clearnet.
+  - **SMP** - Classic survival multiplayer with grief protection. Build, explore, and trade knowing your builds are safe. Grief protection enabled, land claiming.
+  - **SMP2** - No protection, but hacked clients are not allowed.
 
 ### Minetest
 

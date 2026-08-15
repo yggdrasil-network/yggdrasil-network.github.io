@@ -156,7 +156,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## Code Forges
 
-### [Radicle](https://radicle.xyz) Nodes
+### [Radicle](https://radicle.dev) Nodes
 
 Note: do not use square brackets in host!
 

@@ -237,9 +237,6 @@ Note: do not use square brackets in host!
 
 ## Xonotic
 
-- Bivrost — US-East (Ashburn VA) — Clearnet and Cross-overlay — Best-effort support
-   - Press **`** within Xonotic and type or paste: **connect [201:ac2f:89eb:2afe:5f3d:9db9:a7e9:2f75]:26000**
-   
 ----
 
 ## NNCP

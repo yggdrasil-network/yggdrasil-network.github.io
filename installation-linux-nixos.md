@@ -9,7 +9,7 @@ Yggdrasil is supported on NixOS. Is available in the stable channels unstable ch
 
 ## Preparation
 
-Before configuring Yggdrasil, you will need to get a `PrivateKey` first. To get it, simply run `nix-shell -p yggdrasil --run "yggdrasil -genconf -json"`, and copy the `PrivateKey` generated for you.
+Before configuring Yggdrasil, you will need to get a `PrivateKey` first. To get it, simply run `nix-shell -p yggdrasil --run "yggdrasil -genconf -json | yggdrasil -useconf -exportkey"`, and copy the output to your clipboard, it should start with `-----BEGIN PRIVATE KEY-----`.
 
 Now proceed to the configuration.
 
@@ -20,7 +20,17 @@ Now proceed to the configuration.
   services.yggdrasil = {
     enable = true;
     settings = {
-      PrivateKey = "<PrivateKey_generated_in_the_preparation";
+      # Warning: Do not put private keys directly in the Nix store as they would
+      # be world-readable!
+      # There is many other ways you can set `privateKeyPath`,
+      # this way is not recommended but is the simplest one.
+      # If you like to publish your NixOS configurations to a git server,
+      # you should be using sops-nix or Agenix instead.
+      privateKeyPath = "${pkgs.writeText "yggdrasil-private-key" ''
+        -----BEGIN PRIVATE KEY-----
+        <PASTE HERE your ~65 char length Private Key generated with the command above>
+        -----END PRIVATE KEY-----
+      ''}";
       Peers = [
         # Example peers list, modify it according to your needs
         "tcp://1.1.1.1:1234?password=1234"

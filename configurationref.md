@@ -45,6 +45,12 @@ Additional settings can optionally be added as query-string parameters to the en
 
 * `password=PASSWORD` — optionally require a password to connect to this listener, the connecting node's password must match or the connection will fail, limited to 64 characters
 
+### `AdminListen`
+
+An IP address or UNIX socket to listen for admin connections. By default it listens on `unix:///var/run/yggdrasil.sock` for Linux, OpenBSD, FreeBSD and MacOS, and on `tcp://localhost:9001` for Windows and other operating systems.
+
+You may want to set `AdminListen` if you run multiple yggdrasil node in the same machine.
+
 ### `MulticastInterfaces`
 
 Controls which interfaces to enable or disable multicast peer discovery on. The default varies by platform.

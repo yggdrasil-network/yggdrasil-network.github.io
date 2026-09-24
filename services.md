@@ -112,14 +112,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - Accessible via Yggdrasil at the following servers:
   - `203:b00a:1684:860d:880f:ea9c:92dc:fabb` port `6667`
 
-### ILITA IRC
-
-- Primarily Russian IRC network of users and developers of meshnets and overlay networks (like I2P) — English is fine too
-- Accessible via Yggdrasil at the following server:
-  - `324:71e:281a:9ed3::41` port `6667`
-- Join `#en` for english discussions
-- More information can be found at the [ILITA homepage](http://[324:71e:281a:9ed3::41]/) with additional information about access
-
 ### YGGverse
 
 - `202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148` port `6667`

@@ -41,7 +41,7 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [HowTo Ygg: Yggdrasil wiki](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/)
   - `http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/`
 
-- [Acetone's service node](http://[324:71e:281a:9ed3::ace]/)
+- [Acetone's site mirror](http://[324:71e:281a:9ed3::ace]/)
   - `http://[324:71e:281a:9ed3::ace]/`
 
 - [Nikat's homepage](https://[302:a2a5:dead:ded::a2a5]/)
@@ -136,9 +136,6 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 
 ## DNS
 
-- `324:71e:281a:9ed3::53` port `53`, hosted by [acetone](http://[324:71e:281a:9ed3::ace]/)
-  - [Alfis](https://github.com/Revertron/Alfis), [Meshname](https://github.com/zhoreeq/meshname), [OpenNIC](https://www.opennic.org/) and legacy clearnet
-  - At the same address, port `80`, [Mario DNS tool](https://notabug.org/acetone/mario-dns) is [available](http://[324:71e:281a:9ed3::53])
 - `302:db60::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Praha, Czechia
   - [Alfis](https://github.com/Revertron/Alfis), [AdGuard DNS](https://github.com/AdguardTeam/AdGuardHome)
 - `300:6223::53` port `53`, hosted by [Revertron](https://t.me/Revertron), Bratislava, Slovakia
@@ -168,15 +165,6 @@ Note: do not use square brackets in host!
   - `http://[300:8101:e046:d91e::2]`
 - [Deavmi's Personal Forejo](http://ygg.new.git.deavmi.assigned.network)
   - `http://[300:8101:e046:d91e::3]`
-
-----
-
-## VoIP
-
-### Hidden Murmur
-
-- [Web page](http://[324:71e:281a:9ed3::cafe]/). Mumble server is accessible from Yggdrasil, Tor and I2P.
-  - `324:71e:281a:9ed3::cafe` port `64738`
 
 ----
 

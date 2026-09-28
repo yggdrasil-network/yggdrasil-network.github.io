@@ -66,6 +66,14 @@ If public keys are specified, whitelisting is enabled and only nodes with those 
 
 **NOTE:** This is not a firewall and does not control who can send you traffic over the Yggdrasil Network or reach open ports and services on your machine. For that you need an IPv6 firewall.
 
+### `GroupPassword`
+
+Introduced in Yggdrasil 0.5.14, the group password allows forming a closed network on top of the wider network. When the group password is set, session traffic can only be exchanged with other nodes that have the same group password configured. Traffic to or from other Yggdrasil nodes that don't share a group password is dropped.
+
+The group password can be a maximum of 32 characters and is never sent over the wire. Peering connections are not affected by the group password. Nodes continue to act as routers and will forward traffic for other nodes regardless.
+
+When the group password is set, you will no longer be able to reach services on the public testnet.
+
 ### `IfName`
 
 Determines which TUN interface to use. The default is set to `auto` which will try to set up a TUN automatically. If set to `none`, TUN will be disabled and the node will run in headless router-only mode.

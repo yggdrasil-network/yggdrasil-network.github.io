@@ -70,7 +70,7 @@ If public keys are specified, whitelisting is enabled and only nodes with those 
 
 Introduced in Yggdrasil 0.5.14, the group password allows forming a closed network on top of the wider network. When the group password is set, session traffic can only be exchanged with other nodes that have the same group password configured. Traffic to or from other Yggdrasil nodes that don't share a group password is dropped.
 
-The group password can be a maximum of 32 characters and is never sent over the wire. Peering connections are not affected by the group password. Nodes continue to act as routers and will forward traffic for other nodes regardless.
+Longer passwords are better from a security perspective, but the password is hashed and used as a handshake salt, it is never sent over the wire. Peering connections are not affected by the group password. Nodes continue to act as routers and will forward traffic for other nodes regardless.
 
 When the group password is set, you will no longer be able to reach services on the public testnet.
 

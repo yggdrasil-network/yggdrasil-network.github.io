@@ -5,7 +5,7 @@ sitemap: true
 
 # Admin API
 
-The admin socket provides an interface to query and configure Yggdrasil during runtime. By default, Yggdrasil listens for admin connections on `localhost:9001`.
+The admin socket provides an interface to query and configure Yggdrasil during runtime. By default, Yggdrasil listens for admin connections on `unix:///var/run/yggdrasil.sock` for Linux, OpenBSD, FreeBSD and MacOS, and on `localhost:9001` for Windows and other operating systems.
 
 ## Control Utility
 

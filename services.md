@@ -172,9 +172,11 @@ Note: do not use square brackets in host!
 
 ----
 
-## Minecraft
+## Games
 
-### Java Edition
+### Minecraft
+
+#### Java Edition
 
 - `228:39cf:5792:fbd1:d5c7:a750:7ab9:4389` **26.1.2** - Vanilla survival server with minimal mods. The only rule is to not grief.
 - `201:92e3:d9df:4932:ca24:586a:4475:6e8b` or `mc.ygg.at` **1.21.1** - Vanilla survival server. Minimal rules and plugins. Fight with mobs, build beautiful buildings. Have a good time with your friends. And leave a trace in the history of this server with other users yggdrasil! Site: [web.mc.ygg](http://web.mc.ygg.at)
@@ -183,40 +185,48 @@ Note: do not use square brackets in host!
   - **SMP** - Classic survival multiplayer with grief protection. Build, explore, and trade knowing your builds are safe. Grief protection enabled, land claiming.
   - **SMP2** - No protection, but hacked clients are not allowed.
 
-### Minetest
+#### Minetest
 
 - `[203:e93b:9902:9064:5efe:575b:3284:e1d2]:30000` Minetest server hosted by [mittwerk](mittwerk@yggdrasil.link)
 
 ----
 
-## Half-Life
+### Half-Life
 
 [Xash3D / FWGS](https://github.com/FWGS/xash3d-fwgs) servers by [lost+skunk](http://[222:a8e4:50cd:55c:788e:b0a5:4e2f:a92c]/user:skunky)
 
-### Master
+#### Master
 
 - `[300:dee4:d3c0:953b::2019]:27010`
 
-### Game servers
+#### Game servers
 
 - `[300:eaff:7fab:181b::e949]:7588`
 - `[301:f137:d1ac:920e::2019]:27015` - 9 bots, Yggdrasil only
+- `[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:27015` - game server by YGGverse, online time-to-time (by request)
 
 ----
 
-## Hytale
+### Hytale
 
 - Bivrost — US-East (Residential FTTH) — No mods — Cross-overlay — Best-effort support — Simple rule(s): Minimal griefing.
   - `202:79eb:f1b7:799a:f8be:8683:1abd:5338`
 
 ----
 
-## Xonotic
+### Xonotic
 
 - Bivrost — US-East (Ashburn VA) — Clearnet and Cross-overlay — Best-effort support
    - Press **`** within Xonotic and type or paste: **connect [201:ac2f:89eb:2afe:5f3d:9db9:a7e9:2f75]:26000**
    
 ----
+
+### TES3MP
+
+The Elder Scrolls 3: Morrowind online
+
+- `[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:25565` - Game server by YGGverse
+  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:25580` - home page with IPv6 notes
 
 ## NNCP
 

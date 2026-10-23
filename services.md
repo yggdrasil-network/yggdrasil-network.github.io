@@ -35,6 +35,12 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil Map](227:bc24:9a82:e290:7f4a:f992:2ef6:5b34]/)
   - `http://[227:bc24:9a82:e290:7f4a:f992:2ef6:5b34]/`
 
+- [Yggdrasil Map v2](https://ygg.axxa.dev/map)
+  - `https://ygg.axxa.dev/map`
+ 
+- [Yggdrasil Status](https://ygg.axxa.dev/)
+  - `https://ygg.axxa.dev/`
+
 - [deavmi's homepage](http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/)
   - `http://[203:75b7:45af:ecca:d641:cd42:38dc:4788]/`
 

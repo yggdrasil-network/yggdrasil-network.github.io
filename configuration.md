@@ -104,7 +104,7 @@ Note that a `/64` prefix has fewer bits of address space available to check agai
 ### Generating Stronger Addresses (and Prefixes)
 
 While 128 bits is long enough to make collisions technically impractical, if not outright impossible, it's not unreasonable to think that 64 bits may be attackable at some point if not now.
-Without going too far into the details, addresses are a truncated hash of a node's public key, with leading `1` bits accumulated and suppressed (along with the inevitable first `0` bit).
+Without going too far into the details, addresses are a truncated bitwise complement of a node's public key, with leading `1` bits accumulated and suppressed (along with the inevitable first `0` bit).
 Thanks to the accumulator, it is possible to brute force generate keys which include more bits of the node's ID in the node's IPv6 address, thereby making collisions more difficult.
 This can partially mitigate the fact that IPv6 addresses are only 128 bits long, and, more importantly, that prefixes are a mere 64 bits, 16 bits of which are sacrificed to the `200::/7` prefix and 1-byte accumulator in either case.
 

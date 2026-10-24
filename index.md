@@ -44,7 +44,7 @@ This is still an alpha-stage project and there may be some breaking changes in t
     </div>
     <div class='row'>
         <img src='assets/images/iconoir/multi-window.svg' />
-        <p markdown='1'>Explore the [internal services](services.md) available on the network operated by our users.</p>
+        <p markdown='1'>Explore [internal services](services.md) available on the network operated by our users and [projects built on Yggdrasil](projects.md).</p>
     </div>
     <div class='row'>
         <img src='assets/images/iconoir/github.svg' />

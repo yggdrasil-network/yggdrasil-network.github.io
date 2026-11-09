@@ -54,6 +54,15 @@ ip6tables -A INPUT -i tun0 -j DROP
 ufw deny in on tun0 proto ipv6
 ```
 
+##### with `firewall-cmd`
+
+```
+firewall-cmd --permanent --new-zone=yggdrasil
+firewall-cmd --permanent --zone=yggdrasil --add-interface=tun0
+firewall-cmd --permanent --zone=yggdrasil --set-target=DROP
+firewall-cmd --reload
+```
+
 #### Windows (with Windows Firewall)
 
 Windows, by default, should classify the TAP adapter as a "Public Network". Configure Windows Firewall to prevent incoming connections on Public networks.

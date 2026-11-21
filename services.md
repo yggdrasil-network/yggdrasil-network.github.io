@@ -65,6 +65,9 @@ The following services are available on the Yggdrasil Network, courtesy of our c
 - [Yggdrasil project homepage](http://[300:8101:e046:d91e::5])
   - `http://[300:8101:e046:d91e::5]`
 
+- [Banner Exchange Platform](http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:7777)
+  - `http://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:7777`
+
 ----
 
 ## BitTorrent
